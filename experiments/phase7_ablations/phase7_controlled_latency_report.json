@@ -1,0 +1,353 @@
+{
+  "benchmark_metadata": {
+    "target_checkpoint": "experiments/phase6_session2_error/runs/phase6_yolo11m_960_session1/weights/best.pt",
+    "model_architecture": "YOLO11m",
+    "eval_image_count_per_run": 15,
+    "repetition_count": 2,
+    "total_observations_per_pipeline": 30,
+    "eval_image_subset": [
+      "b1cd1e94-549d0bfe.jpg",
+      "b1d7b3ac-995f9d8a.jpg",
+      "b1d9e136-9ab25cb3.jpg",
+      "b1f20aa0-50213047.jpg",
+      "b1f4491b-33824f31.jpg",
+      "b1f62c41-ed0c6521.jpg",
+      "b20ff95c-b9444127.jpg",
+      "b216243d-ad4306b9.jpg",
+      "b23d2079-0c019d8e.jpg",
+      "b24071b8-b3ee1196.jpg",
+      "b266429a-ac0c4ed3.jpg",
+      "b27127df-eac9b95e.jpg",
+      "b27d5dcb-5bdec286.jpg",
+      "b284c0e8-85fbc42a.jpg",
+      "b2860d72-0b43e851.jpg"
+    ],
+    "torch_num_threads": 16,
+    "cpu_telemetry": {
+      "initial": {
+        "current_freq_mhz": 2300.0,
+        "min_freq_mhz": 0.0,
+        "max_freq_mhz": 2300.0,
+        "cpu_percent": 12.6,
+        "temperature_sensor_available": false
+      },
+      "run1_before": {
+        "current_freq_mhz": 2300.0,
+        "min_freq_mhz": 0.0,
+        "max_freq_mhz": 2300.0,
+        "cpu_percent": 11.8,
+        "temperature_sensor_available": false
+      },
+      "run1_after": {
+        "current_freq_mhz": 2300.0,
+        "min_freq_mhz": 0.0,
+        "max_freq_mhz": 2300.0,
+        "cpu_percent": 11.3,
+        "temperature_sensor_available": false
+      },
+      "run2_before": {
+        "current_freq_mhz": 2300.0,
+        "min_freq_mhz": 0.0,
+        "max_freq_mhz": 2300.0,
+        "cpu_percent": 0.0,
+        "temperature_sensor_available": false
+      },
+      "run2_after": {
+        "current_freq_mhz": 2300.0,
+        "min_freq_mhz": 0.0,
+        "max_freq_mhz": 2300.0,
+        "cpu_percent": 10.8,
+        "temperature_sensor_available": false
+      }
+    }
+  },
+  "cold_start_warmup_measurements": {
+    "images": [
+      "b1c66a42-6f7d68ca.jpg",
+      "b1c81faa-3df17267.jpg",
+      "b1ca2e5d-84cf9134.jpg"
+    ],
+    "per_image_times_ms": [
+      4109.3,
+      1072.6,
+      796.7
+    ],
+    "mean_ms": 1992.9
+  },
+  "run1_order_raw_horizon_foveation": {
+    "raw_full_frame": {
+      "per_image_times_ms": [
+        1401.8,
+        792.7,
+        807.2,
+        1277.3,
+        1281.3,
+        1425.8,
+        1182.0,
+        1076.4,
+        1122.2,
+        838.7,
+        948.7,
+        822.6,
+        700.9,
+        682.4,
+        859.3
+      ],
+      "wall_clock_total_s": 15.22,
+      "throughput_fps": 0.986,
+      "stats": {
+        "sample_count": 15,
+        "mean_ms": 1014.6,
+        "std_ms": 244.9,
+        "min_ms": 682.4,
+        "p25_ms": 814.9,
+        "p50_ms": 948.7,
+        "p75_ms": 1229.7,
+        "p90_ms": 1353.6,
+        "p95_ms": 1409.0,
+        "max_ms": 1425.8
+      }
+    },
+    "horizon_slicing_wbf": {
+      "per_image_times_ms": [
+        1970.5,
+        1624.7,
+        1418.1,
+        2407.3,
+        1463.0,
+        1406.2,
+        1960.5,
+        1780.4,
+        1401.5,
+        1312.7,
+        1657.2,
+        1658.5,
+        1458.0,
+        1359.9,
+        1584.3
+      ],
+      "wall_clock_total_s": 24.463,
+      "throughput_fps": 0.613,
+      "stats": {
+        "sample_count": 15,
+        "mean_ms": 1630.9,
+        "std_ms": 286.8,
+        "min_ms": 1312.7,
+        "p25_ms": 1412.1,
+        "p50_ms": 1584.3,
+        "p75_ms": 1719.5,
+        "p90_ms": 1966.5,
+        "p95_ms": 2101.6,
+        "max_ms": 2407.3
+      },
+      "stage_breakdown_mean_ms": {
+        "slice_extraction": 4.0,
+        "slice_inference": 610.2,
+        "wbf_fusion": 1.6
+      }
+    },
+    "active_foveation_wbf": {
+      "per_image_times_ms": [
+        1926.1,
+        2292.8,
+        2539.9,
+        1877.1,
+        2367.9,
+        2603.7,
+        2612.7,
+        2128.7,
+        1341.9,
+        2996.8,
+        2517.3,
+        1452.7,
+        1314.0,
+        2419.4,
+        1305.9
+      ],
+      "wall_clock_total_s": 31.697,
+      "throughput_fps": 0.473,
+      "mean_crops_per_frame": 1.2,
+      "crop_processing_mean_ms": 823.1,
+      "stats": {
+        "sample_count": 15,
+        "mean_ms": 2113.1,
+        "std_ms": 530.4,
+        "min_ms": 1305.9,
+        "p25_ms": 1664.9,
+        "p50_ms": 2292.8,
+        "p75_ms": 2528.6,
+        "p90_ms": 2609.1,
+        "p95_ms": 2727.9,
+        "max_ms": 2996.8
+      }
+    }
+  },
+  "run2_order_foveation_horizon_raw": {
+    "active_foveation_wbf": {
+      "per_image_times_ms": [
+        2645.5,
+        1880.5,
+        3263.6,
+        2623.7,
+        2968.7,
+        3491.7,
+        2347.9,
+        2239.5,
+        1280.6,
+        2905.9,
+        2515.0,
+        1332.8,
+        1456.3,
+        3412.2,
+        1596.2
+      ],
+      "wall_clock_total_s": 35.961,
+      "throughput_fps": 0.417,
+      "mean_crops_per_frame": 1.2,
+      "crop_processing_mean_ms": 993.4,
+      "stats": {
+        "sample_count": 15,
+        "mean_ms": 2397.3,
+        "std_ms": 725.4,
+        "min_ms": 1280.6,
+        "p25_ms": 1738.3,
+        "p50_ms": 2515.0,
+        "p75_ms": 2937.3,
+        "p90_ms": 3352.7,
+        "p95_ms": 3436.0,
+        "max_ms": 3491.7
+      }
+    },
+    "horizon_slicing_wbf": {
+      "per_image_times_ms": [
+        2143.7,
+        2170.8,
+        1752.9,
+        1717.3,
+        1669.8,
+        1743.1,
+        1915.7,
+        1735.0,
+        1737.6,
+        1926.0,
+        1381.0,
+        1389.0,
+        1487.6,
+        1575.8,
+        1393.4
+      ],
+      "wall_clock_total_s": 25.739,
+      "throughput_fps": 0.583,
+      "stats": {
+        "sample_count": 15,
+        "mean_ms": 1715.9,
+        "std_ms": 241.4,
+        "min_ms": 1381.0,
+        "p25_ms": 1531.7,
+        "p50_ms": 1735.0,
+        "p75_ms": 1834.3,
+        "p90_ms": 2056.6,
+        "p95_ms": 2151.8,
+        "max_ms": 2170.8
+      },
+      "stage_breakdown_mean_ms": {
+        "slice_extraction": 4.8,
+        "slice_inference": 672.6,
+        "wbf_fusion": 2.0
+      }
+    },
+    "raw_full_frame": {
+      "per_image_times_ms": [
+        993.8,
+        926.8,
+        937.5,
+        1160.5,
+        813.6,
+        831.8,
+        788.7,
+        1577.6,
+        1396.7,
+        864.9,
+        771.0,
+        908.0,
+        751.7,
+        932.6,
+        791.1
+      ],
+      "wall_clock_total_s": 14.447,
+      "throughput_fps": 1.038,
+      "stats": {
+        "sample_count": 15,
+        "mean_ms": 963.1,
+        "std_ms": 231.3,
+        "min_ms": 751.7,
+        "p25_ms": 802.3,
+        "p50_ms": 908.0,
+        "p75_ms": 965.7,
+        "p90_ms": 1302.2,
+        "p95_ms": 1451.0,
+        "max_ms": 1577.6
+      }
+    }
+  },
+  "pooled_distribution_summary": {
+    "raw_full_frame": {
+      "distribution_stats": {
+        "sample_count": 30,
+        "mean_ms": 988.9,
+        "std_ms": 239.6,
+        "min_ms": 682.4,
+        "p25_ms": 808.8,
+        "p50_ms": 917.4,
+        "p75_ms": 1150.9,
+        "p90_ms": 1397.2,
+        "p95_ms": 1415.0,
+        "max_ms": 1577.6
+      },
+      "total_wall_clock_s": 29.667,
+      "combined_throughput_fps": 1.011,
+      "inter_run_drift_pct": -5.08
+    },
+    "horizon_slicing_wbf": {
+      "distribution_stats": {
+        "sample_count": 30,
+        "mean_ms": 1673.4,
+        "std_ms": 268.5,
+        "min_ms": 1312.7,
+        "p25_ms": 1428.1,
+        "p50_ms": 1657.8,
+        "p75_ms": 1773.5,
+        "p90_ms": 1987.8,
+        "p95_ms": 2158.6,
+        "max_ms": 2407.3
+      },
+      "total_wall_clock_s": 50.202,
+      "combined_throughput_fps": 0.598,
+      "inter_run_drift_pct": 5.21,
+      "stage_breakdown_mean_ms": {
+        "slice_extraction": 4.4,
+        "slice_inference": 641.4,
+        "wbf_fusion": 1.8
+      }
+    },
+    "active_foveation_wbf": {
+      "distribution_stats": {
+        "sample_count": 30,
+        "mean_ms": 2255.2,
+        "std_ms": 651.1,
+        "min_ms": 1280.6,
+        "p25_ms": 1666.4,
+        "p50_ms": 2357.9,
+        "p75_ms": 2620.9,
+        "p90_ms": 3023.5,
+        "p95_ms": 3345.3,
+        "max_ms": 3491.7
+      },
+      "total_wall_clock_s": 67.658,
+      "combined_throughput_fps": 0.443,
+      "inter_run_drift_pct": 13.45,
+      "mean_crops_per_frame": 1.2,
+      "crop_processing_mean_ms": 908.2
+    }
+  }
+}

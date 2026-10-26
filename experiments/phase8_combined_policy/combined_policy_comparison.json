@@ -1,0 +1,603 @@
+{
+  "timestamp": "2026-10-13T03:55:43Z",
+  "cohort": "300-Image Development Pilot",
+  "checkpoint_sha256": "42d4b385ec69d01209e76dcf85f0fb4ffb33857d85f4daa02a4271d20f76541e",
+  "configurations": {
+    "Config_A": {
+      "name": "960px Full-Frame Baseline",
+      "vru_precision": 76.8,
+      "vru_recall": 60.69,
+      "vru_f1": 0.678,
+      "vru_tp": 1056,
+      "vru_fp": 319,
+      "vru_fn": 684,
+      "small_vru_recall": 43.17,
+      "small_vru_tp": 389,
+      "small_vru_total": 901,
+      "per_class": {
+        "person": {
+          "tp": 950,
+          "fp": 260,
+          "fn": 578,
+          "precision": 78.51,
+          "recall": 62.17
+        },
+        "rider": {
+          "tp": 32,
+          "fp": 14,
+          "fn": 26,
+          "precision": 69.57,
+          "recall": 55.17
+        },
+        "bike": {
+          "tp": 63,
+          "fp": 38,
+          "fn": 59,
+          "precision": 62.38,
+          "recall": 51.64
+        },
+        "motor": {
+          "tp": 11,
+          "fp": 7,
+          "fn": 21,
+          "precision": 61.11,
+          "recall": 34.38
+        }
+      },
+      "latency": {
+        "mean_ms": 1349.04,
+        "median_ms": 1300.82,
+        "p95_ms": 2347.92,
+        "min_ms": 393.18,
+        "max_ms": 17818.99,
+        "throughput_fps": 0.74
+      },
+      "crop_distribution": {
+        "mean_crops_per_image": 0.0,
+        "median_crops_per_image": 0.0,
+        "zero_crop_images": 300
+      },
+      "false_positives_by_source": {},
+      "false_positives_by_trigger": {}
+    },
+    "Config_B": {
+      "name": "1280px Native-Resolution Reference",
+      "vru_precision": 78.2,
+      "vru_recall": 61.84,
+      "vru_f1": 0.6906,
+      "vru_tp": 1076,
+      "vru_fp": 300,
+      "vru_fn": 664,
+      "small_vru_recall": 45.17,
+      "small_vru_tp": 407,
+      "small_vru_total": 901,
+      "per_class": {
+        "person": {
+          "tp": 966,
+          "fp": 235,
+          "fn": 562,
+          "precision": 80.43,
+          "recall": 63.22
+        },
+        "rider": {
+          "tp": 33,
+          "fp": 22,
+          "fn": 25,
+          "precision": 60.0,
+          "recall": 56.9
+        },
+        "bike": {
+          "tp": 68,
+          "fp": 36,
+          "fn": 54,
+          "precision": 65.38,
+          "recall": 55.74
+        },
+        "motor": {
+          "tp": 9,
+          "fp": 7,
+          "fn": 23,
+          "precision": 56.25,
+          "recall": 28.12
+        }
+      },
+      "latency": {
+        "mean_ms": 2261.65,
+        "median_ms": 2182.0,
+        "p95_ms": 3941.02,
+        "min_ms": 657.88,
+        "max_ms": 29924.94,
+        "throughput_fps": 0.44
+      },
+      "crop_distribution": {
+        "mean_crops_per_image": 0.0,
+        "median_crops_per_image": 0.0,
+        "zero_crop_images": 300
+      },
+      "false_positives_by_source": {},
+      "false_positives_by_trigger": {}
+    },
+    "Config_C": {
+      "name": "Existing Foveation Policy (K<=2 crops, 640px, conf 0.25)",
+      "vru_precision": 70.85,
+      "vru_recall": 63.85,
+      "vru_f1": 0.6717,
+      "vru_tp": 1111,
+      "vru_fp": 457,
+      "vru_fn": 629,
+      "small_vru_recall": 48.28,
+      "small_vru_tp": 435,
+      "small_vru_total": 901,
+      "per_class": {
+        "person": {
+          "tp": 1001,
+          "fp": 384,
+          "fn": 527,
+          "precision": 72.27,
+          "recall": 65.51
+        },
+        "rider": {
+          "tp": 33,
+          "fp": 18,
+          "fn": 25,
+          "precision": 64.71,
+          "recall": 56.9
+        },
+        "bike": {
+          "tp": 65,
+          "fp": 48,
+          "fn": 57,
+          "precision": 57.52,
+          "recall": 53.28
+        },
+        "motor": {
+          "tp": 12,
+          "fp": 7,
+          "fn": 20,
+          "precision": 63.16,
+          "recall": 37.5
+        }
+      },
+      "latency": {
+        "mean_ms": 3091.22,
+        "median_ms": 3056.29,
+        "p95_ms": 5421.19,
+        "min_ms": 793.64,
+        "max_ms": 24428.14,
+        "throughput_fps": 0.32
+      },
+      "crop_distribution": {
+        "mean_crops_per_image": 1.94,
+        "median_crops_per_image": 2.0,
+        "zero_crop_images": 4
+      },
+      "false_positives_by_source": {
+        "full_frame": 188,
+        "crop": 150,
+        "fused": 119
+      },
+      "false_positives_by_trigger": {
+        "full_frame_existing": 188,
+        "low_confidence+low_confidence+low_confidence+small_vru+small_vru+small_vru": 1,
+        "fused_boosted": 119,
+        "low_confidence+small_vru+cluster_occlusion+low_confidence": 1,
+        "small_vru+small_vru+small_vru+small_vru+cluster_occlusion+cluster_occlusion+small_vru+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence": 1,
+        "small_vru+low_confidence+small_vru+small_vru+low_confidence+low_confidence+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence+small_vru": 1,
+        "low_confidence+cluster_occlusion": 2,
+        "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+small_vru+low_confidence+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru": 2,
+        "cluster_occlusion+cluster_occlusion+cluster_occlusion": 1,
+        "small_vru+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence": 1,
+        "small_vru+cluster_occlusion+small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence": 3,
+        "low_confidence+low_confidence+cluster_occlusion+small_vru+small_vru+small_vru+small_vru": 2,
+        "low_confidence+cluster_occlusion+low_confidence+small_vru+small_vru": 1,
+        "low_confidence+low_confidence": 5,
+        "small_vru+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+small_vru+cluster_occlusion+cluster_occlusion+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+low_confidence+low_confidence+small_vru+small_vru+low_confidence+low_confidence+small_vru+small_vru+low_confidence+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+small_vru": 6,
+        "low_confidence+cluster_occlusion+small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru": 1,
+        "small_vru+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence+small_vru+low_confidence+small_vru+low_confidence+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+small_vru+low_confidence+small_vru+small_vru+small_vru": 2,
+        "low_confidence+cluster_occlusion+cluster_occlusion+small_vru+low_confidence+small_vru+small_vru+low_confidence+small_vru+small_vru": 1,
+        "small_vru+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+cluster_occlusion+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru": 3,
+        "small_vru+low_confidence+cluster_occlusion+small_vru+low_confidence+small_vru": 2,
+        "small_vru+small_vru+small_vru+low_confidence+small_vru+low_confidence+small_vru+low_confidence+low_confidence+cluster_occlusion+low_confidence": 3,
+        "small_vru+small_vru+small_vru+small_vru+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence": 3,
+        "low_confidence+low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+boundary_truncation+boundary_truncation+boundary_truncation+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru+low_confidence": 3,
+        "low_confidence+small_vru+small_vru+low_confidence": 1,
+        "low_confidence": 3,
+        "low_confidence+cluster_occlusion+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+low_confidence": 1,
+        "low_confidence+cluster_occlusion+low_confidence": 2,
+        "low_confidence+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+low_confidence+low_confidence+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru": 1,
+        "low_confidence+cluster_occlusion+cluster_occlusion+boundary_truncation+boundary_truncation+low_confidence+small_vru+low_confidence": 3,
+        "small_vru+low_confidence": 3,
+        "low_confidence+boundary_truncation+boundary_truncation": 2,
+        "cluster_occlusion+low_confidence+small_vru+small_vru": 2,
+        "cluster_occlusion": 2,
+        "small_vru+low_confidence+small_vru+cluster_occlusion+small_vru+small_vru+low_confidence+low_confidence+small_vru": 3,
+        "cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+low_confidence": 1,
+        "cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru": 3,
+        "small_vru+low_confidence+small_vru": 1,
+        "small_vru+small_vru+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence": 2,
+        "small_vru+small_vru+small_vru+low_confidence+low_confidence": 2,
+        "low_confidence+low_confidence+small_vru+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+small_vru+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+small_vru": 6,
+        "small_vru+low_confidence+small_vru+cluster_occlusion+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru": 3,
+        "cluster_occlusion+low_confidence": 4,
+        "low_confidence+small_vru+low_confidence+low_confidence+small_vru+cluster_occlusion+cluster_occlusion+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence": 1,
+        "cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+boundary_truncation+boundary_truncation+boundary_truncation+low_confidence+small_vru+small_vru+low_confidence+low_confidence+low_confidence": 1,
+        "small_vru+low_confidence+cluster_occlusion+small_vru+cluster_occlusion+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence+low_confidence": 3,
+        "small_vru+small_vru+low_confidence+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+low_confidence+low_confidence+small_vru+low_confidence+boundary_truncation+boundary_truncation+boundary_truncation+boundary_truncation+small_vru+small_vru+small_vru+low_confidence": 1,
+        "low_confidence+low_confidence+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru": 3,
+        "small_vru+low_confidence+small_vru+small_vru+low_confidence+low_confidence+low_confidence+small_vru": 1,
+        "cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+low_confidence+low_confidence": 1,
+        "low_confidence+low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru": 2,
+        "low_confidence+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru": 4,
+        "small_vru+low_confidence+small_vru+small_vru+low_confidence": 3,
+        "low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+boundary_truncation+boundary_truncation+boundary_truncation+boundary_truncation+boundary_truncation+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+low_confidence+low_confidence+small_vru+low_confidence": 1,
+        "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru": 4,
+        "small_vru+low_confidence+small_vru+low_confidence": 3,
+        "low_confidence+small_vru+cluster_occlusion+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru": 1,
+        "small_vru+small_vru+low_confidence": 1,
+        "small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+boundary_truncation+low_confidence+low_confidence+low_confidence+low_confidence": 1,
+        "small_vru+small_vru+cluster_occlusion+low_confidence+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+low_confidence+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru": 2,
+        "cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion": 1,
+        "small_vru+low_confidence+low_confidence+small_vru+small_vru+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+low_confidence": 3,
+        "small_vru+small_vru+small_vru+small_vru": 2,
+        "low_confidence+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+low_confidence+cluster_occlusion+boundary_truncation+boundary_truncation+boundary_truncation+boundary_truncation+low_confidence": 1,
+        "small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+cluster_occlusion+cluster_occlusion+small_vru+cluster_occlusion+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+small_vru+low_confidence+low_confidence": 2,
+        "low_confidence+cluster_occlusion+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence": 6,
+        "cluster_occlusion+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+cluster_occlusion+small_vru": 2,
+        "low_confidence+cluster_occlusion+small_vru+cluster_occlusion+small_vru+low_confidence+small_vru+low_confidence+small_vru": 2
+      }
+    },
+    "Config_D": {
+      "name": "Single-Crop Policy (K<=1 crop, 640px, conf 0.25)",
+      "vru_precision": 73.77,
+      "vru_recall": 62.87,
+      "vru_f1": 0.6789,
+      "vru_tp": 1094,
+      "vru_fp": 389,
+      "vru_fn": 646,
+      "small_vru_recall": 46.95,
+      "small_vru_tp": 423,
+      "small_vru_total": 901,
+      "per_class": {
+        "person": {
+          "tp": 986,
+          "fp": 333,
+          "fn": 542,
+          "precision": 74.75,
+          "recall": 64.53
+        },
+        "rider": {
+          "tp": 33,
+          "fp": 16,
+          "fn": 25,
+          "precision": 67.35,
+          "recall": 56.9
+        },
+        "bike": {
+          "tp": 64,
+          "fp": 33,
+          "fn": 58,
+          "precision": 65.98,
+          "recall": 52.46
+        },
+        "motor": {
+          "tp": 11,
+          "fp": 7,
+          "fn": 21,
+          "precision": 61.11,
+          "recall": 34.38
+        }
+      },
+      "latency": {
+        "mean_ms": 2222.4,
+        "median_ms": 2158.15,
+        "p95_ms": 3961.41,
+        "min_ms": 627.5,
+        "max_ms": 19724.25,
+        "throughput_fps": 0.45
+      },
+      "crop_distribution": {
+        "mean_crops_per_image": 0.99,
+        "median_crops_per_image": 1.0,
+        "zero_crop_images": 4
+      },
+      "false_positives_by_source": {
+        "full_frame": 218,
+        "crop": 91,
+        "fused": 80
+      },
+      "false_positives_by_trigger": {
+        "full_frame_existing": 218,
+        "low_confidence+low_confidence+low_confidence+small_vru+small_vru+small_vru": 1,
+        "fused_boosted": 80,
+        "small_vru+low_confidence+small_vru+small_vru+low_confidence+low_confidence+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence+small_vru": 1,
+        "low_confidence+cluster_occlusion": 2,
+        "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+small_vru+low_confidence+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru": 2,
+        "small_vru+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence": 1,
+        "small_vru+cluster_occlusion+small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence": 3,
+        "low_confidence+low_confidence+cluster_occlusion+small_vru+small_vru+small_vru+small_vru": 1,
+        "low_confidence+low_confidence": 2,
+        "small_vru+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+small_vru+cluster_occlusion+cluster_occlusion+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+low_confidence+low_confidence+small_vru+small_vru+low_confidence+low_confidence+small_vru+small_vru+low_confidence+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+small_vru": 5,
+        "low_confidence+cluster_occlusion+small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru": 1,
+        "small_vru+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence+small_vru+low_confidence+small_vru+low_confidence+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+cluster_occlusion+cluster_occlusion+small_vru+low_confidence+small_vru+small_vru+low_confidence+small_vru+small_vru": 1,
+        "small_vru+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+cluster_occlusion+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru": 3,
+        "small_vru+small_vru+small_vru+low_confidence+small_vru+low_confidence+small_vru+low_confidence+low_confidence+cluster_occlusion+low_confidence": 2,
+        "small_vru+small_vru+small_vru+small_vru+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence": 3,
+        "low_confidence+low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+boundary_truncation+boundary_truncation+boundary_truncation+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru+low_confidence": 1,
+        "low_confidence+small_vru+small_vru+low_confidence": 1,
+        "low_confidence+cluster_occlusion+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+low_confidence": 1,
+        "low_confidence+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+low_confidence+low_confidence+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru": 1,
+        "low_confidence+cluster_occlusion+cluster_occlusion+boundary_truncation+boundary_truncation+low_confidence+small_vru+low_confidence": 3,
+        "small_vru+low_confidence": 2,
+        "low_confidence+boundary_truncation+boundary_truncation": 1,
+        "cluster_occlusion+low_confidence+small_vru+small_vru": 1,
+        "cluster_occlusion": 1,
+        "small_vru+low_confidence+small_vru+cluster_occlusion+small_vru+small_vru+low_confidence+low_confidence+small_vru": 2,
+        "cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru": 2,
+        "small_vru+low_confidence+small_vru": 1,
+        "small_vru+small_vru+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence": 1,
+        "small_vru+small_vru+small_vru+low_confidence+low_confidence": 1,
+        "low_confidence+low_confidence+small_vru+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+small_vru+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+small_vru": 4,
+        "small_vru+low_confidence+small_vru+cluster_occlusion+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru": 3,
+        "cluster_occlusion+low_confidence": 2,
+        "low_confidence+small_vru+low_confidence+low_confidence+small_vru+cluster_occlusion+cluster_occlusion+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence": 1,
+        "cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+boundary_truncation+boundary_truncation+boundary_truncation+low_confidence+small_vru+small_vru+low_confidence+low_confidence+low_confidence": 1,
+        "small_vru+low_confidence+cluster_occlusion+small_vru+cluster_occlusion+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+low_confidence+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru": 3,
+        "small_vru+low_confidence+small_vru+small_vru+low_confidence+low_confidence+low_confidence+small_vru": 1,
+        "low_confidence+low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru": 2,
+        "low_confidence+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru": 4,
+        "small_vru+low_confidence+small_vru+small_vru+low_confidence": 2,
+        "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru": 3,
+        "low_confidence+small_vru+cluster_occlusion+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru": 1,
+        "small_vru+small_vru+low_confidence": 1,
+        "small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence+low_confidence": 1,
+        "small_vru+small_vru+cluster_occlusion+low_confidence+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+low_confidence+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru": 1,
+        "cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion": 1,
+        "small_vru+small_vru+small_vru+small_vru": 2,
+        "low_confidence+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+low_confidence+low_confidence": 1,
+        "small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+cluster_occlusion+cluster_occlusion+small_vru+cluster_occlusion+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+small_vru+low_confidence+low_confidence": 2,
+        "low_confidence+cluster_occlusion+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence": 2,
+        "cluster_occlusion+low_confidence+low_confidence+low_confidence": 1
+      }
+    },
+    "Config_E": {
+      "name": "Config D + Conservative Crop Admission (unanchored crop >= 0.35)",
+      "vru_precision": 75.56,
+      "vru_recall": 62.53,
+      "vru_f1": 0.6843,
+      "vru_tp": 1088,
+      "vru_fp": 352,
+      "vru_fn": 652,
+      "small_vru_recall": 46.28,
+      "small_vru_tp": 417,
+      "small_vru_total": 901,
+      "per_class": {
+        "person": {
+          "tp": 980,
+          "fp": 297,
+          "fn": 548,
+          "precision": 76.74,
+          "recall": 64.14
+        },
+        "rider": {
+          "tp": 33,
+          "fp": 16,
+          "fn": 25,
+          "precision": 67.35,
+          "recall": 56.9
+        },
+        "bike": {
+          "tp": 64,
+          "fp": 32,
+          "fn": 58,
+          "precision": 66.67,
+          "recall": 52.46
+        },
+        "motor": {
+          "tp": 11,
+          "fp": 7,
+          "fn": 21,
+          "precision": 61.11,
+          "recall": 34.38
+        }
+      },
+      "latency": {
+        "mean_ms": 2222.43,
+        "median_ms": 2158.45,
+        "p95_ms": 3961.22,
+        "min_ms": 627.5,
+        "max_ms": 19721.24,
+        "throughput_fps": 0.45
+      },
+      "crop_distribution": {
+        "mean_crops_per_image": 0.99,
+        "median_crops_per_image": 1.0,
+        "zero_crop_images": 4
+      },
+      "false_positives_by_source": {
+        "full_frame": 218,
+        "fused": 80,
+        "crop": 54
+      },
+      "false_positives_by_trigger": {
+        "full_frame_existing": 218,
+        "fused_boosted": 80,
+        "small_vru+low_confidence+small_vru+small_vru+low_confidence+low_confidence+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence+small_vru": 1,
+        "low_confidence+cluster_occlusion": 2,
+        "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+small_vru+low_confidence+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru": 1,
+        "small_vru+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence": 1,
+        "small_vru+cluster_occlusion+small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence": 2,
+        "low_confidence+low_confidence+cluster_occlusion+small_vru+small_vru+small_vru+small_vru": 1,
+        "low_confidence+low_confidence": 1,
+        "small_vru+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+small_vru+cluster_occlusion+cluster_occlusion+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+low_confidence+low_confidence+small_vru+small_vru+low_confidence+low_confidence+small_vru+small_vru+low_confidence+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+small_vru": 3,
+        "low_confidence+cluster_occlusion+small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru": 1,
+        "low_confidence+cluster_occlusion+cluster_occlusion+small_vru+low_confidence+small_vru+small_vru+low_confidence+small_vru+small_vru": 1,
+        "small_vru+small_vru+small_vru+low_confidence+small_vru+low_confidence+small_vru+low_confidence+low_confidence+cluster_occlusion+low_confidence": 2,
+        "small_vru+small_vru+small_vru+small_vru+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+small_vru+small_vru+low_confidence": 1,
+        "low_confidence+cluster_occlusion+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+low_confidence": 1,
+        "low_confidence+cluster_occlusion+cluster_occlusion+boundary_truncation+boundary_truncation+low_confidence+small_vru+low_confidence": 3,
+        "small_vru+low_confidence": 2,
+        "low_confidence+boundary_truncation+boundary_truncation": 1,
+        "cluster_occlusion": 1,
+        "small_vru+low_confidence+small_vru+cluster_occlusion+small_vru+small_vru+low_confidence+low_confidence+small_vru": 1,
+        "cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru": 2,
+        "small_vru+small_vru+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+low_confidence+small_vru+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+small_vru+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+small_vru": 2,
+        "small_vru+low_confidence+small_vru+cluster_occlusion+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru": 2,
+        "low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru": 2,
+        "low_confidence+low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru": 2,
+        "low_confidence+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru": 1,
+        "small_vru+low_confidence+small_vru+small_vru+low_confidence": 1,
+        "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru": 3,
+        "low_confidence+small_vru+cluster_occlusion+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru": 1,
+        "cluster_occlusion+low_confidence": 1,
+        "small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+low_confidence+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru": 1,
+        "small_vru+small_vru+small_vru+small_vru": 2,
+        "low_confidence+low_confidence+low_confidence": 1,
+        "small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+cluster_occlusion+cluster_occlusion+small_vru+cluster_occlusion+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+small_vru+low_confidence+low_confidence": 2,
+        "low_confidence+cluster_occlusion+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence": 1,
+        "cluster_occlusion+low_confidence+low_confidence+low_confidence": 1
+      }
+    },
+    "Config_F": {
+      "name": "Config E + Intra-Crop Pedestrian NMS at IoU 0.40 before global WBF",
+      "vru_precision": 75.94,
+      "vru_recall": 62.41,
+      "vru_f1": 0.6852,
+      "vru_tp": 1086,
+      "vru_fp": 344,
+      "vru_fn": 654,
+      "small_vru_recall": 46.28,
+      "small_vru_tp": 417,
+      "small_vru_total": 901,
+      "per_class": {
+        "person": {
+          "tp": 978,
+          "fp": 289,
+          "fn": 550,
+          "precision": 77.19,
+          "recall": 64.01
+        },
+        "rider": {
+          "tp": 33,
+          "fp": 16,
+          "fn": 25,
+          "precision": 67.35,
+          "recall": 56.9
+        },
+        "bike": {
+          "tp": 64,
+          "fp": 32,
+          "fn": 58,
+          "precision": 66.67,
+          "recall": 52.46
+        },
+        "motor": {
+          "tp": 11,
+          "fp": 7,
+          "fn": 21,
+          "precision": 61.11,
+          "recall": 34.38
+        }
+      },
+      "latency": {
+        "mean_ms": 2222.42,
+        "median_ms": 2158.29,
+        "p95_ms": 3961.22,
+        "min_ms": 627.51,
+        "max_ms": 19721.24,
+        "throughput_fps": 0.45
+      },
+      "crop_distribution": {
+        "mean_crops_per_image": 0.99,
+        "median_crops_per_image": 1.0,
+        "zero_crop_images": 4
+      },
+      "false_positives_by_source": {
+        "full_frame": 225,
+        "fused": 72,
+        "crop": 47
+      },
+      "false_positives_by_trigger": {
+        "full_frame_existing": 225,
+        "fused_boosted": 72,
+        "small_vru+low_confidence+small_vru+small_vru+low_confidence+low_confidence+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence+small_vru": 1,
+        "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+small_vru+low_confidence+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru": 1,
+        "small_vru+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence": 1,
+        "small_vru+cluster_occlusion+small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence": 2,
+        "low_confidence+low_confidence+cluster_occlusion+small_vru+small_vru+small_vru+small_vru": 1,
+        "low_confidence+low_confidence": 1,
+        "small_vru+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+small_vru+cluster_occlusion+cluster_occlusion+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+low_confidence+low_confidence+small_vru+small_vru+low_confidence+low_confidence+small_vru+small_vru+low_confidence+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+small_vru": 3,
+        "low_confidence+cluster_occlusion+small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru": 1,
+        "low_confidence+cluster_occlusion+cluster_occlusion+small_vru+low_confidence+small_vru+small_vru+low_confidence+small_vru+small_vru": 1,
+        "small_vru+small_vru+small_vru+low_confidence+small_vru+low_confidence+small_vru+low_confidence+low_confidence+cluster_occlusion+low_confidence": 2,
+        "small_vru+small_vru+small_vru+small_vru+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+small_vru+small_vru+low_confidence": 1,
+        "low_confidence+cluster_occlusion+cluster_occlusion+boundary_truncation+boundary_truncation+low_confidence+small_vru+low_confidence": 2,
+        "small_vru+low_confidence": 2,
+        "low_confidence+boundary_truncation+boundary_truncation": 1,
+        "cluster_occlusion": 1,
+        "cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru": 2,
+        "low_confidence+low_confidence+small_vru+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+small_vru+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+small_vru": 2,
+        "small_vru+low_confidence+small_vru+cluster_occlusion+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru": 2,
+        "low_confidence+low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru": 2,
+        "low_confidence+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru": 1,
+        "small_vru+low_confidence+small_vru+small_vru+low_confidence": 1,
+        "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru": 3,
+        "low_confidence+small_vru+cluster_occlusion+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru": 1,
+        "cluster_occlusion+low_confidence": 1,
+        "small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence+low_confidence": 1,
+        "low_confidence+low_confidence+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru": 1,
+        "low_confidence+cluster_occlusion": 1,
+        "small_vru+small_vru+small_vru+small_vru": 2,
+        "low_confidence+low_confidence+low_confidence": 1,
+        "small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+cluster_occlusion+cluster_occlusion+small_vru+cluster_occlusion+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+small_vru+low_confidence+low_confidence": 2,
+        "low_confidence+cluster_occlusion+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence": 1,
+        "cluster_occlusion+low_confidence+low_confidence+low_confidence": 1
+      }
+    }
+  },
+  "provisional_gates": {
+    "small_vru_recall_min": 46.95,
+    "vru_precision_min": 73.77,
+    "vru_f1_min": 0.68,
+    "latency_lt_1280px": true
+  },
+  "gate_satisfaction": {
+    "gate_1_small_vru_recall": {
+      "target": ">= 46.95%",
+      "measured": "46.28%",
+      "passed": false
+    },
+    "gate_2_vru_precision": {
+      "target": ">= 73.77%",
+      "measured": "75.94%",
+      "passed": true
+    },
+    "gate_3_vru_f1": {
+      "target": ">= 0.6800",
+      "measured": "0.6852",
+      "passed": true
+    },
+    "gate_4_mean_latency_vs_1280px": {
+      "target": "< 1280px reference (2261.7 ms)",
+      "measured": "2222.4 ms",
+      "passed": true
+    }
+  },
+  "checkpoint_post_sha256_verified": true
+}

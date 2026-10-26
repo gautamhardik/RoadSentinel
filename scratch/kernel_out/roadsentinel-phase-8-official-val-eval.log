@@ -1,0 +1,46 @@
+[{"stream_name":"stdout","time":4.188033691,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.9/46.9 kB 1.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":4.705707255,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 27.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":4.735248507,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.5/96.5 kB 5.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":15.27293699,"data":"Creating new Ultralytics Settings v0.0.8 file ✅ \n"}
+,{"stream_name":"stdout","time":15.272975509,"data":"View Ultralytics Settings with 'yolo settings' or at '/root/.config/Ultralytics/settings.json'\n"}
+,{"stream_name":"stdout","time":15.272980837,"data":"Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/usage/settings.\n"}
+,{"stream_name":"stdout","time":15.87814288,"data":"Validation images verified: 10000 images found.\n"}
+,{"stream_name":"stdout","time":816.477400153,"data":"Found checkpoint: /kaggle/input/datasets/hardikgautam24119014/roadsentinel-phase6-weights/yolo11m_phase6_epoch26.pt\n"}
+,{"stream_name":"stdout","time":816.477485252,"data":"Verified SHA-256: 42d4b385ec69d01209e76dcf85f0fb4ffb33857d85f4daa02a4271d20f76541e\n"}
+,{"stream_name":"stdout","time":816.477489936,"data":"Parsing official ground-truth annotations...\n"}
+,{"stream_name":"stdout","time":892.728943275,"data":"Partitions verified: Pilot cohort = 300, Expanded partition = 9700\n"}
+,{"stream_name":"stdout","time":892.73006343,"data":"\n"}
+,{"stream_name":"stdout","time":892.730076292,"data":"--- Running Official Ultralytics model.val() on 10,000 images (imgsz=960, batch=16) ---\n"}
+,{"stream_name":"stdout","time":899.307821319,"data":"Ultralytics 8.4.174 🚀 Python-3.13.15 torch-2.11.0+cu128 CUDA:0 (Tesla T4, 14912MiB)\n"}
+,{"stream_name":"stdout","time":899.804729655,"data":"YOLO11m summary (fused): 125 layers, 20,037,742 parameters, 0 gradients, 67.8 GFLOPs\n"}
+,{"stream_name":"stderr","time":899.856505871,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":899.857371008,"data":"  File \"/kaggle/src/script.py\", line 527, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":899.857382489,"data":"    main()\n"}
+,{"stream_name":"stderr","time":899.857386932,"data":"    ~~~~^^\n"}
+,{"stream_name":"stderr","time":899.857390972,"data":"  File \"/kaggle/src/script.py\", line 413, in main\n"}
+,{"stream_name":"stderr","time":899.857395416,"data":"    val_res = model.val(\n"}
+,{"stream_name":"stderr","time":899.857405728,"data":"        data=str(val_yaml_path),\n"}
+,{"stream_name":"stderr","time":899.857409274,"data":"    ...\u003c6 lines\u003e...\n"}
+,{"stream_name":"stderr","time":899.857412023,"data":"        verbose=True,\n"}
+,{"stream_name":"stderr","time":899.857414742,"data":"    )\n"}
+,{"stream_name":"stderr","time":899.857417536,"data":"  File \"/usr/local/lib/python3.13/dist-packages/ultralytics/engine/model.py\", line 642, in val\n"}
+,{"stream_name":"stderr","time":899.857420595,"data":"    validator(model=self.model)\n"}
+,{"stream_name":"stderr","time":899.857423784,"data":"    ~~~~~~~~~^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":899.857426552,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n"}
+,{"stream_name":"stderr","time":899.857429431,"data":"    return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":899.857432265,"data":"  File \"/usr/local/lib/python3.13/dist-packages/ultralytics/engine/validator.py\", line 223, in __call__\n"}
+,{"stream_name":"stderr","time":899.857444629,"data":"    self.data = check_det_dataset(self.args.data, split=self.args.split)\n"}
+,{"stream_name":"stderr","time":899.857447158,"data":"                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":899.857449371,"data":"  File \"/usr/local/lib/python3.13/dist-packages/ultralytics/data/utils.py\", line 737, in check_det_dataset\n"}
+,{"stream_name":"stderr","time":899.857451797,"data":"    raise SyntaxError(\n"}
+,{"stream_name":"stderr","time":899.857453912,"data":"        emojis(f\"{dataset} '{k}:' key missing ❌.\\n'train' and 'val' are required in all data YAMLs.\")\n"}
+,{"stream_name":"stderr","time":899.857457007,"data":"    )\n"}
+,{"stream_name":"stderr","time":899.857459169,"data":"SyntaxError: /kaggle/working/val_official.yaml 'train:' key missing ❌.\n"}
+,{"stream_name":"stderr","time":899.857461442,"data":"'train' and 'val' are required in all data YAMLs.\n"}
+,{"stream_name":"stderr","time":905.47369137,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":905.473716441,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":905.760705435,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":905.760739668,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":906.552268325,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":907.653798789,"data":"[NbConvertApp] Writing 384192 bytes to __results__.html\n"}
+]

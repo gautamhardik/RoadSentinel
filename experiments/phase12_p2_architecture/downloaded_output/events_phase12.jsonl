@@ -1,0 +1,18 @@
+{"event": "epoch_end", "epoch": 1, "lr": 0.0003332923076923077, "mem_allocated_gb": 5.1, "mem_reserved_gb": 5.56, "elapsed_hours": 1.4058524121840794, "timestamp": 1792023613.5238082}
+{"event": "epoch_end", "epoch": 1, "lr": 0.0003332923076923077, "mem_allocated_gb": 5.08, "mem_reserved_gb": 5.59, "elapsed_hours": 1.4058526632520887, "timestamp": 1792023613.5247145}
+{"event": "epoch_end", "epoch": 2, "lr": 0.0006501266564102564, "mem_allocated_gb": 5.1, "mem_reserved_gb": 6.16, "elapsed_hours": 2.101611951523357, "timestamp": 1792026118.2581792}
+{"event": "epoch_end", "epoch": 2, "lr": 0.0006501266564102564, "mem_allocated_gb": 5.28, "mem_reserved_gb": 6.19, "elapsed_hours": 2.101612262196011, "timestamp": 1792026118.2592754}
+{"event": "epoch_end", "epoch": 3, "lr": 0.0009504610051282053, "mem_allocated_gb": 5.28, "mem_reserved_gb": 6.19, "elapsed_hours": 2.7752163519461948, "timestamp": 1792028543.2339537}
+{"event": "epoch_end", "epoch": 3, "lr": 0.0009504610051282053, "mem_allocated_gb": 5.19, "mem_reserved_gb": 6.16, "elapsed_hours": 2.775216358701388, "timestamp": 1792028543.2340026}
+{"event": "backbone_unfreeze", "epoch": 4, "unfrozen_tensors": 150, "timestamp": 1792028608.0690646}
+{"event": "backbone_unfreeze", "epoch": 4, "unfrozen_tensors": 150, "timestamp": 1792028608.0694466}
+{"event": "epoch_end", "epoch": 4, "lr": 0.0009257500000000001, "mem_allocated_gb": 7.8, "mem_reserved_gb": 8.64, "elapsed_hours": 3.606269683043162, "timestamp": 1792031535.026048}
+{"event": "epoch_end", "epoch": 4, "lr": 0.0009257500000000001, "mem_allocated_gb": 7.79, "mem_reserved_gb": 8.1, "elapsed_hours": 3.6062857737143834, "timestamp": 1792031535.0838695}
+{"event": "epoch_end", "epoch": 4, "lr": 0.0009257500000000001, "mem_allocated_gb": 7.8, "mem_reserved_gb": 8.64, "elapsed_hours": 4.452378236717648, "timestamp": 1792034581.0167441}
+{"event": "epoch_end", "epoch": 4, "lr": 0.0009257500000000001, "mem_allocated_gb": 7.79, "mem_reserved_gb": 8.45, "elapsed_hours": 4.452398495939043, "timestamp": 1792034581.0896857}
+{"event": "epoch_end", "epoch": 5, "lr": 0.000901, "mem_allocated_gb": 7.82, "mem_reserved_gb": 8.64, "elapsed_hours": 5.298546660807397, "timestamp": 1792037627.223079}
+{"event": "epoch_end", "epoch": 5, "lr": 0.000901, "mem_allocated_gb": 7.84, "mem_reserved_gb": 8.68, "elapsed_hours": 5.298565310703384, "timestamp": 1792037627.2902548}
+{"event": "epoch_end", "epoch": 5, "lr": 0.000901, "mem_allocated_gb": 7.82, "mem_reserved_gb": 8.64, "elapsed_hours": 6.146363476978408, "timestamp": 1792040679.363636}
+{"event": "epoch_end", "epoch": 5, "lr": 0.000901, "mem_allocated_gb": 7.89, "mem_reserved_gb": 8.85, "elapsed_hours": 6.146383721960915, "timestamp": 1792040679.4364781}
+{"event": "epoch_end", "epoch": 6, "lr": 0.00087625, "mem_allocated_gb": 7.86, "mem_reserved_gb": 8.64, "elapsed_hours": 7.000460424356991, "timestamp": 1792043754.1126597}
+{"event": "epoch_end", "epoch": 6, "lr": 0.00087625, "mem_allocated_gb": 8.04, "mem_reserved_gb": 8.85, "elapsed_hours": 7.000481645597352, "timestamp": 1792043754.189007}

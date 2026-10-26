@@ -1,0 +1,10 @@
+{"t": 1791668012.0697546, "phase": "A", "event": "train_start", "start_epoch": 0, "epochs": 2, "ema_updates": 0, "optimizer_state_tensors": 0, "world_size": 2, "batch_per_gpu": 16}
+{"t": 1791668012.0764594, "phase": "A", "event": "epoch_start", "epoch": 1}
+{"t": 1791668245.5808704, "phase": "A", "event": "train_end", "epoch": 1, "lr_first": 0.0, "lr_last": 0.009975429975429976, "lr_expected_first": 0.0, "mem_alloc_gb": 9.12}
+{"t": 1791668303.2454712, "phase": "A", "event": "fit_end", "epoch": 1, "fitness": 0.1335, "metrics": {"metrics/precision(B)": 0.49999, "metrics/recall(B)": 0.29421, "metrics/mAP50(B)": 0.27118, "metrics/mAP50-95(B)": 0.1335, "val/box_loss": 1.67962, "val/cls_loss": 1.38719, "val/dfl_loss": 1.11346}}
+{"t": 1791668369.129448, "phase": "A", "event": "fit_end", "epoch": 2, "fitness": 0.1335, "metrics": {"metrics/precision(B)": 0.5068630907406583, "metrics/recall(B)": 0.2860463993835198, "metrics/mAP50(B)": 0.27124525518954645, "metrics/mAP50-95(B)": 0.13337901634683758}}
+{"t": 1791668412.4018748, "phase": "B", "event": "train_start", "start_epoch": 1, "epochs": 2, "ema_updates": 198, "optimizer_state_tensors": 330, "world_size": 2, "batch_per_gpu": 16}
+{"t": 1791668412.4030168, "phase": "B", "event": "epoch_start", "epoch": 2}
+{"t": 1791668649.7599642, "phase": "B", "event": "train_end", "epoch": 2, "lr_first": 0.00505, "lr_last": 0.00505, "lr_expected_first": 0.00505, "mem_alloc_gb": 9.1}
+{"t": 1791668712.0921354, "phase": "B", "event": "fit_end", "epoch": 2, "fitness": 0.1896, "metrics": {"metrics/precision(B)": 0.62361, "metrics/recall(B)": 0.34382, "metrics/mAP50(B)": 0.36769, "metrics/mAP50-95(B)": 0.1896, "val/box_loss": 1.51265, "val/cls_loss": 1.06398, "val/dfl_loss": 1.06817}}
+{"t": 1791668777.220583, "phase": "B", "event": "fit_end", "epoch": 3, "fitness": 0.1896, "metrics": {"metrics/precision(B)": 0.6215379251395721, "metrics/recall(B)": 0.34577220823007715, "metrics/mAP50(B)": 0.36759520571523285, "metrics/mAP50-95(B)": 0.1896575566429772}}

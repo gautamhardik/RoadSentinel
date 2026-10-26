@@ -1,0 +1,25 @@
+{
+  "evaluator_sha256": "B6C6D7E29DDF3461BDF8ABB95FB6ED92F63B9926499FFC2A271D8DF9222F6088",
+  "ultralytics": "8.4.174",
+  "torch": "2.11.0+cu128",
+  "gpu": "Tesla T4",
+  "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+  "split": "BDD100K val only (test quarantined)",
+  "models": {
+    "base_yolo11s": {
+      "sha256": "A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3",
+      "path": "/kaggle/input/datasets/hardikgautam25/roadsentinel-weights/bdd100k_yolo11s.pt",
+      "seconds": 1339.3
+    },
+    "phase5a_u": {
+      "sha256": "BB1823C6190E28CB56C12B549B0D1233B7DE6CF1B8624B1ED02378B42BB693E5",
+      "path": "/kaggle/input/notebooks/hardikgautam25/roadsentinel-phase-5a-vru-model-training/phase5a_training/yolo11s_vru_finetune/weights/best.pt",
+      "seconds": 1207.2
+    },
+    "phase5a_r": {
+      "sha256": "EDCCA4BF03CEC24A4E9D4EEEA524A63FBFD75E40E37359E106264F12A1B447F0",
+      "path": "/kaggle/input/notebooks/hardikgautam25/roadsentinel-phase-5a-r-vru-weighted/phase5a_r_training/yolo11s_vru_weighted_finetune/weights/best.pt",
+      "seconds": 1200.5
+    }
+  }
+}

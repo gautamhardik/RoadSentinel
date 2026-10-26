@@ -1,0 +1,6 @@
+
+path: C:\Users\hiten\Downloads\cv
+train: scratch/test_pilot_16.txt
+val: scratch/test_pilot_16.txt
+nc: 10
+names: ['person', 'rider', 'car', 'bus', 'truck', 'bike', 'motor', 'traffic light', 'traffic sign', 'train']

@@ -1,0 +1,42 @@
+{
+  "pipeline_1_frozen_raw_tau025": {
+    "tp": 1056,
+    "fp": 319,
+    "fn": 684,
+    "precision": 0.768,
+    "recall": 0.6069,
+    "f1": 0.678,
+    "small_tp": 389,
+    "small_recall": 0.4317
+  },
+  "pipeline_2_raw_tau015": {
+    "tp": 1213,
+    "fp": 772,
+    "fn": 527,
+    "precision": 0.6111,
+    "recall": 0.6971,
+    "f1": 0.6513,
+    "small_tp": 496,
+    "small_recall": 0.5505
+  },
+  "pipeline_3_horizon_slice_wbf": {
+    "tp": 1110,
+    "fp": 366,
+    "fn": 630,
+    "precision": 0.752,
+    "recall": 0.6379,
+    "f1": 0.6903,
+    "small_tp": 437,
+    "small_recall": 0.485
+  },
+  "pipeline_4_active_foveation_baseline": {
+    "tp": 1144,
+    "fp": 396,
+    "fn": 596,
+    "precision": 0.7429,
+    "recall": 0.6575,
+    "f1": 0.6976,
+    "small_tp": 468,
+    "small_recall": 0.5194
+  }
+}

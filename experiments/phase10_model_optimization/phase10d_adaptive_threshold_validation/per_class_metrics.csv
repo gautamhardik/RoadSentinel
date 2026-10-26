@@ -1,0 +1,61 @@
+cohort,config_id,class_name,tp,fp,fn,precision,recall,f1_score
+pilot,Config_A,person,954,236,574,80.17,62.43,70.1965
+pilot,Config_A,rider,32,16,26,66.67,55.17,60.3773
+pilot,Config_A,car,2297,471,606,82.98,79.13,81.0093
+pilot,Config_A,bus,39,16,26,70.91,60.0,65.0004
+pilot,Config_A,truck,90,38,43,70.31,67.67,68.9647
+pilot,Config_A,bike,67,29,55,69.79,54.92,61.4685
+pilot,Config_A,motor,10,8,22,55.56,31.25,40.0012
+pilot,Config_A,traffic light,701,244,279,74.18,71.53,72.8309
+pilot,Config_A,traffic sign,784,306,286,71.93,73.27,72.5938
+pilot,Config_A,train,0,0,1,0.0,0.0,0.0
+pilot,Config_B,person,1032,356,496,74.35,67.54,70.7816
+pilot,Config_B,rider,32,18,26,64.0,55.17,59.2579
+pilot,Config_B,car,2297,471,606,82.98,79.13,81.0093
+pilot,Config_B,bus,39,16,26,70.91,60.0,65.0004
+pilot,Config_B,truck,90,38,43,70.31,67.67,68.9647
+pilot,Config_B,bike,74,45,48,62.18,60.66,61.4106
+pilot,Config_B,motor,11,9,21,55.0,34.38,42.3115
+pilot,Config_B,traffic light,701,244,279,74.18,71.53,72.8309
+pilot,Config_B,traffic sign,784,306,286,71.93,73.27,72.5938
+pilot,Config_B,train,0,0,1,0.0,0.0,0.0
+generalization_300,Config_A,person,204,46,113,81.6,64.35,71.9556
+generalization_300,Config_A,rider,9,4,8,69.23,52.94,59.999
+generalization_300,Config_A,car,2384,537,662,81.62,78.27,79.9099
+generalization_300,Config_A,bus,31,11,27,73.81,53.45,62.0013
+generalization_300,Config_A,truck,99,40,48,71.22,67.35,69.231
+generalization_300,Config_A,bike,6,5,14,54.55,30.0,38.7108
+generalization_300,Config_A,motor,8,0,5,100.0,61.54,76.1917
+generalization_300,Config_A,traffic light,543,183,222,74.79,70.98,72.8352
+generalization_300,Config_A,traffic sign,731,263,301,73.54,70.83,72.1596
+generalization_300,Config_A,train,0,0,1,0.0,0.0,0.0
+generalization_300,Config_B,person,216,69,101,75.79,68.14,71.7617
+generalization_300,Config_B,rider,9,6,8,60.0,52.94,56.2493
+generalization_300,Config_B,car,2384,537,662,81.62,78.27,79.9099
+generalization_300,Config_B,bus,31,11,27,73.81,53.45,62.0013
+generalization_300,Config_B,truck,99,40,48,71.22,67.35,69.231
+generalization_300,Config_B,bike,7,9,13,43.75,35.0,38.8889
+generalization_300,Config_B,motor,8,0,5,100.0,61.54,76.1917
+generalization_300,Config_B,traffic light,543,183,222,74.79,70.98,72.8352
+generalization_300,Config_B,traffic sign,731,263,301,73.54,70.83,72.1596
+generalization_300,Config_B,train,0,0,1,0.0,0.0,0.0
+validation_1000,Config_A,person,836,251,456,76.91,64.71,70.2845
+validation_1000,Config_A,rider,30,16,36,65.22,45.45,53.5692
+validation_1000,Config_A,car,7782,1622,2055,82.75,79.11,80.8891
+validation_1000,Config_A,bus,104,47,60,68.87,63.41,66.0273
+validation_1000,Config_A,truck,275,134,184,67.24,59.91,63.3637
+validation_1000,Config_A,bike,50,22,43,69.44,53.76,60.6022
+validation_1000,Config_A,motor,28,10,16,73.68,63.64,68.293
+validation_1000,Config_A,traffic light,1928,687,815,73.73,70.29,71.9689
+validation_1000,Config_A,traffic sign,2622,967,907,73.06,74.3,73.6748
+validation_1000,Config_A,train,0,0,3,0.0,0.0,0.0
+validation_1000,Config_B,person,886,363,406,70.94,68.58,69.74
+validation_1000,Config_B,rider,30,18,36,62.5,45.45,52.6285
+validation_1000,Config_B,car,7782,1622,2055,82.75,79.11,80.8891
+validation_1000,Config_B,bus,104,47,60,68.87,63.41,66.0273
+validation_1000,Config_B,truck,275,134,184,67.24,59.91,63.3637
+validation_1000,Config_B,bike,53,31,40,63.1,56.99,59.8896
+validation_1000,Config_B,motor,29,10,15,74.36,65.91,69.8805
+validation_1000,Config_B,traffic light,1928,687,815,73.73,70.29,71.9689
+validation_1000,Config_B,traffic sign,2622,967,907,73.06,74.3,73.6748
+validation_1000,Config_B,train,0,0,3,0.0,0.0,0.0

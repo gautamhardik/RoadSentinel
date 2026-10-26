@@ -1,0 +1,1513 @@
+{
+  "cohort_size": 300,
+  "random_seed": "deterministic_stride",
+  "strata_breakdown": {
+    "Stratum 1: Recovered Small VRUs": 60,
+    "Stratum 2: Persistent VRU Misses": 60,
+    "Stratum 3: Rare VRU Objects": 60,
+    "Stratum 4: Crowded / High-Action Scenes": 60,
+    "Stratum 5: Controls & True Negatives": 60
+  },
+  "images": [
+    {
+      "image": "b1ca2e5d-84cf9134.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 18
+    },
+    {
+      "image": "b1d9e136-9ab25cb3.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "b1f4491b-33824f31.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 24
+    },
+    {
+      "image": "b1f62c41-ed0c6521.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 5
+    },
+    {
+      "image": "b284c0e8-85fbc42a.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 24
+    },
+    {
+      "image": "b2daf29d-6198754f.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 39
+    },
+    {
+      "image": "b3159650-0d7fbee8.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 6
+    },
+    {
+      "image": "b321c6b6-ab603d42.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "b35dac08-a80be8c5.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 6
+    },
+    {
+      "image": "b37b9cf2-9d52b009.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 19
+    },
+    {
+      "image": "b3b44b49-7336e3ee.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 11
+    },
+    {
+      "image": "b3e32b36-0ca66c00.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 12
+    },
+    {
+      "image": "b4065fc4-ede06556.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 36
+    },
+    {
+      "image": "b43bcc83-c97d569e.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 14
+    },
+    {
+      "image": "b44a71bf-712b4538.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 16
+    },
+    {
+      "image": "b44b6eff-dda9780d.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 23
+    },
+    {
+      "image": "b4542860-0b880bb4.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 25
+    },
+    {
+      "image": "b4aabd48-89db54e4.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 33
+    },
+    {
+      "image": "b4c86653-3594c3a4.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 17
+    },
+    {
+      "image": "b4ef573f-199846ab.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "b59413ff-9094612f.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 15
+    },
+    {
+      "image": "b5a09604-69dd5d9f.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 32
+    },
+    {
+      "image": "b5b17442-ad1dc2ea.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 15
+    },
+    {
+      "image": "b5ed8eaa-3fb2802d.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "b60db8b3-7cb88369.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 4
+    },
+    {
+      "image": "b620fed9-6d88be73.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 13
+    },
+    {
+      "image": "b643ed1d-e4a05157.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 19
+    },
+    {
+      "image": "b6f4b139-d7311df5.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 16
+    },
+    {
+      "image": "b775af1c-b71a7f85.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 8
+    },
+    {
+      "image": "b77df2a1-b2c5d1bb.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 10
+    },
+    {
+      "image": "b78cb53c-65159143.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 17
+    },
+    {
+      "image": "b7e1237b-f08b7c08.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 27
+    },
+    {
+      "image": "b817df43-48a371e7.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 17
+    },
+    {
+      "image": "b832508c-8f2be0ee.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 25
+    },
+    {
+      "image": "b87ca2c5-c3c18e68.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 11
+    },
+    {
+      "image": "b8b06f77-5b618032.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 18
+    },
+    {
+      "image": "b8c1f257-22c2b2cc.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 6
+    },
+    {
+      "image": "b9df54a4-8203d67b.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 17
+    },
+    {
+      "image": "ba5c759c-623fcd9d.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 10
+    },
+    {
+      "image": "ba65c274-e0f6a546.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 25
+    },
+    {
+      "image": "bab90acb-5e9f3a31.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 35
+    },
+    {
+      "image": "baeb920c-a950cb02.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 10
+    },
+    {
+      "image": "baef72b1-809d1abe.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 21
+    },
+    {
+      "image": "bb087b1c-6c9e904f.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 27
+    },
+    {
+      "image": "bb2c5719-38a69465.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 11
+    },
+    {
+      "image": "bb46f3cd-b72d2152.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 7
+    },
+    {
+      "image": "bb97c366-2adf3cdc.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 21
+    },
+    {
+      "image": "bbc0f7ea-77bee0c4.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 4
+    },
+    {
+      "image": "bbc755d2-e35a6b06.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 29
+    },
+    {
+      "image": "bc24e2f5-286f9781.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 7
+    },
+    {
+      "image": "bcea7303-e7f7d067.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 16
+    },
+    {
+      "image": "bdf33dc4-ae128055.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 30
+    },
+    {
+      "image": "bdfc6bf1-523e96ae.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 33
+    },
+    {
+      "image": "be177534-4a736a9b.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 10
+    },
+    {
+      "image": "be1a0aee-7127f0d8.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 9
+    },
+    {
+      "image": "be26ac57-35dabb9c.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 32
+    },
+    {
+      "image": "be37b92a-4873e7e0.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "be56ab92-96e20e29.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 14
+    },
+    {
+      "image": "be7783b0-b44ff154.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 8
+    },
+    {
+      "image": "be97ef40-3cdcb388.jpg",
+      "stratum": "Stratum 1: Recovered Small VRUs",
+      "gt_vru_count": 7
+    },
+    {
+      "image": "b1cd1e94-549d0bfe.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b20ff95c-b9444127.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 6
+    },
+    {
+      "image": "b27127df-eac9b95e.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "b2e54795-601d2d78.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "b3853f81-272f6c37.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 7
+    },
+    {
+      "image": "b3e08585-3f5e6565.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "b44ee0ec-a0786e4c.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 5
+    },
+    {
+      "image": "b4aabd48-38c15aba.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 7
+    },
+    {
+      "image": "b5042634-edf42094.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 5
+    },
+    {
+      "image": "b555790d-cfb88988.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "b5b17442-48053f00.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 8
+    },
+    {
+      "image": "b61aec41-121a3d3a.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b69b7d13-a9c704af.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "b6ffe7bd-7c91eac9.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 4
+    },
+    {
+      "image": "b7480124-540c4b41.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "b7a8e795-ff80fddf.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 4
+    },
+    {
+      "image": "b7fcda2b-2e4d36ef.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 5
+    },
+    {
+      "image": "b873b095-4530040c.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 6
+    },
+    {
+      "image": "b8f2d63d-6aac4195.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b94cd5b4-26c295e5.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b9d34460-2c3b1ab3.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "ba3dc656-c88512cc.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 4
+    },
+    {
+      "image": "bab48a4e-43fa0dfe.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "bb1b7e42-67806924.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "bb99a578-c060f56f.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "bbebc8cb-5ff7981f.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 4
+    },
+    {
+      "image": "bc5fadac-790bcdec.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "bcaf73c1-e0c7165a.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "bd14a97d-cb209ed9.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "bd8aa347-4a6405a9.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "bdda4e2e-6d2bc480.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 22
+    },
+    {
+      "image": "be49ccee-b084e427.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "bec7b5c0-f928ccf5.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 5
+    },
+    {
+      "image": "bf35cb3d-af58fa54.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "bf9e3b67-7c3ff8f9.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "c0082590-683d229f.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c06aa107-6d6d0938.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 6
+    },
+    {
+      "image": "c0bbcd5e-f57df892.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c126dfe1-4bdd6502.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c18c0928-a28a4f94.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "c1e404d7-4a3eedc5.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 4
+    },
+    {
+      "image": "c24838fd-064f7c3f.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "c2e294a9-07a2a060.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 6
+    },
+    {
+      "image": "c328b7ab-8bb33358.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c3884826-d8789adb.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c3f50821-ff9823a2.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c482a775-8e9c09c8.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "c4eb5462-c917fefd.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "c56915dc-1eb8abe1.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "c5b7b466-4adbd41c.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "c60d6c5c-689d8921.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "c6716c49-04844b01.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 10
+    },
+    {
+      "image": "c6dca574-6e641016.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 4
+    },
+    {
+      "image": "c74a122c-24c19251.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c7c2a783-d98d5909.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "c83c10de-85eef163.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 5
+    },
+    {
+      "image": "c8bd76fd-04a1c915.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 9
+    },
+    {
+      "image": "c926408d-8de795c6.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "c977423c-43dddd3b.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "c9df836e-5955e515.jpg",
+      "stratum": "Stratum 2: Persistent VRU Misses",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b1c66a42-6f7d68ca.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "b24071b8-b3ee1196.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 17
+    },
+    {
+      "image": "b294386c-24ddd0c3.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 7
+    },
+    {
+      "image": "b2e54795-db1f3bad.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 9
+    },
+    {
+      "image": "b3432539-8f9fc466.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b39ffdda-b9a4ad33.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "b41d35f8-6cf85033.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 32
+    },
+    {
+      "image": "b4536117-bc85ba28.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b487a2fa-53094db8.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 17
+    },
+    {
+      "image": "b4eb79bd-288f1507.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b555790d-d715196b.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 5
+    },
+    {
+      "image": "b5cb11ce-46ac0ae7.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 8
+    },
+    {
+      "image": "b6241b17-b82f1b25.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "b68e35b5-865cf5ee.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "b6d855a5-c1d5a996.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 12
+    },
+    {
+      "image": "b740e2ac-c01ee78f.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 6
+    },
+    {
+      "image": "b769f2fa-026548da.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 6
+    },
+    {
+      "image": "b7abfbea-3067ba7b.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 6
+    },
+    {
+      "image": "b842dbf5-4b5b09b7.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "b8f0315c-0fb7602c.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "b9586e5c-33b83562.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "ba2610cc-76fb5c2d.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "ba85dccd-ad3b457d.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "baf567e1-5ffa6b77.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "bb71ba86-3204e97e.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 7
+    },
+    {
+      "image": "bbebc8cb-c0c59383.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "bc3edef9-98053500.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 16
+    },
+    {
+      "image": "bcae6e67-059fedea.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 27
+    },
+    {
+      "image": "bd1d310c-f5fb429f.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "bda1cdfa-5da26736.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 5
+    },
+    {
+      "image": "be2d3f1c-2644c9e3.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 7
+    },
+    {
+      "image": "bea02fed-e64fced9.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 4
+    },
+    {
+      "image": "bf0b285b-afa81125.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "bf8220b9-086e9e29.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 8
+    },
+    {
+      "image": "bffe8c14-48544350.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 23
+    },
+    {
+      "image": "c0677163-613b4f10.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "c0c8efe2-cb74e696.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 5
+    },
+    {
+      "image": "c1025fcf-69509758.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 15
+    },
+    {
+      "image": "c155d65b-ae8038a6.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "c1ba5ee6-d5c419d3.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 4
+    },
+    {
+      "image": "c1f8d9b3-343f4798.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c27e2a5d-93699ec3.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 25
+    },
+    {
+      "image": "c2d33423-8f1d3d05.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 8
+    },
+    {
+      "image": "c33251a6-fa2a8810.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "c39dc2ff-4399acc0.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 5
+    },
+    {
+      "image": "c417a291-7ea03054.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c45d3e0a-b26d5167.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 7
+    },
+    {
+      "image": "c4a19ba6-872ab53e.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 19
+    },
+    {
+      "image": "c546c109-92e1a97e.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "c59500f0-d3272eb4.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 23
+    },
+    {
+      "image": "c5f8a1ae-0d55fc7a.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "c6716c49-d48c3543.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 8
+    },
+    {
+      "image": "c69e5864-1e46bd03.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 4
+    },
+    {
+      "image": "c71fcdc8-62a7fa51.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 19
+    },
+    {
+      "image": "c7955e20-b48c7a6a.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "c8111dda-1a7dded7.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c89ee093-65ac0019.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "c8f90ec2-8b0d49de.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 5
+    },
+    {
+      "image": "c96e0b6a-0acdb8b5.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 7
+    },
+    {
+      "image": "c9aa50be-9e8cd399.jpg",
+      "stratum": "Stratum 3: Rare VRU Objects",
+      "gt_vru_count": 7
+    },
+    {
+      "image": "b1d7b3ac-995f9d8a.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b1f20aa0-50213047.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b216243d-ad4306b9.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "b266429a-ac0c4ed3.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "b27d5dcb-5bdec286.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b36a5c73-64eacfbf.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b396946b-d29f75f9.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b3c0357a-10fef986.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 4
+    },
+    {
+      "image": "b4301c7b-735da0d0.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 8
+    },
+    {
+      "image": "b4a9b6ca-b621ed11.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b4ef573f-5122732a.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b563b270-0fe8e937.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b581255d-1c6658b4.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b5a50c2d-a18ba669.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b5ecfd7e-fcdaceb0.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 4
+    },
+    {
+      "image": "b6df605f-51c158b8.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "b77f3729-fcbf9b93.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b7831880-0327e785.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b7f136f3-1a77da25.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 7
+    },
+    {
+      "image": "b825dfb7-442f3c75.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "b8cca913-a59e1a1b.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "b8f65e48-10600b5e.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b967b2a7-2003bfd2.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b97b9ee8-612c36ef.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b9cabddd-e49dded9.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "b9df54a4-66f58812.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 4
+    },
+    {
+      "image": "b9fc97df-397f8a5d.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "ba4bcdc5-31c36605.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "bac25f5a-af4fd9fd.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "bae552dc-36e0fe4e.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "bb2c3ff8-a1444b2b.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "bb541ef2-1c0906c0.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "bb9071ac-6b111ce9.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "bc5bcfab-a639a82e.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 5
+    },
+    {
+      "image": "bc7cbf85-85f4301c.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "bce15cb0-2d6aec27.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "bd5fe5fb-dfcd1cd2.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 5
+    },
+    {
+      "image": "bd989210-c3df0371.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "be042f25-579f9c94.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 7
+    },
+    {
+      "image": "be5c5aae-d31145ff.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "be6fd6ac-a0cc8633.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "be85292c-a3fbba40.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "bf5b7ee3-18a07bcb.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "bfa5fc6e-d9573dba.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 4
+    },
+    {
+      "image": "bfb9cf70-29fd574e.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "bfd64d5f-172c9bb5.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c007dc97-377cfd8a.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c08d18c6-6d211ae8.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c119a2ea-f59c8486.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c146d100-cb76d05b.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "c21ef8aa-cabc5b7a.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "c2775fbb-7b8764dc.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c2a0e52f-013aa867.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c2bd70f5-009e856e.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "c35e0eea-7596f0bd.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c3b940ca-5e220748.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "c41c4557-f9e2022e.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 3
+    },
+    {
+      "image": "c44e7068-5dafd017.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "c48f5464-ebc458bf.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 2
+    },
+    {
+      "image": "c55b474f-f39c51a8.jpg",
+      "stratum": "Stratum 4: Crowded / High-Action Scenes",
+      "gt_vru_count": 1
+    },
+    {
+      "image": "b1c81faa-3df17267.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b23d2079-0c019d8e.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b2860d72-0b43e851.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b3060c96-d2391b61.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b37c5be2-b9164b91.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b3e0345b-ae566cbd.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b4654b11-c935938c.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b4ca8154-fd2ddd24.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b53a1501-f21dfab8.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b58aff80-bea21173.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b5fc0f1e-882a7cce.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b67206f2-c8c9f269.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b6d9b0ba-a0a7525e.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b74bedfc-6187ffd8.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b7bb0d6e-1922b34d.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b83a044e-9b529b91.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b8ab4367-297944fb.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b92a7fe6-714c37c2.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "b99c5931-834bb88c.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "ba1612fa-c9ac53d1.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "baa50786-856eefa3.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "bb198c24-1f5691ed.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "bb8dba97-c7ec77a3.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "bbe88e6d-c0e7b375.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "bc5bcfab-23b275db.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "bcafa205-40fde1da.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "bd338426-4b27de63.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "bd8e0b69-64d450fe.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "bde7a73a-ee84f1a1.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "be52b29f-3c297726.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "beb2d175-69dae2f2.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "bf0038bc-5512f257.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "bf76fa8e-889c317d.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "bfe98b68-b1125889.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c0625a26-cefa81e9.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c0bbcd5e-e207560d.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c121b93f-93807706.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c174b1bd-e90c56a2.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c1b93aa0-3f3c05a3.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c2074a7c-7905ced0.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c2853fd5-304c554e.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c3061560-cb940839.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c37382d8-010bbe82.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c3c28990-04db5664.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c43daa45-612283ce.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c49c8353-f56b7e30.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c5121aec-f19f3e8d.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c569c251-16b6f263.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c5b80ec1-bb9fd172.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c6265010-8caa470f.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c682e776-d20a6f25.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c6dfbd67-2c7061bf.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c74a122c-e7005b78.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c79e3f00-5879235c.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c811793c-7a592fd4.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c877c1e3-b9b26376.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c8d7cfb3-cd9f103f.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c933ade8-f63b2db4.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "c993615f-ae30e2cb.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    },
+    {
+      "image": "ca049e30-cb9982a6.jpg",
+      "stratum": "Stratum 5: Controls & True Negatives",
+      "gt_vru_count": 0
+    }
+  ]
+}

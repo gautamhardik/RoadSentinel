@@ -1,0 +1,18 @@
+{
+  "id": "hardikgautam24119014/roadsentinel-phase-14-precision-lock",
+  "title": "RoadSentinel Phase 14 Precision Lock",
+  "code_file": "train_phase14_precision_lock.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "dataset_sources": [
+    "a7madmostafa/bdd100k-yolo",
+    "hardikgautam24119014/roadsentinel-phase14-inputs"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

@@ -1,0 +1,25 @@
+Operation,Threads,Mean Latency (ms),P50 (ms),P95 (ms),P99 (ms),Throughput (FPS)
+Op1_Letterbox_960_Resize,1,33.63,33.002,39.698,54.128,29.7
+Op2_ROI_LAB_Hist_Laplacian,1,15.022,14.704,18.573,19.529,66.6
+Op3_Night_CLAHE_Gamma_LUT,1,20.754,20.377,24.057,25.922,48.2
+Op4_Rain_Bilateral_Unsharp,1,22.51,22.454,25.878,26.399,44.4
+Op5_Dense_Optical_Flow_Farneback,1,38.872,37.941,53.777,57.884,25.7
+Op6_Full_Agentic_OpenCV_Pipeline,1,112.77,115.536,148.345,166.99,8.9
+Op1_Letterbox_960_Resize,2,22.819,22.657,26.796,28.059,43.8
+Op2_ROI_LAB_Hist_Laplacian,2,13.757,13.417,18.403,21.977,72.7
+Op3_Night_CLAHE_Gamma_LUT,2,13.917,13.746,16.737,18.389,71.9
+Op4_Rain_Bilateral_Unsharp,2,23.02,22.21,28.486,31.538,43.4
+Op5_Dense_Optical_Flow_Farneback,2,49.989,50.101,64.523,72.562,20.0
+Op6_Full_Agentic_OpenCV_Pipeline,2,101.741,100.843,116.815,122.884,9.8
+Op1_Letterbox_960_Resize,4,13.777,13.522,15.87,17.465,72.6
+Op2_ROI_LAB_Hist_Laplacian,4,12.176,12.148,14.579,15.669,82.1
+Op3_Night_CLAHE_Gamma_LUT,4,10.31,9.384,16.079,23.905,97.0
+Op4_Rain_Bilateral_Unsharp,4,18.676,18.348,23.037,27.016,53.5
+Op5_Dense_Optical_Flow_Farneback,4,50.91,50.761,57.506,60.787,19.6
+Op6_Full_Agentic_OpenCV_Pipeline,4,85.372,85.131,93.521,104.566,11.7
+Op1_Letterbox_960_Resize,8,9.935,9.977,11.25,12.102,100.7
+Op2_ROI_LAB_Hist_Laplacian,8,11.632,11.289,14.881,17.723,86.0
+Op3_Night_CLAHE_Gamma_LUT,8,8.414,8.344,11.973,12.564,118.8
+Op4_Rain_Bilateral_Unsharp,8,18.108,18.09,21.972,24.759,55.2
+Op5_Dense_Optical_Flow_Farneback,8,50.785,49.996,58.386,65.88,19.7
+Op6_Full_Agentic_OpenCV_Pipeline,8,79.461,79.185,102.088,112.319,12.6

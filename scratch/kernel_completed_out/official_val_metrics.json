@@ -1,0 +1,418 @@
+{
+  "milestone": "Milestone 1 \u2014 Official Validation Baseline",
+  "benchmark_metadata": {
+    "checkpoint_path": "/kaggle/input/datasets/hardikgautam24119014/roadsentinel-phase6-weights/yolo11m_phase6_epoch26.pt",
+    "checkpoint_sha256": "42d4b385ec69d01209e76dcf85f0fb4ffb33857d85f4daa02a4271d20f76541e",
+    "architecture": "YOLO11m",
+    "epoch": 26,
+    "imgsz": 960,
+    "batch_size": 16,
+    "operational_conf_threshold": 0.25,
+    "nms_iou_threshold": 0.65,
+    "device": "Tesla T4",
+    "ultralytics_version": "8.4.174",
+    "torch_version": "2.11.0+cu128",
+    "total_runtime_seconds": 1120.4,
+    "prediction_throughput_fps": 20.47
+  },
+  "ultralytics_official_map": {
+    "all_class_mAP50": 61.66,
+    "all_class_mAP50_95": 35.88,
+    "all_class_precision": 76.43,
+    "all_class_recall": 55.45,
+    "vru_macro_mAP50": 59.83,
+    "vru_macro_mAP50_95": 31.56,
+    "per_class_ap": {
+      "person": {
+        "AP50": 72.58,
+        "AP50-95": 38.73
+      },
+      "rider": {
+        "AP50": 54.83,
+        "AP50-95": 29.03
+      },
+      "car": {
+        "AP50": 84.02,
+        "AP50-95": 52.74
+      },
+      "bus": {
+        "AP50": 68.54,
+        "AP50-95": 53.58
+      },
+      "truck": {
+        "AP50": 69.84,
+        "AP50-95": 51.74
+      },
+      "bike": {
+        "AP50": 57.35,
+        "AP50-95": 30.58
+      },
+      "motor": {
+        "AP50": 54.54,
+        "AP50-95": 27.9
+      },
+      "traffic light": {
+        "AP50": 71.78,
+        "AP50-95": 28.99
+      },
+      "traffic sign": {
+        "AP50": 76.4,
+        "AP50-95": 41.99
+      },
+      "train": {
+        "AP50": 6.73,
+        "AP50-95": 3.51
+      }
+    }
+  },
+  "partitions": {
+    "pilot_300_development_cohort": {
+      "image_count": 300,
+      "total_gt_objects": 6892,
+      "total_predictions": 6357,
+      "vru_metrics": {
+        "tp": 1052,
+        "fp": 289,
+        "fn": 688,
+        "precision": 78.45,
+        "recall": 60.46,
+        "f1_score": 0.6829,
+        "small_vru_ground_truth": 901,
+        "small_vru_true_positives": 385,
+        "small_vru_recall": 42.73
+      },
+      "all_class_metrics": {
+        "tp": 4954,
+        "fp": 1403,
+        "fn": 1938,
+        "precision": 77.93,
+        "recall": 71.88,
+        "f1_score": 0.7478
+      },
+      "per_class": {
+        "person": {
+          "tp": 946,
+          "fp": 238,
+          "fn": 582,
+          "precision": 79.9,
+          "recall": 61.91
+        },
+        "rider": {
+          "tp": 32,
+          "fp": 14,
+          "fn": 26,
+          "precision": 69.57,
+          "recall": 55.17
+        },
+        "car": {
+          "tp": 2286,
+          "fp": 496,
+          "fn": 617,
+          "precision": 82.17,
+          "recall": 78.75
+        },
+        "bus": {
+          "tp": 41,
+          "fp": 15,
+          "fn": 24,
+          "precision": 73.21,
+          "recall": 63.08
+        },
+        "truck": {
+          "tp": 88,
+          "fp": 47,
+          "fn": 45,
+          "precision": 65.19,
+          "recall": 66.17
+        },
+        "bike": {
+          "tp": 63,
+          "fp": 30,
+          "fn": 59,
+          "precision": 67.74,
+          "recall": 51.64
+        },
+        "motor": {
+          "tp": 11,
+          "fp": 7,
+          "fn": 21,
+          "precision": 61.11,
+          "recall": 34.38
+        },
+        "traffic light": {
+          "tp": 696,
+          "fp": 241,
+          "fn": 284,
+          "precision": 74.28,
+          "recall": 71.02
+        },
+        "traffic sign": {
+          "tp": 791,
+          "fp": 315,
+          "fn": 279,
+          "precision": 71.52,
+          "recall": 73.93
+        },
+        "train": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "vru_by_size": {
+        "Small (<32\u00b2)": {
+          "tp": 385,
+          "fn": 516,
+          "total": 901,
+          "recall": 42.73
+        },
+        "Medium [32\u00b2-96\u00b2)": {
+          "tp": 583,
+          "fn": 163,
+          "total": 746,
+          "recall": 78.15
+        },
+        "Large (\u226596\u00b2)": {
+          "tp": 84,
+          "fn": 9,
+          "total": 93,
+          "recall": 90.32
+        }
+      }
+    },
+    "expanded_9700_validation_partition": {
+      "image_count": 9700,
+      "total_gt_objects": 178686,
+      "total_predictions": 170560,
+      "vru_metrics": {
+        "tp": 8681,
+        "fp": 2720,
+        "fn": 4952,
+        "precision": 76.14,
+        "recall": 63.68,
+        "f1_score": 0.6935,
+        "small_vru_ground_truth": 6128,
+        "small_vru_true_positives": 2741,
+        "small_vru_recall": 44.73
+      },
+      "all_class_metrics": {
+        "tp": 132928,
+        "fp": 37632,
+        "fn": 45758,
+        "precision": 77.94,
+        "recall": 74.39,
+        "f1_score": 0.7612
+      },
+      "per_class": {
+        "person": {
+          "tp": 7667,
+          "fp": 2242,
+          "fn": 4070,
+          "precision": 77.37,
+          "recall": 65.32
+        },
+        "rider": {
+          "tp": 301,
+          "fp": 135,
+          "fn": 290,
+          "precision": 69.04,
+          "recall": 50.93
+        },
+        "car": {
+          "tp": 77779,
+          "fp": 17305,
+          "fn": 21858,
+          "precision": 81.8,
+          "recall": 78.06
+        },
+        "bus": {
+          "tp": 927,
+          "fp": 348,
+          "fn": 605,
+          "precision": 72.71,
+          "recall": 60.51
+        },
+        "truck": {
+          "tp": 2580,
+          "fp": 1111,
+          "fn": 1534,
+          "precision": 69.9,
+          "recall": 62.71
+        },
+        "bike": {
+          "tp": 493,
+          "fp": 262,
+          "fn": 392,
+          "precision": 65.3,
+          "recall": 55.71
+        },
+        "motor": {
+          "tp": 220,
+          "fp": 81,
+          "fn": 200,
+          "precision": 73.09,
+          "recall": 52.38
+        },
+        "traffic light": {
+          "tp": 18330,
+          "fp": 6901,
+          "fn": 7581,
+          "precision": 72.65,
+          "recall": 70.74
+        },
+        "traffic sign": {
+          "tp": 24631,
+          "fp": 9247,
+          "fn": 9214,
+          "precision": 72.71,
+          "recall": 72.78
+        },
+        "train": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 14,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "vru_by_size": {
+        "Small (<32\u00b2)": {
+          "tp": 2741,
+          "fn": 3387,
+          "total": 6128,
+          "recall": 44.73
+        },
+        "Medium [32\u00b2-96\u00b2)": {
+          "tp": 5062,
+          "fn": 1438,
+          "total": 6500,
+          "recall": 77.88
+        },
+        "Large (\u226596\u00b2)": {
+          "tp": 878,
+          "fn": 127,
+          "total": 1005,
+          "recall": 87.36
+        }
+      }
+    },
+    "aggregate_10000_official_validation": {
+      "image_count": 10000,
+      "total_gt_objects": 185578,
+      "total_predictions": 176917,
+      "vru_metrics": {
+        "tp": 9733,
+        "fp": 3009,
+        "fn": 5640,
+        "precision": 76.39,
+        "recall": 63.31,
+        "f1_score": 0.6924,
+        "small_vru_ground_truth": 7029,
+        "small_vru_true_positives": 3126,
+        "small_vru_recall": 44.47
+      },
+      "all_class_metrics": {
+        "tp": 137882,
+        "fp": 39035,
+        "fn": 47696,
+        "precision": 77.94,
+        "recall": 74.3,
+        "f1_score": 0.7607
+      },
+      "per_class": {
+        "person": {
+          "tp": 8613,
+          "fp": 2480,
+          "fn": 4652,
+          "precision": 77.64,
+          "recall": 64.93
+        },
+        "rider": {
+          "tp": 333,
+          "fp": 149,
+          "fn": 316,
+          "precision": 69.09,
+          "recall": 51.31
+        },
+        "car": {
+          "tp": 80065,
+          "fp": 17801,
+          "fn": 22475,
+          "precision": 81.81,
+          "recall": 78.08
+        },
+        "bus": {
+          "tp": 968,
+          "fp": 363,
+          "fn": 629,
+          "precision": 72.73,
+          "recall": 60.61
+        },
+        "truck": {
+          "tp": 2668,
+          "fp": 1158,
+          "fn": 1579,
+          "precision": 69.73,
+          "recall": 62.82
+        },
+        "bike": {
+          "tp": 556,
+          "fp": 292,
+          "fn": 451,
+          "precision": 65.57,
+          "recall": 55.21
+        },
+        "motor": {
+          "tp": 231,
+          "fp": 88,
+          "fn": 221,
+          "precision": 72.41,
+          "recall": 51.11
+        },
+        "traffic light": {
+          "tp": 19026,
+          "fp": 7142,
+          "fn": 7865,
+          "precision": 72.71,
+          "recall": 70.75
+        },
+        "traffic sign": {
+          "tp": 25422,
+          "fp": 9562,
+          "fn": 9493,
+          "precision": 72.67,
+          "recall": 72.81
+        },
+        "train": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 15,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "vru_by_size": {
+        "Small (<32\u00b2)": {
+          "tp": 3126,
+          "fn": 3903,
+          "total": 7029,
+          "recall": 44.47
+        },
+        "Medium [32\u00b2-96\u00b2)": {
+          "tp": 5645,
+          "fn": 1601,
+          "total": 7246,
+          "recall": 77.91
+        },
+        "Large (\u226596\u00b2)": {
+          "tp": 962,
+          "fn": 136,
+          "total": 1098,
+          "recall": 87.61
+        }
+      }
+    }
+  }
+}

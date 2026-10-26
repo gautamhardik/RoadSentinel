@@ -1,0 +1,56 @@
+{
+  "phase": "5A-R",
+  "status": "AWAITING_TRAINED_CHECKPOINTS",
+  "reconciled_canonical_baseline_9700": {
+    "images_count": 9700,
+    "vru_ground_truth": 13633,
+    "vru_tp": 8522,
+    "vru_fp": 5216,
+    "vru_fn": 5111,
+    "vru_precision": 0.6203,
+    "vru_recall": 0.6251,
+    "small_vru_recall": 0.4625,
+    "small_vru_tp": 2834,
+    "small_vru_gt": 6128,
+    "medium_vru_recall": 0.7438,
+    "large_vru_recall": 0.8488,
+    "vru_micro_f1": 0.6227
+  },
+  "phase_5a_u_unweighted_ablation": {
+    "kernel_id": "hardikgautam25/roadsentinel-phase-5a-vru-model-training",
+    "status": "RUNNING_ON_KAGGLE_GPU",
+    "measured_results": null
+  },
+  "phase_5a_r_class_weighted_candidate": {
+    "kernel_id": "hardikgautam25/roadsentinel-phase-5a-r-vru-weighted",
+    "status": "PREPARED_AWAITING_GPU_WINDOW",
+    "measured_results": null
+  },
+  "acceptance_gates_evaluation": {
+    "cohort": "9,700-image confirmation cohort",
+    "gate_1_precision_gain": {
+      "requirement": "Delta Precision >= +5.0 pp vs baseline (Target >= 67.03%)",
+      "baseline": 0.6203,
+      "candidate_5a_r": null,
+      "verdict": "NOT_EVALUATED"
+    },
+    "gate_2_recall_retention": {
+      "requirement": "Delta Recall >= -2.0 pp vs baseline (Target >= 60.51%)",
+      "baseline": 0.6251,
+      "candidate_5a_r": null,
+      "verdict": "NOT_EVALUATED"
+    },
+    "gate_3_small_vru_recall": {
+      "requirement": "Small-VRU Recall >= 45.00%",
+      "baseline": 0.4625,
+      "candidate_5a_r": null,
+      "verdict": "NOT_EVALUATED"
+    },
+    "gate_4_vru_micro_f1": {
+      "requirement": "Micro F1 >= 0.6500",
+      "baseline": 0.6227,
+      "candidate_5a_r": null,
+      "verdict": "NOT_EVALUATED"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "input_video": "data/demo_videos/raw/night_urban_driving.mp4",
+    "output_video": "artifacts/demo_videos/night_urban_vru.mp4",
+    "total_frames_processed": 100,
+    "baseline_vru_detections": 159,
+    "roadsentinel_vru_detections": 187,
+    "net_recovered_vrus": 28,
+    "relative_recall_gain_pct": 17.61,
+    "mean_latency_ms": 684.87,
+    "amortized_fps": 1.46,
+    "mcp_tools_invoked": {
+      "tool_photometric_recover_night_glare": 47,
+      "tool_acuity_recover_rain_blur": 0,
+      "tool_foveate_supercrop_daylight": 0,
+      "tool_verify_temporal_optical_flow": 0
+    },
+    "description": "Night Urban Glare - Pedestrian Recovery via CLAHE + Gamma"
+  },
+  {
+    "input_video": "data/demo_videos/raw/rain_intersection.mp4",
+    "output_video": "artifacts/demo_videos/rain_intersection.mp4",
+    "total_frames_processed": 100,
+    "baseline_vru_detections": 510,
+    "roadsentinel_vru_detections": 596,
+    "net_recovered_vrus": 86,
+    "relative_recall_gain_pct": 16.86,
+    "mean_latency_ms": 11337.6,
+    "amortized_fps": 0.09,
+    "mcp_tools_invoked": {
+      "tool_photometric_recover_night_glare": 0,
+      "tool_acuity_recover_rain_blur": 370,
+      "tool_foveate_supercrop_daylight": 0,
+      "tool_verify_temporal_optical_flow": 0
+    },
+    "description": "Rain & Blur Intersection - Acuity Sharpening Recovery"
+  },
+  {
+    "input_video": "data/demo_videos/raw/urban_pedestrians.mp4",
+    "output_video": "artifacts/demo_videos/distant_corridor_pedestrian.mp4",
+    "total_frames_processed": 100,
+    "baseline_vru_detections": 1268,
+    "roadsentinel_vru_detections": 1664,
+    "net_recovered_vrus": 396,
+    "relative_recall_gain_pct": 31.23,
+    "mean_latency_ms": 3141.45,
+    "amortized_fps": 0.32,
+    "mcp_tools_invoked": {
+      "tool_photometric_recover_night_glare": 0,
+      "tool_acuity_recover_rain_blur": 0,
+      "tool_foveate_supercrop_daylight": 499,
+      "tool_verify_temporal_optical_flow": 0
+    },
+    "description": "Distant Corridor VRUs - Native High-Res Foveation"
+  },
+  {
+    "input_video": "data/demo_videos/raw/sample_driving_test.mp4",
+    "output_video": "artifacts/demo_videos/heavy_occlusion_escalation.mp4",
+    "total_frames_processed": 38,
+    "baseline_vru_detections": 214,
+    "roadsentinel_vru_detections": 327,
+    "net_recovered_vrus": 113,
+    "relative_recall_gain_pct": 52.8,
+    "mean_latency_ms": 12708.41,
+    "amortized_fps": 0.08,
+    "mcp_tools_invoked": {
+      "tool_photometric_recover_night_glare": 0,
+      "tool_acuity_recover_rain_blur": 0,
+      "tool_foveate_supercrop_daylight": 0,
+      "tool_verify_temporal_optical_flow": 123
+    },
+    "description": "Heavy Traffic & Motion Flow Consistency Tracking"
+  }
+]

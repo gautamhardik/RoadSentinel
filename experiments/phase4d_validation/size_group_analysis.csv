@@ -1,0 +1,16 @@
+Configuration,Partition,ImageCount,SmallVRU_Recall,MedVRU_Recall,LargeVRU_Recall,SmallVRU_TP,MedVRU_TP,LargeVRU_TP
+ActiveFoveation-960,Full_10000_Val,10000,0.4587,0.7448,0.8506,3224,5397,934
+ActiveFoveation-960,Pilot_300_Cohort,300,0.4917,0.7748,0.8710,443,578,81
+ActiveFoveation-960,NonPilot_9700_Confirm,9700,0.4538,0.7414,0.8488,2781,4819,853
+Calibrated-ActiveFoveation-960,Full_10000_Val,10000,0.4385,0.7385,0.8434,3082,5351,926
+Calibrated-ActiveFoveation-960,Pilot_300_Cohort,300,0.4717,0.7668,0.8710,425,572,81
+Calibrated-ActiveFoveation-960,NonPilot_9700_Confirm,9700,0.4336,0.7352,0.8408,2657,4779,845
+Candidate-A-AdaptiveArea,Full_10000_Val,10000,0.4503,0.7383,0.8434,3165,5350,926
+Candidate-A-AdaptiveArea,Pilot_300_Cohort,300,0.4850,0.7668,0.8710,437,572,81
+Candidate-A-AdaptiveArea,NonPilot_9700_Confirm,9700,0.4452,0.7351,0.8408,2728,4778,845
+Candidate-B-AdaptiveArea,Full_10000_Val,10000,0.4483,0.7382,0.8434,3151,5349,926
+Candidate-B-AdaptiveArea,Pilot_300_Cohort,300,0.4817,0.7668,0.8710,434,572,81
+Candidate-B-AdaptiveArea,NonPilot_9700_Confirm,9700,0.4434,0.7349,0.8408,2717,4777,845
+Candidate-C-AdaptiveArea,Full_10000_Val,10000,0.4454,0.7382,0.8434,3131,5349,926
+Candidate-C-AdaptiveArea,Pilot_300_Cohort,300,0.4772,0.7668,0.8710,430,572,81
+Candidate-C-AdaptiveArea,NonPilot_9700_Confirm,9700,0.4408,0.7349,0.8408,2701,4777,845

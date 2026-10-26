@@ -1,0 +1,177 @@
+{
+  "quarantine": "test split never listed, opened or hashed",
+  "splits": {
+    "train": {
+      "images": 70000,
+      "label_files": 70000,
+      "images_without_label": 0,
+      "labels_without_image": 0,
+      "images_with_no_boxes": 0,
+      "image_sizes": {
+        "1280x720": 70000
+      },
+      "files_with_label_problems": 387,
+      "label_problem_examples": {
+        "007aeb45-f9f5ac8c.jpg": [
+          "line32:degenerate"
+        ],
+        "00d15d58-9197cde5.jpg": [
+          "line16:degenerate"
+        ],
+        "01853f47-6975b587.jpg": [
+          "line23:degenerate"
+        ],
+        "024b275b-33674b72.jpg": [
+          "line49:degenerate"
+        ],
+        "025f49ef-0f6366f3.jpg": [
+          "line13:degenerate"
+        ],
+        "029ad1d1-8c9b02b1.jpg": [
+          "line11:degenerate"
+        ],
+        "02e98692-41d62ff5.jpg": [
+          "line5:degenerate"
+        ],
+        "0309d328-edcdbab5.jpg": [
+          "line1:degenerate"
+        ],
+        "03f8899f-569acc1a.jpg": [
+          "line8:degenerate"
+        ],
+        "04095551-efe2622a.jpg": [
+          "line4:degenerate"
+        ]
+      },
+      "class_counts": {
+        "traffic light": 186301,
+        "traffic sign": 239961,
+        "car": 714121,
+        "person": 91435,
+        "bus": 11688,
+        "truck": 30012,
+        "rider": 4522,
+        "bike": 7227,
+        "motor": 3002,
+        "train": 136
+      },
+      "vru_total": 106186,
+      "vru_small_lt_1024px2": 48514,
+      "byte_identical_groups_within_split": 1,
+      "name_range": [
+        "0000f77c-6257be58.jpg",
+        "fe189115-8dabb5b1.jpg"
+      ],
+      "name_first_char": {
+        "0": 6105,
+        "1": 6369,
+        "2": 6417,
+        "3": 6255,
+        "4": 6094,
+        "5": 6501,
+        "6": 6150,
+        "7": 6311,
+        "8": 6284,
+        "9": 6167,
+        "a": 6522,
+        "b": 713,
+        "f": 112
+      }
+    },
+    "val": {
+      "images": 10000,
+      "label_files": 10000,
+      "images_without_label": 0,
+      "labels_without_image": 0,
+      "images_with_no_boxes": 0,
+      "image_sizes": {
+        "1280x720": 10000
+      },
+      "files_with_label_problems": 51,
+      "label_problem_examples": {
+        "b2505382-2905b23c.jpg": [
+          "line10:degenerate"
+        ],
+        "b2715214-13e3dd85.jpg": [
+          "line3:degenerate"
+        ],
+        "b2d9b817-9a617024.jpg": [
+          "line11:degenerate"
+        ],
+        "b30b460d-0e26bd8a.jpg": [
+          "line20:degenerate"
+        ],
+        "b3683422-cce330a8.jpg": [
+          "line3:degenerate"
+        ],
+        "b4a23106-80491109.jpg": [
+          "line5:degenerate"
+        ],
+        "b5115080-37a89b9c.jpg": [
+          "line11:degenerate"
+        ],
+        "b5764fb7-c47fa3ec.jpg": [
+          "line21:degenerate"
+        ],
+        "b5d8894a-d99dbb00.jpg": [
+          "line3:degenerate"
+        ],
+        "b66ecd35-8de7da84.jpg": [
+          "line8:degenerate"
+        ]
+      },
+      "class_counts": {
+        "traffic sign": 34915,
+        "traffic light": 26891,
+        "car": 102540,
+        "rider": 649,
+        "motor": 452,
+        "person": 13265,
+        "bus": 1597,
+        "truck": 4247,
+        "bike": 1007,
+        "train": 15
+      },
+      "vru_total": 15373,
+      "vru_small_lt_1024px2": 7029,
+      "byte_identical_groups_within_split": 2,
+      "name_range": [
+        "b1c66a42-6f7d68ca.jpg",
+        "fe1f55fa-19ba3600.jpg"
+      ],
+      "name_first_char": {
+        "b": 5628,
+        "c": 4355,
+        "f": 17
+      }
+    }
+  },
+  "cross_split": {
+    "filename_overlap_train_val": [],
+    "byte_identical_train_val": [],
+    "distinct_prefixes": {
+      "train": 42167,
+      "val": 5931
+    },
+    "shared_8hex_prefixes_train_val": 1,
+    "val_images_with_prefix_seen_in_train": 5
+  },
+  "near_duplicates": {
+    "method": "dHash64 hamming<=6 then 32x32 thumbnail corr>=0.97",
+    "val_vs_train_pairs": 0,
+    "val_images_affected": 0,
+    "val_vs_train_examples": [],
+    "holdout_vs_trainsplit_pairs": 0,
+    "holdout_images_affected": 0,
+    "holdout_vs_trainsplit_examples": []
+  },
+  "phase6_holdout": {
+    "rule": "8-hex prefix groups, random.Random(42).shuffle, until >= 5000 images",
+    "shared_prefixes_holdout_trainsplit": 0,
+    "holdout_size": 5000,
+    "train_split_size": 65000,
+    "disjoint": true,
+    "union_equals_train": true,
+    "holdout_sha256": "c7047ee0073803431321735c098aad212693daa696153f31f8a26e11ebf7686b"
+  }
+}

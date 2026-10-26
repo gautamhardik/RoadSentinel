@@ -1,0 +1,7 @@
+Configuration,FPS,Amortized_MS,Batch1_InMemory_P50_MS,Batch1_Pipeline_P50_MS,CropsExecuted,FractionCropped,PeakVRAM_MB
+FullFrame-640,22.01,45.44,10.18,28.95,0,0.0,1124.0
+FullFrame-960,39.92,25.05,13.09,19.27,0,0.0,1450.0
+FullFrame-1280,31.5,31.75,19.04,24.64,0,0.0,2180.0
+FixedGrid-960,16.79,59.56,34.3,40.48,20000,1.0,1780.0
+RandomCrop-960,16.93,59.07,35.55,41.73,20000,1.0,1790.0
+ActiveFoveation-960,24.14,41.42,14.35,20.53,9240,0.5412,1780.0

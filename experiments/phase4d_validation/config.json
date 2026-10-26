@@ -1,0 +1,70 @@
+{
+  "phase": "4D",
+  "experiment_name": "RoadSentinel Phase 4D — Pre-Registered Adaptive-Area Calibration Experiment",
+  "checkpoint": {
+    "path": "weights/bdd100k_yolo11s.pt",
+    "sha256": "A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3",
+    "architecture": "YOLO11s",
+    "training_resolution": 960
+  },
+  "dataset": {
+    "name": "BDD100K Detection",
+    "validation_images_total": 10000,
+    "pilot_cohort_images": 300,
+    "non_pilot_confirmation_images": 9700,
+    "test_split_quarantined": true,
+    "test_split_images": 20000,
+    "test_images_accessed": 0
+  },
+  "candidate_grid": {
+    "Candidate-A": {
+      "name": "Candidate-A-AdaptiveArea",
+      "tau_isolated_small": 0.28,
+      "tau_isolated_large": 0.45,
+      "area_threshold_px2": 1024.0
+    },
+    "Candidate-B": {
+      "name": "Candidate-B-AdaptiveArea",
+      "tau_isolated_small": 0.30,
+      "tau_isolated_large": 0.45,
+      "area_threshold_px2": 1024.0
+    },
+    "Candidate-C": {
+      "name": "Candidate-C-AdaptiveArea",
+      "tau_isolated_small": 0.32,
+      "tau_isolated_large": 0.45,
+      "area_threshold_px2": 1024.0
+    }
+  },
+  "frozen_references": [
+    "ActiveFoveation-960",
+    "Calibrated-ActiveFoveation-960"
+  ],
+  "fixed_parameters": {
+    "full_frame_imgsz": 960,
+    "crop_imgsz": 640,
+    "max_crops_per_frame": 2,
+    "tau_full_frame": 0.25,
+    "tau_confirmed_crop": 0.20,
+    "iou_concurrence_threshold": 0.30,
+    "full_frame_coarse_support_floor": 0.10,
+    "wbf_cluster_iou_threshold": 0.50,
+    "wbf_crop_coordinate_weight": 1.20,
+    "wbf_consensus_boost": 0.08,
+    "coordinate_system": "1280x720 native BDD100K",
+    "area_predicted_formula": "max(0, min(1280, x2) - max(0, x1)) * max(0, min(720, y2) - max(0, y1))"
+  },
+  "quality_gates_on_9700_confirmation_subset": {
+    "vru_precision_improvement_pp": 5.0,
+    "vru_recall_max_decline_pp": -2.0,
+    "small_vru_recall_min": 0.4500,
+    "vru_f1_min": 0.6500
+  },
+  "selection_rule": [
+    "1. Exclude every candidate that fails any mandatory quality gate on the 9,700-image partition.",
+    "2. If multiple candidates pass, select the candidate with highest VRU F1.",
+    "3. If F1 is tied to 4 decimal places, prefer higher Small-VRU recall, then higher VRU precision, then lower P95 pipeline latency.",
+    "4. If none passes, report that no candidate qualifies. Do not relax quality gates."
+  ],
+  "methodological_status": "Exploratory evaluation on previously inspected validation data. Not independent statistical confirmation."
+}

@@ -1,0 +1,15 @@
+[{"stream_name":"stdout","time":6.745722125,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":6.745886649,"data":"GPU HARDWARE ACCELERATION AUDIT\n"}
+,{"stream_name":"stdout","time":6.745895224,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":6.745900723,"data":"PyTorch Version: 2.11.0+cpu\n"}
+,{"stream_name":"stdout","time":6.745905532,"data":"CUDA Available:  False\n"}
+,{"stream_name":"stdout","time":6.745910092,"data":"CUDA Device Count: 0\n"}
+,{"stream_name":"stdout","time":6.745914152,"data":"NO CUDA ACCELERATION FOUND!\n"}
+,{"stream_name":"stdout","time":6.745917961,"data":"============================================================\n"}
+,{"stream_name":"stderr","time":9.84033514,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":9.840370542,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":10.209238443,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":10.209270235,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":11.191494342,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":12.497611057,"data":"[NbConvertApp] Writing 276939 bytes to __results__.html\n"}
+]

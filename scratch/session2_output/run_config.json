@@ -1,0 +1,52 @@
+{
+  "MODE": "full",
+  "INIT": "coco",
+  "COCO_WEIGHTS": "yolo11m.pt",
+  "IMGSZ": 960,
+  "EPOCHS": 26,
+  "SESSION_STOP_EPOCH": 13,
+  "CLOSE_MOSAIC": 5,
+  "BATCH": 16,
+  "HOLDOUT_SIZE": 5000,
+  "HOLDOUT_SHA256": "c7047ee0073803431321735c098aad212693daa696153f31f8a26e11ebf7686b",
+  "SMOKE_FRACTION": 0.1,
+  "SMOKE_SEED": 7,
+  "SMOKE_PHASE_TIMEOUT_S": 1800,
+  "PROBE_PHASE_TIMEOUT_S": 2100,
+  "TIME_BUDGET_H": 11.0,
+  "RUN_NAME": "phase6_yolo11m_960_session2",
+  "BASE_SHA256": "a4747292648f37f68ab997bea65a36391c41356f35e309a9f3d2eb1d3ea8d8e3",
+  "T0": 1791724301.373726,
+  "PHASE": "",
+  "IS_MAIN_RANK": true,
+  "split_info": {
+    "train_images": 65000,
+    "holdout_images": 5000,
+    "holdout_sha256": "c7047ee0073803431321735c098aad212693daa696153f31f8a26e11ebf7686b",
+    "train_list_sha256": "1d6d610fa390a33f62ceeea672ca09e8bb4acc6ad52ce73625188f6604f3045f",
+    "holdout_vru_instances": {
+      "person": 6313,
+      "rider": 339,
+      "bike": 498,
+      "motor": 223
+    }
+  },
+  "class_weights": [
+    1.2000000476837158,
+    2.0,
+    1.0,
+    1.0,
+    1.0,
+    1.7999999523162842,
+    2.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "ultralytics": "8.4.174",
+  "torch": "2.11.0+cu128",
+  "gpus": [
+    "Tesla T4",
+    "Tesla T4"
+  ]
+}

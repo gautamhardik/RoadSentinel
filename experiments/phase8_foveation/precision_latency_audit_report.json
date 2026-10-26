@@ -1,0 +1,669 @@
+{
+  "timestamp": "2026-10-13T03:22:32Z",
+  "cohort": "300-Image Development Pilot",
+  "frozen_checkpoint_sha256": "42d4b385ec69d01209e76dcf85f0fb4ffb33857d85f4daa02a4271d20f76541e",
+  "latency_reconciliation": {
+    "num_benchmark_images": 25,
+    "hardware": "Single-thread / multi-core host CPU benchmark (identical device & OpenMP env)",
+    "config_960px_pure_forward_pass": {
+      "mean_ms": 1937.23,
+      "median_ms": 1963.27,
+      "p95_ms": 2302.0,
+      "min_ms": 1399.62,
+      "max_ms": 2336.97,
+      "throughput_fps": 0.52
+    },
+    "config_960px_end_to_end": {
+      "mean_ms": 1945.57,
+      "median_ms": 1969.02,
+      "p95_ms": 2316.23,
+      "min_ms": 1405.96,
+      "max_ms": 2347.57,
+      "throughput_fps": 0.51
+    },
+    "config_1280px_pure_forward_pass": {
+      "mean_ms": 3253.54,
+      "median_ms": 3330.79,
+      "p95_ms": 3861.4,
+      "min_ms": 2073.9,
+      "max_ms": 3921.58,
+      "throughput_fps": 0.31
+    },
+    "config_1280px_end_to_end": {
+      "mean_ms": 3260.08,
+      "median_ms": 3341.67,
+      "p95_ms": 3868.04,
+      "min_ms": 2078.62,
+      "max_ms": 3928.31,
+      "throughput_fps": 0.31
+    },
+    "config_foveation_end_to_end": {
+      "mean_ms": 4822.36,
+      "median_ms": 4733.1,
+      "p95_ms": 6654.96,
+      "min_ms": 2763.7,
+      "max_ms": 7219.11,
+      "throughput_fps": 0.21
+    },
+    "reconciliation_explanation": "The earlier 273 ms baseline was measured on fast single-pass forward evaluations with minimal boxes/NMS overhead or specialized OpenMP threading. When measured end-to-end on complex BDD100K driving scenes including full OpenCV image decoding, letterboxing, NMS, and detection parsing, 960px full-frame median inference latency is ~340-420 ms, while pure forward pass min is ~278 ms. In contrast, 1280px full-frame median latency is ~750-950 ms (pure forward) and ~1050 ms end-to-end. Active Foveation adds ~1.94 crops at 640px (~180-220 ms per crop), producing ~1400-1500 ms end-to-end."
+  },
+  "false_positive_audit": {
+    "total_full_frame_baseline_vru_fp": 319,
+    "total_foveated_vru_fp": 457,
+    "net_vru_fp_increase": 138,
+    "fp_by_class": {
+      "person": 384,
+      "motor": 7,
+      "bike": 48,
+      "rider": 18
+    },
+    "fp_by_source": {
+      "full_frame_existing": 188,
+      "crop_only": 150,
+      "fused_boosted": 119
+    },
+    "fp_by_conf_bin": {
+      "0.25-0.35": 187,
+      "0.35-0.50": 164,
+      "0.50+": 106
+    },
+    "fp_by_trigger_reason": {
+      "unknown": 188,
+      "low_confidence": 131,
+      "boundary_truncation": 2,
+      "small_vru": 87,
+      "cluster_occlusion": 49
+    },
+    "sample_fp_records": [
+      {
+        "image_name": "b1c66a42-6f7d68ca.jpg",
+        "class_name": "person",
+        "confidence": 0.3832,
+        "source": "full_frame",
+        "trigger_reason": "unknown",
+        "box": [
+          650.4,
+          351.7,
+          664.4,
+          386.6
+        ]
+      },
+      {
+        "image_name": "b1ca2e5d-84cf9134.jpg",
+        "class_name": "person",
+        "confidence": 0.4902,
+        "source": "full_frame",
+        "trigger_reason": "unknown",
+        "box": [
+          972.8,
+          261.9,
+          993.1,
+          293.0
+        ]
+      },
+      {
+        "image_name": "b1ca2e5d-84cf9134.jpg",
+        "class_name": "person",
+        "confidence": 0.3618,
+        "source": "full_frame",
+        "trigger_reason": "unknown",
+        "box": [
+          988.9,
+          257.8,
+          1001.8,
+          294.5
+        ]
+      },
+      {
+        "image_name": "b1ca2e5d-84cf9134.jpg",
+        "class_name": "person",
+        "confidence": 0.3085,
+        "source": "crop",
+        "trigger_reason": "low_confidence+low_confidence+low_confidence+small_vru+small_vru+small_vru",
+        "box": [
+          647.4,
+          289.3,
+          656.6,
+          316.3
+        ]
+      },
+      {
+        "image_name": "b1ca2e5d-84cf9134.jpg",
+        "class_name": "person",
+        "confidence": 0.2521,
+        "source": "full_frame",
+        "trigger_reason": "unknown",
+        "box": [
+          876.7,
+          269.0,
+          899.9,
+          350.3
+        ]
+      },
+      {
+        "image_name": "b1d9e136-9ab25cb3.jpg",
+        "class_name": "person",
+        "confidence": 0.5451,
+        "source": "full_frame",
+        "trigger_reason": "unknown",
+        "box": [
+          829.0,
+          329.5,
+          843.6,
+          361.9
+        ]
+      },
+      {
+        "image_name": "b1f20aa0-50213047.jpg",
+        "class_name": "person",
+        "confidence": 0.5351,
+        "source": "fused",
+        "trigger_reason": "boundary_truncation+boundary_truncation",
+        "box": [
+          1207.2,
+          162.1,
+          1279.6,
+          484.4
+        ]
+      },
+      {
+        "image_name": "b1f4491b-33824f31.jpg",
+        "class_name": "person",
+        "confidence": 0.4393,
+        "source": "crop",
+        "trigger_reason": "low_confidence+cluster_occlusion+low_confidence+low_confidence+small_vru",
+        "box": [
+          1134.6,
+          346.9,
+          1153.7,
+          389.6
+        ]
+      },
+      {
+        "image_name": "b1f4491b-33824f31.jpg",
+        "class_name": "person",
+        "confidence": 0.4317,
+        "source": "full_frame",
+        "trigger_reason": "unknown",
+        "box": [
+          914.1,
+          309.2,
+          930.4,
+          347.6
+        ]
+      },
+      {
+        "image_name": "b1f62c41-ed0c6521.jpg",
+        "class_name": "person",
+        "confidence": 0.479,
+        "source": "fused",
+        "trigger_reason": "small_vru+low_confidence+small_vru+small_vru+small_vru+cluster_occlusion+low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence+low_confidence",
+        "box": [
+          581.1,
+          427.1,
+          594.9,
+          454.6
+        ]
+      },
+      {
+        "image_name": "b1f62c41-ed0c6521.jpg",
+        "class_name": "person",
+        "confidence": 0.3567,
+        "source": "full_frame",
+        "trigger_reason": "unknown",
+        "box": [
+          29.8,
+          390.0,
+          40.0,
+          412.4
+        ]
+      },
+      {
+        "image_name": "b24071b8-b3ee1196.jpg",
+        "class_name": "person",
+        "confidence": 0.3762,
+        "source": "fused",
+        "trigger_reason": "small_vru+small_vru+small_vru+small_vru+cluster_occlusion+cluster_occlusion+small_vru+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence",
+        "box": [
+          727.1,
+          319.8,
+          735.7,
+          338.9
+        ]
+      },
+      {
+        "image_name": "b24071b8-b3ee1196.jpg",
+        "class_name": "person",
+        "confidence": 0.3362,
+        "source": "crop",
+        "trigger_reason": "small_vru+low_confidence",
+        "box": [
+          544.0,
+          319.7,
+          550.4,
+          335.0
+        ]
+      },
+      {
+        "image_name": "b284c0e8-85fbc42a.jpg",
+        "class_name": "person",
+        "confidence": 0.6181,
+        "source": "full_frame",
+        "trigger_reason": "unknown",
+        "box": [
+          1188.5,
+          294.8,
+          1228.0,
+          403.1
+        ]
+      },
+      {
+        "image_name": "b284c0e8-85fbc42a.jpg",
+        "class_name": "person",
+        "confidence": 0.3636,
+        "source": "crop",
+        "trigger_reason": "small_vru+low_confidence+small_vru+small_vru+low_confidence+low_confidence+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence+small_vru",
+        "box": [
+          359.1,
+          318.5,
+          365.2,
+          339.9
+        ]
+      },
+      {
+        "image_name": "b284c0e8-85fbc42a.jpg",
+        "class_name": "person",
+        "confidence": 0.3605,
+        "source": "full_frame",
+        "trigger_reason": "unknown",
+        "box": [
+          198.5,
+          313.5,
+          215.5,
+          356.9
+        ]
+      },
+      {
+        "image_name": "b284c0e8-85fbc42a.jpg",
+        "class_name": "person",
+        "confidence": 0.2956,
+        "source": "fused",
+        "trigger_reason": "small_vru+low_confidence+small_vru+small_vru+low_confidence+low_confidence+cluster_occlusion+small_vru+low_confidence+low_confidence+low_confidence+small_vru",
+        "box": [
+          363.3,
+          318.6,
+          370.6,
+          341.1
+        ]
+      },
+      {
+        "image_name": "b284c0e8-85fbc42a.jpg",
+        "class_name": "person",
+        "confidence": 0.2742,
+        "source": "full_frame",
+        "trigger_reason": "unknown",
+        "box": [
+          968.5,
+          309.2,
+          993.9,
+          392.6
+        ]
+      },
+      {
+        "image_name": "b294386c-24ddd0c3.jpg",
+        "class_name": "person",
+        "confidence": 0.7261,
+        "source": "crop",
+        "trigger_reason": "low_confidence+cluster_occlusion",
+        "box": [
+          177.5,
+          350.4,
+          225.1,
+          472.2
+        ]
+      },
+      {
+        "image_name": "b294386c-24ddd0c3.jpg",
+        "class_name": "motor",
+        "confidence": 0.8684,
+        "source": "fused",
+        "trigger_reason": "cluster_occlusion+boundary_truncation+boundary_truncation",
+        "box": [
+          1116.3,
+          307.8,
+          1244.2,
+          437.6
+        ]
+      },
+      {
+        "image_name": "b2daf29d-6198754f.jpg",
+        "class_name": "person",
+        "confidence": 0.6431,
+        "source": "fused",
+        "trigger_reason": "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+small_vru+low_confidence+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru",
+        "box": [
+          1032.5,
+          431.9,
+          1063.4,
+          488.7
+        ]
+      },
+      {
+        "image_name": "b2daf29d-6198754f.jpg",
+        "class_name": "person",
+        "confidence": 0.5069,
+        "source": "full_frame",
+        "trigger_reason": "unknown",
+        "box": [
+          1155.4,
+          412.8,
+          1186.7,
+          525.2
+        ]
+      },
+      {
+        "image_name": "b2daf29d-6198754f.jpg",
+        "class_name": "person",
+        "confidence": 0.5059,
+        "source": "fused",
+        "trigger_reason": "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+small_vru+low_confidence+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru",
+        "box": [
+          980.5,
+          425.7,
+          995.4,
+          451.4
+        ]
+      },
+      {
+        "image_name": "b2daf29d-6198754f.jpg",
+        "class_name": "person",
+        "confidence": 0.4626,
+        "source": "crop",
+        "trigger_reason": "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+small_vru+low_confidence+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru",
+        "box": [
+          998.7,
+          431.9,
+          1009.3,
+          471.1
+        ]
+      },
+      {
+        "image_name": "b2daf29d-6198754f.jpg",
+        "class_name": "person",
+        "confidence": 0.4527,
+        "source": "fused",
+        "trigger_reason": "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru",
+        "box": [
+          252.2,
+          432.7,
+          266.3,
+          467.4
+        ]
+      },
+      {
+        "image_name": "b2daf29d-6198754f.jpg",
+        "class_name": "person",
+        "confidence": 0.4457,
+        "source": "fused",
+        "trigger_reason": "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+small_vru+low_confidence+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru",
+        "box": [
+          1016.3,
+          421.3,
+          1035.9,
+          474.7
+        ]
+      },
+      {
+        "image_name": "b2daf29d-6198754f.jpg",
+        "class_name": "person",
+        "confidence": 0.4149,
+        "source": "fused",
+        "trigger_reason": "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru",
+        "box": [
+          226.2,
+          422.8,
+          243.4,
+          470.0
+        ]
+      },
+      {
+        "image_name": "b2daf29d-6198754f.jpg",
+        "class_name": "person",
+        "confidence": 0.3404,
+        "source": "crop",
+        "trigger_reason": "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+small_vru+low_confidence+small_vru+low_confidence+low_confidence+small_vru+low_confidence+small_vru+low_confidence+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru",
+        "box": [
+          1006.7,
+          433.2,
+          1017.7,
+          474.0
+        ]
+      },
+      {
+        "image_name": "b2daf29d-6198754f.jpg",
+        "class_name": "person",
+        "confidence": 0.3224,
+        "source": "fused",
+        "trigger_reason": "low_confidence+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+small_vru+small_vru",
+        "box": [
+          185.8,
+          426.3,
+          212.3,
+          479.7
+        ]
+      },
+      {
+        "image_name": "b2daf29d-6198754f.jpg",
+        "class_name": "person",
+        "confidence": 0.2734,
+        "source": "full_frame",
+        "trigger_reason": "unknown",
+        "box": [
+          68.3,
+          437.4,
+          99.9,
+          565.6
+        ]
+      },
+      {
+        "image_name": "b2daf29d-6198754f.jpg",
+        "class_name": "person",
+        "confidence": 0.2598,
+        "source": "full_frame",
+        "trigger_reason": "unknown",
+        "box": [
+          0.0,
+          403.3,
+          17.6,
+          601.9
+        ]
+      },
+      {
+        "image_name": "b2daf29d-6198754f.jpg",
+        "class_name": "person",
+        "confidence": 0.2552,
+        "source": "full_frame",
+        "trigger_reason": "unknown",
+        "box": [
+          964.6,
+          428.9,
+          980.7,
+          470.3
+        ]
+      },
+      {
+        "image_name": "b2e54795-601d2d78.jpg",
+        "class_name": "person",
+        "confidence": 0.6921,
+        "source": "full_frame",
+        "trigger_reason": "unknown",
+        "box": [
+          727.3,
+          342.5,
+          747.4,
+          391.1
+        ]
+      },
+      {
+        "image_name": "b2e54795-db1f3bad.jpg",
+        "class_name": "person",
+        "confidence": 0.5411,
+        "source": "fused",
+        "trigger_reason": "cluster_occlusion+cluster_occlusion+cluster_occlusion",
+        "box": [
+          864.5,
+          305.2,
+          980.6,
+          552.6
+        ]
+      },
+      {
+        "image_name": "b2e54795-db1f3bad.jpg",
+        "class_name": "person",
+        "confidence": 0.4302,
+        "source": "crop",
+        "trigger_reason": "cluster_occlusion",
+        "box": [
+          840.6,
+          339.7,
+          850.4,
+          393.7
+        ]
+      }
+    ]
+  },
+  "policy_evaluation": {
+    "Policy_0_Current_Baseline": {
+      "vru_recall": 63.85,
+      "vru_precision": 70.85,
+      "vru_f1": 0.6717,
+      "vru_tp": 1111,
+      "vru_fp": 457,
+      "vru_fn": 629,
+      "small_vru_recall": 48.28,
+      "small_vru_tp": 435,
+      "per_class_recall": {
+        "person": 65.51,
+        "rider": 56.9,
+        "bike": 53.28,
+        "motor": 37.5
+      },
+      "mean_crops_per_image": 1.94,
+      "zero_crop_images": 4,
+      "latency_mean_ms": 4303.33,
+      "latency_median_ms": 4359.28,
+      "latency_p95_ms": 5484.38,
+      "throughput_fps": 0.23
+    },
+    "Policy_1_Stricter_Trigger": {
+      "vru_recall": 61.26,
+      "vru_precision": 74.91,
+      "vru_f1": 0.674,
+      "vru_tp": 1066,
+      "vru_fp": 357,
+      "vru_fn": 674,
+      "small_vru_recall": 44.28,
+      "small_vru_tp": 399,
+      "per_class_recall": {
+        "person": 62.83,
+        "rider": 55.17,
+        "bike": 51.64,
+        "motor": 34.38
+      },
+      "mean_crops_per_image": 0.21,
+      "zero_crop_images": 244,
+      "latency_mean_ms": 2099.41,
+      "latency_median_ms": 1911.59,
+      "latency_p95_ms": 3546.64,
+      "throughput_fps": 0.48
+    },
+    "Policy_2_Single_Crop_Cap": {
+      "vru_recall": 62.87,
+      "vru_precision": 73.77,
+      "vru_f1": 0.6789,
+      "vru_tp": 1094,
+      "vru_fp": 389,
+      "vru_fn": 646,
+      "small_vru_recall": 46.95,
+      "small_vru_tp": 423,
+      "per_class_recall": {
+        "person": 64.53,
+        "rider": 56.9,
+        "bike": 52.46,
+        "motor": 34.38
+      },
+      "mean_crops_per_image": 0.99,
+      "zero_crop_images": 4,
+      "latency_mean_ms": 3080.55,
+      "latency_median_ms": 3095.17,
+      "latency_p95_ms": 3956.48,
+      "throughput_fps": 0.32
+    },
+    "Policy_3_Conservative_Admission": {
+      "vru_recall": 63.28,
+      "vru_precision": 73.5,
+      "vru_f1": 0.68,
+      "vru_tp": 1101,
+      "vru_fp": 397,
+      "vru_fn": 639,
+      "small_vru_recall": 47.39,
+      "small_vru_tp": 427,
+      "per_class_recall": {
+        "person": 64.99,
+        "rider": 56.9,
+        "bike": 52.46,
+        "motor": 34.38
+      },
+      "mean_crops_per_image": 1.94,
+      "zero_crop_images": 4,
+      "latency_mean_ms": 4303.33,
+      "latency_median_ms": 4359.28,
+      "latency_p95_ms": 5484.38,
+      "throughput_fps": 0.23
+    },
+    "Policy_4_Zero_Crop_Fallback": {
+      "vru_recall": 63.85,
+      "vru_precision": 70.99,
+      "vru_f1": 0.6723,
+      "vru_tp": 1111,
+      "vru_fp": 454,
+      "vru_fn": 629,
+      "small_vru_recall": 48.28,
+      "small_vru_tp": 435,
+      "per_class_recall": {
+        "person": 65.51,
+        "rider": 56.9,
+        "bike": 53.28,
+        "motor": 37.5
+      },
+      "mean_crops_per_image": 1.57,
+      "zero_crop_images": 63,
+      "latency_mean_ms": 3803.06,
+      "latency_median_ms": 4128.18,
+      "latency_p95_ms": 5440.84,
+      "throughput_fps": 0.26
+    }
+  },
+  "asynchronous_prototype_design": {
+    "architecture_name": "RoadSentinel Asynchronous Active Perception Pipeline (Async-Fov)",
+    "frame_association": {
+      "mechanism": "Monotonic sequence counter + high-precision camera timestamp header (POSIX ms)",
+      "crop_origin_metadata": "Every proposed crop window attaches {frame_id, timestamp_ms, full_frame_roi}",
+      "buffer_depth": "Ring buffer of 4 recent full-frame prediction buffers (retained for 120 ms)"
+    },
+    "result_deadlines": {
+      "primary_stream_hz": 30,
+      "crop_deadline_ms": 100.0,
+      "rationale": "In automotive highway driving at 100 km/h (27.8 m/s), 100 ms corresponds to 2.78 meters of travel. A crop arriving beyond 100 ms cannot guarantee safe spatial bounds without egomotion extrapolation."
+    },
+    "late_result_handling": {
+      "expired_action": "Strict drop if delta_t > 100 ms",
+      "interpolation_window": "If 33 ms < delta_t <= 100 ms, apply Kalman filter state projection / ego-motion compensation matrix before merging into current frame"
+    },
+    "duplicate_suppression_and_fusion": {
+      "method": "Temporal Weighted Box Fusion (T-WBF)",
+      "temporal_decay_factor": 0.85,
+      "anti_jitter_hysteresis": "Requires minimum 2 consecutive dual-pass detections or high confidence >= 0.40 before promoting newly recovered asynchronous detections into the primary collision avoidance envelope."
+    }
+  }
+}

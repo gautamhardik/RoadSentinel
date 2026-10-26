@@ -1,0 +1,4 @@
+SizeGroup,Total_GT,VRU_GT,Ref640_VRU_Recall,HighRes960_VRU_Recall,MaxRes1280_VRU_Recall,Ref640_All_Recall,HighRes960_All_Recall,MaxRes1280_All_Recall
+"Large (≥96²)",255,14,0.9286,0.9286,0.9286,0.9608,0.9647,0.9569
+"Medium [32²-96²)",680,150,0.7067,0.7533,0.7067,0.7971,0.8162,0.8118
+"Small (<32²)",1021,106,0.1509,0.2453,0.2642,0.4202,0.5416,0.5749

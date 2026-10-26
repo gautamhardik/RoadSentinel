@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoadSentinel • Autonomous AI Perception Studio</title>
+
+  <!-- Typography: Plus Jakarta Sans (UI) & JetBrains Mono (Telemetry) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons & Three.js + OrbitControls -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="/static/OrbitControls.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #09090B;
+      color: #F4F4F5;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      letter-spacing: -0.011em;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      user-select: none;
+    }
+
+    .font-mono-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Clean Subtle Scrollbars for Dark Theme */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    /* Glass Dock & Card Base (Neutral Matte Carbon Surface) */
+    .glass-dock {
+      background: #111114;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Optical Loupe */
+    .optical-loupe {
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 1.5px solid #10B981;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+      z-index: 40;
+      display: none;
+      background-repeat: no-repeat;
+    }
+    .optical-loupe::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      border: 1.5px solid #10B981;
+      border-radius: 50%;
+    }
+
+    /* Interactive Split Curtain Slider */
+    .split-slider-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      user-select: none;
+    }
+    .split-curtain-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      overflow: hidden;
+      width: 50%;
+      z-index: 10;
+    }
+    .split-curtain-divider {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      cursor: ew-resize;
+      z-index: 20;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    }
+    .split-slider-knob {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 24px;
+      height: 24px;
+      background: #111114;
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      color: #FFFFFF;
+    }
+
+    /* Range Slider */
+    input[type=range].finops-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 9999px;
+      outline: none;
+    }
+    input[type=range].finops-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+    }
+
+    /* Tactile Premium Button System (Linear + Apple Pro Carbon Aesthetic) */
+    .btn-tactile {
+      transition: all 150ms cubic-bezier(0.16, 1, 0.3, 1);
+      user-select: none;
+      cursor: pointer;
+    }
+    .btn-tactile:active {
+      transform: scale(0.97);
+    }
+
+    .btn-primary {
+      background: #F4F4F5;
+      color: #09090B;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      transition: all 150ms cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      user-select: none;
+    }
+    .btn-primary:hover {
+      background: #FFFFFF;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+    .btn-primary:active {
+      transform: scale(0.97);
+      background: #E4E4E7;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: #E4E4E7;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      transition: all 150ms cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      user-select: none;
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.09);
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+    .btn-secondary:active {
+      transform: scale(0.97);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .btn-success {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34D399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      transition: all 150ms cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      user-select: none;
+    }
+    .btn-success:hover {
+      background: rgba(16, 185, 129, 0.25);
+      color: #6EE7B7;
+      border-color: rgba(16, 185, 129, 0.45);
+    }
+    .btn-success:active {
+      transform: scale(0.97);
+      background: rgba(16, 185, 129, 0.3);
+    }
+
+    .btn-danger {
+      background: rgba(244, 63, 94, 0.15);
+      color: #FB7185;
+      border: 1px solid rgba(244, 63, 94, 0.3);
+      transition: all 150ms cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      user-select: none;
+    }
+    .btn-danger:hover {
+      background: rgba(244, 63, 94, 0.25);
+      color: #FDA4AF;
+      border-color: rgba(244, 63, 94, 0.45);
+    }
+    .btn-danger:active {
+      transform: scale(0.97);
+      background: rgba(244, 63, 94, 0.3);
+    }
+
+    /* Apple-style Crisp Modern Tab */
+    .btn-nav-tab-active {
+      background: #FFFFFF;
+      color: #09090B;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+      font-weight: 600;
+      transition: all 150ms cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+    .btn-nav-tab-inactive {
+      background: transparent;
+      color: #A1A1AA;
+      border: 1px solid transparent;
+      font-weight: 500;
+      transition: all 150ms cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+    .btn-nav-tab-inactive:hover {
+      color: #F4F4F5;
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.07);
+    }
+    .btn-nav-tab-inactive:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+
+<body class="bg-[#09090B] text-zinc-100 h-screen w-screen flex flex-col overflow-hidden antialiased selection:bg-zinc-800 selection:text-white">
+
+  <!-- =========================================================================
+       TOP BAR (Exact 36px Height - Neutral Carbon Glass, Linear + Apple Pro Style)
+       ========================================================================= -->
+  <header class="h-9 min-h-[36px] max-h-[36px] bg-[#09090B] border-b border-white/[0.07] px-3 flex items-center justify-between shrink-0 select-none text-xs z-30">
+    
+    <!-- Left: Brand + Navigation Tabs -->
+    <div class="flex items-center space-x-3 shrink-0">
+      <!-- App Icon / Logo (Neutral Titanium Shield) -->
+      <div class="flex items-center space-x-2 shrink-0">
+        <div class="w-5 h-5 rounded-md bg-zinc-800 flex items-center justify-center shrink-0 border border-white/10 shadow-sm">
+          <svg class="w-3 h-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
+          </svg>
+        </div>
+        <span class="font-bold text-[12px] tracking-tight text-white uppercase shrink-0">RoadSentinel</span>
+        <button id="topbar-toggle-sidebar-btn" onclick="toggleLeftDrawer()"
+          class="w-6 h-6 inline-flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/[0.06] rounded-md border border-white/[0.07] transition-all duration-150 cursor-pointer shrink-0 ml-1"
+          title="Toggle Scenario Sidebar (Ctrl+B)">
+          <i data-lucide="panel-left" class="w-3.5 h-3.5"></i>
+        </button>
+      </div>
+
+      <span class="text-white/15 text-xs shrink-0">|</span>
+
+      <!-- Workspace Navigation Tabs (Pill Buttons with min-width >= 110px, height <= 36px) -->
+      <nav class="flex items-center space-x-1 p-0.5 bg-[#111114] rounded-lg border border-white/[0.07] whitespace-nowrap shrink-0">
+        <button id="nav-btn-agent" onclick="switchNavMode('agent')"
+          class="btn-nav-tab-active px-3.5 py-1.5 rounded-md text-xs flex items-center gap-2 whitespace-nowrap min-w-[110px] justify-center transition-all"
+          title="Autonomous Perception Studio (1)">
+          <i data-lucide="bot" class="w-3.5 h-3.5 text-zinc-950"></i>
+          <span>Perception Studio</span>
+        </button>
+
+        <button id="nav-btn-video" onclick="switchNavMode('video')"
+          class="btn-nav-tab-inactive px-3.5 py-1.5 rounded-md text-xs flex items-center gap-2 whitespace-nowrap min-w-[110px] justify-center transition-all"
+          title="Fleet Video Stream & Tracking (2)">
+          <i data-lucide="video" class="w-3.5 h-3.5 text-zinc-400"></i>
+          <span>Fleet Video</span>
+        </button>
+
+        <button id="nav-btn-ledger" onclick="switchNavMode('ledger')"
+          class="btn-nav-tab-inactive px-3.5 py-1.5 rounded-md text-xs flex items-center gap-2 whitespace-nowrap min-w-[110px] justify-center transition-all"
+          title="Model Ledger & AWS FinOps (3)">
+          <i data-lucide="file-check-2" class="w-3.5 h-3.5 text-zinc-400"></i>
+          <span>Scientific Ledger</span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Center: Active Scenario Title Indicator (Full Width, No Artificial Ellipsis) -->
+    <div class="hidden xl:flex items-center space-x-2.5 text-[11px] font-mono-num text-zinc-300 bg-[#16161A] border border-white/[0.07] rounded-full px-3.5 py-1 shadow-sm shrink-0 whitespace-nowrap">
+      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+      <span class="text-zinc-500 font-semibold text-[10px]">SCENE:</span>
+      <span id="top-bar-scene-name" class="text-zinc-100 font-bold truncate max-w-[320px] 2xl:max-w-[420px]">Night Crosswalk Pedestrian</span>
+      <span class="text-white/15">•</span>
+      <span class="text-zinc-400">960×540 NATIVE</span>
+      <span class="text-white/15">•</span>
+      <span class="text-zinc-300 bg-white/[0.05] border border-white/10 px-2 py-0.5 rounded-full text-[10px] font-semibold">BDD100K VAL</span>
+    </div>
+
+    <!-- Right: Upload Action (API button removed per user request) -->
+    <div class="flex items-center space-x-2 text-xs font-mono-num shrink-0">
+      <div id="active-model-badge" class="hidden">
+        <span id="header-model-name">roadsentinel_ultimate_champion.pt</span>
+        <span id="header-model-metrics">(61.3% mAP50 / 76.5% Prec)</span>
+      </div>
+
+      <button onclick="document.getElementById('custom-image-file-input').click()"
+        class="btn-secondary px-3 py-1 text-xs font-medium rounded-md flex items-center space-x-1.5 shrink-0 whitespace-nowrap border border-white/[0.07]">
+        <i data-lucide="upload" class="w-3.5 h-3.5 text-zinc-400"></i>
+        <span>Upload</span>
+      </button>
+      <input type="file" id="custom-image-file-input" class="hidden" accept="image/*,video/*" onchange="handleCustomImageUpload(event)">
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MAIN DOCKED WORKSPACE (Zero Gaps, Edge-to-Edge IDE Layout)
+       ========================================================================= -->
+  <main class="flex-1 flex overflow-hidden w-full m-0 p-0">
+
+    <!-- WORKSPACE 1: PERCEPTION STUDIO (Canvas-First Full-Height Stage) -->
+    <div id="stage-view-camera" class="flex-1 flex flex-row overflow-hidden w-full h-full divide-x divide-white/[0.07]">
+
+      <!-- =====================================================================
+           LEFT PANEL: 260px SCENARIO DRAWER (2-Line Readable Cards)
+           ===================================================================== -->
+      <aside id="left-scenario-drawer" class="w-[260px] min-w-[260px] max-w-[260px] bg-[#111114] flex flex-col h-full overflow-hidden shrink-0 select-none border-r border-white/[0.07] transition-all duration-200">
+        
+        <!-- 32px Panel Header -->
+        <div class="h-8 min-h-[32px] max-h-[32px] bg-[#111114] border-b border-white/[0.07] px-3 flex items-center justify-between text-[11px] font-medium text-zinc-300 shrink-0">
+          <div class="flex items-center space-x-2">
+            <i data-lucide="layers" class="w-3.5 h-3.5 text-zinc-400"></i>
+            <span class="font-bold text-zinc-100 tracking-tight">SCENARIOS</span>
+          </div>
+          <div class="flex items-center space-x-1.5">
+            <span class="text-[10px] font-mono-num text-zinc-400 font-semibold px-2 py-0.5 bg-white/[0.04] rounded-full border border-white/[0.07]">12 CASES</span>
+            <button onclick="toggleLeftDrawer()" id="toggle-left-drawer-btn" class="w-6 h-6 inline-flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/[0.06] rounded-md transition-all duration-150 cursor-pointer" title="Toggle Sidebar">
+              <i data-lucide="panel-left-close" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tree Explorer Body: 2-Line Cards -->
+        <div class="flex-1 overflow-y-auto p-2 space-y-1.5 bg-[#09090B]">
+          <!-- Clean Cohort Tag -->
+          <div class="px-2 pt-1 pb-1 text-[10px] font-mono-num text-zinc-400 flex items-center justify-between uppercase tracking-wider font-semibold border-b border-white/[0.05]">
+            <span class="flex items-center space-x-1.5 text-zinc-300">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>BDD100K Golden Set</span>
+            </span>
+            <span class="text-[9px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-semibold">Verified</span>
+          </div>
+
+          <!-- Scenario Items List (Populated with 2-line cards) -->
+          <div id="scenario-tree-list" class="flex flex-col space-y-1.5">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- Hidden container to maintain app.js compatibility -->
+          <div id="quick-scenario-pills" class="hidden"></div>
+        </div>
+
+        <!-- Left Panel Footer: Incident Triage Info -->
+        <div class="h-8 bg-[#111114] border-t border-white/[0.07] px-3 flex items-center justify-between text-[10px] font-mono-num text-zinc-400 shrink-0">
+          <span class="text-zinc-400 font-medium">TRIAGE STATUS:</span>
+          <span class="text-emerald-400 font-semibold flex items-center space-x-1.5 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            <span>AUTONOMOUS_LOCK</span>
+          </span>
+        </div>
+      </aside>
+
+      <!-- =====================================================================
+           CENTER HERO STAGE: Full-Height Canvas with Dedicated Header Switcher
+           ===================================================================== -->
+      <section class="flex-1 min-w-0 bg-[#09090B] flex flex-col h-full overflow-hidden relative">
+
+        <!-- Dedicated Non-Overlapping Canvas Header Bar -->
+        <div class="h-9 min-h-[36px] max-h-[36px] bg-[#111114] border-b border-white/[0.07] px-3 flex items-center justify-between shrink-0 select-none z-20">
+          <!-- Left: Sidebar Reopen Button (if collapsed) -->
+          <div class="flex items-center space-x-2">
+            <button id="floating-open-sidebar-btn" onclick="toggleLeftDrawer()"
+              class="hidden btn-secondary px-2.5 py-1 rounded-md text-xs font-medium text-zinc-300 hover:text-white bg-[#16161A] border border-white/[0.07] transition-all cursor-pointer items-center space-x-1.5"
+              title="Open Scenarios Sidebar (Ctrl+B)">
+              <i data-lucide="panel-left-open" class="w-3.5 h-3.5 text-zinc-400"></i>
+              <span>Scenarios</span>
+            </button>
+            <span class="text-[11px] font-mono-num text-zinc-400 font-medium tracking-tight">CANVAS VIEWPORT</span>
+          </div>
+
+          <!-- Center: 3-Mode View Switcher (2D Camera | Split Crop | 3D Corridor) -->
+          <div class="inline-flex items-center p-0.5 bg-[#16161A] border border-white/[0.07] rounded-lg shadow-sm space-x-1">
+            <button id="canvas-tab-camera" onclick="setCanvasViewMode('camera')"
+              class="px-3.5 py-1 rounded-md text-xs font-semibold bg-zinc-100 text-zinc-950 shadow-sm flex items-center gap-1.5 transition-all cursor-pointer">
+              <i data-lucide="camera" class="w-3.5 h-3.5"></i>
+              <span>2D Camera View</span>
+            </button>
+
+            <button id="canvas-tab-crop" onclick="setCanvasViewMode('crop')"
+              class="px-3.5 py-1 rounded-md text-xs font-medium text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.05] flex items-center gap-1.5 transition-all cursor-pointer">
+              <i data-lucide="split" class="w-3.5 h-3.5 text-zinc-400"></i>
+              <span>Split Crop Compare</span>
+            </button>
+
+            <button id="canvas-tab-three" onclick="setCanvasViewMode('three')"
+              class="px-3.5 py-1 rounded-md text-xs font-medium text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.05] flex items-center gap-1.5 transition-all cursor-pointer">
+              <i data-lucide="box" class="w-3.5 h-3.5 text-zinc-400"></i>
+              <span>3D Spatial Corridor</span>
+            </button>
+          </div>
+
+          <!-- Right: Stage Status Indicator -->
+          <div class="flex items-center space-x-1.5 text-[10px] font-mono-num text-zinc-400">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            <span class="text-zinc-300 font-semibold uppercase">HD SENSOR SYNC</span>
+          </div>
+        </div>
+
+        <!-- CANVAS VIEW 1: 2D CAMERA VIEW (Default Active) -->
+        <div id="canvas-view-camera" class="w-full h-full relative flex items-center justify-center p-4 bg-[#09090B] overflow-hidden">
+          
+          <!-- Camera Stage Flat Frame with Simple Hairline Border -->
+          <div class="relative rounded-2xl border border-white/10 bg-[#060608] inline-block max-w-full max-h-full overflow-hidden shadow-2xl">
+            <!-- Main Road Image -->
+            <img id="main-road-image"
+              src="/artifacts/golden_traces/trace_01_full.jpg"
+              alt="BDD100K Native Camera Stream"
+              class="block object-contain max-w-full max-h-[calc(100vh-36px-36px-30px-34px)] transition-all pointer-events-auto rounded-2xl bg-[#060608]"
+              onmousemove="handleLoupeMove(event)"
+              onmouseenter="handleLoupeEnter(event)"
+              onmouseleave="handleLoupeLeave()">
+
+            <!-- Pedestrian Target Box: Clean 1.5px Tactical Green Line, Sleek Floating Label, Zero Halos -->
+            <div id="anduril-target-reticle"
+              class="absolute border-[1.5px] border-[#10B981] pointer-events-none transition-all duration-150 z-20 rounded-sm"
+              style="display: none;">
+              <!-- Sleek Floating Label: PEDESTRIAN • 29.4% -->
+              <div class="absolute -top-5 left-0 px-2 py-0.5 bg-[#111114] text-[#10B981] font-mono-num font-semibold text-[9px] uppercase tracking-wider whitespace-nowrap rounded border border-[#10B981]/40">
+                PEDESTRIAN • <span id="hud-conf-locked">29.4%</span>
+              </div>
+            </div>
+
+            <!-- Tactical Optical Loupe Overlay -->
+            <div id="optical-loupe" class="optical-loupe"></div>
+          </div>
+
+          <!-- Tactical HUD Overlay (Bottom-Left) -->
+          <div class="absolute bottom-4 left-4 z-20 flex items-center space-x-3 text-[11px] font-mono-num bg-[#111114]/90 backdrop-blur-md border border-white/[0.08] px-3.5 py-1.5 text-zinc-300 rounded-xl shadow-lg pointer-events-none">
+            <div class="flex items-center space-x-1.5">
+              <span class="text-zinc-500 font-semibold text-[10px]">DETECTED VRU:</span>
+              <span id="hud-target-label" class="text-zinc-100 font-bold uppercase">PEDESTRIAN</span>
+              <span id="hud-target-dim" class="text-zinc-400 font-mono text-[10px]">(23×57px)</span>
+            </div>
+            <span class="text-white/15">|</span>
+            <div class="flex items-center space-x-1.5">
+              <span class="text-zinc-500 font-semibold text-[10px]">1. FULL FRAME:</span>
+              <span id="hud-conf-init" class="text-zinc-300 font-semibold">20.8%</span>
+              <span class="text-zinc-600">→</span>
+              <span class="text-zinc-500 font-semibold text-[10px]">4. WBF FINAL:</span>
+              <span id="hud-conf-wbf-final" class="text-emerald-400 font-bold">29.4%</span>
+              <span id="hud-conf-delta" class="text-emerald-400 font-semibold text-[10px] bg-emerald-500/10 px-1.5 py-0.2 rounded border border-emerald-500/20">(+8.6 pp)</span>
+            </div>
+          </div>
+
+          <!-- Loupe Toggle Overlay (Bottom-Right) -->
+          <div class="absolute bottom-4 right-4 z-20 flex items-center space-x-2">
+            <button onclick="toggleLoupe()" id="loupe-toggle-btn"
+              class="btn-secondary px-3 py-1.5 rounded-lg text-[11px] font-mono-num font-medium flex items-center space-x-2 bg-[#16161A] border-white/10 text-zinc-300"
+              title="Toggle Tactical 2.5x Optical Loupe">
+              <i data-lucide="search" class="w-3.5 h-3.5 text-zinc-400"></i>
+              <span>2.5× Loupe</span>
+              <span class="text-[9px] font-semibold px-1.5 py-0.2 rounded bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">ON</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- CANVAS VIEW 2: SPLIT CROP COMPARE (Full Hero Stage) -->
+        <div id="canvas-view-crop" class="hidden flex-1 w-full h-full relative flex items-center justify-center p-6 bg-[#09090B] overflow-hidden">
+          
+          <div class="relative w-full max-w-4xl h-[calc(100vh-36px-36px-30px-48px)] border border-white/10 rounded-2xl overflow-hidden bg-black shadow-2xl">
+            
+            <!-- Split Slider Container -->
+            <div class="split-slider-container w-full h-full relative">
+              <!-- Background: OpenCV 5 Enhanced Crop -->
+              <img id="curtain-stage-enhanced"
+                src="/artifacts/golden_traces/trace_01_opencv_crop.jpg"
+                alt="OpenCV 5 Enhanced Crop"
+                class="absolute inset-0 w-full h-full object-contain pointer-events-none">
+
+              <!-- Foreground: Raw Sensor Crop (Clipped by overlay) -->
+              <div id="curtain-stage-overlay" class="split-curtain-overlay">
+                <img id="curtain-stage-raw"
+                  src="/artifacts/golden_traces/trace_01_raw_crop.jpg"
+                  alt="Raw Sensor Crop"
+                  class="absolute top-0 left-0 max-w-none h-full object-contain pointer-events-none">
+              </div>
+
+              <!-- Draggable Divider Handle -->
+              <div id="curtain-stage-handle" class="split-curtain-divider">
+                <div class="split-slider-knob">
+                  <i data-lucide="chevrons-left-right" class="w-3.5 h-3.5 text-zinc-300"></i>
+                </div>
+              </div>
+
+              <!-- Bottom-Left Badge: Raw Crop -->
+              <div id="curtain-raw-badge" class="absolute bottom-4 left-4 z-20 px-3.5 py-1.5 bg-[#111114]/90 backdrop-blur-xl border border-white/10 text-zinc-300 font-mono text-xs font-semibold rounded-full shadow-lg">
+                RAW SENSOR CROP • BEFORE (10.4%)
+              </div>
+
+              <!-- Center Instruction Badge -->
+              <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 px-4 py-1.5 bg-[#111114]/90 backdrop-blur-xl border border-white/[0.07] text-zinc-300 font-mono text-xs rounded-full shadow-xl flex items-center space-x-3 pointer-events-none whitespace-nowrap">
+                <span class="text-zinc-400">Drag divider to compare photometric contrast</span>
+                <span class="text-white/20">•</span>
+                <span id="curtain-delta-stat" class="text-emerald-400 font-bold">Δ Conf: +14.6 pp</span>
+              </div>
+
+              <!-- Bottom-Right Badge: Enhanced Crop -->
+              <div id="curtain-enhanced-badge" class="absolute bottom-4 right-4 z-20 px-3.5 py-1.5 bg-[#111114]/90 backdrop-blur-xl border border-white/10 text-emerald-400 font-mono text-xs font-semibold rounded-full shadow-lg">
+                OPENCV 5 CLAHE + WBF • AFTER (25.0% +14.6%)
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- CANVAS VIEW 3: 3D SPATIAL CORRIDOR (Full Hero Stage) -->
+        <div id="canvas-view-three" class="hidden flex-1 w-full h-full relative overflow-hidden bg-[#09090B]">
+          
+          <!-- Three.js Canvas Container & Canvas -->
+          <div id="three-corridor-container" class="w-full h-full relative overflow-hidden bg-[#09090B]">
+            <canvas id="three-main-canvas" class="w-full h-full block"></canvas>
+          </div>
+
+          <!-- Perspective Presets Sub-Pill -->
+          <div class="absolute top-4 left-1/2 -translate-x-1/2 z-20 flex items-center space-x-1 p-1 bg-[#111114]/90 backdrop-blur-xl border border-white/[0.07] rounded-full shadow-xl whitespace-nowrap">
+            <button onclick="setThreePerspective('chase')" class="px-2.5 py-1 text-[11px] font-mono-num font-semibold rounded-full text-zinc-400 hover:text-white hover:bg-white/[0.05] transition-all cursor-pointer" title="Rear Chase Camera">
+              🚗 Chase
+            </button>
+            <button onclick="setThreePerspective('top')" class="px-2.5 py-1 text-[11px] font-mono-num font-semibold rounded-full text-zinc-400 hover:text-white hover:bg-white/[0.05] transition-all cursor-pointer" title="Top-Down Bird's Eye View">
+              🦅 Top
+            </button>
+            <button onclick="setThreePerspective('side')" class="px-2.5 py-1 text-[11px] font-mono-num font-semibold rounded-full text-zinc-400 hover:text-white hover:bg-white/[0.05] transition-all cursor-pointer" title="Side Profile Perspective">
+              🏎️ Side
+            </button>
+            <button onclick="setThreePerspective('target')" class="px-2.5 py-1 text-[11px] font-mono-num font-semibold rounded-full text-zinc-400 hover:text-white hover:bg-white/[0.05] transition-all cursor-pointer" title="Focus on VRU Target">
+              🎯 VRU
+            </button>
+            <span class="text-white/20">|</span>
+            <button onclick="resetThreeCamera()"
+              class="px-2.5 py-1 rounded-full text-[11px] font-mono-num font-semibold text-zinc-300 hover:text-white hover:bg-white/[0.05] flex items-center space-x-1 transition-all cursor-pointer"
+              title="Reset 3D Orbit Camera to Default Perspective">
+              <i data-lucide="refresh-cw" class="w-3 h-3 text-zinc-400"></i>
+              <span>Reset</span>
+            </button>
+          </div>
+
+          <!-- Corridor Telemetry & 360 Interaction HUD (Bottom Floating Pill) -->
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center space-x-3 text-[11px] font-mono-num bg-[#111114]/90 backdrop-blur-xl border border-white/[0.07] px-4 py-1.5 text-zinc-300 rounded-full shadow-xl pointer-events-none whitespace-nowrap">
+            <div class="flex items-center space-x-1.5">
+              <span class="text-zinc-500 font-semibold">TTC:</span>
+              <span class="text-emerald-400 font-bold">3.24s (CLEAR)</span>
+            </div>
+            <span class="text-white/20">•</span>
+            <div class="flex items-center space-x-1.5">
+              <span class="text-zinc-500 font-semibold">RANGE:</span>
+              <span class="text-zinc-200 font-bold">24.6m</span>
+            </div>
+            <span class="text-white/20">•</span>
+            <div class="flex items-center space-x-1.5">
+              <span class="text-zinc-500 font-semibold">SPEED:</span>
+              <span class="text-white font-bold">48.2 km/h</span>
+            </div>
+            <span class="text-white/20">|</span>
+            <div class="flex items-center space-x-1.5 text-zinc-400 font-medium text-[10px]">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>Left-Drag: 360° Orbit • Wheel: Zoom • Right-Drag: Pan</span>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================================
+           RIGHT PANEL: 360px PROPERTY INSPECTOR (CROPS + 5-STAGE MCP AGENT)
+           ===================================================================== -->
+      <aside class="w-[360px] min-w-[360px] max-w-[360px] bg-[#111114] flex flex-col h-full overflow-hidden divide-y divide-white/[0.07] shrink-0 select-none border-l border-white/[0.07]">
+        
+        <!-- UPPER RIGHT SUBPANEL: OPENCV 5 CROP PREVIEWS -->
+        <div class="h-[270px] min-h-[270px] max-h-[270px] flex flex-col bg-transparent overflow-hidden shrink-0">
+          
+          <!-- 32px Panel Header -->
+          <div class="h-8 min-h-[32px] max-h-[32px] bg-[#111114] border-b border-white/[0.07] px-3 flex items-center justify-between text-[11px] font-medium text-zinc-300 shrink-0">
+            <div class="flex items-center space-x-1.5">
+              <i data-lucide="crop" class="w-3.5 h-3.5 text-zinc-400"></i>
+              <span class="font-bold text-zinc-100 tracking-tight">OPENCV 5 CROP COMPARATOR</span>
+            </div>
+            <span id="crop-boost-badge" class="text-[10px] font-mono-num font-bold px-2 py-0.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full">
+              +14.6% Boost
+            </span>
+          </div>
+
+          <!-- Side-by-Side Crop Preview Cards -->
+          <div class="flex-1 p-2.5 grid grid-cols-2 gap-2 overflow-hidden bg-transparent">
+            <!-- Raw Crop Preview Card -->
+            <div onclick="setCanvasViewMode('crop')" class="flex flex-col bg-[#16161A] border border-white/[0.07] rounded-xl p-2 space-y-1.5 cursor-pointer hover:border-white/20 hover:bg-[#1C1C21] transition-all group">
+              <div class="flex items-center justify-between text-[10px] font-mono">
+                <span class="text-zinc-400 group-hover:text-zinc-200 font-semibold">BEFORE</span>
+                <span id="sbs-raw-conf-badge" class="text-zinc-300 font-bold bg-white/[0.06] px-1.5 py-0.2 rounded border border-white/10">10.4%</span>
+              </div>
+              <div class="flex-1 relative overflow-hidden rounded-lg bg-black flex items-center justify-center border border-white/[0.06]">
+                <img id="sbs-raw-crop-img" src="/artifacts/golden_traces/trace_01_raw_crop.jpg" alt="Raw Crop" class="w-full h-full object-cover">
+              </div>
+              <div class="text-[9px] font-mono text-zinc-500 text-center">Native Sensor</div>
+            </div>
+
+            <!-- Enhanced Crop Preview Card -->
+            <div onclick="setCanvasViewMode('crop')" class="flex flex-col bg-[#16161A] border border-white/[0.07] rounded-xl p-2 space-y-1.5 cursor-pointer hover:border-white/20 hover:bg-[#1C1C21] transition-all group">
+              <div class="flex items-center justify-between text-[10px] font-mono">
+                <span class="text-emerald-400 group-hover:text-emerald-300 font-semibold">AFTER</span>
+                <span id="sbs-cv-conf-badge" class="text-emerald-400 font-bold bg-emerald-500/10 px-1.5 py-0.2 rounded border border-emerald-500/20">25.0%</span>
+              </div>
+              <div class="flex-1 relative overflow-hidden rounded-lg bg-black flex items-center justify-center border border-white/[0.06]">
+                <img id="sbs-opencv-crop-img" src="/artifacts/golden_traces/trace_01_opencv_crop.jpg" alt="Enhanced Crop" class="w-full h-full object-cover">
+              </div>
+              <div class="text-[9px] font-mono text-emerald-400 text-center font-medium">OpenCV 5 CLAHE</div>
+            </div>
+          </div>
+
+          <!-- 4-Stage Confidence Progression Meter (Clean Single-Line Percentages) -->
+          <div class="h-14 bg-[#111114] border-t border-white/[0.07] px-2.5 py-1.5 flex flex-col justify-between shrink-0 font-mono-num text-[10px]">
+            <div class="grid grid-cols-4 gap-1.5">
+              <div class="px-1 py-0.5 rounded-lg bg-[#16161A] border border-white/[0.07] text-center">
+                <div class="text-[8px] text-zinc-500 uppercase font-semibold">1. Full</div>
+                <div id="conf-step-1" class="text-zinc-300 font-bold text-[10px]">20.8%</div>
+              </div>
+              <div class="px-1 py-0.5 rounded-lg bg-[#16161A] border border-white/[0.07] text-center">
+                <div class="text-[8px] text-zinc-500 uppercase font-semibold">2. Raw</div>
+                <div id="conf-step-2" class="text-zinc-300 font-bold text-[10px]">10.4%</div>
+              </div>
+              <div class="px-1 py-0.5 rounded-lg bg-[#16161A] border border-white/[0.07] text-center">
+                <div class="text-[8px] text-zinc-500 uppercase font-semibold">3. CV 5</div>
+                <div class="flex items-center justify-center">
+                  <span id="conf-step-3" class="text-zinc-200 font-bold text-[10px]">25.0%</span>
+                </div>
+              </div>
+              <div class="px-1 py-0.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-center">
+                <div class="text-[8px] text-emerald-400 uppercase font-semibold">4. WBF</div>
+                <div id="conf-step-4" class="text-emerald-400 font-bold text-[10px]">29.4%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LOWER RIGHT SUBPANEL: 5-STAGE MCP AGENT DELIBERATION STREAM -->
+        <div class="flex-1 min-h-0 flex flex-col bg-transparent overflow-hidden">
+          
+          <!-- 32px Panel Header (No Sparkle Icon, No Double-Slashes) -->
+          <div class="h-8 min-h-[32px] max-h-[32px] bg-[#111114] border-b border-white/[0.07] px-3 flex items-center justify-between text-[11px] font-medium text-zinc-300 shrink-0">
+            <div class="flex items-center space-x-1.5">
+              <span class="font-bold text-zinc-100 tracking-tight">MCP AGENT DELIBERATION</span>
+            </div>
+            <div class="flex items-center space-x-1.5">
+              <span id="agent-status-pill" class="text-[9px] font-mono-num font-semibold px-2 py-0.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full">
+                ONLINE • READY
+              </span>
+              <button onclick="clearAgentStream()" class="w-6 h-6 inline-flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/[0.05] active:bg-white/[0.1] rounded-md transition-all duration-150 cursor-pointer" title="Refresh Deliberation">
+                <i data-lucide="rotate-ccw" class="w-3 h-3"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Scrollable Deliberation Stream -->
+          <div id="agent-thought-stream" class="flex-1 overflow-y-auto p-3 space-y-2 text-xs font-sans">
+            <!-- Populated with 5-stage reasoning steps on load & on scenario select -->
+          </div>
+
+          <!-- Operator Sign-Off Actions Only (Clean, Uncrowded Footer) -->
+          <div class="border-t border-white/[0.07] bg-[#111114] p-2.5 shrink-0">
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <button onclick="approveAutonomousLock()" id="btn-approve-lock"
+                class="py-2 px-3.5 rounded-lg flex items-center justify-center space-x-1.5 font-semibold text-xs tracking-wide bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-400 border border-emerald-500/30 transition-all cursor-pointer">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+                <span>Approve Lock</span>
+              </button>
+              <button onclick="escalateToSafety()" id="btn-escalate-vlm"
+                class="py-2 px-3.5 rounded-lg flex items-center justify-center space-x-1.5 font-semibold text-xs tracking-wide bg-rose-500/15 hover:bg-rose-500/25 text-rose-400 border border-rose-500/30 transition-all cursor-pointer">
+                <i data-lucide="alert-triangle" class="w-4 h-4 text-rose-400"></i>
+                <span>Escalate</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+    <!-- WORKSPACE 2: FLEET VIDEO STREAM & ACTIVE TRACKING (Initially Hidden) -->
+    <div id="stage-view-video" class="hidden flex-1 flex flex-col bg-[#09090B] overflow-hidden h-full">
+      <!-- 36px Header Bar -->
+      <div class="h-9 min-h-[36px] max-h-[36px] bg-[#111114] border-b border-white/[0.07] px-4 flex items-center justify-between text-xs font-medium text-zinc-300 shrink-0">
+        <div class="flex items-center space-x-2">
+          <i data-lucide="video" class="w-3.5 h-3.5 text-zinc-400"></i>
+          <span class="font-bold text-zinc-100 tracking-tight text-[11px] uppercase">Fleet Video Stream • H.264 HTTP-206 Byte-Range Telemetry</span>
+        </div>
+        <!-- 4 Verified Videos Selector Buttons with Human Titles -->
+        <div id="fleet-video-buttons" class="flex items-center space-x-1.5 text-xs font-mono">
+          <button onclick="switchFleetVideo('night_urban_vru.mp4')" class="fleet-video-btn bg-white text-zinc-950 font-semibold shadow-sm px-3 py-1 rounded-lg text-xs" data-video="night_urban_vru.mp4">
+            01. Night Urban Glare (+17.6%)
+          </button>
+          <button onclick="switchFleetVideo('rain_intersection.mp4')" class="fleet-video-btn bg-[#16161A] hover:bg-white/[0.06] text-zinc-300 border border-white/[0.07] px-3 py-1 rounded-lg text-xs font-medium" data-video="rain_intersection.mp4">
+            02. Rainy Intersection (+16.9%)
+          </button>
+          <button onclick="switchFleetVideo('distant_corridor_pedestrian.mp4')" class="fleet-video-btn bg-[#16161A] hover:bg-white/[0.06] text-zinc-300 border border-white/[0.07] px-3 py-1 rounded-lg text-xs font-medium" data-video="distant_corridor_pedestrian.mp4">
+            03. Distant Corridor VRU (+31.2%)
+          </button>
+          <button onclick="switchFleetVideo('heavy_occlusion_escalation.mp4')" class="fleet-video-btn bg-[#16161A] hover:bg-white/[0.06] text-zinc-300 border border-white/[0.07] px-3 py-1 rounded-lg text-xs font-medium" data-video="heavy_occlusion_escalation.mp4">
+            04. Heavy Occlusion (+52.8%)
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Video Container -->
+      <div class="flex-1 flex flex-col items-center justify-center p-4 bg-[#09090B] relative overflow-hidden space-y-3">
+        <!-- Video Player Frame -->
+        <div class="relative max-w-full max-h-[calc(100vh-36px-36px-30px-140px)] border border-white/10 shadow-2xl rounded-2xl overflow-hidden bg-black flex items-center justify-center">
+          <video id="fleet-video-element" autoplay loop muted playsinline class="block max-w-full max-h-[calc(100vh-36px-36px-30px-140px)] object-contain bg-black">
+            <source src="/videos/night_urban_vru.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- Playback Control Bar -->
+        <div class="inline-flex items-center space-x-2 px-3 py-1.5 bg-[#111114] border border-white/[0.07] rounded-xl shadow-lg text-xs font-mono-num z-20">
+          <button id="video-play-btn" onclick="toggleVideoPlayback()" class="p-1.5 rounded-lg bg-zinc-100 hover:bg-white text-zinc-950 font-bold shadow-sm transition-all cursor-pointer" title="Play / Pause (Space)">
+            <i data-lucide="pause" id="video-play-icon" class="w-3.5 h-3.5"></i>
+          </button>
+          <div class="h-4 w-px bg-white/10"></div>
+          <button onclick="stepVideoFrame(-1)" class="px-2.5 py-1 rounded-lg bg-[#16161A] hover:bg-white/[0.06] border border-white/[0.07] text-zinc-300 hover:text-white transition-all cursor-pointer" title="Step Back 1 Frame">
+            -1 Frame
+          </button>
+          <button onclick="stepVideoFrame(1)" class="px-2.5 py-1 rounded-lg bg-[#16161A] hover:bg-white/[0.06] border border-white/[0.07] text-zinc-300 hover:text-white transition-all cursor-pointer" title="Step Forward 1 Frame">
+            +1 Frame
+          </button>
+          <div class="h-4 w-px bg-white/10"></div>
+          <button onclick="setVideoSpeed(0.5)" id="speed-btn-05" class="px-2 py-1 rounded-lg bg-[#16161A] hover:bg-white/[0.06] border border-white/[0.07] text-zinc-300 transition-all cursor-pointer">0.5×</button>
+          <button onclick="setVideoSpeed(1.0)" id="speed-btn-10" class="px-2 py-1 rounded-lg bg-zinc-100 text-zinc-950 font-bold shadow-sm transition-all cursor-pointer">1.0×</button>
+          <button onclick="setVideoSpeed(2.0)" id="speed-btn-20" class="px-2 py-1 rounded-lg bg-[#16161A] hover:bg-white/[0.06] border border-white/[0.07] text-zinc-300 transition-all cursor-pointer">2.0×</button>
+          <div class="h-4 w-px bg-white/10"></div>
+          <span id="video-timecode" class="text-zinc-300 font-mono text-[11px] px-2">00:01.40 / 00:03.33</span>
+          <span class="text-white/20">•</span>
+          <span id="video-frame-count" class="text-zinc-400 font-mono text-[11px] pr-2">Frame: 42 / 100 (30 FPS)</span>
+        </div>
+
+        <!-- 4-Card Optical Flow & ByteTrack Telemetry Strip -->
+        <div class="w-full max-w-5xl grid grid-cols-4 gap-2 text-xs font-mono-num shrink-0 z-20">
+          <div class="p-2.5 rounded-xl bg-[#111114] border border-white/[0.07] space-y-1">
+            <div class="flex items-center justify-between text-[10px] text-zinc-500 font-semibold uppercase">
+              <span>Farneback Dense Flow</span>
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            </div>
+            <div class="text-xs font-bold text-zinc-100">4.8 px/frame</div>
+            <div class="text-[10px] text-zinc-400">Scale: 0.5× • 2 Iterations</div>
+          </div>
+
+          <div class="p-2.5 rounded-xl bg-[#111114] border border-white/[0.07] space-y-1">
+            <div class="flex items-center justify-between text-[10px] text-zinc-500 font-semibold uppercase">
+              <span>ByteTrack Kalman Filter</span>
+              <span class="text-emerald-400 font-bold text-[9px] bg-emerald-500/10 px-1 rounded">LOCKED</span>
+            </div>
+            <div class="text-xs font-bold text-zinc-100">Track ID #42</div>
+            <div class="text-[10px] text-zinc-400">Covariance: 0.014 • Confirmed</div>
+          </div>
+
+          <div class="p-2.5 rounded-xl bg-[#111114] border border-white/[0.07] space-y-1">
+            <div class="flex items-center justify-between text-[10px] text-zinc-500 font-semibold uppercase">
+              <span>HTTP-206 Stream Latency</span>
+              <span class="text-zinc-400 text-[10px]">60 FPS</span>
+            </div>
+            <div class="text-xs font-bold text-emerald-400">1.4 ms / chunk</div>
+            <div class="text-[10px] text-zinc-400">H.264 Byte-Range Ingestion</div>
+          </div>
+
+          <div class="p-2.5 rounded-xl bg-[#111114] border border-white/[0.07] space-y-1">
+            <div class="flex items-center justify-between text-[10px] text-zinc-500 font-semibold uppercase">
+              <span>Foveation Boost</span>
+              <span class="text-emerald-400 font-bold">+16.9%</span>
+            </div>
+            <div class="text-xs font-bold text-zinc-100">82.6% Final WBF</div>
+            <div class="text-[10px] text-zinc-400">From 65.7% Native YOLO</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- WORKSPACE 3: SCIENTIFIC EVALUATION LEDGER & AWS FINOPS (Initially Hidden) -->
+    <div id="stage-view-ledger" class="hidden flex-1 flex flex-col bg-[#09090B] overflow-y-auto p-6 pb-16 space-y-5 h-full relative">
+
+      <!-- Scientific Ledger Header Card -->
+      <div class="shrink-0 bg-[#111114] border border-white/[0.07] p-5 rounded-2xl shadow-xl relative z-10">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center space-x-2.5">
+            <div class="w-8 h-8 rounded-lg bg-zinc-800 border border-white/10 flex items-center justify-center">
+              <i data-lucide="shield-check" class="w-4 h-4 text-zinc-300"></i>
+            </div>
+            <h2 class="text-xs font-bold text-zinc-100 tracking-tight uppercase">Master Scientific Evaluation Ledger (BDD100K Empirical Verification)</h2>
+          </div>
+          <span class="text-[10px] font-mono-num px-3 py-1 bg-white/[0.06] text-zinc-300 border border-white/10 rounded-full font-bold">
+            EMPIRICALLY RESOLVED • 8 MILESTONES
+          </span>
+        </div>
+        <p class="text-xs text-zinc-400 leading-relaxed">
+          Historical record across 8 milestones and blind quarantined test evaluations. Demonstrates that our Stage 2–5 OpenCV 5 MCP Agent + Calibrated WBF (<span class="font-mono text-zinc-200 font-semibold">&tau;_iso = 0.40</span>) suppresses false positives to combine Phase 14's <span class="font-mono text-emerald-400 font-semibold">76.53% Precision (+10.82 pp)</span> and <span class="font-mono text-zinc-200 font-semibold">61.32% mAP50</span> with high-recall VRU safety!
+        </p>
+      </div>
+
+      <!-- Table: Empirical Ledger (Fully Visible, No Height/Scroll Clipping) -->
+      <div class="shrink-0 bg-[#111114] border border-white/[0.07] rounded-2xl overflow-hidden shadow-xl relative z-10">
+        <div class="h-9 bg-[#111114] border-b border-white/[0.07] px-4 flex items-center justify-between text-xs font-medium text-zinc-300">
+          <span class="font-bold text-zinc-100 tracking-tight text-[11px] uppercase">Historical Phases & Audited Metrics</span>
+          <span class="text-[10px] font-mono-num text-zinc-400 font-semibold px-2 py-0.5 bg-[#16161A] rounded-full border border-white/[0.07]">8 MILESTONES VERIFIED</span>
+        </div>
+        <div class="w-full">
+          <table class="w-full text-left text-xs font-mono-num">
+            <thead class="bg-[#16161A] text-[10px] uppercase text-zinc-400 border-b border-white/[0.07]">
+              <tr>
+                <th class="py-3 px-4 font-semibold tracking-wider">Phase / Architecture</th>
+                <th class="py-3 px-4 font-semibold tracking-wider">Dataset Scope</th>
+                <th class="py-3 px-4 font-semibold tracking-wider">mAP50</th>
+                <th class="py-3 px-4 font-semibold tracking-wider">VRU Recall</th>
+                <th class="py-3 px-4 font-semibold tracking-wider">Precision</th>
+                <th class="py-3 px-4 font-semibold tracking-wider">Net Delta</th>
+                <th class="py-3 px-4 font-semibold tracking-wider">Status</th>
+              </tr>
+            </thead>
+                        <tbody id="evaluation-ledger-tbody" class="divide-y divide-white/[0.05] text-zinc-200">
+              <tr class="hover:bg-white/[0.03] transition-colors border-b border-white/[0.05]">
+                <td class="py-2.5 px-3 font-semibold text-zinc-100"><span class="text-zinc-300 font-bold">Phase 2:</span> Small-VRU Resolution Crisis</td>
+                <td class="py-2.5 px-3 text-zinc-400">10,000 BDD100K Val</td>
+                <td class="py-2.5 px-3 font-bold text-zinc-100">44.1%</td>
+                <td class="py-2.5 px-3 text-emerald-400 font-bold">36.4%</td>
+                <td class="py-2.5 px-3 text-zinc-300">72.4%</td>
+                <td class="py-2.5 px-3 text-zinc-400 font-medium">+13.14 pp Small Recall</td>
+                <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-bold text-emerald-400">RESOLVED_BY_ACTIVE_FOVEATION</span></td>
+              </tr>
+              <tr class="hover:bg-white/[0.03] transition-colors border-b border-white/[0.05]">
+                <td class="py-2.5 px-3 font-semibold text-zinc-100"><span class="text-zinc-300 font-bold">Phase 3.4:</span> Active Foveation Clean Benchmark</td>
+                <td class="py-2.5 px-3 text-zinc-400">10,000 BDD100K Val (15,373 GT)</td>
+                <td class="py-2.5 px-3 font-bold text-zinc-100">47.9%</td>
+                <td class="py-2.5 px-3 text-emerald-400 font-bold">46.8%</td>
+                <td class="py-2.5 px-3 text-zinc-300">75.8%</td>
+                <td class="py-2.5 px-3 text-zinc-400 font-medium">+10.44 pp (+734 VRUs)</td>
+                <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-bold text-emerald-400">VERIFIED_AGENTIC_SUPERIORITY</span></td>
+              </tr>
+              <tr class="hover:bg-white/[0.03] transition-colors border-b border-white/[0.05]">
+                <td class="py-2.5 px-3 font-semibold text-zinc-100"><span class="text-zinc-300 font-bold">Phase 6:</span> Champion YOLO11m + Calibrated WBF</td>
+                <td class="py-2.5 px-3 text-zinc-400">300 BDD100K Val Pilot</td>
+                <td class="py-2.5 px-3 font-bold text-zinc-100">49.1%</td>
+                <td class="py-2.5 px-3 text-emerald-400 font-bold">51.9%</td>
+                <td class="py-2.5 px-3 text-zinc-300">76.8%</td>
+                <td class="py-2.5 px-3 text-zinc-400 font-medium">+8.77 pp Recall | +0.0196 F1</td>
+                <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-bold text-emerald-400">CHAMPION_FUSION_POLICY</span></td>
+              </tr>
+              <tr class="hover:bg-white/[0.03] transition-colors border-b border-white/[0.05]">
+                <td class="py-2.5 px-3 font-semibold text-zinc-100"><span class="text-zinc-300 font-bold">Phase 10F:</span> Extended 50-Epoch Champion (Dev Gate)</td>
+                <td class="py-2.5 px-3 text-zinc-400">1,000 Untouched Dev Cohort</td>
+                <td class="py-2.5 px-3 font-bold text-zinc-100">49.8%</td>
+                <td class="py-2.5 px-3 text-emerald-400 font-bold">45.3%</td>
+                <td class="py-2.5 px-3 text-zinc-300">77.0%</td>
+                <td class="py-2.5 px-3 text-zinc-400 font-medium">+3.98 pp Small Recall</td>
+                <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-bold text-emerald-400">CHAMPION_PRODUCTION</span></td>
+              </tr>
+              <tr class="hover:bg-white/[0.03] transition-colors border-b border-white/[0.05]">
+                <td class="py-2.5 px-3 font-semibold text-zinc-100"><span class="text-zinc-300 font-bold">Phase 11:</span> Official Quarantined Blind Test</td>
+                <td class="py-2.5 px-3 text-zinc-400">2,000 BDD100K Official Test</td>
+                <td class="py-2.5 px-3 font-bold text-zinc-100">49.8%</td>
+                <td class="py-2.5 px-3 text-emerald-400 font-bold">47.3%</td>
+                <td class="py-2.5 px-3 text-zinc-300">77.1%</td>
+                <td class="py-2.5 px-3 text-zinc-400 font-medium">+1.78 pp Recall (P=100%)</td>
+                <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-bold text-emerald-400">AUDITED_PRODUCTION_BENCHMARK</span></td>
+              </tr>
+              <tr class="hover:bg-white/[0.03] transition-colors border-b border-white/[0.05]">
+                <td class="py-2.5 px-3 font-semibold text-zinc-100"><span class="text-zinc-300 font-bold">Phase 12:</span> Stride-4 YOLO11m-P2 Architectural Study</td>
+                <td class="py-2.5 px-3 text-zinc-400">BDD100K Native Resolution</td>
+                <td class="py-2.5 px-3 font-bold text-zinc-100">43.6%</td>
+                <td class="py-2.5 px-3 text-emerald-400 font-bold">40.6%</td>
+                <td class="py-2.5 px-3 text-zinc-300">64.1%</td>
+                <td class="py-2.5 px-3 text-zinc-400 font-medium">Proved Foveation Superiority</td>
+                <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-bold text-emerald-400">STRIDE_4_ABLATION</span></td>
+              </tr>
+              <tr class="hover:bg-white/[0.03] transition-colors border-b border-white/[0.05]">
+                <td class="py-2.5 px-3 font-semibold text-zinc-100"><span class="text-zinc-300 font-bold">Phase 13:</span> Champion VRU-Curriculum & Native Polish</td>
+                <td class="py-2.5 px-3 text-zinc-400">28,554 VRU Curriculum (16 Epochs)</td>
+                <td class="py-2.5 px-3 font-bold text-zinc-100">61.0%</td>
+                <td class="py-2.5 px-3 text-emerald-400 font-bold">56.6%</td>
+                <td class="py-2.5 px-3 text-zinc-300">65.7%</td>
+                <td class="py-2.5 px-3 text-zinc-400 font-medium">+11.28 pp Recall | +11.20 pp mAP50</td>
+                <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-bold text-emerald-400">VRU_CURRICULUM_POLISH</span></td>
+              </tr>
+              <tr class="hover:bg-white/[0.03] transition-colors border-b border-white/[0.05]">
+                <td class="py-2.5 px-3 font-semibold text-zinc-100"><span class="text-zinc-300 font-bold">Phase 14:</span> Hard-Negative Precision Lock</td>
+                <td class="py-2.5 px-3 text-zinc-400">28,554 VRUs + 12,000 Hard Negs (8 Epochs)</td>
+                <td class="py-2.5 px-3 font-bold text-zinc-100">61.3%</td>
+                <td class="py-2.5 px-3 text-emerald-400 font-bold">56.5%</td>
+                <td class="py-2.5 px-3 text-zinc-300">76.5%</td>
+                <td class="py-2.5 px-3 text-zinc-400 font-medium">+10.82 pp Precision (+16.5%) with zero recall loss</td>
+                <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-bold text-emerald-400">PRECISION_LOCK_SUPREMACY</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Audited CPU-to-CPU Comparison (Intel x86 c6i.xlarge vs AWS Graviton c7g/c8g + COOL) -->
+      <div class="shrink-0 bg-[#111114] border border-white/[0.07] p-5 rounded-2xl space-y-4 shadow-xl relative z-10">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <div class="w-7 h-7 rounded-lg bg-zinc-800 border border-white/10 flex items-center justify-center">
+              <i data-lucide="cpu" class="w-4 h-4 text-zinc-300"></i>
+            </div>
+            <h3 class="text-xs font-bold text-zinc-100 uppercase tracking-tight">Audited CPU-to-CPU Telemetry (AWS Graviton vs Intel Xeon)</h3>
+          </div>
+          <span class="text-xs font-mono-num text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20 font-semibold">
+            14.7% Hourly Savings vs Intel x86
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-3 text-xs font-mono-num">
+          <!-- Intel c6i.xlarge -->
+          <div class="p-3 bg-[#16161A] border border-white/[0.07] rounded-xl space-y-1">
+            <div class="text-[10px] text-zinc-500 uppercase font-semibold">Intel Xeon (c6i.xlarge)</div>
+            <div class="text-base font-bold text-zinc-200">$0.1700 / hr</div>
+            <div class="text-[11px] text-zinc-400">85.37 ms • x86_64 AVX-512</div>
+            <div class="text-[10px] text-zinc-500 font-semibold pt-1">Baseline Workstation</div>
+          </div>
+
+          <!-- Graviton3 c7g.xlarge -->
+          <div class="p-3 bg-[#16161A] border border-emerald-500/30 rounded-xl space-y-1">
+            <div class="text-[10px] text-emerald-400 uppercase font-semibold">AWS Graviton3 (c7g.xlarge)</div>
+            <div class="text-base font-bold text-emerald-400">$0.1450 / hr</div>
+            <div class="text-[11px] text-zinc-300">Arm64 Neoverse V1 • $3.44/M f</div>
+            <div class="text-[10px] text-emerald-400 font-bold pt-1">-14.7% Cost Savings</div>
+          </div>
+
+          <!-- Graviton4 c8g.xlarge -->
+          <div class="p-3 bg-[#16161A] border border-white/[0.07] rounded-xl space-y-1">
+            <div class="text-[10px] text-zinc-400 uppercase font-semibold">AWS Graviton4 (c8g.xlarge)</div>
+            <div class="text-base font-bold text-zinc-100">$0.1596 / hr</div>
+            <div class="text-[11px] text-zinc-400">Arm64 Neoverse V2 (SVE2)</div>
+            <div class="text-[10px] text-zinc-300 font-semibold pt-1">High Throughput + KleidiCV</div>
+          </div>
+
+          <!-- AMD EPYC c6a.xlarge -->
+          <div class="p-3 bg-[#16161A] border border-white/[0.07] rounded-xl space-y-1">
+            <div class="text-[10px] text-zinc-500 uppercase font-semibold">AMD EPYC (c6a.xlarge)</div>
+            <div class="text-base font-bold text-zinc-200">$0.1530 / hr</div>
+            <div class="text-[11px] text-zinc-400">x86_64 Zen 3 • $3.63/M f</div>
+            <div class="text-[10px] text-zinc-500 font-semibold pt-1">Alternative x86</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive 6-Operation OpenCV 5 Live Micro-Benchmark -->
+      <div class="shrink-0 bg-[#111114] border border-white/[0.07] p-5 rounded-2xl space-y-4 shadow-xl relative z-10">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <div class="w-7 h-7 rounded-lg bg-zinc-800 border border-white/10 flex items-center justify-center">
+              <i data-lucide="bar-chart-2" class="w-4 h-4 text-zinc-300"></i>
+            </div>
+            <div>
+              <h3 class="text-xs font-bold text-zinc-100 uppercase tracking-tight">OpenCV 5 Host Micro-Benchmark (6 Atomic Operations)</h3>
+              <p class="text-[11px] text-zinc-400">Real-time measured execution latencies on host CPU</p>
+            </div>
+          </div>
+          <button id="btn-run-microbench" onclick="triggerLiveMicrobenchmark()"
+            class="px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center space-x-1.5 bg-zinc-100 hover:bg-white text-zinc-950 shadow-sm transition-all cursor-pointer">
+            <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i>
+            <span id="microbench-btn-label">▶ Run Live 25-Iteration Benchmark</span>
+          </button>
+        </div>
+
+        <!-- 6-Operation Horizontal Bar Chart Grid -->
+        <div class="space-y-3 pt-2 font-mono-num text-xs">
+          <!-- Op 1 -->
+          <div class="space-y-1">
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="text-zinc-300 font-medium">1. Letterbox Resize (1280×720 &rarr; 960×540)</span>
+              <span id="bench-val-op1" class="text-zinc-200 font-bold">12.42 ms <span class="text-zinc-500 font-normal">(80.5 FPS)</span></span>
+            </div>
+            <div class="h-2 w-full bg-[#16161A] rounded-full overflow-hidden border border-white/[0.05]">
+              <div id="bench-bar-op1" class="h-full bg-zinc-400 rounded-full transition-all duration-300" style="width: 35%;"></div>
+            </div>
+          </div>
+
+          <!-- Op 2 -->
+          <div class="space-y-1">
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="text-zinc-300 font-medium">2. Sensor Diagnosis (LAB Color + Laplacian Variance)</span>
+              <span id="bench-val-op2" class="text-zinc-200 font-bold">0.28 ms <span class="text-zinc-500 font-normal">(3570 FPS)</span></span>
+            </div>
+            <div class="h-2 w-full bg-[#16161A] rounded-full overflow-hidden border border-white/[0.05]">
+              <div id="bench-bar-op2" class="h-full bg-zinc-300 rounded-full transition-all duration-300" style="width: 8%;"></div>
+            </div>
+          </div>
+
+          <!-- Op 3 -->
+          <div class="space-y-1">
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="text-emerald-400 font-medium">3. Photometric Recovery (CLAHE Clip 2.5 + Gamma LUT)</span>
+              <span id="bench-val-op3" class="text-emerald-400 font-bold">0.84 ms <span class="text-emerald-500/70 font-normal">(1190 FPS)</span></span>
+            </div>
+            <div class="h-2 w-full bg-[#16161A] rounded-full overflow-hidden border border-white/[0.05]">
+              <div id="bench-bar-op3" class="h-full bg-emerald-400 rounded-full transition-all duration-300" style="width: 15%;"></div>
+            </div>
+          </div>
+
+          <!-- Op 4 -->
+          <div class="space-y-1">
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="text-zinc-300 font-medium">4. Rain Denoise (Bilateral Filter + Unsharp Mask)</span>
+              <span id="bench-val-op4" class="text-zinc-200 font-bold">1.25 ms <span class="text-zinc-500 font-normal">(800 FPS)</span></span>
+            </div>
+            <div class="h-2 w-full bg-[#16161A] rounded-full overflow-hidden border border-white/[0.05]">
+              <div id="bench-bar-op4" class="h-full bg-zinc-300 rounded-full transition-all duration-300" style="width: 20%;"></div>
+            </div>
+          </div>
+
+          <!-- Op 5 -->
+          <div class="space-y-1">
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="text-zinc-300 font-medium">5. Motion Estimation (Farneback Dense Optical Flow)</span>
+              <span id="bench-val-op5" class="text-zinc-200 font-bold">4.82 ms <span class="text-zinc-500 font-normal">(207 FPS)</span></span>
+            </div>
+            <div class="h-2 w-full bg-[#16161A] rounded-full overflow-hidden border border-white/[0.05]">
+              <div id="bench-bar-op5" class="h-full bg-zinc-400 rounded-full transition-all duration-300" style="width: 45%;"></div>
+            </div>
+          </div>
+
+          <!-- Op 6 -->
+          <div class="space-y-1 pt-1 border-t border-white/[0.06]">
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="text-zinc-100 font-bold">6. Full Chained MCP Agent Pipeline (Total End-to-End)</span>
+              <span id="bench-val-op6" class="text-emerald-400 font-bold">19.61 ms <span class="text-emerald-500/70 font-normal">(51.0 FPS)</span></span>
+            </div>
+            <div class="h-2 w-full bg-[#16161A] rounded-full overflow-hidden border border-white/[0.05]">
+              <div id="bench-bar-op6" class="h-full bg-emerald-500 rounded-full transition-all duration-300" style="width: 70%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AWS FinOps Graviton Calculator -->
+      <div class="shrink-0 bg-[#111114] border border-white/[0.07] p-5 rounded-2xl space-y-4 shadow-xl relative z-10">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <div class="w-7 h-7 rounded-lg bg-zinc-800 border border-white/10 flex items-center justify-center">
+              <i data-lucide="calculator" class="w-4 h-4 text-zinc-300"></i>
+            </div>
+            <h3 class="text-xs font-bold text-zinc-100 uppercase tracking-tight">AWS Graviton Fleet Economics Calculator</h3>
+          </div>
+          <span class="text-xs font-mono-num text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20 font-semibold">
+            4.2x Cost-Efficiency vs x86_64 GPU
+          </span>
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex items-center justify-between text-xs font-mono-num text-zinc-300">
+            <span>Fleet Size (Vehicles):</span>
+            <span id="finops-fleet-count" class="font-bold text-zinc-100 bg-[#16161A] px-2.5 py-0.5 rounded-lg border border-white/[0.07]">50 AV Vehicles</span>
+          </div>
+          <input type="range" id="finops-fleet-slider" min="1" max="500" value="50"
+            class="finops-slider w-full cursor-pointer accent-zinc-200" oninput="updateFinOpsCalculator(this.value)">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3 pt-2">
+          <div class="p-3 bg-[#16161A] border border-white/[0.07] rounded-xl">
+            <div class="text-[10px] text-zinc-500 font-mono-num uppercase font-semibold">Hourly Fleet Compute (c7g.2xlarge)</div>
+            <div id="finops-hourly-total" class="text-lg font-bold text-zinc-100 font-mono-num mt-1">$17.85 / hr</div>
+          </div>
+          <div class="p-3 bg-[#16161A] border border-emerald-500/30 rounded-xl">
+            <div class="text-[10px] text-emerald-400 font-mono-num uppercase font-semibold">Annual Cloud Savings vs g4dn GPU</div>
+            <div id="finops-annual-total" class="text-lg font-bold text-emerald-400 font-mono-num mt-1">$370,986 / yr</div>
+          </div>
+        </div>
+      </div>
+
+    </div>    </div>
+
+  </main>
+
+  <!-- =========================================================================
+       BOTTOM TELEMETRY & PLAYBACK BAR (Exact 30px Height - Lichtblick / Rerun style)
+       ========================================================================= -->
+  <footer class="h-[30px] min-h-[30px] max-h-[30px] bg-[#09090B] border-t border-white/[0.07] px-3 flex items-center justify-between text-[11px] font-mono-num text-zinc-400 shrink-0 select-none z-30">
+    
+    <!-- Left: Prev/Next Scenario Stepping & Frame Index -->
+    <div class="flex items-center space-x-3">
+      <div class="flex items-center space-x-1">
+        <button id="btn-prev-scenario" onclick="navigateScenario(-1)" class="btn-secondary px-2.5 py-0.5 rounded-md flex items-center space-x-1 font-semibold text-[10px]" title="Previous Scenario (ArrowLeft / ArrowUp)">
+          <i data-lucide="chevron-left" class="w-3 h-3 text-zinc-400"></i>
+          <span>Prev</span>
+        </button>
+        <button id="btn-next-scenario" onclick="navigateScenario(1)" class="btn-secondary px-2.5 py-0.5 rounded-md flex items-center space-x-1 font-semibold text-[10px]" title="Next Scenario (ArrowRight / ArrowDown)">
+          <span>Next</span>
+          <i data-lucide="chevron-right" class="w-3 h-3 text-zinc-400"></i>
+        </button>
+      </div>
+
+      <span class="text-zinc-600">|</span>
+
+      <div class="flex items-center space-x-1.5">
+        <span class="text-zinc-500 font-medium">SCENARIO:</span>
+        <span id="bottom-scenario-index" class="text-zinc-200 font-bold">01</span><span class="text-zinc-500 font-medium">/12</span>
+      </div>
+    </div>
+
+    <!-- Center: Performance Telemetry (Clean, Minimal Latency & FPS) -->
+    <div class="hidden sm:flex items-center space-x-2 text-zinc-300 text-[11px] font-mono-num">
+      <span class="text-zinc-500 font-medium">PIPELINE LATENCY:</span>
+      <span class="text-emerald-400 font-bold">24.8ms</span>
+      <span class="text-zinc-600">•</span>
+      <span class="text-zinc-300 font-medium">58.4 FPS</span>
+      <span id="footer-model-hash" class="hidden">bbac96e571881b294c96020756ae5914...</span>
+    </div>
+
+    <!-- Right: Operational Status (Minimal & Clean) -->
+    <div class="flex items-center space-x-2 text-[11px]">
+      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+      <span class="text-zinc-300 font-medium">System Online</span>
+    </div>
+
+  </footer>
+
+  <!-- Main Application Logic -->
+  <script src="/static/app.js"></script>
+</body>
+</html>

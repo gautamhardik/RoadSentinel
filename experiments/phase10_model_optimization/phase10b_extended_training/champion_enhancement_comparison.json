@@ -1,0 +1,133 @@
+{
+  "timestamp": "2026-10-14T04:55:03Z",
+  "champion_checkpoint": "C:\\Users\\hiten\\Downloads\\cv\\experiments\\phase10_model_optimization\\phase10b_extended_training\\session4_artifacts\\session4_best.pt",
+  "threshold_sweep": {
+    "vru_conf_0.15": {
+      "vru_threshold": 0.15,
+      "non_vru_threshold": 0.25,
+      "small_vru_recall": 55.6,
+      "small_vru_tp": 501,
+      "vru_recall": 70.0,
+      "vru_precision": 65.55,
+      "vru_f1": 0.677,
+      "all_class_recall": 74.42,
+      "all_class_precision": 74.94
+    },
+    "vru_conf_0.18": {
+      "vru_threshold": 0.18,
+      "non_vru_threshold": 0.25,
+      "small_vru_recall": 52.28,
+      "small_vru_tp": 471,
+      "vru_recall": 67.76,
+      "vru_precision": 70.39,
+      "vru_f1": 0.6905,
+      "all_class_recall": 73.85,
+      "all_class_precision": 76.41
+    },
+    "vru_conf_0.20": {
+      "vru_threshold": 0.2,
+      "non_vru_threshold": 0.25,
+      "small_vru_recall": 49.83,
+      "small_vru_tp": 449,
+      "vru_recall": 66.03,
+      "vru_precision": 72.86,
+      "vru_f1": 0.6928,
+      "all_class_recall": 73.42,
+      "all_class_precision": 77.1
+    },
+    "vru_conf_0.25": {
+      "vru_threshold": 0.25,
+      "non_vru_threshold": 0.25,
+      "small_vru_recall": 42.95,
+      "small_vru_tp": 387,
+      "vru_recall": 61.09,
+      "vru_precision": 78.62,
+      "vru_f1": 0.6876,
+      "all_class_recall": 72.17,
+      "all_class_precision": 78.48
+    }
+  },
+  "champion_active_foveation": {
+    "small_vru_recall": 50.39,
+    "small_vru_tp": 454,
+    "vru_recall": 65.57,
+    "vru_precision": 72.22,
+    "vru_f1": 0.6873,
+    "all_class_recall": 74.29,
+    "all_class_precision": 70.66,
+    "avg_latency_ms": 1940.8,
+    "mean_crops_per_image": 1.91,
+    "per_class": {
+      "person": {
+        "tp": 1027,
+        "fp": 369,
+        "fn": 501,
+        "precision": 73.57,
+        "recall": 67.21
+      },
+      "rider": {
+        "tp": 33,
+        "fp": 23,
+        "fn": 25,
+        "precision": 58.93,
+        "recall": 56.9
+      },
+      "car": {
+        "tp": 2326,
+        "fp": 779,
+        "fn": 577,
+        "precision": 74.91,
+        "recall": 80.12
+      },
+      "bus": {
+        "tp": 41,
+        "fp": 24,
+        "fn": 24,
+        "precision": 63.08,
+        "recall": 63.08
+      },
+      "truck": {
+        "tp": 93,
+        "fp": 75,
+        "fn": 40,
+        "precision": 55.36,
+        "recall": 69.92
+      },
+      "bike": {
+        "tp": 70,
+        "fp": 40,
+        "fn": 52,
+        "precision": 63.64,
+        "recall": 57.38
+      },
+      "motor": {
+        "tp": 11,
+        "fp": 7,
+        "fn": 21,
+        "precision": 61.11,
+        "recall": 34.38
+      },
+      "traffic light": {
+        "tp": 714,
+        "fp": 352,
+        "fn": 266,
+        "precision": 66.98,
+        "recall": 72.86
+      },
+      "traffic sign": {
+        "tp": 805,
+        "fp": 457,
+        "fn": 265,
+        "precision": 63.79,
+        "recall": 75.23
+      },
+      "train": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    }
+  }
+}

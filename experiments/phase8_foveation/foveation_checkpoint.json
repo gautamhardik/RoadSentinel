@@ -1,0 +1,77 @@
+{
+  "images_processed": 300,
+  "total_images": 300,
+  "elapsed_seconds": 450.84,
+  "crop_counts_mean": 1.94,
+  "inspected_area_pct_mean": 5.44,
+  "current_rss_mb": 894.3,
+  "class_stats": {
+    "person": {
+      "tp": 1001,
+      "fp": 384,
+      "fn": 527
+    },
+    "rider": {
+      "tp": 33,
+      "fp": 18,
+      "fn": 25
+    },
+    "car": {
+      "tp": 2313,
+      "fp": 820,
+      "fn": 590
+    },
+    "bus": {
+      "tp": 41,
+      "fp": 19,
+      "fn": 24
+    },
+    "truck": {
+      "tp": 90,
+      "fp": 78,
+      "fn": 43
+    },
+    "bike": {
+      "tp": 65,
+      "fp": 48,
+      "fn": 57
+    },
+    "motor": {
+      "tp": 12,
+      "fp": 7,
+      "fn": 20
+    },
+    "traffic light": {
+      "tp": 709,
+      "fp": 362,
+      "fn": 271
+    },
+    "traffic sign": {
+      "tp": 805,
+      "fp": 465,
+      "fn": 265
+    },
+    "train": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 1
+    }
+  },
+  "vru_size_stats": {
+    "Small (<32\u00b2)": {
+      "tp": 435,
+      "fn": 466,
+      "total": 901
+    },
+    "Medium [32\u00b2-96\u00b2)": {
+      "tp": 591,
+      "fn": 155,
+      "total": 746
+    },
+    "Large (\u226596\u00b2)": {
+      "tp": 85,
+      "fn": 8,
+      "total": 93
+    }
+  }
+}

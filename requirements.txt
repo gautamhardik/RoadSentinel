@@ -1,0 +1,27 @@
+# RoadSentinel Autonomous Perception Platform — Core Dependencies
+# Compatible with Python 3.10, 3.11, 3.12 (x86_64 and ARM64 / AWS Graviton)
+
+# Web & API Framework
+fastapi>=0.110.0
+uvicorn[standard]>=0.28.0
+pydantic>=2.6.0
+python-multipart>=0.0.9
+aiofiles>=23.2.1
+
+# Computer Vision & Deep Learning
+torch>=2.2.0
+torchvision>=0.17.0
+ultralytics>=8.1.0
+opencv-python-headless>=4.9.0.80
+numpy>=1.24.0,<2.0.0
+pillow>=10.2.0
+scipy>=1.11.0
+
+# Multi-Candidate Spatial Fusion & Optimization
+ensemble-boxes>=1.0.9
+
+# CLI, Utilities & Testing
+requests>=2.31.0
+tqdm>=4.66.0
+pytest>=8.0.0
+httpx>=0.27.0

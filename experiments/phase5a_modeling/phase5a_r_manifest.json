@@ -1,0 +1,58 @@
+{
+  "phase": "5A-R",
+  "experiment_name": "RoadSentinel Phase 5A-R — Corrected Class-Weighted VRU Fine-Tuning",
+  "status": "EXPERIMENT_PREPARED_AWAITING_GPU_WINDOW",
+  "date": "2026-10-10",
+  "checkpoint": {
+    "base_path": "weights/bdd100k_yolo11s.pt",
+    "sha256": "A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3",
+    "architecture": "YOLO11s",
+    "parameters": 9431662,
+    "strides": [8, 16, 32]
+  },
+  "provenance_and_hashes": {
+    "training_script": "kaggle_jobs/model_training/train_phase5a_r_vru_weighted.py",
+    "training_script_sha256": "BD464C2A0A2F0D0DDE13BC6A35B4C427932963B2BC2CEE056800FA56A02EC9CC",
+    "config_yaml": "experiments/phase5a_modeling/phase5a_r_config.yaml",
+    "config_yaml_sha256": "3CA3312B173D008BBD943C3992ECFC30D84A50CEE28D2C2B93099421BAA60D95",
+    "kernel_metadata": "kaggle_jobs/model_training/kernel-metadata-5ar.json",
+    "kernel_id": "hardikgautam25/roadsentinel-phase-5a-r-vru-weighted"
+  },
+  "loss_weighting_specification": {
+    "mechanism": "v8DetectionLoss.class_weights elementwise tensor scaling",
+    "class_order": ["person", "rider", "car", "bus", "truck", "bike", "motor", "traffic light", "traffic sign", "train"],
+    "class_weights": [1.2, 2.0, 1.0, 1.0, 1.0, 1.8, 2.0, 1.0, 1.0, 1.0],
+    "unit_test_status": "VERIFIED (tests/test_phase5a_r_loss_weighting.py: 5/5 passing)"
+  },
+  "augmentation_honesty": {
+    "copy_paste": 0.0,
+    "copy_paste_rationale": "Explicitly disabled: BDD100K bounding-box labels lack polygon segmentation contours",
+    "mosaic": 0.8,
+    "close_mosaic_epochs": 2,
+    "scale_jitter": 0.4,
+    "fliplr": 0.5
+  },
+  "acceptance_gates": {
+    "cohort": "9,700-image confirmation cohort",
+    "gate_1_precision_gain": {
+      "baseline": 0.6203,
+      "target": 0.6703,
+      "status": "NOT_EVALUATED"
+    },
+    "gate_2_recall_retention": {
+      "baseline": 0.6251,
+      "target": 0.6051,
+      "status": "NOT_EVALUATED"
+    },
+    "gate_3_small_vru_recall": {
+      "baseline": 0.4625,
+      "target": 0.4500,
+      "status": "NOT_EVALUATED"
+    },
+    "gate_4_micro_f1": {
+      "baseline": 0.6227,
+      "target": 0.6500,
+      "status": "NOT_EVALUATED"
+    }
+  }
+}

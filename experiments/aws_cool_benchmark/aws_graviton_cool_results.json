@@ -1,0 +1,273 @@
+{
+  "timestamp": "2026-10-25 05:19:47 UTC",
+  "environment": {
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "system": "Windows",
+    "release": "11",
+    "python_version": "3.13.9",
+    "cpu_count": 22,
+    "opencv_version": "5.0.0",
+    "simd_flags": {
+      "NEON": false,
+      "KleidiCV": false,
+      "SVE": false,
+      "AVX2": true,
+      "AVX512": true,
+      "parallel_framework": "Default"
+    },
+    "build_info_snippet": "\nGeneral configuration for OpenCV 5.0.0 =====================================\n  Version control:               5.0.0\n\n  Platform:\n    Timestamp:                   2026-07-01T09:07:32Z\n    Host:                        Windows 10.0.20348 AMD64\n    CMake:                       4.3.2\n    CMake generator:             Visual Studio 17 2022\n    CMake build tool:            C:/Program Files/Microsoft Visual Studio/2022/Enterprise/MSBuild/Current/Bin/amd64/MSBuild.exe\n    MSVC:                        1944\n    Configuration:               Debug Release\n    Algorithm Hint:              ALGO_HINT_ACCURATE\n\n  CPU/HW features:\n    Baseline:                    SSE SSE2 SSE3\n      requested:                 SSE3\n    Dispatched code generation:  SSE4_1 SSE4_2 AVX FP16 AVX2 AVX512_SKX\n      SSE4_1 (18 files):         + SSSE3 SSE4_1\n      SSE4_2 (1 files):          + SSSE3 SSE4_1 POPCNT SSE4_2\n      AVX (17 files):            + SSSE3 SSE4_1 POPCNT SSE4_2 AVX\n      FP16 (0 files):            + SSSE3 SSE4_1 POPCNT SSE4_2 AVX FP16\n      AVX2 (49 files):           + SSSE3 SSE4_1 POPCNT SSE4_2 AVX FP16 AVX2 FMA3\n      AVX512_SKX (9 files):      + SSSE3 SSE4_1 POPCNT SSE4_2 AVX FP16 AVX2 FMA3 AVX_512F AVX512_COMMON AVX512_SKX\n"
+  },
+  "is_native_arm64": false,
+  "benchmark_matrix": {
+    "threads_1": {
+      "Op1_Letterbox_960_Resize": {
+        "mean_ms": 33.63,
+        "std_ms": 4.311,
+        "p50_ms": 33.002,
+        "p95_ms": 39.698,
+        "p99_ms": 54.128,
+        "fps": 29.7
+      },
+      "Op2_ROI_LAB_Hist_Laplacian": {
+        "mean_ms": 15.022,
+        "std_ms": 1.945,
+        "p50_ms": 14.704,
+        "p95_ms": 18.573,
+        "p99_ms": 19.529,
+        "fps": 66.6
+      },
+      "Op3_Night_CLAHE_Gamma_LUT": {
+        "mean_ms": 20.754,
+        "std_ms": 1.862,
+        "p50_ms": 20.377,
+        "p95_ms": 24.057,
+        "p99_ms": 25.922,
+        "fps": 48.2
+      },
+      "Op4_Rain_Bilateral_Unsharp": {
+        "mean_ms": 22.51,
+        "std_ms": 1.965,
+        "p50_ms": 22.454,
+        "p95_ms": 25.878,
+        "p99_ms": 26.399,
+        "fps": 44.4
+      },
+      "Op5_Dense_Optical_Flow_Farneback": {
+        "mean_ms": 38.872,
+        "std_ms": 10.269,
+        "p50_ms": 37.941,
+        "p95_ms": 53.777,
+        "p99_ms": 57.884,
+        "fps": 25.7
+      },
+      "Op6_Full_Agentic_OpenCV_Pipeline": {
+        "mean_ms": 112.77,
+        "std_ms": 23.613,
+        "p50_ms": 115.536,
+        "p95_ms": 148.345,
+        "p99_ms": 166.99,
+        "fps": 8.9
+      }
+    },
+    "threads_2": {
+      "Op1_Letterbox_960_Resize": {
+        "mean_ms": 22.819,
+        "std_ms": 1.902,
+        "p50_ms": 22.657,
+        "p95_ms": 26.796,
+        "p99_ms": 28.059,
+        "fps": 43.8
+      },
+      "Op2_ROI_LAB_Hist_Laplacian": {
+        "mean_ms": 13.757,
+        "std_ms": 2.503,
+        "p50_ms": 13.417,
+        "p95_ms": 18.403,
+        "p99_ms": 21.977,
+        "fps": 72.7
+      },
+      "Op3_Night_CLAHE_Gamma_LUT": {
+        "mean_ms": 13.917,
+        "std_ms": 1.623,
+        "p50_ms": 13.746,
+        "p95_ms": 16.737,
+        "p99_ms": 18.389,
+        "fps": 71.9
+      },
+      "Op4_Rain_Bilateral_Unsharp": {
+        "mean_ms": 23.02,
+        "std_ms": 3.176,
+        "p50_ms": 22.21,
+        "p95_ms": 28.486,
+        "p99_ms": 31.538,
+        "fps": 43.4
+      },
+      "Op5_Dense_Optical_Flow_Farneback": {
+        "mean_ms": 49.989,
+        "std_ms": 8.191,
+        "p50_ms": 50.101,
+        "p95_ms": 64.523,
+        "p99_ms": 72.562,
+        "fps": 20.0
+      },
+      "Op6_Full_Agentic_OpenCV_Pipeline": {
+        "mean_ms": 101.741,
+        "std_ms": 7.745,
+        "p50_ms": 100.843,
+        "p95_ms": 116.815,
+        "p99_ms": 122.884,
+        "fps": 9.8
+      }
+    },
+    "threads_4": {
+      "Op1_Letterbox_960_Resize": {
+        "mean_ms": 13.777,
+        "std_ms": 1.026,
+        "p50_ms": 13.522,
+        "p95_ms": 15.87,
+        "p99_ms": 17.465,
+        "fps": 72.6
+      },
+      "Op2_ROI_LAB_Hist_Laplacian": {
+        "mean_ms": 12.176,
+        "std_ms": 1.407,
+        "p50_ms": 12.148,
+        "p95_ms": 14.579,
+        "p99_ms": 15.669,
+        "fps": 82.1
+      },
+      "Op3_Night_CLAHE_Gamma_LUT": {
+        "mean_ms": 10.31,
+        "std_ms": 3.726,
+        "p50_ms": 9.384,
+        "p95_ms": 16.079,
+        "p99_ms": 23.905,
+        "fps": 97.0
+      },
+      "Op4_Rain_Bilateral_Unsharp": {
+        "mean_ms": 18.676,
+        "std_ms": 2.722,
+        "p50_ms": 18.348,
+        "p95_ms": 23.037,
+        "p99_ms": 27.016,
+        "fps": 53.5
+      },
+      "Op5_Dense_Optical_Flow_Farneback": {
+        "mean_ms": 50.91,
+        "std_ms": 4.011,
+        "p50_ms": 50.761,
+        "p95_ms": 57.506,
+        "p99_ms": 60.787,
+        "fps": 19.6
+      },
+      "Op6_Full_Agentic_OpenCV_Pipeline": {
+        "mean_ms": 85.372,
+        "std_ms": 6.152,
+        "p50_ms": 85.131,
+        "p95_ms": 93.521,
+        "p99_ms": 104.566,
+        "fps": 11.7
+      }
+    },
+    "threads_8": {
+      "Op1_Letterbox_960_Resize": {
+        "mean_ms": 9.935,
+        "std_ms": 1.056,
+        "p50_ms": 9.977,
+        "p95_ms": 11.25,
+        "p99_ms": 12.102,
+        "fps": 100.7
+      },
+      "Op2_ROI_LAB_Hist_Laplacian": {
+        "mean_ms": 11.632,
+        "std_ms": 1.768,
+        "p50_ms": 11.289,
+        "p95_ms": 14.881,
+        "p99_ms": 17.723,
+        "fps": 86.0
+      },
+      "Op3_Night_CLAHE_Gamma_LUT": {
+        "mean_ms": 8.414,
+        "std_ms": 1.757,
+        "p50_ms": 8.344,
+        "p95_ms": 11.973,
+        "p99_ms": 12.564,
+        "fps": 118.8
+      },
+      "Op4_Rain_Bilateral_Unsharp": {
+        "mean_ms": 18.108,
+        "std_ms": 2.305,
+        "p50_ms": 18.09,
+        "p95_ms": 21.972,
+        "p99_ms": 24.759,
+        "fps": 55.2
+      },
+      "Op5_Dense_Optical_Flow_Farneback": {
+        "mean_ms": 50.785,
+        "std_ms": 4.59,
+        "p50_ms": 49.996,
+        "p95_ms": 58.386,
+        "p99_ms": 65.88,
+        "fps": 19.7
+      },
+      "Op6_Full_Agentic_OpenCV_Pipeline": {
+        "mean_ms": 79.461,
+        "std_ms": 14.133,
+        "p50_ms": 79.185,
+        "p95_ms": 102.088,
+        "p99_ms": 112.319,
+        "fps": 12.6
+      }
+    }
+  },
+  "aws_cloud_cost_analysis": {
+    "c7g.xlarge": {
+      "instance": "c7g.xlarge",
+      "architecture": "aarch64",
+      "description": "AWS Graviton3 (Arm64)",
+      "hourly_cost_usd": 0.145,
+      "effective_fps": 11.7,
+      "fps_source": "HOST_MEASURED_BASELINE",
+      "hours_per_1m_frames": 23.742,
+      "cost_per_1m_frames_usd": 3.4425
+    },
+    "c8g.xlarge": {
+      "instance": "c8g.xlarge",
+      "architecture": "aarch64",
+      "description": "AWS Graviton4 (Arm64)",
+      "hourly_cost_usd": 0.1596,
+      "effective_fps": 11.7,
+      "fps_source": "HOST_MEASURED_BASELINE",
+      "hours_per_1m_frames": 23.742,
+      "cost_per_1m_frames_usd": 3.7892
+    },
+    "c6i.xlarge": {
+      "instance": "c6i.xlarge",
+      "architecture": "x86_64",
+      "description": "Intel Xeon 8375C (x86_64)",
+      "hourly_cost_usd": 0.17,
+      "effective_fps": 11.7,
+      "fps_source": "HOST_MEASURED_BASELINE",
+      "hours_per_1m_frames": 23.742,
+      "cost_per_1m_frames_usd": 4.0361
+    },
+    "c6a.xlarge": {
+      "instance": "c6a.xlarge",
+      "architecture": "x86_64",
+      "description": "AMD EPYC 7R13 (x86_64)",
+      "hourly_cost_usd": 0.153,
+      "effective_fps": 11.7,
+      "fps_source": "HOST_MEASURED_BASELINE",
+      "hours_per_1m_frames": 23.742,
+      "cost_per_1m_frames_usd": 3.6325
+    }
+  },
+  "summary": {
+    "reference_pipeline_latency_ms": 85.372,
+    "reference_pipeline_fps": 11.7,
+    "graviton_hourly_saving_vs_intel_pct": 14.7,
+    "execution_mode": "HOST_WORKSTATION_BASELINE",
+    "cool_simd_provenance": "Host SIMD (AVX2, AVX512, parallel_framework) active"
+  }
+}

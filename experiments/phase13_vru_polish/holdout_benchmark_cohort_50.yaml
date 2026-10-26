@@ -1,0 +1,5 @@
+path: C:\Users\hiten\Downloads\cv
+train: C:\Users\hiten\Downloads\cv\experiments\phase13_vru_polish\holdout_benchmark_cohort_50.txt
+val: C:\Users\hiten\Downloads\cv\experiments\phase13_vru_polish\holdout_benchmark_cohort_50.txt
+nc: 10
+names: ['person', 'rider', 'car', 'bus', 'truck', 'bike', 'motor', 'traffic light', 'traffic sign', 'train']

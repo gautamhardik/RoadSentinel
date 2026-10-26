@@ -1,0 +1,71 @@
+{
+  "phase": "5A",
+  "experiment_name": "RoadSentinel Phase 5A — Evaluator Hardening and Small-VRU Model Research",
+  "date": "2026-10-10",
+  "status": "TRAINING_EXECUTING_ON_KAGGLE_GPU",
+  "training_execution": {
+    "kernel_id": "hardikgautam25/roadsentinel-phase-5a-vru-model-training",
+    "kernel_status": "KernelWorkerStatus.RUNNING",
+    "compute_device": "Kaggle Tesla T4 (16GB) / P100 (16GB)",
+    "training_script": "kaggle_jobs/model_training/train_phase5a_vru_yolo11s.py",
+    "kernel_metadata": "kaggle_jobs/model_training/kernel-metadata.json",
+    "config_yaml": "experiments/phase5a_modeling/training_config.yaml",
+    "log_summary": "experiments/phase5a_modeling/training_log_summary.json"
+  },
+  "evaluator_hardening": {
+    "status": "VERIFIED_AND_PROTECTED",
+    "canonical_baseline_fusion_restored": true,
+    "prefilter_removed": true,
+    "regression_tests_passing": "44/44 repository tests pass (6 pipeline validation tests, 4 hardening tests)",
+    "canonical_metrics": {
+      "full_validation_10000": {
+        "vru_tp": 9641,
+        "vru_fp": 5901,
+        "vru_fn": 5732,
+        "vru_precision": 0.6203,
+        "vru_recall": 0.6271,
+        "small_vru_recall": 0.4683,
+        "vru_f1": 0.6237,
+        "overall_map50": 0.5403,
+        "vru_macro_map50": 0.5120
+      },
+      "confirmation_cohort_9700": {
+        "vru_tp": 8522,
+        "vru_fp": 5216,
+        "vru_fn": 5111,
+        "vru_precision": 0.6203,
+        "vru_recall": 0.6251,
+        "small_vru_recall": 0.4625,
+        "vru_f1": 0.6227
+      }
+    }
+  },
+  "checkpoint": {
+    "path": "weights/bdd100k_yolo11s.pt",
+    "sha256": "A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3",
+    "architecture": "YOLO11s",
+    "parameters": 9431662,
+    "strides": [8, 16, 32]
+  },
+  "dataset": {
+    "name": "BDD100K Detection",
+    "config_yaml": "bdd100k_dataset/data.yaml",
+    "train_images": 70000,
+    "val_images_total": 10000,
+    "pilot_cohort_images": 300,
+    "non_pilot_confirmation_images": 9700,
+    "test_images_quarantined": 20000,
+    "test_images_accessed": 0
+  },
+  "remediated_pipeline_defects": [
+    "Loss weighting attached via on_pretrain_routine_end callback to ensure v8DetectionLoss applies class weights",
+    "Identified Ultralytics CopyPaste requires polygon segmentation; multi-scale learning driven by Mosaic and Scale jitter",
+    "Resolved evaluation-cohort inconsistency: baseline mapped to exact 9,700 confirmation subset"
+  ],
+  "acceptance_gates_status": {
+    "gate_1_precision_improvement": "NOT_EVALUATED (Pending trained checkpoint)",
+    "gate_2_recall_retention": "NOT_EVALUATED (Pending trained checkpoint)",
+    "gate_3_small_vru_recall": "NOT_EVALUATED (Pending trained checkpoint)",
+    "gate_4_vru_micro_f1": "NOT_EVALUATED (Pending trained checkpoint)"
+  }
+}

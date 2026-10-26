@@ -1,0 +1,36 @@
+================================================================================
+ROADSENTINEL PHASE 2B.2 — FULL-VALIDATION BENCHMARK RUN LOG
+================================================================================
+Timestamp: 2026-10-09 16:13:19
+Hardware: Tesla T4 (cuda:0) | PyTorch 2.11.0+cu128 | CUDA 12.8
+Checkpoint SHA-256: A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3
+Checkpoint Provenance: Native imgsz=960, epochs=50, date=2026-09-23T23:55:04.410734+02:00
+Images Evaluated: 10000 | Total GT: 185578
+
+CONFIGURATION: Control-640 (imgsz=640)
+  Batch Size: 32 (initial: 32, OOM: False)
+  Batched Throughput: 35.34 FPS (28.3 ms/img)
+  Batch-1 Latency: Mean=29.01ms, P50=28.95ms, P95=33.95ms
+  Peak VRAM: 957.4 MB
+  Overall mAP@50: 0.4819 | mAP@50-95: 0.2757
+  VRU Macro mAP@50: 0.4428 | mAP@50-95: 0.2276
+  VRU Operational Point: Prec=0.7319, Rec=0.4836, F1=0.5824
+
+CONFIGURATION: Candidate-960 (imgsz=960)
+  Batch Size: 16 (initial: 16, OOM: False)
+  Batched Throughput: 34.71 FPS (28.81 ms/img)
+  Batch-1 Latency: Mean=19.55ms, P50=19.27ms, P95=22.07ms
+  Peak VRAM: 1008.9 MB
+  Overall mAP@50: 0.5544 | mAP@50-95: 0.318
+  VRU Macro mAP@50: 0.5262 | mAP@50-95: 0.2715
+  VRU Operational Point: Prec=0.7524, Rec=0.5692, F1=0.6481
+
+CONFIGURATION: Candidate-1280 (imgsz=1280)
+  Batch Size: 8 (initial: 8, OOM: False)
+  Batched Throughput: 25.41 FPS (39.36 ms/img)
+  Batch-1 Latency: Mean=24.73ms, P50=24.64ms, P95=25.99ms
+  Peak VRAM: 957.2 MB
+  Overall mAP@50: 0.5638 | mAP@50-95: 0.3224
+  VRU Macro mAP@50: 0.5367 | mAP@50-95: 0.2775
+  VRU Operational Point: Prec=0.7617, Rec=0.5807, F1=0.659
+

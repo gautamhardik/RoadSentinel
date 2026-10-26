@@ -1,0 +1,1202 @@
+{
+  "b1c81faa-c80764c5.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1112.1
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 935.3
+    }
+  },
+  "b1c9c847-3bda4659.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 989.9
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 877.4
+    }
+  },
+  "b1ca8418-84a133a0.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1170.6
+    },
+    "Config_F": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 922.8
+    }
+  },
+  "b1cac6a7-04e33135.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 981.2
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 956.5
+    }
+  },
+  "b1cd1e94-26dd524f.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1080.7
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 982.8
+    }
+  },
+  "b1ceb32e-3f481b43.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 876.4
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1114.0
+    }
+  },
+  "b1ceb32e-51852abe.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 2,
+      "latency_ms": 1140.1
+    },
+    "Config_F": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 905.8
+    }
+  },
+  "b1ceb32e-813f84b2.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1105.7
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1160.3
+    }
+  },
+  "b1ceb32e-a106591d.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 875.4
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 979.9
+    }
+  },
+  "b1cebfb7-284f5117.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 972.5
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 992.5
+    }
+  },
+  "b1d0091f-75824d0d.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1401.1
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1031.2
+    }
+  },
+  "b1d0091f-f2c2d2ae.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 895.5
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1063.7
+    }
+  },
+  "b1d0a191-03dcecc2.jpg": {
+    "Config_B": {
+      "tp": 12,
+      "fp": 1,
+      "latency_ms": 1145.7
+    },
+    "Config_F": {
+      "tp": 12,
+      "fp": 1,
+      "latency_ms": 1001.9
+    }
+  },
+  "b1d0a191-06deb55d.jpg": {
+    "Config_B": {
+      "tp": 8,
+      "fp": 2,
+      "latency_ms": 1191.3
+    },
+    "Config_F": {
+      "tp": 8,
+      "fp": 3,
+      "latency_ms": 1168.7
+    }
+  },
+  "b1d0a191-28f0e779.jpg": {
+    "Config_B": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 1321.8
+    },
+    "Config_F": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 1188.8
+    }
+  },
+  "b1d0a191-2ed2269e.jpg": {
+    "Config_B": {
+      "tp": 1,
+      "fp": 2,
+      "latency_ms": 1434.1
+    },
+    "Config_F": {
+      "tp": 1,
+      "fp": 1,
+      "latency_ms": 1378.5
+    }
+  },
+  "b1d0a191-5490450b.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 1,
+      "latency_ms": 1253.4
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 1,
+      "latency_ms": 1125.0
+    }
+  },
+  "b1d0a191-65deaeef.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1136.4
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1515.6
+    }
+  },
+  "b1d0a191-de8948f6.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 1,
+      "latency_ms": 1367.2
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1007.7
+    }
+  },
+  "b1d10d08-5b108225.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1770.9
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1658.3
+    }
+  },
+  "b1d10d08-743fd86c.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1778.2
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1665.5
+    }
+  },
+  "b1d10d08-c35503b8.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1728.7
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1551.9
+    }
+  },
+  "b1d10d08-da110fcb.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1741.1
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1806.4
+    }
+  },
+  "b1d10d08-ec660956.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1782.7
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1680.8
+    }
+  },
+  "b1d22449-117aa773.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1972.4
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 2003.9
+    }
+  },
+  "b1d22449-15fb948f.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1923.3
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1460.1
+    }
+  },
+  "b1d22ed6-f1cac061.jpg": {
+    "Config_B": {
+      "tp": 8,
+      "fp": 0,
+      "latency_ms": 1748.6
+    },
+    "Config_F": {
+      "tp": 6,
+      "fp": 0,
+      "latency_ms": 1497.9
+    }
+  },
+  "b1d3907b-2278601b.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1675.4
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1606.7
+    }
+  },
+  "b1d4b62c-60aab822.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1668.0
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1674.8
+    }
+  },
+  "b1d4b62c-89eeb5d3.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1746.7
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1664.9
+    }
+  },
+  "b1d4b62c-d9805029.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 2310.4
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1840.4
+    }
+  },
+  "b1d59b1f-a38aec79.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1790.5
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1821.6
+    }
+  },
+  "b1d7b3ac-0bdb47dc.jpg": {
+    "Config_B": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 1723.4
+    },
+    "Config_F": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 1692.6
+    }
+  },
+  "b1d7b3ac-2a92e19f.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1649.8
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1922.3
+    }
+  },
+  "b1d7b3ac-36f2d3b7.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1751.5
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1017.6
+    }
+  },
+  "b1d7b3ac-5744370e.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1776.5
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1807.4
+    }
+  },
+  "b1d7b3ac-5af8623b.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1614.8
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1187.8
+    }
+  },
+  "b1d7b3ac-9e14f05f.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1114.9
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1087.4
+    }
+  },
+  "b1d7b3ac-afa57f22.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1211.4
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 592.3
+    }
+  },
+  "b1d8735d-eee9f184.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1096.1
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1017.0
+    }
+  },
+  "b1d968b9-563405f4.jpg": {
+    "Config_B": {
+      "tp": 1,
+      "fp": 2,
+      "latency_ms": 1119.9
+    },
+    "Config_F": {
+      "tp": 1,
+      "fp": 1,
+      "latency_ms": 974.9
+    }
+  },
+  "b1d968b9-ce42734f.jpg": {
+    "Config_B": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 980.8
+    },
+    "Config_F": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 1118.2
+    }
+  },
+  "b1d971b4-ac67ca0d.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1315.8
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 939.3
+    }
+  },
+  "b1d9e136-6c94ea3f.jpg": {
+    "Config_B": {
+      "tp": 4,
+      "fp": 1,
+      "latency_ms": 1107.4
+    },
+    "Config_F": {
+      "tp": 4,
+      "fp": 1,
+      "latency_ms": 852.7
+    }
+  },
+  "b1da9c53-0f3d4c5d.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1139.1
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 597.2
+    }
+  },
+  "b1dac7f7-6b2e0382.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 1,
+      "latency_ms": 1104.5
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 979.9
+    }
+  },
+  "b1db7e22-cfa74dc3.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1113.0
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1549.4
+    }
+  },
+  "b1dce572-c6a8cb5e.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1129.5
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 851.2
+    }
+  },
+  "b1dd58c1-8b546ba7.jpg": {
+    "Config_B": {
+      "tp": 3,
+      "fp": 1,
+      "latency_ms": 1230.2
+    },
+    "Config_F": {
+      "tp": 3,
+      "fp": 1,
+      "latency_ms": 874.1
+    }
+  },
+  "b1df722f-57d21f3f.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1008.9
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1015.0
+    }
+  },
+  "b1df722f-5bcc3db7.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1408.8
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1246.3
+    }
+  },
+  "b1e0c01d-dd9e6e2f.jpg": {
+    "Config_B": {
+      "tp": 2,
+      "fp": 1,
+      "latency_ms": 1443.7
+    },
+    "Config_F": {
+      "tp": 2,
+      "fp": 1,
+      "latency_ms": 912.4
+    }
+  },
+  "b1e1a7b8-0aec80e8.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1457.9
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1154.2
+    }
+  },
+  "b1e1a7b8-65ec7612.jpg": {
+    "Config_B": {
+      "tp": 1,
+      "fp": 1,
+      "latency_ms": 1247.0
+    },
+    "Config_F": {
+      "tp": 2,
+      "fp": 0,
+      "latency_ms": 1625.4
+    }
+  },
+  "b1e1a7b8-a7426a97.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1216.6
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1242.5
+    }
+  },
+  "b1e1a7b8-b397c445.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1122.8
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1217.2
+    }
+  },
+  "b1e2346e-c5f98707.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1309.5
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1104.0
+    }
+  },
+  "b1e3e9f5-92377424.jpg": {
+    "Config_B": {
+      "tp": 1,
+      "fp": 1,
+      "latency_ms": 1257.2
+    },
+    "Config_F": {
+      "tp": 1,
+      "fp": 1,
+      "latency_ms": 1205.9
+    }
+  },
+  "b1e62c91-eca210a9.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1250.4
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1055.1
+    }
+  },
+  "b1e6efc0-2552cc5d.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1387.7
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 983.8
+    }
+  },
+  "b1e88fd2-c1e4fd2b.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1354.1
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1081.7
+    }
+  },
+  "b1e8ad72-c3c79240.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1469.4
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1458.6
+    }
+  },
+  "b1e9ee0e-67e26f2e.jpg": {
+    "Config_B": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 2151.3
+    },
+    "Config_F": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 1900.1
+    }
+  },
+  "b1ea0ae4-4f770228.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1751.7
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1391.5
+    }
+  },
+  "b1eb9133-5cc75c18.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1724.8
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1701.4
+    }
+  },
+  "b1ebfc3c-740ec84a.jpg": {
+    "Config_B": {
+      "tp": 3,
+      "fp": 0,
+      "latency_ms": 1811.3
+    },
+    "Config_F": {
+      "tp": 3,
+      "fp": 0,
+      "latency_ms": 1682.7
+    }
+  },
+  "b1ebfc3c-cc9c2bb8.jpg": {
+    "Config_B": {
+      "tp": 8,
+      "fp": 3,
+      "latency_ms": 1729.6
+    },
+    "Config_F": {
+      "tp": 9,
+      "fp": 3,
+      "latency_ms": 1608.2
+    }
+  },
+  "b1ee702d-0ae1fc10.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1759.4
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1729.8
+    }
+  },
+  "b1ee702d-4a193906.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1681.3
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1922.3
+    }
+  },
+  "b1ee702d-525fcebf.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1725.8
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1671.7
+    }
+  },
+  "b1f022d3-3774de8b.jpg": {
+    "Config_B": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 1703.9
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 1,
+      "latency_ms": 1837.7
+    }
+  },
+  "b1f022d3-45162c67.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1778.2
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1761.7
+    }
+  },
+  "b1f0efd9-37a14dda.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1831.1
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 1,
+      "latency_ms": 1727.9
+    }
+  },
+  "b1f0efd9-e900c6e5.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1717.8
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1701.9
+    }
+  },
+  "b1f20aa0-3401c3bf.jpg": {
+    "Config_B": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 2234.3
+    },
+    "Config_F": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 1817.5
+    }
+  },
+  "b1f20aa0-6ef1db42.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1772.1
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1469.2
+    }
+  },
+  "b1f25ff6-1ddb7e43.jpg": {
+    "Config_B": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 1771.3
+    },
+    "Config_F": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 1703.1
+    }
+  },
+  "b1f4491b-07b32e8c.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1758.1
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1922.3
+    }
+  },
+  "b1f4491b-09593e90.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1892.6
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1889.2
+    }
+  },
+  "b1f4491b-16256d7c.jpg": {
+    "Config_B": {
+      "tp": 2,
+      "fp": 1,
+      "latency_ms": 1412.7
+    },
+    "Config_F": {
+      "tp": 2,
+      "fp": 1,
+      "latency_ms": 791.4
+    }
+  },
+  "b1f4491b-846d8cb2.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1113.9
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1133.9
+    }
+  },
+  "b1f4491b-97465266.jpg": {
+    "Config_B": {
+      "tp": 2,
+      "fp": 0,
+      "latency_ms": 1171.6
+    },
+    "Config_F": {
+      "tp": 2,
+      "fp": 0,
+      "latency_ms": 1153.1
+    }
+  },
+  "b1f4491b-9958bd99.jpg": {
+    "Config_B": {
+      "tp": 6,
+      "fp": 1,
+      "latency_ms": 1037.1
+    },
+    "Config_F": {
+      "tp": 6,
+      "fp": 3,
+      "latency_ms": 808.8
+    }
+  },
+  "b1f4491b-bf7d513f.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1098.9
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 953.4
+    }
+  },
+  "b1f4491b-cf446195.jpg": {
+    "Config_B": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 1111.7
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 956.5
+    }
+  },
+  "b1f4491b-d8d1459c.jpg": {
+    "Config_B": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 1011.9
+    },
+    "Config_F": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 839.3
+    }
+  },
+  "b1f4491b-dd8dfed5.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1174.0
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1080.3
+    }
+  },
+  "b1f6c103-5ce1f3c6.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1191.1
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1042.5
+    }
+  },
+  "b1f6c103-8b75ea3e.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1209.4
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 854.4
+    }
+  },
+  "b1f6c103-b00e8aad.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1151.9
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1242.4
+    }
+  },
+  "b1f85377-44885085.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1144.6
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1113.0
+    }
+  },
+  "b1fbaab8-68db7df7.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1329.3
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1173.7
+    }
+  },
+  "b1fbf878-b31a8293.jpg": {
+    "Config_B": {
+      "tp": 6,
+      "fp": 1,
+      "latency_ms": 1211.6
+    },
+    "Config_F": {
+      "tp": 6,
+      "fp": 1,
+      "latency_ms": 1196.3
+    }
+  },
+  "b1fc95c9-644e3c3f.jpg": {
+    "Config_B": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 1195.3
+    },
+    "Config_F": {
+      "tp": 1,
+      "fp": 0,
+      "latency_ms": 1264.5
+    }
+  },
+  "b1fc95c9-cb2882c7.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1319.8
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1115.5
+    }
+  },
+  "b1ff4656-0435391e.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1188.9
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1160.0
+    }
+  },
+  "b1ff4656-94ee8536.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1672.7
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1151.6
+    }
+  },
+  "b1ff4656-ebcfeb35.jpg": {
+    "Config_B": {
+      "tp": 2,
+      "fp": 0,
+      "latency_ms": 1291.8
+    },
+    "Config_F": {
+      "tp": 2,
+      "fp": 0,
+      "latency_ms": 947.9
+    }
+  },
+  "b200b84e-4a792877.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1133.9
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1263.6
+    }
+  },
+  "b200e97a-bf074435.jpg": {
+    "Config_B": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1225.4
+    },
+    "Config_F": {
+      "tp": 0,
+      "fp": 0,
+      "latency_ms": 1228.6
+    }
+  }
+}

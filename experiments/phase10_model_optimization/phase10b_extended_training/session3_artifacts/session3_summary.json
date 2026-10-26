@@ -1,0 +1,20 @@
+{
+  "session": 3,
+  "target_completed_epoch": 39,
+  "start_epoch": 27,
+  "epochs_trained_in_session": 13,
+  "checkpoint_file": "session3_checkpoint_ep38.pt",
+  "checkpoint_sha256": "a7383eeded7b3f3fa64da10ff9e1f160e95709f1c68775fd4c7e093ae6bb0fb4",
+  "optimizer_intact": false,
+  "optimizer_state_tensors": 0,
+  "optimizer_param_groups": 0,
+  "fitness": 0.35735,
+  "best_fitness": 0.35735,
+  "metrics": {
+    "metrics/precision(B)": 0.7659616744692674,
+    "metrics/recall(B)": 0.5668066577782335,
+    "metrics/mAP50(B)": 0.6161298403033738,
+    "metrics/mAP50-95(B)": 0.3570385499400322
+  },
+  "elapsed_hours": 7.831254545119074
+}

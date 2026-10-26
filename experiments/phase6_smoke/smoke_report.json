@@ -1,0 +1,139 @@
+{
+  "mode": "smoke",
+  "split": {
+    "train_images": 6500,
+    "holdout_images": 5000,
+    "holdout_sha256": "c7047ee0073803431321735c098aad212693daa696153f31f8a26e11ebf7686b",
+    "train_list_sha256": "e73df84cbef993128b6fa8b9d9e16bc3dee304e58f9e17fa309168d2a5964430"
+  },
+  "phases": [
+    {
+      "phase": "A",
+      "exit": 0,
+      "seconds": 591.1,
+      "log": "train_phase_A.log"
+    },
+    {
+      "phase": "B",
+      "exit": 0,
+      "seconds": 407.6,
+      "log": "train_phase_B.log"
+    }
+  ],
+  "gpu": {
+    "0": {
+      "samples": 95,
+      "util_mean_pct": 89.6,
+      "util_p10_pct": 91.4,
+      "mem_peak_mib": 9641.0,
+      "mem_total_mib": 15360.0
+    },
+    "1": {
+      "samples": 95,
+      "util_mean_pct": 90.8,
+      "util_p10_pct": 92.0,
+      "mem_peak_mib": 9557.0,
+      "mem_total_mib": 15360.0
+    }
+  },
+  "epochs": [
+    {
+      "phase": "A",
+      "epoch": 1,
+      "train_s": 233.5,
+      "val_s": 57.7,
+      "lr_first": 0.0,
+      "lr_last": 0.009975429975429976,
+      "lr_expected_first": 0.0,
+      "mem_alloc_gb": 9.12,
+      "fitness": 0.1335
+    },
+    {
+      "phase": "B",
+      "epoch": 2,
+      "train_s": 237.4,
+      "val_s": 62.3,
+      "lr_first": 0.00505,
+      "lr_last": 0.00505,
+      "lr_expected_first": 0.00505,
+      "mem_alloc_gb": 9.1,
+      "fitness": 0.1896
+    }
+  ],
+  "loss_weight_proof": {
+    "box_cls_dfl_weighted": [
+      1.4283294677734375,
+      2.216639757156372,
+      1.1078177690505981
+    ],
+    "box_cls_dfl_unweighted": [
+      1.4283294677734375,
+      2.137446165084839,
+      1.1078177690505981
+    ],
+    "PASS": true
+  },
+  "checkpoint_audit": {
+    "ema": true,
+    "optimizer": true,
+    "scaler": true,
+    "epoch": true,
+    "updates": true,
+    "train_args": true,
+    "train_metrics": true,
+    "best_fitness": true,
+    "saved_epoch_index": 0,
+    "saved_ema_updates": 198
+  },
+  "hashes_sha256": {
+    "resume_after_phase_A.pt": "e023054ef9df3ac9fc5d9209165d246045a42a5d07f4f15514e0aa9a68dd972d",
+    "resume_last.pt": "39304bd61250a1fed20bacbf810705b26b77c88cc0b2f6e14d97dfbea9064b1b",
+    "last.pt": "7e7db19cd570340f93ad9d94a306abf1d7e85fb79d618678e56a484c9b7f7c38",
+    "best.pt": "017c7d9f9e169ff962d1c2307e64c28955f93fa136ae15261b5862b28adb35d2",
+    "rng_state_rank0.pt": "da48bcc5ed7968b11758a183d2ac87dd1a384668764507e58bb58a956bb97973"
+  },
+  "not_saved_by_ultralytics": [
+    "scheduler state (rebuilt from epoch index on resume)",
+    "RNG state of rank 1 and dataloader workers",
+    "resume reseeds every rank with seed+1+RANK, so augmentation order after resume differs from an uninterrupted run"
+  ],
+  "warnings": [
+    "WARNING \u26a0\ufe0f \u001b[34m\u001b[1mtrain: \u001b[0mSlow image access detected (ping: 5.4\u00b11.8 ms, read: 7.2\u00b12.7 MB/s, size: 52.7 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips",
+    "WARNING \u26a0\ufe0f \u001b[34m\u001b[1mtrain: \u001b[0mCache directory /kaggle/input/datasets/a7madmostafa/bdd100k-yolo/train is not writable, cache not saved.",
+    "WARNING \u26a0\ufe0f \u001b[34m\u001b[1mval: \u001b[0mSlow image access detected (ping: 5.8\u00b12.6 ms, read: 7.4\u00b12.1 MB/s, size: 65.0 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips",
+    "WARNING \u26a0\ufe0f \u001b[34m\u001b[1mval: \u001b[0mCache directory /kaggle/input/datasets/a7madmostafa/bdd100k-yolo/train is not writable, cache not saved.",
+    "warnings.warn("
+  ],
+  "checks": {
+    "two_gpus_visible": "PASS",
+    "ddp_world_size_2": "PASS",
+    "both_gpus_utilized": "PASS",
+    "phase_A_completed": "PASS",
+    "phase_B_completed": "PASS",
+    "class_weights_change_loss": "PASS",
+    "checkpoint_has_model_optimizer_scaler_epoch_ema": "PASS",
+    "resume_started_at_epoch_2": "PASS",
+    "resume_restored_ema_updates": "PASS",
+    "resume_restored_optimizer_state": "PASS",
+    "lr_schedule_exact_after_resume": "PASS",
+    "no_ddp_errors": "PASS"
+  },
+  "estimate": {
+    "measured_train_s_per_smoke_epoch": [
+      233.5,
+      237.4
+    ],
+    "measured_val_s_per_epoch": [
+      57.7,
+      62.3
+    ],
+    "train_images_per_s": 27.38,
+    "projected_s_per_full_epoch": 2436,
+    "startup_and_final_eval_overhead_s": 291,
+    "official_val_report_s": 125,
+    "session_budget_s": 39600.0,
+    "safety_margin": 0.15,
+    "max_epochs_fitting_one_session": 13,
+    "note": "Linear scaling of the slowest measured smoke epoch from 6,500 to 65,000 images."
+  }
+}

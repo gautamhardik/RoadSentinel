@@ -1,0 +1,77 @@
+[{"stream_name":"stdout","time":0.600587921,"data":"Installing ultralytics package in Kaggle environment...\n"}
+,{"stream_name":"stdout","time":3.637895735,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.9/46.9 kB 2.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":4.108961195,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 46.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":4.131749028,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.5/96.5 kB 5.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":13.405049511,"data":"Creating new Ultralytics Settings v0.0.8 file ✅ \n"}
+,{"stream_name":"stdout","time":13.405089499,"data":"View Ultralytics Settings with 'yolo settings' or at '/root/.config/Ultralytics/settings.json'\n"}
+,{"stream_name":"stdout","time":13.405096927,"data":"Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/usage/settings.\n"}
+,{"stream_name":"stdout","time":13.551985357,"data":"================================================================================\n"}
+,{"stream_name":"stdout","time":13.552028517,"data":"RoadSentinel Phase 2B.2 — Full-Validation Multi-Resolution Benchmark\n"}
+,{"stream_name":"stdout","time":13.552035146,"data":"Configurations: Control-640 (b32), Candidate-960 (b16), Candidate-1280 (b8)\n"}
+,{"stream_name":"stdout","time":13.552039489,"data":"================================================================================\n"}
+,{"stream_name":"stdout","time":13.846975441,"data":"Device: cuda:0 (Tesla T4)\n"}
+,{"stream_name":"stdout","time":13.847000575,"data":"PyTorch Version: 2.11.0+cu128 | CUDA: 12.8\n"}
+,{"stream_name":"stdout","time":13.848416357,"data":"Platform: Linux-6.18.48+-x86_64-with-glibc2.39\n"}
+,{"stream_name":"stdout","time":13.884062796,"data":"Using Checkpoint: /kaggle/input/datasets/hardikgautam25/roadsentinel-weights/bdd100k_yolo11s.pt\n"}
+,{"stream_name":"stdout","time":13.884079532,"data":"Using Validation Images: /kaggle/input/datasets/a7madmostafa/bdd100k-yolo/val/images\n"}
+,{"stream_name":"stdout","time":13.884090732,"data":"Using Validation Labels: /kaggle/input/datasets/a7madmostafa/bdd100k-yolo/val/labels\n"}
+,{"stream_name":"stdout","time":14.261747835,"data":"Checkpoint SHA-256: A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3\n"}
+,{"stream_name":"stdout","time":14.326484956,"data":"Checkpoint Provenance Audit:\n"}
+,{"stream_name":"stdout","time":14.32650918,"data":"  Trained date: 2026-09-23T23:55:04.410734+02:00\n"}
+,{"stream_name":"stdout","time":14.326513384,"data":"  Ultralytics version: 8.4.155\n"}
+,{"stream_name":"stdout","time":14.326516876,"data":"  Native training resolution (imgsz): 960\n"}
+,{"stream_name":"stdout","time":14.326520305,"data":"  Training epochs: 50, batch: 8, optimizer: SGD\n"}
+,{"stream_name":"stdout","time":14.604690043,"data":"\n"}
+,{"stream_name":"stdout","time":14.6047471,"data":"Discovered 10000 validation images to evaluate.\n"}
+,{"stream_name":"stdout","time":14.606811833,"data":"Saved validation manifest to /kaggle/working/validation_manifest_10000.txt\n"}
+,{"stream_name":"stdout","time":14.606828503,"data":"\n"}
+,{"stream_name":"stdout","time":14.60683256,"data":"Loading ground truth annotations and size group categories...\n"}
+,{"stream_name":"stdout","time":151.841246598,"data":"Loaded 185578 total ground truth boxes across 10000 images.\n"}
+,{"stream_name":"stdout","time":151.841286155,"data":"  person        :  13265 boxes\n"}
+,{"stream_name":"stdout","time":151.84130455,"data":"  rider         :    649 boxes\n"}
+,{"stream_name":"stdout","time":151.841308583,"data":"  car           : 102540 boxes\n"}
+,{"stream_name":"stdout","time":151.841312042,"data":"  bus           :   1597 boxes\n"}
+,{"stream_name":"stdout","time":151.841315612,"data":"  truck         :   4247 boxes\n"}
+,{"stream_name":"stdout","time":151.841319013,"data":"  bike          :   1007 boxes\n"}
+,{"stream_name":"stdout","time":151.841322333,"data":"  motor         :    452 boxes\n"}
+,{"stream_name":"stdout","time":151.84132559,"data":"  traffic light :  26891 boxes\n"}
+,{"stream_name":"stdout","time":151.8413289,"data":"  traffic sign  :  34915 boxes\n"}
+,{"stream_name":"stdout","time":151.84133235,"data":"  train         :     15 boxes\n"}
+,{"stream_name":"stdout","time":151.841335703,"data":"\n"}
+,{"stream_name":"stdout","time":151.841339102,"data":"Benchmarking Batch-1 Latency on fixed subset of 200 images...\n"}
+,{"stream_name":"stdout","time":151.841342641,"data":"\n"}
+,{"stream_name":"stdout","time":151.84134604,"data":"--- Batch-1 Latency Benchmark: Control-640 (imgsz=640) ---\n"}
+,{"stream_name":"stdout","time":167.602171452,"data":"  Batch-1 Mean Latency: 39.46 ± 15.44 ms\n"}
+,{"stream_name":"stdout","time":167.60224319,"data":"  Batch-1 Median (p50): 36.15 ms | p95: 65.48 ms\n"}
+,{"stream_name":"stdout","time":167.607451571,"data":"\n"}
+,{"stream_name":"stdout","time":167.607472086,"data":"--- Batch-1 Latency Benchmark: Candidate-960 (imgsz=960) ---\n"}
+,{"stream_name":"stdout","time":171.668878513,"data":"  Batch-1 Mean Latency: 17.69 ± 2.25 ms\n"}
+,{"stream_name":"stdout","time":171.668915884,"data":"  Batch-1 Median (p50): 17.08 ms | p95: 20.58 ms\n"}
+,{"stream_name":"stdout","time":171.673761916,"data":"\n"}
+,{"stream_name":"stdout","time":171.673778157,"data":"--- Batch-1 Latency Benchmark: Candidate-1280 (imgsz=1280) ---\n"}
+,{"stream_name":"stdout","time":176.700673454,"data":"  Batch-1 Mean Latency: 22.77 ± 1.10 ms\n"}
+,{"stream_name":"stdout","time":176.700738365,"data":"  Batch-1 Median (p50): 22.62 ms | p95: 24.11 ms\n"}
+,{"stream_name":"stdout","time":176.706742862,"data":"\n"}
+,{"stream_name":"stdout","time":176.706759436,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":176.706764094,"data":"Running Full Validation: Control-640 | imgsz=640 | Initial Batch=32\n"}
+,{"stream_name":"stdout","time":176.706769354,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":292.898122317,"data":"  Processed 4000/10000 images (34.9 FPS)...\n"}
+,{"stream_name":"stdout","time":412.073080427,"data":"  Processed 8000/10000 images (34.2 FPS)...\n"}
+,{"stream_name":"stdout","time":466.05322589,"data":"  Processed 10000/10000 images (34.8 FPS)...\n"}
+,{"stream_name":"stdout","time":466.053503643,"data":"Inference Complete: 287.65 s | 28.76 ms/img | 34.77 FPS | Peak VRAM: 957.4 MB\n"}
+,{"stream_name":"stdout","time":466.053521337,"data":"Calculating COCO-style 101-point AP and Operational Metrics...\n"}
+,{"stream_name":"stderr","time":614.446972037,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":614.447491427,"data":"  File \"/kaggle/src/script.py\", line 847, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":614.447503714,"data":"    main()\n"}
+,{"stream_name":"stderr","time":614.447508485,"data":"    ~~~~^^\n"}
+,{"stream_name":"stderr","time":614.447512695,"data":"  File \"/kaggle/src/script.py\", line 629, in main\n"}
+,{"stream_name":"stderr","time":614.447532712,"data":"    \"batch1_stats\": batch1_results[cname],\n"}
+,{"stream_name":"stderr","time":614.447537124,"data":"                    ~~~~~~~~~~~~~~^^^^^^^\n"}
+,{"stream_name":"stderr","time":614.447541297,"data":"KeyError: 'train'\n"}
+,{"stream_name":"stderr","time":620.271250911,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":620.271277846,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":620.508407545,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":620.508432383,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":621.303081382,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":622.375330268,"data":"[NbConvertApp] Writing 442369 bytes to __results__.html\n"}
+]

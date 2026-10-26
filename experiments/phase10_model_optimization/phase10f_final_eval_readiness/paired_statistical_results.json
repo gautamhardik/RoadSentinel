@@ -1,0 +1,92 @@
+{
+  "integrity": {
+    "champion_sha256": "4a245c1f81d1240f28fbd4d35bd175cdff765fcadc4c3137f52fb5ca912666cd",
+    "baseline_sha256": "42d4b385ec69d01209e76dcf85f0fb4ffb33857d85f4daa02a4271d20f76541e",
+    "champion_verified": true,
+    "baseline_verified": true
+  },
+  "cohort": {
+    "name": "cohort5_untouched_1000",
+    "image_count": 1000,
+    "total_gt_objects": 18548,
+    "vru_gt_objects": 1300,
+    "small_vru_gt_objects": 628
+  },
+  "point_estimates": {
+    "baseline": {
+      "small_vru_recall": 45.22,
+      "vru_recall": 63.62,
+      "vru_precision": 77.58,
+      "vru_f1": 0.6991,
+      "mean_fp_per_img": 0.239,
+      "tp": 827,
+      "fp": 239,
+      "fn": 473,
+      "small_tp": 284,
+      "small_fn": 344
+    },
+    "config_e": {
+      "small_vru_recall": 49.2,
+      "vru_recall": 66.08,
+      "vru_precision": 77.04,
+      "vru_f1": 0.7114,
+      "mean_fp_per_img": 0.256,
+      "tp": 859,
+      "fp": 256,
+      "fn": 441,
+      "small_tp": 309,
+      "small_fn": 319
+    },
+    "paired_deltas": {
+      "delta_small_vru_recall": 3.98,
+      "delta_vru_recall": 2.46,
+      "delta_vru_precision": -0.54,
+      "delta_vru_f1": 0.0123,
+      "delta_fp_per_img": 0.017
+    }
+  },
+  "paired_bootstrap": {
+    "replicates": 2000,
+    "seed": 42,
+    "sampling_unit": "image_level",
+    "interval_method": "percentile_95",
+    "ci_95_paired_deltas": {
+      "delta_small_vru_recall": [
+        2.37,
+        5.71
+      ],
+      "delta_vru_recall": [
+        1.6,
+        3.34
+      ],
+      "delta_vru_precision": [
+        -1.66,
+        0.59
+      ],
+      "delta_vru_f1": [
+        0.0051,
+        0.0195
+      ],
+      "delta_fp_per_img": [
+        0.001,
+        0.032
+      ]
+    },
+    "config_e_absolute_ci_95": {
+      "vru_precision": [
+        73.2,
+        80.68
+      ],
+      "small_vru_recall": [
+        44.02,
+        54.46
+      ]
+    },
+    "precision_floor_audit_72": {
+      "pct_replicates_ge_72": 99.45,
+      "min_replicate_precision": 70.67,
+      "observed_point_margin_pp": 5.04,
+      "observed_ci_lower_margin_pp": 1.2
+    }
+  }
+}

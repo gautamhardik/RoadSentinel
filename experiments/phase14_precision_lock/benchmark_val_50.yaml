@@ -1,0 +1,5 @@
+path: C:\Users\hiten\Downloads\cv
+train: C:\Users\hiten\Downloads\cv\experiments\phase14_precision_lock\holdout_cohort_50.txt
+val: C:\Users\hiten\Downloads\cv\experiments\phase14_precision_lock\holdout_cohort_50.txt
+nc: 10
+names: ['person', 'rider', 'car', 'bus', 'truck', 'bike', 'motor', 'traffic light', 'traffic sign', 'train']

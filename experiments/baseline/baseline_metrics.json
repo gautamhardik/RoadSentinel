@@ -1,0 +1,129 @@
+{
+  "timestamp": "2026-10-09 13:24:20",
+  "weights": "bdd100k_yolo11s.pt",
+  "eval_images_count": 100,
+  "latency": {
+    "mean_ms": 598.98,
+    "median_ms": 447.1,
+    "p95_ms": 1329.34,
+    "fps": 1.67
+  },
+  "summary": {
+    "overall_precision_50": 0.3787,
+    "overall_recall_50": 0.2225,
+    "vru_recall_50": 0.3074
+  },
+  "per_class_metrics": [
+    {
+      "cid": 0,
+      "name": "person",
+      "is_vru": true,
+      "gt_count": 238,
+      "pred_count": 159,
+      "precision_50": 0.7925,
+      "recall_50": 0.5294,
+      "map_50": 0.4195,
+      "map_50_95": 0.3303
+    },
+    {
+      "cid": 1,
+      "name": "rider",
+      "is_vru": true,
+      "gt_count": 10,
+      "pred_count": 4,
+      "precision_50": 0.75,
+      "recall_50": 0.3,
+      "map_50": 0.225,
+      "map_50_95": 0.24
+    },
+    {
+      "cid": 2,
+      "name": "car",
+      "is_vru": false,
+      "gt_count": 1006,
+      "pred_count": 941,
+      "precision_50": 0.7503,
+      "recall_50": 0.7018,
+      "map_50": 0.5265,
+      "map_50_95": 0.4837
+    },
+    {
+      "cid": 3,
+      "name": "truck",
+      "is_vru": false,
+      "gt_count": 20,
+      "pred_count": 36,
+      "precision_50": 0.0278,
+      "recall_50": 0.05,
+      "map_50": 0.0014,
+      "map_50_95": 0.025
+    },
+    {
+      "cid": 4,
+      "name": "bus",
+      "is_vru": false,
+      "gt_count": 54,
+      "pred_count": 12,
+      "precision_50": 0.0833,
+      "recall_50": 0.0185,
+      "map_50": 0.0015,
+      "map_50_95": 0.0185
+    },
+    {
+      "cid": 5,
+      "name": "train",
+      "is_vru": true,
+      "gt_count": 12,
+      "pred_count": 0,
+      "precision_50": 0.0,
+      "recall_50": 0.0,
+      "map_50": 0.0,
+      "map_50_95": 0.0
+    },
+    {
+      "cid": 6,
+      "name": "motor",
+      "is_vru": true,
+      "gt_count": 10,
+      "pred_count": 4,
+      "precision_50": 1.0,
+      "recall_50": 0.4,
+      "map_50": 0.4,
+      "map_50_95": 0.28
+    },
+    {
+      "cid": 7,
+      "name": "bike",
+      "is_vru": false,
+      "gt_count": 286,
+      "pred_count": 5,
+      "precision_50": 0.0,
+      "recall_50": 0.0,
+      "map_50": 0.0,
+      "map_50_95": 0.0
+    },
+    {
+      "cid": 8,
+      "name": "traffic light",
+      "is_vru": false,
+      "gt_count": 320,
+      "pred_count": 242,
+      "precision_50": 0.0041,
+      "recall_50": 0.0031,
+      "map_50": 0.0,
+      "map_50_95": 0.0003
+    },
+    {
+      "cid": 9,
+      "name": "traffic sign",
+      "is_vru": false,
+      "gt_count": 0,
+      "pred_count": 241,
+      "precision_50": 0.0,
+      "recall_50": 0.0,
+      "map_50": 0.0,
+      "map_50_95": 0.0
+    }
+  ],
+  "failure_cases_saved": 10
+}

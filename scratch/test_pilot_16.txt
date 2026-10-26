@@ -1,0 +1,16 @@
+C:\Users\hiten\Downloads\cv\bdd100k_dataset\train\images\0024b742-83709bd4.jpg
+C:\Users\hiten\Downloads\cv\bdd100k_dataset\train\images\0024b742-acbed4fb.jpg
+C:\Users\hiten\Downloads\cv\bdd100k_dataset\train\images\0033b19f-65613f7e.jpg
+C:\Users\hiten\Downloads\cv\bdd100k_dataset\train\images\0033b19f-7f07efac.jpg
+C:\Users\hiten\Downloads\cv\bdd100k_dataset\train\images\00423ac5-1fa7ff43.jpg
+C:\Users\hiten\Downloads\cv\bdd100k_dataset\train\images\005ee183-0100ac18.jpg
+C:\Users\hiten\Downloads\cv\bdd100k_dataset\train\images\005ee183-bcfab89f.jpg
+C:\Users\hiten\Downloads\cv\bdd100k_dataset\train\images\006a4209-286a5664.jpg
+C:\Users\hiten\Downloads\cv\bdd100k_dataset\train\images\006a4209-4f3bf6cf.jpg
+C:\Users\hiten\Downloads\cv\bdd100k_dataset\train\images\007eddfc-528c4da4.jpg
+C:\Users\hiten\Downloads\cv\bdd100k_dataset\train\images\007eddfc-bcaeb35b.jpg
+C:\Users\hiten\Downloads\cv\bdd100k_dataset\train\images\007eddfc-f8a80310.jpg
+C:\Users\hiten\Downloads\cv\bdd100k_dataset\train\images\00ce95b0-84be34a3.jpg
+C:\Users\hiten\Downloads\cv\bdd100k_dataset\train\images\00d1bafa-1b47b41c.jpg
+C:\Users\hiten\Downloads\cv\bdd100k_dataset\train\images\00d1bafa-6701fcd9.jpg
+C:\Users\hiten\Downloads\cv\bdd100k_dataset\train\images\00d9e313-038310a2.jpg

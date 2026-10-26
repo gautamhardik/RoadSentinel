@@ -1,0 +1,105 @@
+[{"stream_name":"stdout","time":0.946410083,"data":"Installing ultralytics package in Kaggle environment...\n"}
+,{"stream_name":"stdout","time":5.344672654,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.9/46.9 kB 1.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":5.991974551,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 19.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.036922258,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.5/96.5 kB 3.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":18.965953751,"data":"Creating new Ultralytics Settings v0.0.8 file ✅ \n"}
+,{"stream_name":"stdout","time":18.965991378,"data":"View Ultralytics Settings with 'yolo settings' or at '/root/.config/Ultralytics/settings.json'\n"}
+,{"stream_name":"stdout","time":18.965997251,"data":"Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/usage/settings.\n"}
+,{"stream_name":"stdout","time":19.16019661,"data":"================================================================================\n"}
+,{"stream_name":"stdout","time":19.160231565,"data":"RoadSentinel Phase 2B.2 — Full-Validation Multi-Resolution Benchmark\n"}
+,{"stream_name":"stdout","time":19.160236415,"data":"Configurations: Control-640 (b32), Candidate-960 (b16), Candidate-1280 (b8)\n"}
+,{"stream_name":"stdout","time":19.160239268,"data":"================================================================================\n"}
+,{"stream_name":"stdout","time":19.479378555,"data":"Device: cuda:0 (Tesla T4)\n"}
+,{"stream_name":"stdout","time":19.479416539,"data":"PyTorch Version: 2.11.0+cu128 | CUDA: 12.8\n"}
+,{"stream_name":"stdout","time":19.481182323,"data":"Platform: Linux-6.18.48+-x86_64-with-glibc2.39\n"}
+,{"stream_name":"stdout","time":19.493953821,"data":"Using Checkpoint: /kaggle/input/datasets/hardikgautam25/roadsentinel-weights/bdd100k_yolo11s.pt\n"}
+,{"stream_name":"stdout","time":19.493997376,"data":"Using Validation Images: /kaggle/input/datasets/a7madmostafa/bdd100k-yolo/val/images\n"}
+,{"stream_name":"stdout","time":19.494018747,"data":"Using Validation Labels: /kaggle/input/datasets/a7madmostafa/bdd100k-yolo/val/labels\n"}
+,{"stream_name":"stdout","time":19.768929694,"data":"Checkpoint SHA-256: A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3\n"}
+,{"stream_name":"stdout","time":19.859080404,"data":"Checkpoint Provenance Audit:\n"}
+,{"stream_name":"stdout","time":19.859109545,"data":"  Trained date: 2026-09-23T23:55:04.410734+02:00\n"}
+,{"stream_name":"stdout","time":19.859113919,"data":"  Ultralytics version: 8.4.155\n"}
+,{"stream_name":"stdout","time":19.859116991,"data":"  Native training resolution (imgsz): 960\n"}
+,{"stream_name":"stdout","time":19.859119698,"data":"  Training epochs: 50, batch: 8, optimizer: SGD\n"}
+,{"stream_name":"stdout","time":19.99971324,"data":"\n"}
+,{"stream_name":"stdout","time":19.999741322,"data":"Discovered 10000 validation images to evaluate.\n"}
+,{"stream_name":"stdout","time":20.001863365,"data":"Saved validation manifest to /kaggle/working/validation_manifest_10000.txt\n"}
+,{"stream_name":"stdout","time":20.001882382,"data":"\n"}
+,{"stream_name":"stdout","time":20.001887047,"data":"Loading ground truth annotations and size group categories...\n"}
+,{"stream_name":"stdout","time":114.415248069,"data":"Loaded 185578 total ground truth boxes across 10000 images.\n"}
+,{"stream_name":"stdout","time":114.415290971,"data":"  person        :  13265 boxes\n"}
+,{"stream_name":"stdout","time":114.415311619,"data":"  rider         :    649 boxes\n"}
+,{"stream_name":"stdout","time":114.415314964,"data":"  car           : 102540 boxes\n"}
+,{"stream_name":"stdout","time":114.415317596,"data":"  bus           :   1597 boxes\n"}
+,{"stream_name":"stdout","time":114.415320156,"data":"  truck         :   4247 boxes\n"}
+,{"stream_name":"stdout","time":114.415322701,"data":"  bike          :   1007 boxes\n"}
+,{"stream_name":"stdout","time":114.415325281,"data":"  motor         :    452 boxes\n"}
+,{"stream_name":"stdout","time":114.415327767,"data":"  traffic light :  26891 boxes\n"}
+,{"stream_name":"stdout","time":114.415330253,"data":"  traffic sign  :  34915 boxes\n"}
+,{"stream_name":"stdout","time":114.415332756,"data":"  train         :     15 boxes\n"}
+,{"stream_name":"stdout","time":114.415335345,"data":"\n"}
+,{"stream_name":"stdout","time":114.415337867,"data":"Benchmarking Batch-1 Latency on fixed subset of 200 images...\n"}
+,{"stream_name":"stdout","time":114.415340616,"data":"\n"}
+,{"stream_name":"stdout","time":114.415343075,"data":"--- Batch-1 Latency Benchmark: Control-640 (imgsz=640) ---\n"}
+,{"stream_name":"stdout","time":130.741773447,"data":"  Batch-1 Mean Latency: 29.01 ± 3.98 ms\n"}
+,{"stream_name":"stdout","time":130.741814667,"data":"  Batch-1 Median (p50): 28.95 ms | p95: 33.95 ms\n"}
+,{"stream_name":"stdout","time":130.747221457,"data":"\n"}
+,{"stream_name":"stdout","time":130.747250345,"data":"--- Batch-1 Latency Benchmark: Candidate-960 (imgsz=960) ---\n"}
+,{"stream_name":"stdout","time":135.251958865,"data":"  Batch-1 Mean Latency: 19.55 ± 1.24 ms\n"}
+,{"stream_name":"stdout","time":135.252018917,"data":"  Batch-1 Median (p50): 19.27 ms | p95: 22.07 ms\n"}
+,{"stream_name":"stdout","time":135.256962566,"data":"\n"}
+,{"stream_name":"stdout","time":135.257000038,"data":"--- Batch-1 Latency Benchmark: Candidate-1280 (imgsz=1280) ---\n"}
+,{"stream_name":"stdout","time":140.731797818,"data":"  Batch-1 Mean Latency: 24.73 ± 0.96 ms\n"}
+,{"stream_name":"stdout","time":140.731848723,"data":"  Batch-1 Median (p50): 24.64 ms | p95: 25.99 ms\n"}
+,{"stream_name":"stdout","time":140.738208604,"data":"\n"}
+,{"stream_name":"stdout","time":140.738242053,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":140.738246057,"data":"Running Full Validation: Control-640 | imgsz=640 | Initial Batch=32\n"}
+,{"stream_name":"stdout","time":140.738248911,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":253.167109326,"data":"  Processed 4000/10000 images (36.2 FPS)...\n"}
+,{"stream_name":"stdout","time":368.937396565,"data":"  Processed 8000/10000 images (35.4 FPS)...\n"}
+,{"stream_name":"stdout","time":425.669834063,"data":"  Processed 10000/10000 images (35.4 FPS)...\n"}
+,{"stream_name":"stdout","time":425.670091474,"data":"Inference Complete: 282.99 s | 28.30 ms/img | 35.34 FPS | Peak VRAM: 957.4 MB\n"}
+,{"stream_name":"stdout","time":425.670106098,"data":"Calculating COCO-style 101-point AP and Operational Metrics...\n"}
+,{"stream_name":"stdout","time":608.463202265,"data":"\n"}
+,{"stream_name":"stdout","time":608.463269459,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":608.463274929,"data":"Running Full Validation: Candidate-960 | imgsz=960 | Initial Batch=16\n"}
+,{"stream_name":"stdout","time":608.463278965,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":665.669255093,"data":"  Processed 2000/10000 images (35.9 FPS)...\n"}
+,{"stream_name":"stdout","time":723.344071014,"data":"  Processed 4000/10000 images (35.3 FPS)...\n"}
+,{"stream_name":"stdout","time":781.177728072,"data":"  Processed 6000/10000 images (35.0 FPS)...\n"}
+,{"stream_name":"stdout","time":839.28058923,"data":"  Processed 8000/10000 images (34.9 FPS)...\n"}
+,{"stream_name":"stdout","time":898.039849267,"data":"  Processed 10000/10000 images (34.7 FPS)...\n"}
+,{"stream_name":"stdout","time":898.040194464,"data":"Inference Complete: 288.11 s | 28.81 ms/img | 34.71 FPS | Peak VRAM: 1008.9 MB\n"}
+,{"stream_name":"stdout","time":898.040241365,"data":"Calculating COCO-style 101-point AP and Operational Metrics...\n"}
+,{"stream_name":"stdout","time":1092.330923759,"data":"\n"}
+,{"stream_name":"stdout","time":1092.330982146,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":1092.330987525,"data":"Running Full Validation: Candidate-1280 | imgsz=1280 | Initial Batch=8\n"}
+,{"stream_name":"stdout","time":1092.330991229,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":1168.794205665,"data":"  Processed 2000/10000 images (26.6 FPS)...\n"}
+,{"stream_name":"stdout","time":1247.654467901,"data":"  Processed 4000/10000 images (25.9 FPS)...\n"}
+,{"stream_name":"stdout","time":1327.792178385,"data":"  Processed 6000/10000 images (25.6 FPS)...\n"}
+,{"stream_name":"stdout","time":1407.605418872,"data":"  Processed 8000/10000 images (25.5 FPS)...\n"}
+,{"stream_name":"stdout","time":1487.087363523,"data":"  Processed 10000/10000 images (25.4 FPS)...\n"}
+,{"stream_name":"stdout","time":1487.087626895,"data":"Inference Complete: 393.58 s | 39.36 ms/img | 25.41 FPS | Peak VRAM: 957.2 MB\n"}
+,{"stream_name":"stdout","time":1487.08764047,"data":"Calculating COCO-style 101-point AP and Operational Metrics...\n"}
+,{"stream_name":"stdout","time":1703.565614818,"data":"\n"}
+,{"stream_name":"stdout","time":1703.565672523,"data":"Extracting representative visual cases (Recovered VRUs \u0026 Persistent Misses)...\n"}
+,{"stream_name":"stdout","time":1703.830191097,"data":"Rendered 20 comparison images in /kaggle/working/visual_examples\n"}
+,{"stream_name":"stdout","time":1703.830225459,"data":"\n"}
+,{"stream_name":"stdout","time":1703.830230023,"data":"Writing auditable output artifacts...\n"}
+,{"stream_name":"stdout","time":1703.83205562,"data":"Wrote JSON metrics to /kaggle/working/full_resolution_metrics.json\n"}
+,{"stream_name":"stdout","time":1703.832350697,"data":"Wrote Per-Class CSV to /kaggle/working/per_class_comparison.csv\n"}
+,{"stream_name":"stdout","time":1703.832542065,"data":"Wrote Size Group CSV to /kaggle/working/size_group_analysis.csv\n"}
+,{"stream_name":"stdout","time":1703.832731511,"data":"Wrote Latency \u0026 Memory CSV to /kaggle/working/latency_and_memory.csv\n"}
+,{"stream_name":"stdout","time":1703.832974995,"data":"Wrote Run Log to /kaggle/working/run_log.txt\n"}
+,{"stream_name":"stdout","time":1703.833004382,"data":"\n"}
+,{"stream_name":"stdout","time":1703.833011357,"data":"================================================================================\n"}
+,{"stream_name":"stdout","time":1703.833017307,"data":"RoadSentinel Phase 2B.2 Full Validation Benchmark Completed Successfully!\n"}
+,{"stream_name":"stdout","time":1703.833022529,"data":"================================================================================\n"}
+,{"stream_name":"stderr","time":1711.944594294,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1711.944643607,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1712.294183032,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1712.294223725,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1713.213246986,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1714.608871044,"data":"[NbConvertApp] Writing 442420 bytes to __results__.html\n"}
+]

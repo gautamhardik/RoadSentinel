@@ -1,0 +1,2560 @@
+{
+  "benchmark_name": "RoadSentinel Phase 3 \u2014 Active Foveation Engine Benchmark",
+  "timestamp": "2026-10-09 23:10:36",
+  "hardware": {
+    "device": "cuda:0 (Tesla T4)",
+    "local_test_device": "cpu",
+    "pytorch_version": "2.12.0"
+  },
+  "checkpoint": {
+    "file": "bdd100k_yolo11s.pt",
+    "sha256": "A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3",
+    "native_imgsz": 960
+  },
+  "dataset": {
+    "split": "val",
+    "images_evaluated": 10000,
+    "total_ground_truth_objects": 185578
+  },
+  "configurations": {
+    "FullFrame-640": {
+      "type": "full_frame",
+      "imgsz": 640,
+      "crops_per_image": 0,
+      "overall_mAP_50": 0.4819,
+      "overall_mAP_50_95": 0.2842,
+      "vru_macro_mAP_50": 0.4428,
+      "vru_macro_mAP_50_95": 0.2315,
+      "vru_micro_precision_50": 0.6812,
+      "vru_micro_recall_50": 0.4836,
+      "vru_micro_f1_50": 0.5656,
+      "small_vru_recall": 0.2325,
+      "med_vru_recall": 0.635,
+      "large_vru_recall": 0.7712,
+      "throughput_fps": 22.01,
+      "amortized_ms": 45.44,
+      "batch1_mean_ms": 11.09,
+      "batch1_p50_ms": 10.18,
+      "batch1_p95_ms": 14.52,
+      "peak_vram_mb": 1124.0,
+      "total_crops": 0,
+      "fraction_cropped": 0.0
+    },
+    "FullFrame-960": {
+      "type": "full_frame",
+      "imgsz": 960,
+      "crops_per_image": 0,
+      "overall_mAP_50": 0.5544,
+      "overall_mAP_50_95": 0.3421,
+      "vru_macro_mAP_50": 0.5262,
+      "vru_macro_mAP_50_95": 0.291,
+      "vru_micro_precision_50": 0.718,
+      "vru_micro_recall_50": 0.5692,
+      "vru_micro_f1_50": 0.6349,
+      "small_vru_recall": 0.3639,
+      "med_vru_recall": 0.7145,
+      "large_vru_recall": 0.812,
+      "throughput_fps": 39.92,
+      "amortized_ms": 25.05,
+      "batch1_mean_ms": 13.43,
+      "batch1_p50_ms": 13.09,
+      "batch1_p95_ms": 17.8,
+      "peak_vram_mb": 1450.0,
+      "total_crops": 0,
+      "fraction_cropped": 0.0
+    },
+    "FullFrame-1280": {
+      "type": "full_frame",
+      "imgsz": 1280,
+      "crops_per_image": 0,
+      "overall_mAP_50": 0.5638,
+      "overall_mAP_50_95": 0.354,
+      "vru_macro_mAP_50": 0.5367,
+      "vru_macro_mAP_50_95": 0.3025,
+      "vru_micro_precision_50": 0.7095,
+      "vru_micro_recall_50": 0.5807,
+      "vru_micro_f1_50": 0.6387,
+      "small_vru_recall": 0.4033,
+      "med_vru_recall": 0.728,
+      "large_vru_recall": 0.824,
+      "throughput_fps": 31.5,
+      "amortized_ms": 31.75,
+      "batch1_mean_ms": 19.9,
+      "batch1_p50_ms": 19.04,
+      "batch1_p95_ms": 25.4,
+      "peak_vram_mb": 2180.0,
+      "total_crops": 0,
+      "fraction_cropped": 0.0
+    },
+    "FixedGrid-960": {
+      "type": "fixed_grid",
+      "imgsz": 960,
+      "crops_per_image": 2,
+      "overall_mAP_50": 0.5032,
+      "overall_mAP_50_95": 0.3015,
+      "vru_macro_mAP_50": 0.48,
+      "vru_macro_mAP_50_95": 0.258,
+      "vru_micro_precision_50": 0.582,
+      "vru_micro_recall_50": 0.6343,
+      "vru_micro_f1_50": 0.607,
+      "small_vru_recall": 0.4629,
+      "med_vru_recall": 0.742,
+      "large_vru_recall": 0.826,
+      "throughput_fps": 16.79,
+      "amortized_ms": 59.56,
+      "batch1_mean_ms": 36.34,
+      "batch1_p50_ms": 34.3,
+      "batch1_p95_ms": 48.2,
+      "peak_vram_mb": 1780.0,
+      "total_crops": 20000,
+      "fraction_cropped": 1.0
+    },
+    "RandomCrop-960": {
+      "type": "random_crop",
+      "imgsz": 960,
+      "crops_per_image": 2,
+      "overall_mAP_50": 0.5048,
+      "overall_mAP_50_95": 0.304,
+      "vru_macro_mAP_50": 0.4935,
+      "vru_macro_mAP_50_95": 0.265,
+      "vru_micro_precision_50": 0.591,
+      "vru_micro_recall_50": 0.6183,
+      "vru_micro_f1_50": 0.6043,
+      "small_vru_recall": 0.4446,
+      "med_vru_recall": 0.731,
+      "large_vru_recall": 0.821,
+      "throughput_fps": 16.93,
+      "amortized_ms": 59.07,
+      "batch1_mean_ms": 37.81,
+      "batch1_p50_ms": 35.55,
+      "batch1_p95_ms": 49.6,
+      "peak_vram_mb": 1790.0,
+      "total_crops": 20000,
+      "fraction_cropped": 1.0
+    },
+    "ActiveFoveation-960": {
+      "type": "active_foveation",
+      "imgsz": 960,
+      "crops_per_image": 2,
+      "overall_mAP_50": 0.5403,
+      "overall_mAP_50_95": 0.331,
+      "vru_macro_mAP_50": 0.512,
+      "vru_macro_mAP_50_95": 0.2795,
+      "vru_micro_precision_50": 0.654,
+      "vru_micro_recall_50": 0.6271,
+      "vru_micro_f1_50": 0.6402,
+      "small_vru_recall": 0.4683,
+      "med_vru_recall": 0.7485,
+      "large_vru_recall": 0.831,
+      "throughput_fps": 24.14,
+      "amortized_ms": 41.42,
+      "batch1_mean_ms": 30.37,
+      "batch1_p50_ms": 14.35,
+      "batch1_p95_ms": 42.1,
+      "peak_vram_mb": 1780.0,
+      "total_crops": 9240,
+      "fraction_cropped": 0.5412
+    }
+  },
+  "sample_agent_traces": [
+    {
+      "image_id": "b1c66a42-6f7d68ca.jpg",
+      "image_shape": [
+        720,
+        1280
+      ],
+      "policy": "uncertainty_active",
+      "num_full_frame_dets": 36,
+      "num_crops_executed": 2,
+      "num_fused_dets": 39,
+      "crop_proposals": [
+        {
+          "crop_id": 1,
+          "crop_box": [
+            593.53,
+            246.03,
+            775.36,
+            433.93
+          ],
+          "trigger_reason": "small_vru+low_confidence+low_confidence+low_confidence",
+          "trigger_score": 0.7212,
+          "source_detection_idx": 26,
+          "context_margin": 0.375,
+          "area": 34166.4
+        },
+        {
+          "crop_id": 2,
+          "crop_box": [
+            340.02,
+            296.52,
+            592.06,
+            428.01
+          ],
+          "trigger_reason": "low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence",
+          "trigger_score": 0.3968,
+          "source_detection_idx": 35,
+          "context_margin": 0.25,
+          "area": 33138.8
+        }
+      ],
+      "crop_results": [
+        {
+          "proposal": {
+            "crop_id": 1,
+            "crop_box": [
+              593.53,
+              246.03,
+              775.36,
+              433.93
+            ],
+            "trigger_reason": "small_vru+low_confidence+low_confidence+low_confidence",
+            "trigger_score": 0.7212,
+            "source_detection_idx": 26,
+            "context_margin": 0.375,
+            "area": 34166.4
+          },
+          "crop_shape": [
+            188,
+            181
+          ],
+          "num_detections": 6,
+          "remapped_detections": [
+            {
+              "box": [
+                728.25,
+                364.58,
+                759.98,
+                401.53
+              ],
+              "class_id": 2,
+              "class_name": "car",
+              "confidence": 0.7955,
+              "source": "crop",
+              "crop_id": 1,
+              "trigger_reason": "small_vru+low_confidence+low_confidence+low_confidence",
+              "uncertainty_score": 0.7212,
+              "area": 1172.8,
+              "is_vru": false
+            },
+            {
+              "box": [
+                748.94,
+                361.39,
+                774.79,
+                408.91
+              ],
+              "class_id": 2,
+              "class_name": "car",
+              "confidence": 0.7872,
+              "source": "crop",
+              "crop_id": 1,
+              "trigger_reason": "small_vru+low_confidence+low_confidence+low_confidence",
+              "uncertainty_score": 0.7212,
+              "area": 1228.5,
+              "is_vru": false
+            },
+            {
+              "box": [
+                682.59,
+                357.77,
+                717.8,
+                391.01
+              ],
+              "class_id": 2,
+              "class_name": "car",
+              "confidence": 0.7479,
+              "source": "crop",
+              "crop_id": 1,
+              "trigger_reason": "small_vru+low_confidence+low_confidence+low_confidence",
+              "uncertainty_score": 0.7212,
+              "area": 1170.6,
+              "is_vru": false
+            },
+            {
+              "box": [
+                702.92,
+                363.21,
+                737.37,
+                394.18
+              ],
+              "class_id": 2,
+              "class_name": "car",
+              "confidence": 0.6493,
+              "source": "crop",
+              "crop_id": 1,
+              "trigger_reason": "small_vru+low_confidence+low_confidence+low_confidence",
+              "uncertainty_score": 0.7212,
+              "area": 1066.8,
+              "is_vru": false
+            },
+            {
+              "box": [
+                596.72,
+                352.24,
+                634.33,
+                381.67
+              ],
+              "class_id": 2,
+              "class_name": "car",
+              "confidence": 0.637,
+              "source": "crop",
+              "crop_id": 1,
+              "trigger_reason": "small_vru+low_confidence+low_confidence+low_confidence",
+              "uncertainty_score": 0.7212,
+              "area": 1107.1,
+              "is_vru": false
+            },
+            {
+              "box": [
+                656.57,
+                304.19,
+                682.78,
+                312.87
+              ],
+              "class_id": 8,
+              "class_name": "traffic sign",
+              "confidence": 0.396,
+              "source": "crop",
+              "crop_id": 1,
+              "trigger_reason": "small_vru+low_confidence+low_confidence+low_confidence",
+              "uncertainty_score": 0.7212,
+              "area": 227.6,
+              "is_vru": false
+            }
+          ],
+          "inference_time_ms": 367.72
+        },
+        {
+          "proposal": {
+            "crop_id": 2,
+            "crop_box": [
+              340.02,
+              296.52,
+              592.06,
+              428.01
+            ],
+            "trigger_reason": "low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence",
+            "trigger_score": 0.3968,
+            "source_detection_idx": 35,
+            "context_margin": 0.25,
+            "area": 33138.8
+          },
+          "crop_shape": [
+            131,
+            252
+          ],
+          "num_detections": 2,
+          "remapped_detections": [
+            {
+              "box": [
+                582.23,
+                357.55,
+                592.0,
+                377.01
+              ],
+              "class_id": 2,
+              "class_name": "car",
+              "confidence": 0.4782,
+              "source": "crop",
+              "crop_id": 2,
+              "trigger_reason": "low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence",
+              "uncertainty_score": 0.3968,
+              "area": 190.1,
+              "is_vru": false
+            },
+            {
+              "box": [
+                495.57,
+                349.49,
+                498.5,
+                354.43
+              ],
+              "class_id": 7,
+              "class_name": "traffic light",
+              "confidence": 0.331,
+              "source": "crop",
+              "crop_id": 2,
+              "trigger_reason": "low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence",
+              "uncertainty_score": 0.3968,
+              "area": 14.4,
+              "is_vru": false
+            }
+          ],
+          "inference_time_ms": 168.24
+        }
+      ],
+      "fused_detections": [
+        {
+          "box": [
+            216.11,
+            169.38,
+            277.26,
+            229.12
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.7586,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 3653.7,
+          "is_vru": false
+        },
+        {
+          "box": [
+            794.6,
+            310.88,
+            828.16,
+            344.47
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.7243,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 1127.2,
+          "is_vru": false
+        },
+        {
+          "box": [
+            1000.44,
+            281.66,
+            1039.91,
+            326.21
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.7233,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 1758.6,
+          "is_vru": false
+        },
+        {
+          "box": [
+            655.9,
+            304.4,
+            683.51,
+            313.82
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.4111,
+          "source": "fused",
+          "crop_id": 1,
+          "trigger_reason": "small_vru+low_confidence+low_confidence+low_confidence",
+          "uncertainty_score": 0.7212,
+          "area": 260.1,
+          "is_vru": false
+        },
+        {
+          "box": [
+            273.38,
+            287.73,
+            308.58,
+            301.59
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.2862,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 487.9,
+          "is_vru": false
+        },
+        {
+          "box": [
+            650.72,
+            353.2,
+            664.34,
+            386.66
+          ],
+          "class_id": 0,
+          "class_name": "person",
+          "confidence": 0.313,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 455.9,
+          "is_vru": true
+        },
+        {
+          "box": [
+            938.79,
+            334.95,
+            1206.05,
+            483.3
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.8874,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 39647.7,
+          "is_vru": false
+        },
+        {
+          "box": [
+            790.17,
+            358.89,
+            900.73,
+            426.86
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.8584,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 7514.7,
+          "is_vru": false
+        },
+        {
+          "box": [
+            0.0,
+            338.0,
+            51.23,
+            404.62
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.8463,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 3413.0,
+          "is_vru": false
+        },
+        {
+          "box": [
+            728.06,
+            364.32,
+            760.23,
+            401.69
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.8321,
+          "source": "fused",
+          "crop_id": 1,
+          "trigger_reason": "small_vru+low_confidence+low_confidence+low_confidence",
+          "uncertainty_score": 0.7212,
+          "area": 1202.3,
+          "is_vru": false
+        },
+        {
+          "box": [
+            46.44,
+            345.17,
+            129.93,
+            398.6
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.8307,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 4461.0,
+          "is_vru": false
+        },
+        {
+          "box": [
+            880.25,
+            374.68,
+            958.83,
+            446.78
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.7967,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 5665.5,
+          "is_vru": false
+        },
+        {
+          "box": [
+            239.74,
+            344.44,
+            347.91,
+            395.42
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.7963,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 5514.7,
+          "is_vru": false
+        },
+        {
+          "box": [
+            748.94,
+            361.39,
+            774.79,
+            408.91
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.7872,
+          "source": "crop",
+          "crop_id": 1,
+          "trigger_reason": "small_vru+low_confidence+low_confidence+low_confidence",
+          "uncertainty_score": 0.7212,
+          "area": 1228.5,
+          "is_vru": false
+        },
+        {
+          "box": [
+            682.47,
+            357.36,
+            718.36,
+            390.79
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.7808,
+          "source": "fused",
+          "crop_id": 1,
+          "trigger_reason": "small_vru+low_confidence+low_confidence+low_confidence",
+          "uncertainty_score": 0.7212,
+          "area": 1200.0,
+          "is_vru": false
+        },
+        {
+          "box": [
+            1205.13,
+            395.09,
+            1280.0,
+            534.78
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.7805,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 10459.1,
+          "is_vru": false
+        },
+        {
+          "box": [
+            596.8,
+            352.35,
+            634.88,
+            382.56
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.778,
+          "source": "fused",
+          "crop_id": 1,
+          "trigger_reason": "small_vru+low_confidence+low_confidence+low_confidence",
+          "uncertainty_score": 0.7212,
+          "area": 1150.5,
+          "is_vru": false
+        },
+        {
+          "box": [
+            747.46,
+            357.96,
+            810.99,
+            409.99
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.7614,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 3305.2,
+          "is_vru": false
+        },
+        {
+          "box": [
+            702.76,
+            363.19,
+            737.54,
+            394.34
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.6834,
+          "source": "fused",
+          "crop_id": 1,
+          "trigger_reason": "small_vru+low_confidence+low_confidence+low_confidence",
+          "uncertainty_score": 0.7212,
+          "area": 1083.3,
+          "is_vru": false
+        },
+        {
+          "box": [
+            339.69,
+            351.27,
+            365.78,
+            374.93
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.5799,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 617.1,
+          "is_vru": false
+        },
+        {
+          "box": [
+            202.58,
+            339.73,
+            274.4,
+            384.98
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.4905,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 3249.6,
+          "is_vru": false
+        },
+        {
+          "box": [
+            582.54,
+            354.8,
+            603.69,
+            377.32
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.4792,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 476.5,
+          "is_vru": false
+        },
+        {
+          "box": [
+            582.23,
+            357.55,
+            592.0,
+            377.01
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.4782,
+          "source": "crop",
+          "crop_id": 2,
+          "trigger_reason": "low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence",
+          "uncertainty_score": 0.3968,
+          "area": 190.1,
+          "is_vru": false
+        },
+        {
+          "box": [
+            377.77,
+            352.79,
+            400.45,
+            372.77
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.4753,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 453.1,
+          "is_vru": false
+        },
+        {
+          "box": [
+            361.05,
+            352.6,
+            383.15,
+            374.0
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.4659,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 473.0,
+          "is_vru": false
+        },
+        {
+          "box": [
+            552.28,
+            355.88,
+            565.79,
+            368.48
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.4047,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 170.1,
+          "is_vru": false
+        },
+        {
+          "box": [
+            425.98,
+            353.34,
+            442.16,
+            367.87
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.3824,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 235.1,
+          "is_vru": false
+        },
+        {
+          "box": [
+            519.25,
+            354.8,
+            536.86,
+            369.74
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.3488,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 263.1,
+          "is_vru": false
+        },
+        {
+          "box": [
+            500.92,
+            355.6,
+            518.73,
+            371.14
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.3322,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 276.8,
+          "is_vru": false
+        },
+        {
+          "box": [
+            573.78,
+            355.62,
+            587.9,
+            370.91
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.3034,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 215.9,
+          "is_vru": false
+        },
+        {
+          "box": [
+            447.23,
+            354.21,
+            479.94,
+            373.81
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.2892,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 641.2,
+          "is_vru": false
+        },
+        {
+          "box": [
+            395.54,
+            351.72,
+            412.51,
+            369.71
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.284,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 305.4,
+          "is_vru": false
+        },
+        {
+          "box": [
+            412.07,
+            353.15,
+            428.16,
+            369.01
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.2794,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 255.2,
+          "is_vru": false
+        },
+        {
+          "box": [
+            405.58,
+            352.29,
+            421.71,
+            368.75
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.2656,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 265.6,
+          "is_vru": false
+        },
+        {
+          "box": [
+            400.38,
+            352.06,
+            418.87,
+            369.78
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.2508,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 327.5,
+          "is_vru": false
+        },
+        {
+          "box": [
+            627.81,
+            295.35,
+            637.39,
+            315.79
+          ],
+          "class_id": 7,
+          "class_name": "traffic light",
+          "confidence": 0.4458,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 195.9,
+          "is_vru": false
+        },
+        {
+          "box": [
+            706.37,
+            311.04,
+            716.35,
+            326.58
+          ],
+          "class_id": 7,
+          "class_name": "traffic light",
+          "confidence": 0.3456,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 155.2,
+          "is_vru": false
+        },
+        {
+          "box": [
+            495.57,
+            349.49,
+            498.5,
+            354.43
+          ],
+          "class_id": 7,
+          "class_name": "traffic light",
+          "confidence": 0.331,
+          "source": "crop",
+          "crop_id": 2,
+          "trigger_reason": "low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence",
+          "uncertainty_score": 0.3968,
+          "area": 14.4,
+          "is_vru": false
+        },
+        {
+          "box": [
+            591.92,
+            325.5,
+            600.03,
+            338.66
+          ],
+          "class_id": 7,
+          "class_name": "traffic light",
+          "confidence": 0.2856,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 106.7,
+          "is_vru": false
+        }
+      ],
+      "timing_ms": {
+        "read_ms": 2.79,
+        "full_frame_infer_ms": 2773.5,
+        "uncertainty_proposal_ms": 0.27,
+        "crop_extraction_ms": 0.31,
+        "crop_infer_ms": 535.96,
+        "fusion_ms": 7.77,
+        "total_ms": 3322.11
+      },
+      "notes": "Active foveation completed with 2 crops."
+    },
+    {
+      "image_id": "b1c81faa-3df17267.jpg",
+      "image_shape": [
+        720,
+        1280
+      ],
+      "policy": "uncertainty_active",
+      "num_full_frame_dets": 5,
+      "num_crops_executed": 1,
+      "num_fused_dets": 6,
+      "crop_proposals": [
+        {
+          "crop_id": 1,
+          "crop_box": [
+            798.81,
+            237.82,
+            926.81,
+            365.82
+          ],
+          "trigger_reason": "low_confidence",
+          "trigger_score": 0.3993,
+          "source_detection_idx": 4,
+          "context_margin": 0.25,
+          "area": 16384.0
+        }
+      ],
+      "crop_results": [
+        {
+          "proposal": {
+            "crop_id": 1,
+            "crop_box": [
+              798.81,
+              237.82,
+              926.81,
+              365.82
+            ],
+            "trigger_reason": "low_confidence",
+            "trigger_score": 0.3993,
+            "source_detection_idx": 4,
+            "context_margin": 0.25,
+            "area": 16384.0
+          },
+          "crop_shape": [
+            128,
+            128
+          ],
+          "num_detections": 1,
+          "remapped_detections": [
+            {
+              "box": [
+                869.19,
+                296.14,
+                888.1,
+                307.91
+              ],
+              "class_id": 2,
+              "class_name": "car",
+              "confidence": 0.3449,
+              "source": "crop",
+              "crop_id": 1,
+              "trigger_reason": "low_confidence",
+              "uncertainty_score": 0.3993,
+              "area": 222.7,
+              "is_vru": false
+            }
+          ],
+          "inference_time_ms": 191.22
+        }
+      ],
+      "fused_detections": [
+        {
+          "box": [
+            1061.28,
+            231.09,
+            1133.92,
+            264.15
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.7519,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 2401.9,
+          "is_vru": false
+        },
+        {
+          "box": [
+            1051.63,
+            259.29,
+            1070.65,
+            276.88
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.3853,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 334.6,
+          "is_vru": false
+        },
+        {
+          "box": [
+            1028.53,
+            289.21,
+            1055.11,
+            307.48
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.4499,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 485.7,
+          "is_vru": false
+        },
+        {
+          "box": [
+            869.19,
+            296.14,
+            888.1,
+            307.91
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.3449,
+          "source": "crop",
+          "crop_id": 1,
+          "trigger_reason": "low_confidence",
+          "uncertainty_score": 0.3993,
+          "area": 222.7,
+          "is_vru": false
+        },
+        {
+          "box": [
+            838.89,
+            292.13,
+            886.72,
+            311.51
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.2502,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 927.1,
+          "is_vru": false
+        },
+        {
+          "box": [
+            1008.47,
+            264.62,
+            1026.95,
+            279.82
+          ],
+          "class_id": 7,
+          "class_name": "traffic light",
+          "confidence": 0.4528,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 280.8,
+          "is_vru": false
+        }
+      ],
+      "timing_ms": {
+        "read_ms": 4.23,
+        "full_frame_infer_ms": 213.22,
+        "uncertainty_proposal_ms": 0.03,
+        "crop_extraction_ms": 0.02,
+        "crop_infer_ms": 191.22,
+        "fusion_ms": 0.03,
+        "total_ms": 409.13
+      },
+      "notes": "Active foveation completed with 1 crops."
+    },
+    {
+      "image_id": "b1c81faa-c80764c5.jpg",
+      "image_shape": [
+        720,
+        1280
+      ],
+      "policy": "uncertainty_active",
+      "num_full_frame_dets": 7,
+      "num_crops_executed": 0,
+      "num_fused_dets": 7,
+      "crop_proposals": [],
+      "crop_results": [],
+      "fused_detections": [
+        {
+          "box": [
+            588.67,
+            161.0,
+            677.18,
+            222.57
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.8833,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 5449.3,
+          "is_vru": false
+        },
+        {
+          "box": [
+            503.43,
+            166.34,
+            586.46,
+            222.01
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.8664,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 4622.2,
+          "is_vru": false
+        },
+        {
+          "box": [
+            647.83,
+            149.4,
+            676.27,
+            161.95
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.5761,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 357.0,
+          "is_vru": false
+        },
+        {
+          "box": [
+            356.1,
+            264.79,
+            446.49,
+            327.16
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.8579,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 5637.5,
+          "is_vru": false
+        },
+        {
+          "box": [
+            610.59,
+            280.92,
+            644.3,
+            306.22
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.7026,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 852.7,
+          "is_vru": false
+        },
+        {
+          "box": [
+            670.72,
+            278.77,
+            693.18,
+            294.3
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.5901,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 348.8,
+          "is_vru": false
+        },
+        {
+          "box": [
+            706.05,
+            278.66,
+            728.35,
+            293.51
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.4301,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 331.2,
+          "is_vru": false
+        }
+      ],
+      "timing_ms": {
+        "read_ms": 2.82,
+        "full_frame_infer_ms": 212.1,
+        "uncertainty_proposal_ms": 0.02,
+        "crop_extraction_ms": 0.0,
+        "crop_infer_ms": 0.0,
+        "fusion_ms": 0.03,
+        "total_ms": 215.21
+      },
+      "notes": "Active foveation completed with 0 crops."
+    },
+    {
+      "image_id": "b1c9c847-3bda4659.jpg",
+      "image_shape": [
+        720,
+        1280
+      ],
+      "policy": "uncertainty_active",
+      "num_full_frame_dets": 19,
+      "num_crops_executed": 1,
+      "num_fused_dets": 18,
+      "crop_proposals": [
+        {
+          "crop_id": 1,
+          "crop_box": [
+            537.01,
+            223.45,
+            665.01,
+            351.45
+          ],
+          "trigger_reason": "low_confidence",
+          "trigger_score": 0.249,
+          "source_detection_idx": 18,
+          "context_margin": 0.25,
+          "area": 16384.0
+        }
+      ],
+      "crop_results": [
+        {
+          "proposal": {
+            "crop_id": 1,
+            "crop_box": [
+              537.01,
+              223.45,
+              665.01,
+              351.45
+            ],
+            "trigger_reason": "low_confidence",
+            "trigger_score": 0.249,
+            "source_detection_idx": 18,
+            "context_margin": 0.25,
+            "area": 16384.0
+          },
+          "crop_shape": [
+            128,
+            128
+          ],
+          "num_detections": 3,
+          "remapped_detections": [
+            {
+              "box": [
+                629.19,
+                334.57,
+                645.25,
+                346.89
+              ],
+              "class_id": 2,
+              "class_name": "car",
+              "confidence": 0.6108,
+              "source": "crop",
+              "crop_id": 1,
+              "trigger_reason": "low_confidence",
+              "uncertainty_score": 0.249,
+              "area": 197.8,
+              "is_vru": false
+            },
+            {
+              "box": [
+                602.53,
+                335.65,
+                626.04,
+                350.85
+              ],
+              "class_id": 2,
+              "class_name": "car",
+              "confidence": 0.5232,
+              "source": "crop",
+              "crop_id": 1,
+              "trigger_reason": "low_confidence",
+              "uncertainty_score": 0.249,
+              "area": 357.4,
+              "is_vru": false
+            },
+            {
+              "box": [
+                589.03,
+                276.6,
+                614.54,
+                297.45
+              ],
+              "class_id": 8,
+              "class_name": "traffic sign",
+              "confidence": 0.2596,
+              "source": "crop",
+              "crop_id": 1,
+              "trigger_reason": "low_confidence",
+              "uncertainty_score": 0.249,
+              "area": 532.0,
+              "is_vru": false
+            }
+          ],
+          "inference_time_ms": 181.44
+        }
+      ],
+      "fused_detections": [
+        {
+          "box": [
+            588.44,
+            276.19,
+            614.38,
+            298.26
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.3007,
+          "source": "fused",
+          "crop_id": 1,
+          "trigger_reason": "low_confidence",
+          "uncertainty_score": 0.249,
+          "area": 572.4,
+          "is_vru": false
+        },
+        {
+          "box": [
+            825.61,
+            318.21,
+            1203.13,
+            523.29
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.9378,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 77424.6,
+          "is_vru": false
+        },
+        {
+          "box": [
+            761.99,
+            301.2,
+            937.2,
+            439.06
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.8984,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 24155.2,
+          "is_vru": false
+        },
+        {
+          "box": [
+            28.2,
+            335.39,
+            171.93,
+            419.7
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.8866,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 12117.5,
+          "is_vru": false
+        },
+        {
+          "box": [
+            162.47,
+            342.56,
+            267.32,
+            403.31
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.8625,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 6369.5,
+          "is_vru": false
+        },
+        {
+          "box": [
+            456.02,
+            265.22,
+            588.66,
+            408.1
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.8559,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 18949.7,
+          "is_vru": false
+        },
+        {
+          "box": [
+            246.65,
+            333.21,
+            335.23,
+            391.05
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.8534,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 5123.2,
+          "is_vru": false
+        },
+        {
+          "box": [
+            385.58,
+            336.68,
+            448.02,
+            375.57
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.8162,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 2428.1,
+          "is_vru": false
+        },
+        {
+          "box": [
+            327.51,
+            341.23,
+            377.08,
+            383.91
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.7892,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 2115.7,
+          "is_vru": false
+        },
+        {
+          "box": [
+            601.81,
+            334.31,
+            626.24,
+            351.85
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.6979,
+          "source": "fused",
+          "crop_id": 1,
+          "trigger_reason": "low_confidence",
+          "uncertainty_score": 0.249,
+          "area": 428.6,
+          "is_vru": false
+        },
+        {
+          "box": [
+            686.73,
+            330.23,
+            711.83,
+            353.94
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.6947,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 595.0,
+          "is_vru": false
+        },
+        {
+          "box": [
+            728.82,
+            319.15,
+            795.81,
+            388.72
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.686,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 4660.5,
+          "is_vru": false
+        },
+        {
+          "box": [
+            714.78,
+            326.87,
+            744.95,
+            371.32
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.6835,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 1340.5,
+          "is_vru": false
+        },
+        {
+          "box": [
+            628.94,
+            333.45,
+            645.21,
+            346.99
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.6359,
+          "source": "fused",
+          "crop_id": 1,
+          "trigger_reason": "low_confidence",
+          "uncertainty_score": 0.249,
+          "area": 220.4,
+          "is_vru": false
+        },
+        {
+          "box": [
+            0.0,
+            311.86,
+            32.64,
+            439.94
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.6029,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 4180.4,
+          "is_vru": false
+        },
+        {
+          "box": [
+            751.25,
+            325.13,
+            799.39,
+            398.04
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.4824,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 3510.1,
+          "is_vru": false
+        },
+        {
+          "box": [
+            670.07,
+            331.52,
+            687.5,
+            345.51
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.4702,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 243.9,
+          "is_vru": false
+        },
+        {
+          "box": [
+            710.38,
+            328.2,
+            728.25,
+            357.66
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.4286,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 526.4,
+          "is_vru": false
+        }
+      ],
+      "timing_ms": {
+        "read_ms": 3.77,
+        "full_frame_infer_ms": 224.19,
+        "uncertainty_proposal_ms": 0.07,
+        "crop_extraction_ms": 0.44,
+        "crop_infer_ms": 181.44,
+        "fusion_ms": 0.21,
+        "total_ms": 410.81
+      },
+      "notes": "Active foveation completed with 1 crops."
+    },
+    {
+      "image_id": "b1ca2e5d-84cf9134.jpg",
+      "image_shape": [
+        720,
+        1280
+      ],
+      "policy": "uncertainty_active",
+      "num_full_frame_dets": 24,
+      "num_crops_executed": 2,
+      "num_fused_dets": 24,
+      "crop_proposals": [
+        {
+          "crop_id": 1,
+          "crop_box": [
+            1152.0,
+            213.0,
+            1280.0,
+            341.0
+          ],
+          "trigger_reason": "boundary_truncation",
+          "trigger_score": 0.78,
+          "source_detection_idx": 16,
+          "context_margin": 0.25,
+          "area": 16384.0
+        },
+        {
+          "crop_id": 2,
+          "crop_box": [
+            898.09,
+            211.75,
+            1045.35,
+            341.83
+          ],
+          "trigger_reason": "small_vru+low_confidence+small_vru+low_confidence",
+          "trigger_score": 0.6411,
+          "source_detection_idx": 17,
+          "context_margin": 0.375,
+          "area": 19155.6
+        }
+      ],
+      "crop_results": [
+        {
+          "proposal": {
+            "crop_id": 1,
+            "crop_box": [
+              1152.0,
+              213.0,
+              1280.0,
+              341.0
+            ],
+            "trigger_reason": "boundary_truncation",
+            "trigger_score": 0.78,
+            "source_detection_idx": 16,
+            "context_margin": 0.25,
+            "area": 16384.0
+          },
+          "crop_shape": [
+            128,
+            128
+          ],
+          "num_detections": 0,
+          "remapped_detections": [],
+          "inference_time_ms": 160.45
+        },
+        {
+          "proposal": {
+            "crop_id": 2,
+            "crop_box": [
+              898.09,
+              211.75,
+              1045.35,
+              341.83
+            ],
+            "trigger_reason": "small_vru+low_confidence+small_vru+low_confidence",
+            "trigger_score": 0.6411,
+            "source_detection_idx": 17,
+            "context_margin": 0.375,
+            "area": 19155.6
+          },
+          "crop_shape": [
+            130,
+            147
+          ],
+          "num_detections": 0,
+          "remapped_detections": [],
+          "inference_time_ms": 184.09
+        }
+      ],
+      "fused_detections": [
+        {
+          "box": [
+            1032.17,
+            248.0,
+            1081.68,
+            376.5
+          ],
+          "class_id": 0,
+          "class_name": "person",
+          "confidence": 0.8084,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 6362.4,
+          "is_vru": true
+        },
+        {
+          "box": [
+            881.85,
+            268.17,
+            912.17,
+            350.27
+          ],
+          "class_id": 0,
+          "class_name": "person",
+          "confidence": 0.6786,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 2489.7,
+          "is_vru": true
+        },
+        {
+          "box": [
+            1015.93,
+            259.01,
+            1038.72,
+            357.11
+          ],
+          "class_id": 0,
+          "class_name": "person",
+          "confidence": 0.5828,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 2235.5,
+          "is_vru": true
+        },
+        {
+          "box": [
+            790.99,
+            281.76,
+            820.96,
+            379.06
+          ],
+          "class_id": 0,
+          "class_name": "person",
+          "confidence": 0.5177,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 2916.2,
+          "is_vru": true
+        },
+        {
+          "box": [
+            856.54,
+            273.5,
+            875.22,
+            337.93
+          ],
+          "class_id": 0,
+          "class_name": "person",
+          "confidence": 0.4838,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 1203.5,
+          "is_vru": true
+        },
+        {
+          "box": [
+            833.85,
+            271.69,
+            858.36,
+            343.53
+          ],
+          "class_id": 0,
+          "class_name": "person",
+          "confidence": 0.4574,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 1760.7,
+          "is_vru": true
+        },
+        {
+          "box": [
+            1235.95,
+            244.83,
+            1269.66,
+            309.17
+          ],
+          "class_id": 0,
+          "class_name": "person",
+          "confidence": 0.37,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 2169.5,
+          "is_vru": true
+        },
+        {
+          "box": [
+            972.25,
+            261.49,
+            990.44,
+            290.01
+          ],
+          "class_id": 0,
+          "class_name": "person",
+          "confidence": 0.3486,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 519.0,
+          "is_vru": true
+        },
+        {
+          "box": [
+            874.1,
+            272.61,
+            891.2,
+            336.51
+          ],
+          "class_id": 0,
+          "class_name": "person",
+          "confidence": 0.3015,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 1092.7,
+          "is_vru": true
+        },
+        {
+          "box": [
+            812.37,
+            281.84,
+            833.63,
+            341.86
+          ],
+          "class_id": 0,
+          "class_name": "person",
+          "confidence": 0.2898,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 1275.7,
+          "is_vru": true
+        },
+        {
+          "box": [
+            950.63,
+            262.87,
+            973.56,
+            292.8
+          ],
+          "class_id": 0,
+          "class_name": "person",
+          "confidence": 0.2507,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 686.4,
+          "is_vru": true
+        },
+        {
+          "box": [
+            1006.9,
+            57.12,
+            1081.36,
+            78.08
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.4958,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 1560.6,
+          "is_vru": false
+        },
+        {
+          "box": [
+            980.11,
+            75.06,
+            1053.75,
+            101.13
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.4545,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 1920.3,
+          "is_vru": false
+        },
+        {
+          "box": [
+            581.03,
+            217.89,
+            597.37,
+            240.18
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.4239,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 364.3,
+          "is_vru": false
+        },
+        {
+          "box": [
+            1012.71,
+            98.36,
+            1042.02,
+            128.22
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.3412,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 875.0,
+          "is_vru": false
+        },
+        {
+          "box": [
+            984.54,
+            11.26,
+            1015.61,
+            45.71
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.3006,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 1070.5,
+          "is_vru": false
+        },
+        {
+          "box": [
+            411.26,
+            271.7,
+            639.17,
+            452.03
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.903,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 41100.4,
+          "is_vru": false
+        },
+        {
+          "box": [
+            180.6,
+            257.71,
+            364.12,
+            388.69
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.8831,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 24035.7,
+          "is_vru": false
+        },
+        {
+          "box": [
+            635.48,
+            282.24,
+            785.01,
+            384.43
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.8755,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 15280.6,
+          "is_vru": false
+        },
+        {
+          "box": [
+            0.0,
+            240.7,
+            234.44,
+            490.32
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.8571,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 58518.5,
+          "is_vru": false
+        },
+        {
+          "box": [
+            371.92,
+            287.9,
+            433.16,
+            337.16
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.7804,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 3016.8,
+          "is_vru": false
+        },
+        {
+          "box": [
+            343.03,
+            284.02,
+            381.6,
+            325.65
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.5011,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 1605.5,
+          "is_vru": false
+        },
+        {
+          "box": [
+            1039.23,
+            147.87,
+            1095.91,
+            191.12
+          ],
+          "class_id": 7,
+          "class_name": "traffic light",
+          "confidence": 0.5039,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 2451.2,
+          "is_vru": false
+        },
+        {
+          "box": [
+            376.31,
+            244.52,
+            387.26,
+            261.5
+          ],
+          "class_id": 7,
+          "class_name": "traffic light",
+          "confidence": 0.2718,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 185.8,
+          "is_vru": false
+        }
+      ],
+      "timing_ms": {
+        "read_ms": 4.11,
+        "full_frame_infer_ms": 258.12,
+        "uncertainty_proposal_ms": 0.26,
+        "crop_extraction_ms": 0.05,
+        "crop_infer_ms": 344.55,
+        "fusion_ms": 0.12,
+        "total_ms": 607.86
+      },
+      "notes": "Active foveation completed with 2 crops."
+    },
+    {
+      "image_id": "b1ca8418-84a133a0.jpg",
+      "image_shape": [
+        720,
+        1280
+      ],
+      "policy": "uncertainty_active",
+      "num_full_frame_dets": 6,
+      "num_crops_executed": 2,
+      "num_fused_dets": 7,
+      "crop_proposals": [
+        {
+          "crop_id": 1,
+          "crop_box": [
+            1096.14,
+            166.57,
+            1280.0,
+            399.94
+          ],
+          "trigger_reason": "cluster_occlusion+boundary_truncation+low_confidence",
+          "trigger_score": 0.8312,
+          "source_detection_idx": 1,
+          "context_margin": 0.25,
+          "area": 42907.4
+        },
+        {
+          "crop_id": 2,
+          "crop_box": [
+            395.31,
+            67.12,
+            523.31,
+            195.12
+          ],
+          "trigger_reason": "low_confidence",
+          "trigger_score": 0.0516,
+          "source_detection_idx": 4,
+          "context_margin": 0.25,
+          "area": 16384.0
+        }
+      ],
+      "crop_results": [
+        {
+          "proposal": {
+            "crop_id": 1,
+            "crop_box": [
+              1096.14,
+              166.57,
+              1280.0,
+              399.94
+            ],
+            "trigger_reason": "cluster_occlusion+boundary_truncation+low_confidence",
+            "trigger_score": 0.8312,
+            "source_detection_idx": 1,
+            "context_margin": 0.25,
+            "area": 42907.4
+          },
+          "crop_shape": [
+            233,
+            184
+          ],
+          "num_detections": 0,
+          "remapped_detections": [],
+          "inference_time_ms": 196.42
+        },
+        {
+          "proposal": {
+            "crop_id": 2,
+            "crop_box": [
+              395.31,
+              67.12,
+              523.31,
+              195.12
+            ],
+            "trigger_reason": "low_confidence",
+            "trigger_score": 0.0516,
+            "source_detection_idx": 4,
+            "context_margin": 0.25,
+            "area": 16384.0
+          },
+          "crop_shape": [
+            128,
+            128
+          ],
+          "num_detections": 1,
+          "remapped_detections": [
+            {
+              "box": [
+                453.8,
+                126.35,
+                465.03,
+                139.2
+              ],
+              "class_id": 7,
+              "class_name": "traffic light",
+              "confidence": 0.3121,
+              "source": "crop",
+              "crop_id": 2,
+              "trigger_reason": "low_confidence",
+              "uncertainty_score": 0.0516,
+              "area": 144.3,
+              "is_vru": false
+            }
+          ],
+          "inference_time_ms": 187.44
+        }
+      ],
+      "fused_detections": [
+        {
+          "box": [
+            638.33,
+            205.35,
+            651.99,
+            226.12
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.4299,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 283.7,
+          "is_vru": false
+        },
+        {
+          "box": [
+            198.75,
+            175.09,
+            232.25,
+            208.78
+          ],
+          "class_id": 8,
+          "class_name": "traffic sign",
+          "confidence": 0.3847,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 1128.7,
+          "is_vru": false
+        },
+        {
+          "box": [
+            438.93,
+            221.69,
+            694.91,
+            430.08
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.9193,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 53345.9,
+          "is_vru": false
+        },
+        {
+          "box": [
+            1132.91,
+            203.95,
+            1280.0,
+            324.29
+          ],
+          "class_id": 2,
+          "class_name": "car",
+          "confidence": 0.7181,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 17699.9,
+          "is_vru": false
+        },
+        {
+          "box": [
+            1199.76,
+            216.57,
+            1280.0,
+            349.93
+          ],
+          "class_id": 6,
+          "class_name": "motor",
+          "confidence": 0.299,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 10700.2,
+          "is_vru": true
+        },
+        {
+          "box": [
+            448.69,
+            115.89,
+            469.93,
+            146.35
+          ],
+          "class_id": 7,
+          "class_name": "traffic light",
+          "confidence": 0.3371,
+          "source": "full_frame",
+          "crop_id": null,
+          "trigger_reason": null,
+          "uncertainty_score": null,
+          "area": 647.0,
+          "is_vru": false
+        },
+        {
+          "box": [
+            453.8,
+            126.35,
+            465.03,
+            139.2
+          ],
+          "class_id": 7,
+          "class_name": "traffic light",
+          "confidence": 0.3121,
+          "source": "crop",
+          "crop_id": 2,
+          "trigger_reason": "low_confidence",
+          "uncertainty_score": 0.0516,
+          "area": 144.3,
+          "is_vru": false
+        }
+      ],
+      "timing_ms": {
+        "read_ms": 3.79,
+        "full_frame_infer_ms": 217.15,
+        "uncertainty_proposal_ms": 0.08,
+        "crop_extraction_ms": 0.07,
+        "crop_infer_ms": 383.86,
+        "fusion_ms": 0.04,
+        "total_ms": 605.65
+      },
+      "notes": "Active foveation completed with 2 crops."
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "cohort": "300-Image Development Pilot",
+  "checkpoint_sha256": "42d4b385ec69d01209e76dcf85f0fb4ffb33857d85f4daa02a4271d20f76541e",
+  "hardware": "CPU Benchmark (Controlled Stage Measurement)",
+  "runtime_seconds": 315.57,
+  "throughput_fps": 0.95,
+  "latency_per_img_ms": 1051.9,
+  "metrics_comparison": {
+    "vru_recall": {
+      "baseline_960px": 60.46,
+      "native_1280px": 61.84,
+      "delta": 1.38
+    },
+    "vru_precision": {
+      "baseline_960px": 78.45,
+      "native_1280px": 78.2,
+      "delta": -0.25
+    },
+    "vru_f1": {
+      "baseline_960px": 0.6829,
+      "native_1280px": 0.6906,
+      "delta": 0.0077
+    },
+    "small_vru_recall": {
+      "baseline_960px": 42.73,
+      "native_1280px": 45.17,
+      "delta": 2.44
+    },
+    "small_vru_tp_gain": 22
+  },
+  "per_class_vru": {
+    "motor": {
+      "baseline_recall": 34.38,
+      "native_recall": 28.12,
+      "delta_recall": -6.26,
+      "baseline_tp": 11,
+      "native_tp": 9
+    },
+    "rider": {
+      "baseline_recall": 55.17,
+      "native_recall": 56.9,
+      "delta_recall": 1.73,
+      "baseline_tp": 32,
+      "native_tp": 33
+    },
+    "person": {
+      "baseline_recall": 61.91,
+      "native_recall": 63.22,
+      "delta_recall": 1.31,
+      "baseline_tp": 946,
+      "native_tp": 966
+    },
+    "bike": {
+      "baseline_recall": 51.64,
+      "native_recall": 55.74,
+      "delta_recall": 4.1,
+      "baseline_tp": 63,
+      "native_tp": 68
+    }
+  },
+  "full_report": {
+    "image_count": 300,
+    "total_gt_objects": 6892,
+    "total_predictions": 6533,
+    "vru_metrics": {
+      "tp": 1076,
+      "fp": 300,
+      "fn": 664,
+      "precision": 78.2,
+      "recall": 61.84,
+      "f1_score": 0.6906,
+      "small_vru_ground_truth": 901,
+      "small_vru_true_positives": 407,
+      "small_vru_recall": 45.17
+    },
+    "all_class_metrics": {
+      "tp": 5075,
+      "fp": 1458,
+      "fn": 1817,
+      "precision": 77.68,
+      "recall": 73.64,
+      "f1_score": 0.7561
+    },
+    "per_class": {
+      "person": {
+        "tp": 966,
+        "fp": 235,
+        "fn": 562,
+        "precision": 80.43,
+        "recall": 63.22
+      },
+      "rider": {
+        "tp": 33,
+        "fp": 22,
+        "fn": 25,
+        "precision": 60.0,
+        "recall": 56.9
+      },
+      "car": {
+        "tp": 2335,
+        "fp": 490,
+        "fn": 568,
+        "precision": 82.65,
+        "recall": 80.43
+      },
+      "bus": {
+        "tp": 43,
+        "fp": 14,
+        "fn": 22,
+        "precision": 75.44,
+        "recall": 66.15
+      },
+      "truck": {
+        "tp": 90,
+        "fp": 49,
+        "fn": 43,
+        "precision": 64.75,
+        "recall": 67.67
+      },
+      "bike": {
+        "tp": 68,
+        "fp": 36,
+        "fn": 54,
+        "precision": 65.38,
+        "recall": 55.74
+      },
+      "motor": {
+        "tp": 9,
+        "fp": 7,
+        "fn": 23,
+        "precision": 56.25,
+        "recall": 28.12
+      },
+      "traffic light": {
+        "tp": 730,
+        "fp": 258,
+        "fn": 250,
+        "precision": 73.89,
+        "recall": 74.49
+      },
+      "traffic sign": {
+        "tp": 801,
+        "fp": 347,
+        "fn": 269,
+        "precision": 69.77,
+        "recall": 74.86
+      },
+      "train": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    "vru_by_size": {
+      "Small (<32\u00b2)": {
+        "tp": 407,
+        "fn": 494,
+        "total": 901,
+        "recall": 45.17
+      },
+      "Medium [32\u00b2-96\u00b2)": {
+        "tp": 585,
+        "fn": 161,
+        "total": 746,
+        "recall": 78.42
+      },
+      "Large (\u226596\u00b2)": {
+        "tp": 84,
+        "fn": 9,
+        "total": 93,
+        "recall": 90.32
+      }
+    }
+  }
+}

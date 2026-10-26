@@ -1,0 +1,35 @@
+# Datasets and heavy data
+bdd100k_dataset/
+*.zip
+*.tar
+*.tar.gz
+*.gz
+experiments/stage0b_floor_dump/
+datasets/
+
+# Training runs & checkpoints
+runs/
+*.pt
+*.pth
+weights/
+
+# Build and python caches
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Credentials and secrets
+*token*
+*secret*
+*credential*
+*.json.bak
+kaggle.json
+roadsentinel_runtime_bundle.tar.gz

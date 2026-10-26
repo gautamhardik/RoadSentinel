@@ -1,0 +1,16 @@
+{
+  "experiment": "Phase 13 \u2014 Champion VRU-Curriculum & Native-Frame Polish",
+  "base_checkpoint": "session4_best.pt",
+  "base_sha256": "4a245c1f81d1240f28fbd4d35bd175cdff765fcadc4c3137f52fb5ca912666cd",
+  "target_epochs": 16,
+  "imgsz": 960,
+  "curriculum_size": 28554,
+  "holdout_size": 5000,
+  "holdout_sha256": "c7047ee0073803431321735c098aad212693daa696153f31f8a26e11ebf7686b",
+  "best_checkpoint_sha256": "bbac96e571881b294c96020756ae59140bc72a97229d1d42d703904bb61354ce",
+  "final_checkpoint_sha256": "36ed14d894a876e938340994573262af29c8956d7b3500115f0b1b6c2e676189",
+  "total_elapsed_hours": 4.352660541799334,
+  "peak_allocated_vram_gb": 0.0,
+  "peak_reserved_vram_gb": 0.0,
+  "status": "COMPLETED"
+}

@@ -1,0 +1,107 @@
+{
+  "phase": "5A",
+  "status": "EVALUATION_PENDING_TRAINING_COMPLETION",
+  "timestamp": "2026-10-10T05:43:53Z",
+  "canonical_baseline_metrics": {
+    "full_validation_10000": {
+      "images_count": 10000,
+      "vru_ground_truth": 15373,
+      "vru_tp": 9641,
+      "vru_fp": 5901,
+      "vru_fn": 5732,
+      "vru_precision": 0.6203,
+      "vru_recall": 0.6271,
+      "vru_f1": 0.6237,
+      "small_vru_recall": 0.4683,
+      "small_vru_tp": 3292,
+      "small_vru_gt": 7029,
+      "medium_vru_recall": 0.7472,
+      "medium_vru_tp": 5414,
+      "medium_vru_gt": 7246,
+      "large_vru_recall": 0.8515,
+      "large_vru_tp": 935,
+      "large_vru_gt": 1098,
+      "overall_map50": 0.5403,
+      "vru_macro_map50": 0.5120,
+      "in_memory_latency_p50_ms": 16.23,
+      "pipeline_latency_p50_ms": 20.33,
+      "peak_vram_mb": 159.9
+    },
+    "confirmation_cohort_9700": {
+      "images_count": 9700,
+      "vru_ground_truth": 13633,
+      "vru_tp": 8522,
+      "vru_fp": 5216,
+      "vru_fn": 5111,
+      "vru_precision": 0.6203,
+      "vru_recall": 0.6251,
+      "vru_f1": 0.6227,
+      "small_vru_recall": 0.4625,
+      "small_vru_tp": 2834,
+      "small_vru_gt": 6128,
+      "medium_vru_recall": 0.7438,
+      "medium_vru_tp": 4835,
+      "medium_vru_gt": 6500,
+      "large_vru_recall": 0.8488,
+      "large_vru_tp": 853,
+      "large_vru_gt": 1005
+    },
+    "pilot_cohort_300": {
+      "images_count": 300,
+      "vru_ground_truth": 1740,
+      "vru_tp": 1119,
+      "vru_fp": 685,
+      "vru_fn": 621,
+      "vru_precision": 0.6203,
+      "vru_recall": 0.6431,
+      "vru_f1": 0.6315,
+      "small_vru_recall": 0.5083,
+      "small_vru_tp": 458,
+      "small_vru_gt": 901
+    }
+  },
+  "phase4c_calibrated_reference_9700": {
+    "images_count": 9700,
+    "vru_ground_truth": 13633,
+    "vru_tp": 8281,
+    "vru_fp": 3084,
+    "vru_fn": 5352,
+    "vru_precision": 0.7286,
+    "vru_recall": 0.6074,
+    "vru_f1": 0.6625,
+    "small_vru_recall": 0.4336
+  },
+  "candidate_1_evaluation": {
+    "model_name": "YOLO11s-TargetedVRU-FineTuned",
+    "training_job_id": "hardikgautam25/roadsentinel-phase-5a-vru-model-training",
+    "evaluation_state": "NOT_EVALUATED_TRAINING_IN_PROGRESS",
+    "measured_results": null
+  },
+  "predeclared_acceptance_gates": {
+    "evaluation_cohort": "9,700-image confirmation partition",
+    "gate_1_precision_improvement": {
+      "requirement": "Delta Precision >= +5.0 pp vs confirmation baseline (62.03%)",
+      "target_value": 0.6703,
+      "measured_value": null,
+      "status": "NOT_EVALUATED"
+    },
+    "gate_2_recall_retention": {
+      "requirement": "Delta Recall >= -2.0 pp vs confirmation baseline (62.51%)",
+      "target_value": 0.6051,
+      "measured_value": null,
+      "status": "NOT_EVALUATED"
+    },
+    "gate_3_small_vru_recall": {
+      "requirement": "Small-VRU Recall >= 45.00% (Baseline: 46.25%)",
+      "target_value": 0.4500,
+      "measured_value": null,
+      "status": "NOT_EVALUATED"
+    },
+    "gate_4_vru_micro_f1": {
+      "requirement": "Micro F1 >= 0.6500 (Baseline: 0.6227)",
+      "target_value": 0.6500,
+      "measured_value": null,
+      "status": "NOT_EVALUATED"
+    }
+  }
+}

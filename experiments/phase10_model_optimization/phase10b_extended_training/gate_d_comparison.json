@@ -1,0 +1,203 @@
+{
+  "timestamp": "2026-10-14T04:23:15Z",
+  "cohort": "300-Image Development Pilot (PILOT_300_FILENAMES)",
+  "resolution": 960,
+  "operational_conf": 0.25,
+  "baseline_model": {
+    "name": "Phase 6 Baseline (Epoch 26)",
+    "sha256": "42d4b385ec69d01209e76dcf85f0fb4ffb33857d85f4daa02a4271d20f76541e",
+    "small_vru_tp": 385,
+    "small_vru_total": 901,
+    "small_vru_recall": 42.73,
+    "vru_precision": 78.45,
+    "vru_recall": 60.46,
+    "vru_f1": 0.6829,
+    "all_class_precision": 77.93,
+    "all_class_recall": 71.88,
+    "all_class_f1": 0.7478,
+    "avg_latency_ms": 1437.45,
+    "per_class": {
+      "person": {
+        "tp": 946,
+        "fp": 238,
+        "fn": 582,
+        "precision": 79.9,
+        "recall": 61.91
+      },
+      "rider": {
+        "tp": 32,
+        "fp": 14,
+        "fn": 26,
+        "precision": 69.57,
+        "recall": 55.17
+      },
+      "car": {
+        "tp": 2286,
+        "fp": 496,
+        "fn": 617,
+        "precision": 82.17,
+        "recall": 78.75
+      },
+      "bus": {
+        "tp": 41,
+        "fp": 15,
+        "fn": 24,
+        "precision": 73.21,
+        "recall": 63.08
+      },
+      "truck": {
+        "tp": 88,
+        "fp": 47,
+        "fn": 45,
+        "precision": 65.19,
+        "recall": 66.17
+      },
+      "bike": {
+        "tp": 63,
+        "fp": 30,
+        "fn": 59,
+        "precision": 67.74,
+        "recall": 51.64
+      },
+      "motor": {
+        "tp": 11,
+        "fp": 7,
+        "fn": 21,
+        "precision": 61.11,
+        "recall": 34.38
+      },
+      "traffic light": {
+        "tp": 696,
+        "fp": 241,
+        "fn": 284,
+        "precision": 74.28,
+        "recall": 71.02
+      },
+      "traffic sign": {
+        "tp": 791,
+        "fp": 315,
+        "fn": 279,
+        "precision": 71.52,
+        "recall": 73.93
+      },
+      "train": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    }
+  },
+  "extended_champion": {
+    "name": "Phase 10B Extended Champion (Epoch 50)",
+    "sha256": "4a245c1f81d1240f28fbd4d35bd175cdff765fcadc4c3137f52fb5ca912666cd",
+    "small_vru_tp": 387,
+    "small_vru_total": 901,
+    "small_vru_recall": 42.95,
+    "vru_precision": 78.62,
+    "vru_recall": 61.09,
+    "vru_f1": 0.6876,
+    "all_class_precision": 78.48,
+    "all_class_recall": 72.17,
+    "all_class_f1": 0.7519,
+    "avg_latency_ms": 803.22,
+    "per_class": {
+      "person": {
+        "tp": 954,
+        "fp": 236,
+        "fn": 574,
+        "precision": 80.17,
+        "recall": 62.43
+      },
+      "rider": {
+        "tp": 32,
+        "fp": 16,
+        "fn": 26,
+        "precision": 66.67,
+        "recall": 55.17
+      },
+      "car": {
+        "tp": 2297,
+        "fp": 471,
+        "fn": 606,
+        "precision": 82.98,
+        "recall": 79.13
+      },
+      "bus": {
+        "tp": 39,
+        "fp": 16,
+        "fn": 26,
+        "precision": 70.91,
+        "recall": 60.0
+      },
+      "truck": {
+        "tp": 90,
+        "fp": 38,
+        "fn": 43,
+        "precision": 70.31,
+        "recall": 67.67
+      },
+      "bike": {
+        "tp": 67,
+        "fp": 29,
+        "fn": 55,
+        "precision": 69.79,
+        "recall": 54.92
+      },
+      "motor": {
+        "tp": 10,
+        "fp": 8,
+        "fn": 22,
+        "precision": 55.56,
+        "recall": 31.25
+      },
+      "traffic light": {
+        "tp": 701,
+        "fp": 244,
+        "fn": 279,
+        "precision": 74.18,
+        "recall": 71.53
+      },
+      "traffic sign": {
+        "tp": 784,
+        "fp": 306,
+        "fn": 286,
+        "precision": 71.93,
+        "recall": 73.27
+      },
+      "train": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    }
+  },
+  "deltas": {
+    "small_vru_recall_pp": 0.22,
+    "small_vru_tp_gain": 2,
+    "vru_recall_pp": 0.63,
+    "vru_precision_pp": 0.17,
+    "all_class_recall_pp": 0.29,
+    "all_class_precision_pp": 0.55
+  },
+  "gates": {
+    "small_vru_recall_gate": {
+      "threshold": "+2.00 pp",
+      "achieved": "+0.22 pp",
+      "passed": false
+    },
+    "vru_precision_gate": {
+      "threshold": ">= 75.00%",
+      "achieved": "78.62%",
+      "passed": true
+    },
+    "zero_forgetting_gate": {
+      "threshold": ">= 0.0 pp on all-class recall",
+      "achieved": "+0.29 pp",
+      "passed": true
+    }
+  }
+}

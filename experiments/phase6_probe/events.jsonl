@@ -1,0 +1,10 @@
+{"t": 1791675759.3004713, "phase": "P", "event": "train_start", "start_epoch": 0, "epochs": 2, "ema_updates": 0, "optimizer_state_tensors": 0, "world_size": 2, "batch_per_gpu": 16}
+{"t": 1791675759.3099444, "phase": "P", "event": "epoch_start", "epoch": 1}
+{"t": 1791675962.4111803, "phase": "P", "event": "mosaic_state", "epoch": 1, "dataset_augment": true, "dataset_rect": false, "mosaic_transform_p": [1.0]}
+{"t": 1791675962.4125583, "phase": "P", "event": "train_end", "epoch": 1, "lr_first": 0.0, "lr_last": 0.009975429975429976, "lr_expected_first": 0.0, "mem_alloc_gb": 9.25}
+{"t": 1791676016.7562478, "phase": "P", "event": "fit_end", "epoch": 1, "fitness": 0.16544, "metrics": {"metrics/precision(B)": 0.54428, "metrics/recall(B)": 0.34396, "metrics/mAP50(B)": 0.32745, "metrics/mAP50-95(B)": 0.16544, "val/box_loss": 1.54014, "val/cls_loss": 1.32347, "val/dfl_loss": 1.09748}}
+{"t": 1791676016.7585015, "phase": "P", "event": "epoch_start", "epoch": 2}
+{"t": 1791676212.0567691, "phase": "P", "event": "mosaic_state", "epoch": 2, "dataset_augment": true, "dataset_rect": false, "mosaic_transform_p": [1.0]}
+{"t": 1791676212.0589845, "phase": "P", "event": "train_end", "epoch": 2, "lr_first": 0.00505, "lr_last": 0.00505, "lr_expected_first": 0.00505, "mem_alloc_gb": 9.28}
+{"t": 1791676259.405776, "phase": "P", "event": "fit_end", "epoch": 2, "fitness": 0.21911, "metrics": {"metrics/precision(B)": 0.63779, "metrics/recall(B)": 0.3866, "metrics/mAP50(B)": 0.41054, "metrics/mAP50-95(B)": 0.21911, "val/box_loss": 1.46585, "val/cls_loss": 0.98933, "val/dfl_loss": 1.0419}}
+{"t": 1791676319.6539884, "phase": "P", "event": "fit_end", "epoch": 3, "fitness": 0.21911, "metrics": {"metrics/precision(B)": 0.6367619951264865, "metrics/recall(B)": 0.3862283243979802, "metrics/mAP50(B)": 0.4100565797971541, "metrics/mAP50-95(B)": 0.2188433383243106}}

@@ -1,0 +1,70 @@
+{
+  "experiment": "RoadSentinel Phase 5A — Small-VRU Fine-Tuning",
+  "phase": "5A",
+  "timestamp": "2026-10-10T05:43:53Z",
+  "status": "RUNNING_ON_KAGGLE_GPU",
+  "kernel_id": "hardikgautam25/roadsentinel-phase-5a-vru-model-training",
+  "compute_environment": {
+    "platform": "Kaggle Cloud GPU",
+    "device_type": "NVIDIA Tesla T4 (16GB) / P100 (16GB)",
+    "cuda_version": "12.1",
+    "pytorch_version": "2.1.2",
+    "ultralytics_version": "8.3.x"
+  },
+  "training_hyperparameters": {
+    "task": "detect",
+    "base_checkpoint": "weights/bdd100k_yolo11s.pt",
+    "base_checkpoint_sha256": "A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3",
+    "imgsz": 960,
+    "epochs": 8,
+    "batch_size": 16,
+    "optimizer": "AdamW",
+    "lr0": 0.0003,
+    "lrf": 0.05,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 1.0,
+    "seed": 42,
+    "deterministic": true,
+    "mosaic": 0.8,
+    "close_mosaic": 2,
+    "scale": 0.4,
+    "copy_paste": 0.15,
+    "box_gain": 7.5,
+    "cls_gain": 1.2,
+    "dfl_gain": 1.5,
+    "class_weights": {
+      "person": 1.2,
+      "rider": 2.0,
+      "car": 1.0,
+      "bus": 1.0,
+      "truck": 1.0,
+      "bike": 1.8,
+      "motor": 2.0,
+      "traffic_light": 1.0,
+      "traffic_sign": 1.0,
+      "train": 1.0
+    }
+  },
+  "remediated_defects": [
+    {
+      "defect": "Class weights not hooked into v8DetectionLoss in standard YOLO.train",
+      "fix": "Registered on_pretrain_routine_end callback attaching tensor to model.class_weights and loss.class_weights",
+      "verified": true
+    },
+    {
+      "defect": "CopyPaste silently no-ops on pure bounding-box dataset (instances.segments empty)",
+      "fix": "Documented bounding-box dependency; multi-scale small-object learning driven by Mosaic (0.8) and Scale jitter (0.4)",
+      "verified": true
+    },
+    {
+      "defect": "Evaluation cohort acceptance gate inconsistency (comparing 9,700 eval against 10,000 baseline)",
+      "fix": "Calculated and frozen exact same-cohort ActiveFoveation-960 baselines for 9,700 and 10,000 partitions",
+      "verified": true
+    }
+  ],
+  "estimated_training_duration_hours": 3.8,
+  "output_checkpoints": {
+    "best_weights": "experiments/phase5a_modeling/runs/phase5a_training/yolo11s_vru_finetune/weights/best.pt",
+    "last_weights": "experiments/phase5a_modeling/runs/phase5a_training/yolo11s_vru_finetune/weights/last.pt"
+  }
+}

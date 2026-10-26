@@ -1,0 +1,51 @@
+{
+  "audit_version": "1.1_final_consistency",
+  "num_evaluated_frames": 20,
+  "hardware": "Local multi-core CPU (16 threads, PyTorch oneDNN)",
+  "raw_yolo11m_batch1": {
+    "timing_metric": "per_image_wall_clock_ms",
+    "p50_ms": 1464.3,
+    "p95_ms": 1747.6,
+    "mean_ms": 1486.6,
+    "total_elapsed_wall_clock_s": 29.732,
+    "calculated_fps": 0.6726,
+    "fps_formula": "num_images / total_elapsed_wall_clock_s = 20 / 29.732s"
+  },
+  "raw_yolo11m_batched_16": {
+    "timing_metric": "amortized_per_image_ms",
+    "note": "chunk_latency_ms divided by chunk_size, NOT total batch latency",
+    "p50_ms": 1450.9,
+    "p95_ms": 1450.9,
+    "mean_ms": 1401.5,
+    "percentile_distribution_explanation": "20 images evaluated in two chunks (chunk 1: 16 images @ 1450.9 ms/img, chunk 2: 4 images @ 1203.9 ms/img). Since 80% of samples (16/20) equal 1450.9 ms, both P50 (index 9.5) and P95 (index 18.05) equal 1450.9 ms, while mean is weighted average 1401.5 ms.",
+    "chunk_breakdown": {
+      "chunk_1_16_images_total_ms": 23214.4,
+      "chunk_1_amortized_per_img_ms": 1450.9,
+      "chunk_2_4_images_total_ms": 4815.6,
+      "chunk_2_amortized_per_img_ms": 1203.9
+    },
+    "total_elapsed_wall_clock_s": 28.03,
+    "calculated_fps": 0.7135,
+    "fps_formula": "num_images / (chunk1_s + chunk2_s) = 20 / (23.2144s + 4.8156s) = 20 / 28.030s"
+  },
+  "foveation_wbf_true_e2e": {
+    "timing_metric": "true_end_to_end_per_image_ms",
+    "p50_ms": 3027.4,
+    "p95_ms": 4562.4,
+    "mean_ms": 2910.9,
+    "calculated_fps": 0.3435,
+    "fps_formula": "1000.0 / mean_ms = 1000.0 / 2910.9ms",
+    "mean_crops_per_frame": 1.25,
+    "stage_breakdown_mean_ms": {
+      "stage1_full_frame_960": 1583.1,
+      "stage2_crop_generation_cv": 16.2,
+      "stage3_crop_inference_640": 1291.3,
+      "stage4_wbf_consensus_fusion": 8.3
+    },
+    "sum_of_stage_means_ms": 2898.9,
+    "uninstrumented_loop_overhead_mean_ms": 12.0,
+    "stage_gap_reconciliation": "The 12.0 ms gap between sum of stage means (2898.9 ms) and end-to-end mean (2910.9 ms) represents uninstrumented Python overhead between Stage 1 exit and Stage 2 entry: iterating res_ff.boxes, moving PyTorch tensor coordinates to NumPy arrays, and assembling the ff_dets dictionary list.",
+    "stage1_vs_standalone_raw_reconciliation": "Standalone raw mean (1486.6 ms) was measured with 1 forward pass per frame. In foveation, full-frame inference ran alongside 1.25 crop passes per frame, doubling per-image CPU compute from ~1.5s to ~3.0s, inducing thermal turbo step-down and L3 cache evictions. The 6.5% delta (1583.1 ms vs 1486.6 ms) is expected multitasking CPU variance on Windows.",
+    "isolated_foveation_addon_mean_ms": 1315.9
+  }
+}

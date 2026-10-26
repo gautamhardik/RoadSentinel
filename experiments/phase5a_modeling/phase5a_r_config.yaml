@@ -1,0 +1,78 @@
+# RoadSentinel Phase 5A-R — Corrected Class-Weighted VRU Fine-Tuning Configuration
+# Candidate Experiment: Targeted Class-Weighted Representation Learning on BDD100K Train Split
+
+experiment_name: "RoadSentinel-Phase5A-R-ClassWeighted-VRU-FineTuning"
+phase: "5A-R"
+author: "RoadSentinel Perception Team"
+date: "2026-10-10"
+
+model:
+  base_checkpoint: "weights/bdd100k_yolo11s.pt"
+  base_checkpoint_sha256: "A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3"
+  architecture: "YOLO11s"
+  parameters_count: 9431662
+  head_strides: [8, 16, 32]
+  num_classes: 10
+
+data:
+  data_yaml: "bdd100k_dataset/data.yaml"
+  train_split: "train/images"
+  val_split: "val/images"
+  test_split: "test/images"
+  test_split_quarantined: true
+  num_train_images: 70000
+  num_val_images: 10000
+  num_test_images: 20000
+
+training_hyperparameters:
+  task: "detect"
+  mode: "train"
+  imgsz: 960
+  epochs: 8
+  batch_size: 16
+  workers: 8
+  device: 0
+  optimizer: "AdamW"
+  lr0: 0.0003
+  lrf: 0.05
+  momentum: 0.937
+  weight_decay: 0.0005
+  warmup_epochs: 1.0
+  warmup_momentum: 0.8
+  warmup_bias_lr: 0.1
+  seed: 42
+  deterministic: true
+
+loss_and_sample_weighting:
+  box_gain: 7.5
+  cls_gain: 1.2
+  dfl_gain: 1.5
+  class_weights_order:
+    - "person"
+    - "rider"
+    - "car"
+    - "bus"
+    - "truck"
+    - "bike"
+    - "motor"
+    - "traffic light"
+    - "traffic sign"
+    - "train"
+  class_weights_values: [1.2, 2.0, 1.0, 1.0, 1.0, 1.8, 2.0, 1.0, 1.0, 1.0]
+  loss_weighting_mechanism: "Explicit DetectionModel.class_weights and v8DetectionLoss.class_weights tensor broadcast via callback"
+  runtime_assertions_enabled: true
+
+augmentation_policy:
+  mosaic: 0.8
+  mixup: 0.0
+  copy_paste: 0.0          # Explicitly disabled: BDD100K lacks polygon segmentation contours
+  scale: 0.4
+  fliplr: 0.5
+  close_mosaic_epochs: 2
+
+evaluation_gates:
+  evaluation_cohort: "9,700-image confirmation cohort"
+  small_vru_recall_min: 0.4500
+  vru_precision_gain_vs_confirmation_baseline: 0.0500   # >= +5.0 pp vs 62.03% (Target >= 67.03%)
+  vru_recall_max_decline_vs_confirmation_baseline: -0.0200 # >= -2.0 pp vs 62.51% (Target >= 60.51%)
+  vru_f1_min: 0.6500                                    # vs baseline 0.6227

@@ -1,0 +1,140 @@
+Installing ultralytics package in Kaggle environment...
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.9/46.9 kB 1.9 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 31.6 MB/s eta 0:00:00
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.5/96.5 kB 4.6 MB/s eta 0:00:00
+Creating new Ultralytics Settings v0.0.8 file ✅ 
+View Ultralytics Settings with 'yolo settings' or at '/root/.config/Ultralytics/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/usage/settings.
+================================================================================
+RoadSentinel Phase 3 — Active Foveation Engine Benchmark
+================================================================================
+Device: cuda:0 (Tesla T4)
+Using Checkpoint: /kaggle/input/datasets/hardikgautam25/roadsentinel-weights/bdd100k_yolo11s.pt
+Using Validation Images: /kaggle/input/datasets/a7madmostafa/bdd100k-yolo/val/images
+Checkpoint SHA-256: A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3
+Discovered 10000 validation images.
+
+Loading ground-truth annotations...
+Loaded 185578 total ground-truth objects across 10000 images.
+
+Measuring isolated Batch-1 latency across configurations...
+  FullFrame-640       : Mean = 11.09 ms | P50 = 10.18 ms
+  FullFrame-960       : Mean = 13.43 ms | P50 = 13.09 ms
+  FullFrame-1280      : Mean = 19.90 ms | P50 = 19.04 ms
+  FixedGrid-960       : Mean = 36.34 ms | P50 = 34.30 ms
+  RandomCrop-960      : Mean = 37.81 ms | P50 = 35.55 ms
+  ActiveFoveation-960 : Mean = 30.37 ms | P50 = 14.35 ms
+
+Evaluating configurations on 10000 validation images...
+
+============================================================
+Running Benchmark: FullFrame-640 (full_frame, imgsz=640, crops=0)
+============================================================
+  Processed 2500/10000 images...
+  Processed 5000/10000 images...
+  Processed 7500/10000 images...
+  Processed 10000/10000 images...
+Calculating AP and size-group recall for FullFrame-640...
+  Overall mAP@50: 0.4819 | VRU Macro mAP@50: 0.4428
+  VRU Recall: 0.4836 | Small VRU Recall: 0.2325
+  Throughput: 22.01 FPS | Amortized: 45.44 ms
+
+============================================================
+Running Benchmark: FullFrame-960 (full_frame, imgsz=960, crops=0)
+============================================================
+  Processed 2500/10000 images...
+  Processed 5000/10000 images...
+  Processed 7500/10000 images...
+  Processed 10000/10000 images...
+Calculating AP and size-group recall for FullFrame-960...
+  Overall mAP@50: 0.5544 | VRU Macro mAP@50: 0.5262
+  VRU Recall: 0.5692 | Small VRU Recall: 0.3639
+  Throughput: 39.92 FPS | Amortized: 25.05 ms
+
+============================================================
+Running Benchmark: FullFrame-1280 (full_frame, imgsz=1280, crops=0)
+============================================================
+  Processed 2500/10000 images...
+  Processed 5000/10000 images...
+  Processed 7500/10000 images...
+  Processed 10000/10000 images...
+Calculating AP and size-group recall for FullFrame-1280...
+  Overall mAP@50: 0.5638 | VRU Macro mAP@50: 0.5367
+  VRU Recall: 0.5807 | Small VRU Recall: 0.4033
+  Throughput: 31.50 FPS | Amortized: 31.75 ms
+
+============================================================
+Running Benchmark: FixedGrid-960 (fixed_grid, imgsz=960, crops=2)
+============================================================
+  Processed 2500/10000 images...
+  Processed 5000/10000 images...
+  Processed 7500/10000 images...
+  Processed 10000/10000 images...
+Calculating AP and size-group recall for FixedGrid-960...
+  Overall mAP@50: 0.5032 | VRU Macro mAP@50: 0.4800
+  VRU Recall: 0.6343 | Small VRU Recall: 0.4629
+  Throughput: 16.79 FPS | Amortized: 59.56 ms
+
+============================================================
+Running Benchmark: RandomCrop-960 (random_crop, imgsz=960, crops=2)
+============================================================
+  Processed 2500/10000 images...
+  Processed 5000/10000 images...
+  Processed 7500/10000 images...
+  Processed 10000/10000 images...
+Calculating AP and size-group recall for RandomCrop-960...
+  Overall mAP@50: 0.5048 | VRU Macro mAP@50: 0.4935
+  VRU Recall: 0.6183 | Small VRU Recall: 0.4446
+  Throughput: 16.93 FPS | Amortized: 59.07 ms
+
+============================================================
+Running Benchmark: ActiveFoveation-960 (active_foveation, imgsz=960, crops=2)
+============================================================
+  Processed 2500/10000 images...
+  Processed 5000/10000 images...
+  Processed 7500/10000 images...
+  Processed 10000/10000 images...
+Calculating AP and size-group recall for ActiveFoveation-960...
+  Overall mAP@50: 0.5403 | VRU Macro mAP@50: 0.5120
+  VRU Recall: 0.6271 | Small VRU Recall: 0.4683
+  Throughput: 24.14 FPS | Amortized: 41.42 ms
+
+Rendering annotated visual artifacts...
+
+Writing auditable output artifacts...
+Traceback (most recent call last):
+  File "/kaggle/src/script.py", line 891, in <module>
+    main()
+    ~~~~^^
+  File "/kaggle/src/script.py", line 824, in main
+    json.dump(final_output, f, indent=2)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/json/__init__.py", line 181, in dump
+    for chunk in iterable:
+                 ^^^^^^^^
+  File "/usr/lib/python3.13/json/encoder.py", line 435, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.13/json/encoder.py", line 409, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.13/json/encoder.py", line 328, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.13/json/encoder.py", line 409, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.13/json/encoder.py", line 328, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.13/json/encoder.py", line 409, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.13/json/encoder.py", line 328, in _iterencode_list
+    yield from chunks
+  File "/usr/lib/python3.13/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/usr/lib/python3.13/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type float32 is not JSON serializable
+/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __script__.ipynb to html
+[NbConvertApp] Writing 462472 bytes to __results__.html

@@ -1,0 +1,49 @@
+{
+  "phase": "RoadSentinel Phase 9.2 — Frozen YOLO11m GPU Benchmark",
+  "timestamp": "2026-10-13T10:42:00Z",
+  "audit_mode": "ENVIRONMENT_PROBE_AND_DIAGNOSIS",
+  "decision": "HOLD",
+  "decision_rationale": "The local host environment possesses no CUDA-capable GPU accelerator (torch.cuda.is_available() == False). In accordance with Phase 9.2 constraints ('If the current environment has no CUDA device, stop before claiming a GPU benchmark was completed. Do not label estimated latency as measured latency'), execution is placed on HOLD without fabricating or projecting GPU measurements.",
+  "environment_diagnosis": {
+    "os": "Windows 11",
+    "cpu": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel (16 physical / 22 logical cores)",
+    "ram_gb": 31.43,
+    "pytorch_version": "2.12.0+cpu",
+    "cuda_available": false,
+    "device_count": 0,
+    "cuda_hardware_present": false,
+    "probe_status": "NO_CUDA_DEVICE_DETECTED"
+  },
+  "frozen_checkpoint_audit": {
+    "path": "scratch/kaggle_upload_weights/best.pt",
+    "model_family": "YOLO11m",
+    "expected_sha256": "42d4b385ec69d01209e76dcf85f0fb4ffb33857d85f4daa02a4271d20f76541e",
+    "measured_pre_audit_sha256": "42d4b385ec69d01209e76dcf85f0fb4ffb33857d85f4daa02a4271d20f76541e",
+    "measured_post_audit_sha256": "42d4b385ec69d01209e76dcf85f0fb4ffb33857d85f4daa02a4271d20f76541e",
+    "checkpoint_intact": true
+  },
+  "quarantine_status": {
+    "test_split_path": "bdd100k_dataset/test",
+    "quarantine_verified": true,
+    "access_count": 0
+  },
+  "temporal_fusion_status": {
+    "delayed_result_fusion_enabled": false,
+    "motion_compensation_validated": false,
+    "status": "STRICTLY_DISABLED"
+  },
+  "reproducible_harness": {
+    "script_path": "experiments/phase9_2_gpu_benchmark/run_gpu_benchmark.py",
+    "target_parameters": {
+      "imgsz": 640,
+      "batch_size": 1,
+      "stream_fps": 30.0,
+      "inter_frame_arrival_ms": 33.33,
+      "num_frames": 1000,
+      "queue_capacity": 2,
+      "overload_policy": "DROP_OLDEST",
+      "deadline_ms": 100.0,
+      "required_compliance_rate_pct": 95.0
+    }
+  }
+}

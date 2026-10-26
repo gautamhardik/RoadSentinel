@@ -1,0 +1,3 @@
+policy_id,policy_name,vru_conf,vru_nms_iou,small_vru_recall,small_ci_low,small_ci_high,vru_recall,rec_ci_low,rec_ci_high,vru_precision,prec_ci_low,prec_ci_high,vru_f1,f1_ci_low,f1_ci_high,vru_tp,vru_fp,vru_fn,mean_fp_per_img,forward_passes
+Baseline_0.25,"Controlled Baseline (Flat 0.25)",0.25,0.65,45.51,41.97,49.22,65.45,63.11,67.65,77.94,75.99,79.89,0.7115,0.6928,0.7288,1841,521,972,0.261,1.0
+Config_E,"Candidate Policy (Adaptive 0.22, NMS 0.55)",0.22,0.55,47.29,43.81,50.94,66.65,64.25,68.88,77.10,75.13,79.03,0.7150,0.6964,0.7323,1875,557,938,0.279,1.0

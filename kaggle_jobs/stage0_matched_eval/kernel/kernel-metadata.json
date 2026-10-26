@@ -1,0 +1,22 @@
+{
+  "id": "hardikgautam25/roadsentinel-stage-0-matched-evaluation",
+  "title": "RoadSentinel Stage 0 Matched Evaluation",
+  "code_file": "stage0_matched_eval.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": [
+    "a7madmostafa/bdd100k-yolo",
+    "hardikgautam25/roadsentinel-weights"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [
+    "hardikgautam25/roadsentinel-phase-5a-vru-model-training",
+    "hardikgautam25/roadsentinel-phase-5a-r-vru-weighted"
+  ],
+  "model_sources": []
+}

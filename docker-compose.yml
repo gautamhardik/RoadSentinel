@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  roadsentinel-studio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: roadsentinel-studio
+    image: roadsentinel/studio:3.0
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - LOG_LEVEL=info
+      - MODEL_WEIGHTS_PATH=/app/weights/session4_best.pt
+      - NEBIUS_API_KEY=${NEBIUS_API_KEY:-}
+    volumes:
+      - ./artifacts:/app/artifacts
+      - ./weights:/app/weights
+      - ./videos:/app/videos
+      - ./bdd100k_dataset:/app/bdd100k_dataset:ro
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/system/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

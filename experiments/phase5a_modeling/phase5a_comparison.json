@@ -1,0 +1,95 @@
+{
+  "protocol": "RoadSentinel Phase 5A Controlled Modeling Comparison",
+  "evaluation_cohort": "9,700-image confirmation cohort",
+  "quarantined_test_set_accessed": false,
+  "canonical_baseline": {
+    "model": "ActiveFoveation-960 (Frozen Base Checkpoint)",
+    "checkpoint_sha256": "A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3",
+    "tp": 8522,
+    "fp": 5216,
+    "fn": 5111,
+    "gt_vru_total": 13633,
+    "precision": 0.6203,
+    "recall": 0.6251,
+    "small_vru_recall": 0.4625,
+    "micro_f1": 0.6227
+  },
+  "acceptance_gates": {
+    "precision_threshold": 0.6703,
+    "recall_min_threshold": 0.6051,
+    "small_vru_recall_threshold": 0.4500,
+    "micro_f1_threshold": 0.6500
+  },
+  "phase_5a_u_ablation": {
+    "status": "EVALUATION_COMPLETE",
+    "kernel_id": "hardikgautam25/roadsentinel-phase-5a-vru-model-training",
+    "eval_kernel_id": "hardikgautam25/roadsentinel-phase-5a-u-evaluation-benchmark",
+    "class_weighting_active": false,
+    "copy_paste": 0.0,
+    "checkpoint_sha256": "BB1823C6190E28CB56C12B549B0D1233B7DE6CF1B8624B1ED02378B42BB693E5",
+    "reported_metrics": {
+      "tp": 8067,
+      "fp": 42217,
+      "fn": 5566,
+      "gt_vru_total": 13633,
+      "precision": 0.1604,
+      "recall": 0.5917,
+      "small_vru_recall": 0.4522,
+      "micro_f1": 0.2524,
+      "anomaly_note": "Evaluator applied legacy CHECKPOINT_TO_GT_ID which remapped predicted traffic lights (37,035 detections) to bike, inflating bike FP"
+    },
+    "unpermuted_classes_metrics": {
+      "classes": ["person", "rider", "motor"],
+      "tp": 8067,
+      "fp": 5182,
+      "fn": 4681,
+      "precision": 0.6089,
+      "recall": 0.6328
+    },
+    "gates": {
+      "gate_1_precision": "FAIL",
+      "gate_2_recall": "FAIL",
+      "gate_3_small_vru_recall": "PASS",
+      "gate_4_micro_f1": "FAIL"
+    }
+  },
+  "phase_5a_r_weighted": {
+    "status": "EVALUATION_COMPLETE",
+    "kernel_id": "hardikgautam25/roadsentinel-phase-5a-r-vru-weighted",
+    "eval_kernel_id": "hardikgautam25/roadsentinel-phase-5a-r-evaluation-benchmark",
+    "class_weighting_active": true,
+    "class_weights": [1.2, 2.0, 1.0, 1.0, 1.0, 1.8, 2.0, 1.0, 1.0, 1.0],
+    "copy_paste": 0.0,
+    "checkpoint_sha256": "EDCCA4BF03CEC24A4E9D4EEEA524A63FBFD75E40E37359E106264F12A1B447F0",
+    "active_foveation_960": {
+      "tp": 8831,
+      "fp": 7132,
+      "fn": 4802,
+      "precision": 0.5532,
+      "recall": 0.6478,
+      "small_vru_recall": 0.4941,
+      "micro_f1": 0.5968,
+      "gates": {
+        "gate_1_precision": "FAIL",
+        "gate_2_recall": "PASS",
+        "gate_3_small_vru_recall": "PASS",
+        "gate_4_micro_f1": "FAIL"
+      }
+    },
+    "calibrated_consensus_wbf": {
+      "tp": 8563,
+      "fp": 4073,
+      "fn": 5070,
+      "precision": 0.6777,
+      "recall": 0.6281,
+      "small_vru_recall": 0.4638,
+      "micro_f1": 0.6519,
+      "gates": {
+        "gate_1_precision": "PASS",
+        "gate_2_recall": "PASS",
+        "gate_3_small_vru_recall": "PASS",
+        "gate_4_micro_f1": "PASS"
+      }
+    }
+  }
+}

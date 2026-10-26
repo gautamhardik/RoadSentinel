@@ -1,0 +1,167 @@
+{
+  "audit_version": "1.1_final_consistency",
+  "evaluation_cohort_size_frames": 50,
+  "total_detections_raw": 5139,
+  "total_vru_detections": 1645,
+  "ambiguous_vru_in_conf_window_detections": 295,
+  "ambiguous_window_definition": "0.15 <= conf <= 0.45 across entire frame (periphery, sidewalk, ego path)",
+  "gated_for_investigation_detections": 18,
+  "gated_frames_count": 18,
+  "frame_gating_rate_percent": 36.0,
+  "gating_semantics_note": "Of 295 ambiguous VRU detections, exactly 18 detections met all gating policy criteria (ego-path corridor + unexhausted budget). Because the budget is strictly 1 query per frame, exactly 18 distinct frames triggered deliberation (18/50 = 36.0% frame gating rate).",
+  "safety_escalation_triggers": 0,
+  "night_low_light_detections": 0,
+  "mean_investigation_latency_ms": 19.55,
+  "median_investigation_latency_ms": 0.70,
+  "latency_derivation_note": "Call 1 incurred a cold-start overhead of 340.26 ms (OpenCV CLAHE filter allocation and LAB space conversion), while subsequent 17 calls averaged 0.71 ms (median 0.70 ms). Mean = (340.26 + 17 * 0.71) / 18 = 19.55 ms.",
+  "projected_cost_usd": 0.009,
+  "cost_per_frame_usd": 0.00018,
+  "cost_derivation_formula": "18 queries * $0.0005/query = $0.00900 total; $0.00900 / 50 frames = $0.000180/frame",
+  "live_credentials_available": false,
+  "execution_mode": "deterministic_fail_safe",
+  "live_vlm_call_claimed": false,
+  "accuracy_improvement_claimed": false,
+  "safety_semantics_note": "Deterministic fallback strictly preserved 100% of detector priors (source: 'deterministic_fallback'). No bounding boxes were modified, no detections were suppressed, and no accuracy or recall improvements are claimed from VLM deliberation.",
+  "sample_verdicts": [
+    {
+      "img_name": "b1c66a42-6f7d68ca.jpg",
+      "initial_class": "person",
+      "initial_conf": 0.383,
+      "verified_class": "person",
+      "epistemic_conf": 0.383,
+      "visual_evidence": [
+        "detector_prior_retained",
+        "standard_illumination"
+      ],
+      "safety_escalation": false,
+      "source": "deterministic_fallback",
+      "latency_ms": 340.26
+    },
+    {
+      "img_name": "b1ca2e5d-84cf9134.jpg",
+      "initial_class": "person",
+      "initial_conf": 0.35,
+      "verified_class": "person",
+      "epistemic_conf": 0.35,
+      "visual_evidence": [
+        "detector_prior_retained",
+        "standard_illumination"
+      ],
+      "safety_escalation": false,
+      "source": "deterministic_fallback",
+      "latency_ms": 0.99
+    },
+    {
+      "img_name": "b1f4491b-33824f31.jpg",
+      "initial_class": "person",
+      "initial_conf": 0.339,
+      "verified_class": "person",
+      "epistemic_conf": 0.339,
+      "visual_evidence": [
+        "detector_prior_retained",
+        "standard_illumination"
+      ],
+      "safety_escalation": false,
+      "source": "deterministic_fallback",
+      "latency_ms": 0.56
+    },
+    {
+      "img_name": "b1f62c41-ed0c6521.jpg",
+      "initial_class": "person",
+      "initial_conf": 0.219,
+      "verified_class": "person",
+      "epistemic_conf": 0.219,
+      "visual_evidence": [
+        "detector_prior_retained",
+        "standard_illumination"
+      ],
+      "safety_escalation": false,
+      "source": "deterministic_fallback",
+      "latency_ms": 0.54
+    },
+    {
+      "img_name": "b24071b8-b3ee1196.jpg",
+      "initial_class": "person",
+      "initial_conf": 0.406,
+      "verified_class": "person",
+      "epistemic_conf": 0.406,
+      "visual_evidence": [
+        "detector_prior_retained",
+        "standard_illumination"
+      ],
+      "safety_escalation": false,
+      "source": "deterministic_fallback",
+      "latency_ms": 0.76
+    },
+    {
+      "img_name": "b284c0e8-85fbc42a.jpg",
+      "initial_class": "person",
+      "initial_conf": 0.396,
+      "verified_class": "person",
+      "epistemic_conf": 0.396,
+      "visual_evidence": [
+        "detector_prior_retained",
+        "standard_illumination"
+      ],
+      "safety_escalation": false,
+      "source": "deterministic_fallback",
+      "latency_ms": 0.64
+    },
+    {
+      "img_name": "b3159650-0d7fbee8.jpg",
+      "initial_class": "person",
+      "initial_conf": 0.283,
+      "verified_class": "person",
+      "epistemic_conf": 0.283,
+      "visual_evidence": [
+        "detector_prior_retained",
+        "standard_illumination"
+      ],
+      "safety_escalation": false,
+      "source": "deterministic_fallback",
+      "latency_ms": 0.53
+    },
+    {
+      "img_name": "b37b9cf2-9d52b009.jpg",
+      "initial_class": "person",
+      "initial_conf": 0.42,
+      "verified_class": "person",
+      "epistemic_conf": 0.42,
+      "visual_evidence": [
+        "detector_prior_retained",
+        "standard_illumination"
+      ],
+      "safety_escalation": false,
+      "source": "deterministic_fallback",
+      "latency_ms": 0.66
+    },
+    {
+      "img_name": "b3853f81-272f6c37.jpg",
+      "initial_class": "person",
+      "initial_conf": 0.365,
+      "verified_class": "person",
+      "epistemic_conf": 0.365,
+      "visual_evidence": [
+        "detector_prior_retained",
+        "standard_illumination"
+      ],
+      "safety_escalation": false,
+      "source": "deterministic_fallback",
+      "latency_ms": 0.58
+    },
+    {
+      "img_name": "b3e32b36-0ca66c00.jpg",
+      "initial_class": "person",
+      "initial_conf": 0.278,
+      "verified_class": "person",
+      "epistemic_conf": 0.278,
+      "visual_evidence": [
+        "detector_prior_retained",
+        "standard_illumination"
+      ],
+      "safety_escalation": false,
+      "source": "deterministic_fallback",
+      "latency_ms": 0.95
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "mode": "probe",
+  "split": {
+    "train_images": 6500,
+    "holdout_images": 5000,
+    "holdout_sha256": "c7047ee0073803431321735c098aad212693daa696153f31f8a26e11ebf7686b",
+    "train_list_sha256": "e73df84cbef993128b6fa8b9d9e16bc3dee304e58f9e17fa309168d2a5964430"
+  },
+  "phases": [
+    {
+      "phase": "P",
+      "exit": 0,
+      "seconds": 750.3,
+      "log": "train_phase_P.log"
+    }
+  ],
+  "measured": {
+    "epochs": [
+      {
+        "phase": "P",
+        "epoch": 1,
+        "train_s": 203.1,
+        "val_s": 54.3,
+        "lr_first": 0.0,
+        "lr_last": 0.009975429975429976,
+        "lr_expected_first": 0.0,
+        "mem_alloc_gb": 9.25,
+        "fitness": 0.16544
+      },
+      {
+        "phase": "P",
+        "epoch": 2,
+        "train_s": 195.3,
+        "val_s": 47.3,
+        "lr_first": 0.00505,
+        "lr_last": 0.00505,
+        "lr_expected_first": 0.00505,
+        "mem_alloc_gb": 9.28,
+        "fitness": 0.21911
+      }
+    ],
+    "train_images_per_epoch": 6500,
+    "epoch_level_img_per_s": [
+      32.0,
+      33.28
+    ],
+    "steady_state_by_epoch_rank0": {
+      "1": {
+        "steps_measured": 386,
+        "global_img_per_s_p10": 33.9,
+        "global_img_per_s_p50": 34.23,
+        "global_img_per_s_p90": 35.69,
+        "data_wait_fraction": 0.001,
+        "step_s_p50": 0.464,
+        "data_wait_s_p50": 0.0003
+      },
+      "2": {
+        "steps_measured": 386,
+        "global_img_per_s_p10": 32.9,
+        "global_img_per_s_p50": 33.32,
+        "global_img_per_s_p90": 33.71,
+        "data_wait_fraction": 0.001,
+        "step_s_p50": 0.482,
+        "data_wait_s_p50": 0.0004
+      }
+    },
+    "steady_state_all_ranks_epochs": {
+      "steps_measured": 1544,
+      "global_img_per_s_p10": 32.92,
+      "global_img_per_s_p50": 33.79,
+      "global_img_per_s_p90": 35.21,
+      "data_wait_fraction": 0.001,
+      "step_s_p50": 0.473,
+      "data_wait_s_p50": 0.0004
+    },
+    "holdout_val_s": [
+      54.3,
+      47.3
+    ],
+    "launch_overhead_s": 250.3,
+    "gpu": {
+      "0": {
+        "samples": 198,
+        "util_mean_pct": 92.5,
+        "util_p10_pct": 91.0,
+        "mem_peak_mib": 9631.0,
+        "mem_total_mib": 15360.0
+      },
+      "1": {
+        "samples": 198,
+        "util_mean_pct": 92.8,
+        "util_p10_pct": 92.0,
+        "mem_peak_mib": 9537.0,
+        "mem_total_mib": 15360.0
+      }
+    },
+    "cpu": {
+      "samples": 198,
+      "cpu_count": 4,
+      "util_mean_pct": 66.0,
+      "util_p90_pct": 69.4,
+      "load1_mean": 2.92
+    }
+  },
+  "mosaic_events": [
+    {
+      "t": 1791675962.4111803,
+      "phase": "P",
+      "event": "mosaic_state",
+      "epoch": 1,
+      "dataset_augment": true,
+      "dataset_rect": false,
+      "mosaic_transform_p": [
+        1.0
+      ]
+    },
+    {
+      "t": 1791676212.0567691,
+      "phase": "P",
+      "event": "mosaic_state",
+      "epoch": 2,
+      "dataset_augment": true,
+      "dataset_rect": false,
+      "mosaic_transform_p": [
+        1.0
+      ]
+    }
+  ],
+  "effective_augmentation": {
+    "mosaic": 1.0,
+    "close_mosaic": 0,
+    "mixup": 0.0,
+    "copy_paste": 0.0,
+    "scale": 0.5,
+    "translate": 0.1,
+    "fliplr": 0.5,
+    "flipud": 0.0,
+    "degrees": 0.0,
+    "shear": 0.0,
+    "perspective": 0.0,
+    "hsv_h": 0.015,
+    "hsv_s": 0.7,
+    "hsv_v": 0.4,
+    "erasing": 0.4,
+    "auto_augment": "randaugment",
+    "imgsz": 960,
+    "batch": 16,
+    "workers": 4
+  },
+  "checks": {
+    "two_gpus_visible": "PASS",
+    "ddp_world_size_2": "PASS",
+    "both_gpus_utilized": "PASS",
+    "phase_completed": "PASS",
+    "mosaic_in_effective_args": "PASS",
+    "mosaic_active_every_epoch": "PASS",
+    "mosaic_never_closed": "PASS",
+    "holdout_excluded_from_training": "PASS",
+    "no_ddp_errors": "PASS"
+  },
+  "warnings": [
+    "WARNING \u26a0\ufe0f \u001b[34m\u001b[1mtrain: \u001b[0mSlow image access detected (ping: 4.3\u00b12.1 ms, read: 9.0\u00b13.3 MB/s, size: 52.7 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips",
+    "WARNING \u26a0\ufe0f \u001b[34m\u001b[1mtrain: \u001b[0mCache directory /kaggle/input/datasets/a7madmostafa/bdd100k-yolo/train is not writable, cache not saved.",
+    "WARNING \u26a0\ufe0f \u001b[34m\u001b[1mval: \u001b[0mSlow image access detected (ping: 3.2\u00b10.2 ms, read: 11.7\u00b13.9 MB/s, size: 65.0 KB). Use local storage instead of remote/mounted storage for better performance. See https://docs.ultralytics.com/guides/model-training-tips",
+    "WARNING \u26a0\ufe0f \u001b[34m\u001b[1mval: \u001b[0mCache directory /kaggle/input/datasets/a7madmostafa/bdd100k-yolo/train is not writable, cache not saved.",
+    "warnings.warn("
+  ],
+  "hashes_sha256": {
+    "last.pt": "105aa3096bc8a510cb793e455dd29ac1dce52619ae3430e4feff6a697877a210",
+    "best.pt": "183367d621e6364aef91db1744ba9a1777562561cd432005fee2c6b8559b567f",
+    "effective_train_args.json": "cabc76e3e83382e54c70a8490b3b52fa3cf823ebb76a83837a5490ffab5e102c",
+    "augmentation_pipeline.txt": "c283736cc7c9d15cd9b4036863ec687e29e305b321cf543d53aae13559841b74",
+    "run_config.json": "c0acfa499a0581c03b5a1c0b42142f86d3415f8ef6600ca6da34467fa2654a92"
+  },
+  "note": "Measurements only; full-run extrapolation is done separately."
+}

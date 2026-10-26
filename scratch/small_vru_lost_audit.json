@@ -1,0 +1,210 @@
+[
+  {
+    "image_name": "b59413ff-9094612f.jpg",
+    "is_small_vru": true,
+    "class_name": "person",
+    "gt_box": [
+      681.3,
+      97.3,
+      692.5,
+      124.8
+    ],
+    "gt_area": 308.3,
+    "gt_size_group": "Small (<32\u00b2)",
+    "pred_box": [
+      682.8,
+      98.8,
+      690.9,
+      122.8
+    ],
+    "pred_conf": 0.3403,
+    "pred_source": "crop",
+    "match_iou": 0.631,
+    "crop_trigger_reason": "low_confidence+cluster_occlusion+small_vru+low_confidence+small_vru+small_vru+small_vru+small_vru+low_confidence",
+    "raw_crop_conf": 0.3403,
+    "in_config_e": false,
+    "filter_eliminated_by": "Removed by Conservative Admission (unanchored crop confidence < 0.35)"
+  },
+  {
+    "image_name": "b775af1c-b71a7f85.jpg",
+    "is_small_vru": true,
+    "class_name": "person",
+    "gt_box": [
+      420.2,
+      267.9,
+      435.8,
+      294.9
+    ],
+    "gt_area": 422.8,
+    "gt_size_group": "Small (<32\u00b2)",
+    "pred_box": [
+      422.7,
+      266.4,
+      434.1,
+      296.7
+    ],
+    "pred_conf": 0.2848,
+    "pred_source": "crop",
+    "match_iou": 0.667,
+    "crop_trigger_reason": "small_vru+low_confidence+small_vru",
+    "raw_crop_conf": 0.2848,
+    "in_config_e": false,
+    "filter_eliminated_by": "Removed by Conservative Admission (unanchored crop confidence < 0.35)"
+  },
+  {
+    "image_name": "b832508c-8f2be0ee.jpg",
+    "is_small_vru": true,
+    "class_name": "person",
+    "gt_box": [
+      483.4,
+      301.8,
+      495.5,
+      328.2
+    ],
+    "gt_area": 320.6,
+    "gt_size_group": "Small (<32\u00b2)",
+    "pred_box": [
+      485.5,
+      306.2,
+      494.0,
+      328.1
+    ],
+    "pred_conf": 0.3142,
+    "pred_source": "crop",
+    "match_iou": 0.58,
+    "crop_trigger_reason": "low_confidence+low_confidence+small_vru+small_vru+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+small_vru+low_confidence+small_vru+low_confidence+small_vru+low_confidence+low_confidence+low_confidence+small_vru+small_vru+small_vru",
+    "raw_crop_conf": 0.3142,
+    "in_config_e": false,
+    "filter_eliminated_by": "Removed by Conservative Admission (unanchored crop confidence < 0.35)"
+  },
+  {
+    "image_name": "ba65c274-e0f6a546.jpg",
+    "is_small_vru": true,
+    "class_name": "person",
+    "gt_box": [
+      195.7,
+      335.0,
+      202.5,
+      358.6
+    ],
+    "gt_area": 159.5,
+    "gt_size_group": "Small (<32\u00b2)",
+    "pred_box": [
+      194.2,
+      334.3,
+      201.3,
+      360.3
+    ],
+    "pred_conf": 0.3031,
+    "pred_source": "crop",
+    "match_iou": 0.613,
+    "crop_trigger_reason": "small_vru+low_confidence+cluster_occlusion+small_vru+cluster_occlusion+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru+small_vru+low_confidence+low_confidence+low_confidence",
+    "raw_crop_conf": 0.3031,
+    "in_config_e": false,
+    "filter_eliminated_by": "Removed by Conservative Admission (unanchored crop confidence < 0.35)"
+  },
+  {
+    "image_name": "bbc0f7ea-77bee0c4.jpg",
+    "is_small_vru": true,
+    "class_name": "person",
+    "gt_box": [
+      610.2,
+      283.2,
+      618.9,
+      305.7
+    ],
+    "gt_area": 196.2,
+    "gt_size_group": "Small (<32\u00b2)",
+    "pred_box": [
+      611.3,
+      284.7,
+      618.6,
+      303.5
+    ],
+    "pred_conf": 0.2527,
+    "pred_source": "crop",
+    "match_iou": 0.692,
+    "crop_trigger_reason": "low_confidence+cluster_occlusion+small_vru+cluster_occlusion+low_confidence+low_confidence+low_confidence+low_confidence+low_confidence",
+    "raw_crop_conf": 0.2527,
+    "in_config_e": false,
+    "filter_eliminated_by": "Removed by Conservative Admission (unanchored crop confidence < 0.35)"
+  },
+  {
+    "image_name": "bcae6e67-059fedea.jpg",
+    "is_small_vru": true,
+    "class_name": "person",
+    "gt_box": [
+      360.0,
+      363.9,
+      366.0,
+      386.4
+    ],
+    "gt_area": 134.6,
+    "gt_size_group": "Small (<32\u00b2)",
+    "pred_box": [
+      358.4,
+      365.4,
+      365.0,
+      386.9
+    ],
+    "pred_conf": 0.3434,
+    "pred_source": "crop",
+    "match_iou": 0.599,
+    "crop_trigger_reason": "small_vru+low_confidence+small_vru+small_vru+low_confidence",
+    "raw_crop_conf": 0.3434,
+    "in_config_e": false,
+    "filter_eliminated_by": "Removed by Conservative Admission (unanchored crop confidence < 0.35)"
+  },
+  {
+    "image_name": "bdf33dc4-ae128055.jpg",
+    "is_small_vru": false,
+    "class_name": "person",
+    "gt_box": [
+      95.5,
+      355.0,
+      122.4,
+      426.0
+    ],
+    "gt_area": 1912.3,
+    "gt_size_group": "Medium [32\u00b2-96\u00b2)",
+    "pred_box": [
+      104.1,
+      355.2,
+      123.0,
+      429.0
+    ],
+    "pred_conf": 0.2542,
+    "pred_source": "fused",
+    "match_iou": 0.647,
+    "crop_trigger_reason": "low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+boundary_truncation+boundary_truncation+boundary_truncation+boundary_truncation+boundary_truncation+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+low_confidence+low_confidence+small_vru+low_confidence",
+    "raw_crop_conf": 0.2108,
+    "in_config_e": true,
+    "filter_eliminated_by": "Suppressed by Intra-Crop Pedestrian NMS (IoU >= 0.40 duplicate)"
+  },
+  {
+    "image_name": "bdf33dc4-ae128055.jpg",
+    "is_small_vru": false,
+    "class_name": "person",
+    "gt_box": [
+      128.5,
+      342.8,
+      160.4,
+      434.6
+    ],
+    "gt_area": 2922.3,
+    "gt_size_group": "Medium [32\u00b2-96\u00b2)",
+    "pred_box": [
+      127.4,
+      348.7,
+      148.2,
+      428.5
+    ],
+    "pred_conf": 0.269,
+    "pred_source": "fused",
+    "match_iou": 0.523,
+    "crop_trigger_reason": "low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+cluster_occlusion+cluster_occlusion+cluster_occlusion+low_confidence+low_confidence+boundary_truncation+boundary_truncation+boundary_truncation+boundary_truncation+boundary_truncation+small_vru+low_confidence+low_confidence+low_confidence+low_confidence+small_vru+low_confidence+low_confidence+small_vru+small_vru+low_confidence+low_confidence+small_vru+low_confidence",
+    "raw_crop_conf": 0.2592,
+    "in_config_e": true,
+    "filter_eliminated_by": "Suppressed by Intra-Crop Pedestrian NMS (IoU >= 0.40 duplicate)"
+  }
+]

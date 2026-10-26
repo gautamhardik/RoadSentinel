@@ -1,0 +1,226 @@
+{
+  "status": "ARITHMETIC_VERIFIED_CONSISTENT",
+  "sample_design": {
+    "unique_images_evaluated": 15,
+    "total_observations_per_pipeline": 30,
+    "repetition_mode": "Two repeated runs with inverted execution order",
+    "independent_scene_count": 15,
+    "repeated_observation_warning": "Observations are NOT 30 independent scenes. They are 15 unique development scenes evaluated under two order permutations."
+  },
+  "discrepancies_found": [],
+  "recomputed_statistics": {
+    "run1": {
+      "raw_full_frame": {
+        "n": 15,
+        "mean_ms": 1014.62,
+        "std_ms_population_ddof0": 244.93,
+        "std_ms_sample_ddof1": 253.53,
+        "median_ms": 948.7,
+        "p95_ms": 1409.0,
+        "sum_per_image_s": 15.219,
+        "wall_clock_s": 15.22,
+        "throughput_fps": 0.986
+      },
+      "horizon_slicing_wbf": {
+        "n": 15,
+        "mean_ms": 1630.85,
+        "std_ms_population_ddof0": 286.82,
+        "std_ms_sample_ddof1": 296.88,
+        "median_ms": 1584.3,
+        "p95_ms": 2101.54,
+        "sum_per_image_s": 24.463,
+        "wall_clock_s": 24.463,
+        "throughput_fps": 0.613
+      },
+      "active_foveation_wbf": {
+        "n": 15,
+        "mean_ms": 2113.13,
+        "std_ms_population_ddof0": 530.39,
+        "std_ms_sample_ddof1": 549.01,
+        "median_ms": 2292.8,
+        "p95_ms": 2727.93,
+        "sum_per_image_s": 31.697,
+        "wall_clock_s": 31.697,
+        "throughput_fps": 0.473
+      }
+    },
+    "run2": {
+      "raw_full_frame": {
+        "n": 15,
+        "mean_ms": 963.09,
+        "std_ms_population_ddof0": 231.27,
+        "std_ms_sample_ddof1": 239.39,
+        "median_ms": 908.0,
+        "p95_ms": 1450.97,
+        "sum_per_image_s": 14.446,
+        "wall_clock_s": 14.447,
+        "throughput_fps": 1.038
+      },
+      "horizon_slicing_wbf": {
+        "n": 15,
+        "mean_ms": 1715.91,
+        "std_ms_population_ddof0": 241.37,
+        "std_ms_sample_ddof1": 249.84,
+        "median_ms": 1735.0,
+        "p95_ms": 2151.83,
+        "sum_per_image_s": 25.739,
+        "wall_clock_s": 25.739,
+        "throughput_fps": 0.583
+      },
+      "active_foveation_wbf": {
+        "n": 15,
+        "mean_ms": 2397.34,
+        "std_ms_population_ddof0": 725.35,
+        "std_ms_sample_ddof1": 750.81,
+        "median_ms": 2515.0,
+        "p95_ms": 3436.05,
+        "sum_per_image_s": 35.96,
+        "wall_clock_s": 35.961,
+        "throughput_fps": 0.417
+      }
+    },
+    "pooled": {
+      "raw_full_frame": {
+        "n_observations": 30,
+        "unique_scenes": 15,
+        "observations_per_scene": 2,
+        "mean_ms": 988.85,
+        "std_ms_population_ddof0": 239.59,
+        "std_ms_sample_ddof1": 243.68,
+        "min_ms": 682.4,
+        "p25_ms": 808.8,
+        "p50_median_ms": 917.4,
+        "p75_ms": 1150.92,
+        "p90_ms": 1397.21,
+        "p95_ms_descriptive_uncertain": 1415.0,
+        "max_ms": 1577.6,
+        "total_wall_clock_s": 29.667,
+        "combined_throughput_fps": 1.011
+      },
+      "horizon_slicing_wbf": {
+        "n_observations": 30,
+        "unique_scenes": 15,
+        "observations_per_scene": 2,
+        "mean_ms": 1673.38,
+        "std_ms_population_ddof0": 268.46,
+        "std_ms_sample_ddof1": 273.05,
+        "min_ms": 1312.7,
+        "p25_ms": 1428.07,
+        "p50_median_ms": 1657.85,
+        "p75_ms": 1773.53,
+        "p90_ms": 1987.82,
+        "p95_ms_descriptive_uncertain": 2158.61,
+        "max_ms": 2407.3,
+        "total_wall_clock_s": 50.202,
+        "combined_throughput_fps": 0.598
+      },
+      "active_foveation_wbf": {
+        "n_observations": 30,
+        "unique_scenes": 15,
+        "observations_per_scene": 2,
+        "mean_ms": 2255.23,
+        "std_ms_population_ddof0": 651.09,
+        "std_ms_sample_ddof1": 662.22,
+        "min_ms": 1280.6,
+        "p25_ms": 1666.42,
+        "p50_median_ms": 2357.9,
+        "p75_ms": 2620.95,
+        "p90_ms": 3023.48,
+        "p95_ms_descriptive_uncertain": 3345.33,
+        "max_ms": 3491.7,
+        "total_wall_clock_s": 67.658,
+        "combined_throughput_fps": 0.443
+      }
+    },
+    "paired_analysis_fov_minus_horizon": {
+      "definition": "Latency(Active Foveation) - Latency(Horizon Slicing) per image. Positive value indicates Horizon Slicing was faster.",
+      "run1_mean_delta_ms": 482.27,
+      "run1_median_delta_ms": 652.2,
+      "run1_horizon_faster_count": 9,
+      "run1_foveation_faster_count": 6,
+      "run2_mean_delta_ms": 681.43,
+      "run2_median_delta_ms": 504.5,
+      "run2_horizon_faster_count": 11,
+      "run2_foveation_faster_count": 4,
+      "pooled_mean_delta_ms": 581.85,
+      "pooled_median_delta_ms": 578.35,
+      "pooled_std_delta_ms": 694.12,
+      "pooled_min_delta_ms": -530.2,
+      "pooled_max_delta_ms": 1836.4,
+      "total_pairs": 30,
+      "total_horizon_faster_pairs": 20,
+      "total_foveation_faster_pairs": 10,
+      "percentage_horizon_faster": 66.7
+    }
+  },
+  "standard_deviation_convention_audit": {
+    "convention_documentation": "Benchmark script uses NumPy default np.std(arr), which implements population standard deviation (ddof=0, N divisor). Sample standard deviation uses Bessel's correction (ddof=1, N-1 divisor).",
+    "horizon_slicing_pooled": {
+      "stored_std_ms": 268.5,
+      "calculated_population_std_ddof0_ms": 268.46,
+      "calculated_sample_std_ddof1_ms": 273.05,
+      "delta_sample_minus_stored_ms": 4.55,
+      "status": "STORED_USES_POPULATION_DDOF0"
+    },
+    "raw_full_frame_pooled": {
+      "stored_std_ms": 239.6,
+      "calculated_population_std_ddof0_ms": 239.59,
+      "calculated_sample_std_ddof1_ms": 243.68,
+      "delta_sample_minus_stored_ms": 4.08,
+      "status": "STORED_USES_POPULATION_DDOF0"
+    },
+    "active_foveation_pooled": {
+      "stored_std_ms": 651.1,
+      "calculated_population_std_ddof0_ms": 651.09,
+      "calculated_sample_std_ddof1_ms": 662.22,
+      "delta_sample_minus_stored_ms": 11.12,
+      "status": "STORED_USES_POPULATION_DDOF0"
+    }
+  },
+  "stage_accounting": {
+    "instrumentation_classification": {
+      "directly_measured_stages": [
+        "Raw Full-Frame end-to-end latency (run_raw_inference)",
+        "Horizon Slicing slice extraction latency (t_sl0 to dt_sl)",
+        "Horizon Slicing slice inference latency (t_inf0 to dt_inf)",
+        "Horizon Slicing WBF fusion latency (t_wbf0 to dt_wbf)",
+        "Horizon Slicing end-to-end latency (run_horizon_slicing)",
+        "Active Foveation crop extraction + inference latency (t_c0 to dt_c, crop_processing_mean_ms)",
+        "Active Foveation end-to-end latency (run_active_foveation)"
+      ],
+      "inferred_by_subtraction_stages": [
+        "Horizon Slicing uninstrumented full-frame step (end-to-end minus extraction, slice inference, and WBF)",
+        "Active Foveation uninstrumented full-frame step + WBF (end-to-end minus crop processing)",
+        "Active Foveation 358.1 ms stage gap vs standalone raw"
+      ],
+      "uninstrumented_substages_in_active_foveation": [
+        "Primary full-frame model forward pass (model.predict)",
+        "OpenCV frame decode (cv2.imread)",
+        "Heuristic crop proposal generation (generate_uncertainty_crops)",
+        "Calibrated WBF consensus box fusion (calibrated_wbf_consensus_fusion)"
+      ]
+    },
+    "horizon_slicing": {
+      "end_to_end_mean_ms": 1673.4,
+      "directly_measured_slice_extraction_ms": 4.4,
+      "directly_measured_slice_inference_ms": 641.4,
+      "directly_measured_wbf_fusion_ms": 1.8,
+      "reported_stages_sum_ms": 647.6,
+      "inferred_uninstrumented_full_frame_step_ms": 1025.8
+    },
+    "active_foveation": {
+      "end_to_end_mean_ms": 2255.2,
+      "directly_measured_crop_processing_ms": 908.2,
+      "inferred_uninstrumented_full_frame_plus_wbf_step_ms": 1347.0
+    },
+    "standalone_raw": {
+      "end_to_end_mean_ms": 988.9
+    },
+    "causal_status_of_358_1_ms_gap": {
+      "gap_value_ms": 358.1,
+      "epistemic_status": "MEASURED_AGGREGATE_RESIDUAL_CAUSALLY_UNRESOLVED",
+      "audit_finding": "The 358.1 ms difference between Active Foveation's inferred Stage 1 (1,347.0 ms) and standalone raw inference (988.9 ms) is directly measured as an aggregate residual. However, its causal allocation among primary forward inference, cv2.imread decode, bounding box dictionary packaging, heuristic crop proposal generation, and WBF consensus fusion is causally unresolved because existing code does not instrument these sub-stages with individual timers.",
+      "future_work_recommendation": "Instrument the inner execution loop of run_active_foveation with dedicated sub-millisecond timers (perf_counter) around model.predict, cv2.imread, generate_uncertainty_crops, and calibrated_wbf_consensus_fusion to isolate individual overheads without launching an expensive full re-benchmark."
+    }
+  }
+}

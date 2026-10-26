@@ -1,0 +1,152 @@
+{
+  "FullFrame-640": {
+    "policy": "full_frame_only",
+    "full_frame_imgsz": 640,
+    "crop_imgsz": 640,
+    "max_crops": 0,
+    "num_timed_images": 10,
+    "num_warmup": 2,
+    "in_memory": {
+      "mean_ms": 108.0919418334961,
+      "median_p50_ms": 101.27275085449219,
+      "p95_ms": 140.16458129882812,
+      "min_ms": 90.4126968383789,
+      "max_ms": 157.02040100097656,
+      "throughput_fps": 9.251383781433105
+    },
+    "pipeline": {
+      "mean_ms": 145.6571807861328,
+      "median_p50_ms": 140.7042999267578,
+      "p95_ms": 197.53857421875,
+      "min_ms": 110.44219970703125,
+      "max_ms": 217.52330017089844,
+      "throughput_fps": 6.865435600280762
+    },
+    "measured_io_and_decode_overhead_ms": 39.431549072265625
+  },
+  "FullFrame-960": {
+    "policy": "full_frame_only",
+    "full_frame_imgsz": 960,
+    "crop_imgsz": 640,
+    "max_crops": 0,
+    "num_timed_images": 10,
+    "num_warmup": 2,
+    "in_memory": {
+      "mean_ms": 217.6084442138672,
+      "median_p50_ms": 213.5001983642578,
+      "p95_ms": 252.53729248046875,
+      "min_ms": 188.98219299316406,
+      "max_ms": 252.69119262695312,
+      "throughput_fps": 4.595409870147705
+    },
+    "pipeline": {
+      "mean_ms": 501.73626708984375,
+      "median_p50_ms": 455.61907958984375,
+      "p95_ms": 845.05517578125,
+      "min_ms": 232.3885040283203,
+      "max_ms": 1011.85400390625,
+      "throughput_fps": 1.9930789470672607
+    },
+    "measured_io_and_decode_overhead_ms": 242.11888122558594
+  },
+  "FullFrame-1280": {
+    "policy": "full_frame_only",
+    "full_frame_imgsz": 1280,
+    "crop_imgsz": 640,
+    "max_crops": 0,
+    "num_timed_images": 10,
+    "num_warmup": 2,
+    "in_memory": {
+      "mean_ms": 1343.4453125,
+      "median_p50_ms": 1216.030029296875,
+      "p95_ms": 1950.3729248046875,
+      "min_ms": 1030.0916748046875,
+      "max_ms": 2378.836669921875,
+      "throughput_fps": 0.7443548440933228
+    },
+    "pipeline": {
+      "mean_ms": 1256.290283203125,
+      "median_p50_ms": 1161.396484375,
+      "p95_ms": 1607.64306640625,
+      "min_ms": 1081.027587890625,
+      "max_ms": 1651.9283447265625,
+      "throughput_fps": 0.7959944009780884
+    },
+    "measured_io_and_decode_overhead_ms": -54.633544921875
+  },
+  "FixedGrid-960": {
+    "policy": "fixed_grid",
+    "full_frame_imgsz": 960,
+    "crop_imgsz": 640,
+    "max_crops": 2,
+    "num_timed_images": 10,
+    "num_warmup": 2,
+    "in_memory": {
+      "mean_ms": 1545.137451171875,
+      "median_p50_ms": 1608.99169921875,
+      "p95_ms": 2038.9005126953125,
+      "min_ms": 633.4437255859375,
+      "max_ms": 2119.998046875,
+      "throughput_fps": 0.64719158411026
+    },
+    "pipeline": {
+      "mean_ms": 1748.166748046875,
+      "median_p50_ms": 1395.99951171875,
+      "p95_ms": 3624.958984375,
+      "min_ms": 850.2681884765625,
+      "max_ms": 3908.5673828125,
+      "throughput_fps": 0.5720278024673462
+    },
+    "measured_io_and_decode_overhead_ms": -212.9921875
+  },
+  "RandomCrop-960": {
+    "policy": "random",
+    "full_frame_imgsz": 960,
+    "crop_imgsz": 640,
+    "max_crops": 2,
+    "num_timed_images": 10,
+    "num_warmup": 2,
+    "in_memory": {
+      "mean_ms": 1638.5845947265625,
+      "median_p50_ms": 1712.268798828125,
+      "p95_ms": 2819.828125,
+      "min_ms": 779.8609008789062,
+      "max_ms": 3379.190673828125,
+      "throughput_fps": 0.6102827787399292
+    },
+    "pipeline": {
+      "mean_ms": 2194.69287109375,
+      "median_p50_ms": 1741.0540771484375,
+      "p95_ms": 4275.0498046875,
+      "min_ms": 1366.7161865234375,
+      "max_ms": 5307.55712890625,
+      "throughput_fps": 0.4556446075439453
+    },
+    "measured_io_and_decode_overhead_ms": 28.7852783203125
+  },
+  "ActiveFoveation-960": {
+    "policy": "uncertainty_active",
+    "full_frame_imgsz": 960,
+    "crop_imgsz": 640,
+    "max_crops": 2,
+    "num_timed_images": 10,
+    "num_warmup": 2,
+    "in_memory": {
+      "mean_ms": 981.7195434570312,
+      "median_p50_ms": 947.858642578125,
+      "p95_ms": 1672.9332275390625,
+      "min_ms": 455.3124084472656,
+      "max_ms": 2181.5888671875,
+      "throughput_fps": 1.0186208486557007
+    },
+    "pipeline": {
+      "mean_ms": 1281.1141357421875,
+      "median_p50_ms": 1376.226318359375,
+      "p95_ms": 1989.315185546875,
+      "min_ms": 549.5914916992188,
+      "max_ms": 2289.020751953125,
+      "throughput_fps": 0.7805705666542053
+    },
+    "measured_io_and_decode_overhead_ms": 428.36767578125
+  }
+}

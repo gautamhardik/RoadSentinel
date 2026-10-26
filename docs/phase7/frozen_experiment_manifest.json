@@ -1,0 +1,146 @@
+{
+  "manifest_version": "1.0_frozen",
+  "created_at": "2026-10-12T04:30:00Z",
+  "checkpoint": {
+    "path": "experiments/phase6_session2_error/runs/phase6_yolo11m_960_session1/weights/best.pt",
+    "epoch": 26,
+    "architecture": "YOLO11m",
+    "holdout_selection_fitness": 0.31074,
+    "state_dict_sha256": "706008333c710bd8c109c41c1f78f6170b3c85f793f42fd8a3aecd4b0c19f59e",
+    "status": "STRICTLY_FROZEN"
+  },
+  "data_partitions": {
+    "development_pilot_cohort": {
+      "image_count": 300,
+      "vru_ground_truth": 1740,
+      "small_vru_ground_truth": 901,
+      "permitted_use": "Exploratory development, threshold sweeps, prototype slicing",
+      "status": "TUNING_DATA_NOT_INDEPENDENT_BENCHMARK"
+    },
+    "confirmatory_validation_partition": {
+      "image_count": 9700,
+      "vru_ground_truth": 13633,
+      "permitted_use": "One-shot confirmatory evaluation only",
+      "status": "STRICTLY_UNTOUCHED_ZERO_TUNING"
+    },
+    "official_validation_set": {
+      "image_count": 10000,
+      "vru_ground_truth": 15373,
+      "permitted_use": "Official detector standalone evaluation",
+      "status": "PENDING_GPU_QUOTA_RESET"
+    },
+    "official_test_split": {
+      "image_count": 20000,
+      "permitted_use": "Final blind benchmark",
+      "status": "STRICTLY_QUARANTINED_ZERO_TOUCHES"
+    }
+  },
+  "experiments": {
+    "EXP-BASE": {
+      "name": "Frozen Full-Frame Baseline",
+      "input_resolution": "960x960",
+      "passes_per_frame": 1,
+      "operating_threshold": 0.25,
+      "fusion": "None (Raw detector outputs post-NMS)",
+      "measured_development_metrics": {
+        "tp": 1056,
+        "fp": 319,
+        "fn": 684,
+        "precision": 0.7680,
+        "recall": 0.6069,
+        "f1": 0.6780,
+        "small_vru_tp": 389,
+        "small_vru_recall": 0.4317
+      },
+      "measured_latency_cpu_ms": {
+        "controlled_revalidated_mean_ms": 988.9,
+        "controlled_p50_median_ms": 917.4,
+        "controlled_p95_ms": 1415.0,
+        "combined_throughput_fps": 1.011,
+        "historical_steady_state_mean_ms": 1486.6,
+        "historical_burst_mean_ms": 654.5
+      },
+      "acceptance_status": "BENCHMARK_CONTROL"
+    },
+    "EXP-7A": {
+      "name": "Lower-Threshold Candidate",
+      "input_resolution": "960x960",
+      "passes_per_frame": 1,
+      "operating_threshold": 0.15,
+      "fusion": "None (Raw detector proposals post-NMS)",
+      "target_gate": "Recall >= 68.0%, F1 >= 0.650",
+      "measured_development_metrics": {
+        "tp": 1213,
+        "fp": 772,
+        "fn": 527,
+        "precision": 0.6111,
+        "recall": 0.6971,
+        "f1": 0.6513,
+        "small_vru_tp": 496,
+        "small_vru_recall": 0.5505
+      },
+      "acceptance_status": "CONDITIONAL_EXPLORATORY_PASS",
+      "decision_rationale": "Meets arithmetic recall target (+9.02 pp) but precision collapses to 61.11% (+453 FP). Requires epistemic/WBF filtering before production consideration."
+    },
+    "EXP-7B": {
+      "name": "Autonomous Horizon Slicing + WBF",
+      "input_resolution": "960x960 full-frame + 960x320 horizon corridor",
+      "slice_geometry": {
+        "x1": 160,
+        "y1": 200,
+        "x2": 1120,
+        "y2": 520
+      },
+      "passes_per_frame": 2,
+      "operating_threshold": "tau_ff=0.25, tau_conf=0.15, tau_isolated=0.35",
+      "fusion": "Calibrated WBF (IoU=0.30 assoc, 0.50 cluster, weight_crop=1.1x)",
+      "target_gate": "Small-VRU Recall >= 55.00% (+3.0 pp over Active Foveation)",
+      "measured_development_metrics": {
+        "tp": 1110,
+        "fp": 366,
+        "fn": 630,
+        "precision": 0.7520,
+        "recall": 0.6379,
+        "f1": 0.6903,
+        "small_vru_tp": 437,
+        "small_vru_recall": 0.4850
+      },
+      "measured_latency_cpu_ms": {
+        "controlled_revalidated_mean_ms": 1673.4,
+        "controlled_p50_median_ms": 1657.8,
+        "controlled_p95_ms": 2158.6,
+        "combined_throughput_fps": 0.598,
+        "stage_slice_extraction_ms": 4.4,
+        "stage_slice_inference_ms": 641.4,
+        "stage_wbf_fusion_ms": 1.8
+      },
+      "acceptance_status": "FAIL_GATE_NOT_MET",
+      "decision_rationale": "Improves upon raw baseline (43.17% -> 48.50%, +5.33 pp), but misses 55.00% target by -6.50 pp and trails Active Foveation's 51.94% by -3.44 pp (31 fewer small VRUs)."
+    },
+    "EXP-FOV": {
+      "name": "Active Foveation + Calibrated WBF Baseline",
+      "input_resolution": "960x960 full-frame + variable 640x640 uncertainty crops",
+      "passes_per_frame": "1 to 3 (mean 1.20 to 1.50)",
+      "operating_threshold": "tau_ff=0.25, tau_conf=0.15, tau_isolated=0.35",
+      "fusion": "Calibrated WBF (IoU=0.30 assoc, 0.50 cluster, weight_crop=1.2x, beta=+0.08)",
+      "measured_development_metrics": {
+        "tp": 1144,
+        "fp": 396,
+        "fn": 596,
+        "precision": 0.7429,
+        "recall": 0.6575,
+        "f1": 0.6976,
+        "small_vru_tp": 468,
+        "small_vru_recall": 0.5194
+      },
+      "measured_latency_cpu_ms": {
+        "controlled_revalidated_mean_ms": 2255.2,
+        "controlled_p50_median_ms": 2357.9,
+        "controlled_p95_ms": 3345.3,
+        "combined_throughput_fps": 0.443,
+        "historical_steady_state_mean_ms": 2910.9
+      },
+      "acceptance_status": "INCUMBENT_PRODUCTION_BASELINE"
+    }
+  }
+}

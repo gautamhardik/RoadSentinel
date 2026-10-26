@@ -1,0 +1,10 @@
+{
+  "completed_epochs": 13,
+  "best_fitness": 0.29889,
+  "best_epoch": 13,
+  "best_pt_fitness": 0.29889,
+  "resume_last_sha256": "7fcb6d8a28f92cc42c764dcd87e9295bd881f3fad469dbce1645cbb1e8317c4b",
+  "best_sha256": "01bd55ec8075942b12ec2d5f5b9f243d4b6ab43eb4a3aa0910946f3edcaf45d1",
+  "best_weights_fingerprint": "97925c8c29245536d1533a863768f6d3b3150982d3129d1242659ed125d8e48c",
+  "selection_metric": "VRU macro AP50-95 (person, rider, bike, motor) on training-only holdout"
+}

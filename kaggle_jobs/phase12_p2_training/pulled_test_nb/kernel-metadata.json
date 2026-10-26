@@ -1,0 +1,19 @@
+{
+  "id": "hardikgautam2005/test-notebook-gpu",
+  "id_no": 139387018,
+  "title": "Test Notebook GPU",
+  "code_file": "test-notebook-gpu.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-images/python@sha256:81b1e7c4b4f0f2a7e0a33943c95754b1b7af6b30d65221633a284b6b601cd84a",
+  "machine_shape": "NvidiaTeslaT4"
+}

@@ -1,0 +1,107 @@
+{
+ "base_yolo11s": {
+  "per_class": {
+   "person": {
+    "n_pred": 117926,
+    "ap50": 0.6551,
+    "ap50_95": 0.3404,
+    "recall_at_floor": 0.8802,
+    "ap50_upper_bound": 0.6669
+   },
+   "rider": {
+    "n_pred": 2325,
+    "ap50": 0.4439,
+    "ap50_95": 0.2202,
+    "recall_at_floor": 0.6159,
+    "ap50_upper_bound": 0.5347
+   },
+   "bike": {
+    "n_pred": 11058,
+    "ap50": 0.4972,
+    "ap50_95": 0.2579,
+    "recall_at_floor": 0.7932,
+    "ap50_upper_bound": 0.5137
+   },
+   "motor": {
+    "n_pred": 2388,
+    "ap50": 0.4661,
+    "ap50_95": 0.2271,
+    "recall_at_floor": 0.6524,
+    "ap50_upper_bound": 0.5244
+   }
+  },
+  "vru_mAP50": 0.5156,
+  "vru_mAP50_95": 0.2614,
+  "vru_mAP50_upper_bound": 0.5599
+ },
+ "phase5a_u": {
+  "per_class": {
+   "person": {
+    "n_pred": 142559,
+    "ap50": 0.6503,
+    "ap50_95": 0.3352,
+    "recall_at_floor": 0.8818,
+    "ap50_upper_bound": 0.6601
+   },
+   "rider": {
+    "n_pred": 3997,
+    "ap50": 0.4393,
+    "ap50_95": 0.2259,
+    "recall_at_floor": 0.6311,
+    "ap50_upper_bound": 0.4915
+   },
+   "bike": {
+    "n_pred": 15033,
+    "ap50": 0.4899,
+    "ap50_95": 0.2476,
+    "recall_at_floor": 0.7932,
+    "ap50_upper_bound": 0.5021
+   },
+   "motor": {
+    "n_pred": 4776,
+    "ap50": 0.4516,
+    "ap50_95": 0.2201,
+    "recall_at_floor": 0.669,
+    "ap50_upper_bound": 0.4807
+   }
+  },
+  "vru_mAP50": 0.5078,
+  "vru_mAP50_95": 0.2572,
+  "vru_mAP50_upper_bound": 0.5336
+ },
+ "phase5a_r": {
+  "per_class": {
+   "person": {
+    "n_pred": 149295,
+    "ap50": 0.6421,
+    "ap50_95": 0.3321,
+    "recall_at_floor": 0.883,
+    "ap50_upper_bound": 0.6514
+   },
+   "rider": {
+    "n_pred": 3979,
+    "ap50": 0.4575,
+    "ap50_95": 0.2334,
+    "recall_at_floor": 0.6379,
+    "ap50_upper_bound": 0.5098
+   },
+   "bike": {
+    "n_pred": 13601,
+    "ap50": 0.4874,
+    "ap50_95": 0.2437,
+    "recall_at_floor": 0.8056,
+    "ap50_upper_bound": 0.5002
+   },
+   "motor": {
+    "n_pred": 4008,
+    "ap50": 0.4583,
+    "ap50_95": 0.2289,
+    "recall_at_floor": 0.6667,
+    "ap50_upper_bound": 0.4926
+   }
+  },
+  "vru_mAP50": 0.5113,
+  "vru_mAP50_95": 0.2595,
+  "vru_mAP50_upper_bound": 0.5385
+ }
+}

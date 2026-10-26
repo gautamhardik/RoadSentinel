@@ -1,0 +1,8 @@
+Configuration,Type,Imgsz,CropsPerImg,Overall_mAP50,VRU_mAP50,VRU_Precision,VRU_Recall,VRU_F1,SmallVRU_Recall,Throughput_FPS,Amortized_MS,Batch1_InMemory_P50_MS,PeakVRAM_MB
+ActiveFoveation-960,active_foveation,960,2,0.5403,0.512,0.6203,0.6271,0.6237,0.4683,19.32,51.75,16.88,195.7
+Calibrated-ActiveFoveation-960,calibrated_foveation,960,2,0.4706,0.443,0.7314,0.6088,0.6645,0.4385,19.32,51.75,14.44,195.7
+FullFrame-640,full_frame,640,0,0.4819,0.4428,0.7319,0.4836,0.5824,0.2325,46.53,21.49,9.77,167.7
+FullFrame-960,full_frame,960,0,0.5544,0.5262,0.7524,0.5692,0.6481,0.3639,40.37,24.77,13.31,196.3
+FullFrame-1280,full_frame,1280,0,0.5638,0.5367,0.7617,0.5807,0.659,0.4033,31.28,31.97,20.19,240.0
+FixedGrid-960,fixed_grid,960,2,0.5032,0.48,0.5643,0.6343,0.5972,0.4629,15.99,62.53,34.46,196.1
+RandomCrop-960,random_crop,960,2,0.5048,0.4935,0.6158,0.6183,0.6171,0.4446,16.26,61.5,35.73,196.8

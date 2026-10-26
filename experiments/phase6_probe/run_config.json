@@ -1,0 +1,45 @@
+{
+  "MODE": "probe",
+  "INIT": "coco",
+  "COCO_WEIGHTS": "yolo11m.pt",
+  "IMGSZ": 960,
+  "EPOCHS": 2,
+  "CLOSE_MOSAIC": 0,
+  "BATCH": 16,
+  "HOLDOUT_SIZE": 5000,
+  "HOLDOUT_SHA256": "c7047ee0073803431321735c098aad212693daa696153f31f8a26e11ebf7686b",
+  "SMOKE_FRACTION": 0.1,
+  "SMOKE_SEED": 7,
+  "SMOKE_PHASE_TIMEOUT_S": 1800,
+  "PROBE_PHASE_TIMEOUT_S": 2100,
+  "TIME_BUDGET_H": 0.6,
+  "RUN_NAME": "phase6_yolo11m_960_probe",
+  "BASE_SHA256": "a4747292648f37f68ab997bea65a36391c41356f35e309a9f3d2eb1d3ea8d8e3",
+  "T0": 1791675572.326772,
+  "PHASE": "",
+  "IS_MAIN_RANK": true,
+  "split_info": {
+    "train_images": 6500,
+    "holdout_images": 5000,
+    "holdout_sha256": "c7047ee0073803431321735c098aad212693daa696153f31f8a26e11ebf7686b",
+    "train_list_sha256": "e73df84cbef993128b6fa8b9d9e16bc3dee304e58f9e17fa309168d2a5964430"
+  },
+  "class_weights": [
+    1.2000000476837158,
+    2.0,
+    1.0,
+    1.0,
+    1.0,
+    1.7999999523162842,
+    2.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "ultralytics": "8.4.174",
+  "torch": "2.11.0+cu128",
+  "gpus": [
+    "Tesla T4",
+    "Tesla T4"
+  ]
+}

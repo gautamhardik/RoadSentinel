@@ -1,0 +1,6 @@
+Configuration,Type,Partition,VRU_Precision,VRU_Recall,VRU_F1,SmallVRU_Recall,MedVRU_Recall,LargeVRU_Recall,VRU_TP,VRU_FP,VRU_FN,Delta_Prec_pp_vs_Baseline,Delta_Rec_pp_vs_Baseline,Gate1_Prec,Gate2_Rec,Gate3_SmallRec,Gate4_F1,Gate_Verdict
+ActiveFoveation-960,reference_baseline,NonPilot_9700,0.5708,0.6418,0.6042,0.4847,0.7574,0.8517,8749,6578,4884,+0.00,+0.00,FAIL,PASS,PASS,FAIL,FAIL
+Calibrated-ActiveFoveation-960,reference_phase4c,NonPilot_9700,0.6904,0.6216,0.6542,0.4535,0.7455,0.8448,8474,3800,5159,+11.96,-2.02,PASS,FAIL,PASS,PASS,FAIL
+Candidate-A-AdaptiveArea,adaptive_area,NonPilot_9700,0.6654,0.6271,0.6457,0.4654,0.7458,0.8448,8549,4299,5084,+9.46,-1.47,PASS,PASS,PASS,FAIL,FAIL
+Candidate-B-AdaptiveArea,adaptive_area,NonPilot_9700,0.6711,0.6259,0.6477,0.4630,0.7457,0.8448,8533,4182,5100,+10.03,-1.59,PASS,PASS,PASS,FAIL,FAIL
+Candidate-C-AdaptiveArea,adaptive_area,NonPilot_9700,0.6771,0.6255,0.6503,0.4621,0.7457,0.8448,8528,4067,5105,+10.63,-1.63,PASS,PASS,PASS,PASS,PASS

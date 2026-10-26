@@ -1,0 +1,105 @@
+{
+  "comparison_metadata": {
+    "benchmark_target": "RoadSentinel Phase 10B — Reconciled Baseline vs Extended YOLO11m",
+    "timestamp": "2026-10-13T11:20:00Z",
+    "validation_split": "BDD100K Official Validation Set & 300-Image Pilot Cohort",
+    "quarantine_verified": true,
+    "evaluation_protocol": {
+      "cohort": "300-Image Development Pilot (PILOT_300_FILENAMES)",
+      "operational_conf_threshold": 0.25,
+      "nms_iou_threshold": 0.65,
+      "matching_iou_threshold": 0.50,
+      "matching_policy": "Class-aware, confidence-ordered greedy matching",
+      "small_object_definition": "Area < 1024 px² (<32²) in original 1280x720 coordinates",
+      "vru_classes": ["person", "rider", "bike", "motor"]
+    }
+  },
+  "reconciled_baselines": {
+    "baseline_960px_frozen": {
+      "model": "YOLO11m Phase 6 (Epoch 26)",
+      "checkpoint": "scratch/kaggle_upload_weights/best.pt",
+      "sha256": "42d4b385ec69d01209e76dcf85f0fb4ffb33857d85f4daa02a4271d20f76541e",
+      "epochs_completed": 26,
+      "input_resolution": 960,
+      "validation_metrics_all_val": {
+        "all_class_map50": 0.6131,
+        "all_class_map50_95": 0.3541,
+        "vru_macro_map50": 0.6025,
+        "vru_macro_map50_95": 0.3107
+      },
+      "pilot_300_metrics_at_conf_0_25": {
+        "total_gt_objects": 6892,
+        "vru_precision": 78.45,
+        "vru_recall": 60.46,
+        "vru_f1": 0.6829,
+        "small_vru_ground_truth": 901,
+        "small_vru_true_positives": 385,
+        "small_vru_recall_percent": 42.73,
+        "all_class_precision": 77.93,
+        "all_class_recall": 71.88,
+        "all_class_f1": 0.7478
+      },
+      "per_class_pilot_at_conf_0_25": {
+        "person": {"precision": 79.90, "recall": 61.91, "tp": 946, "fn": 582},
+        "rider": {"precision": 69.57, "recall": 55.17, "tp": 32, "fn": 26},
+        "bike": {"precision": 67.74, "recall": 51.64, "tp": 63, "fn": 59},
+        "motor": {"precision": 61.11, "recall": 34.38, "tp": 11, "fn": 21}
+      }
+    },
+    "reference_1280px_native": {
+      "model": "YOLO11m Phase 6 (Epoch 26) @ 1280px Native",
+      "checkpoint": "scratch/kaggle_upload_weights/best.pt",
+      "sha256": "42d4b385ec69d01209e76dcf85f0fb4ffb33857d85f4daa02a4271d20f76541e",
+      "input_resolution": 1280,
+      "pilot_300_metrics_at_conf_0_25": {
+        "vru_precision": 78.20,
+        "vru_recall": 61.84,
+        "vru_f1": 0.6906,
+        "small_vru_ground_truth": 901,
+        "small_vru_true_positives": 407,
+        "small_vru_recall_percent": 45.17,
+        "all_class_precision": 77.68,
+        "all_class_recall": 73.64,
+        "all_class_f1": 0.7561
+      },
+      "per_class_pilot_at_conf_0_25": {
+        "person": {"precision": 77.80, "recall": 63.22, "tp": 966, "fn": 562},
+        "rider": {"precision": 68.40, "recall": 56.90, "tp": 33, "fn": 25},
+        "bike": {"precision": 72.10, "recall": 55.74, "tp": 68, "fn": 54},
+        "motor": {"precision": 64.50, "recall": 28.12, "tp": 9, "fn": 23}
+      }
+    }
+  },
+  "extended_50_epoch_specification": {
+    "model": "YOLO11m Phase 10B Extended (Target: Epoch 50)",
+    "target_checkpoint": "experiments/phase10_model_optimization/phase10b_extended_training/weights/best.pt",
+    "target_epochs": 50,
+    "input_resolution": 960,
+    "close_mosaic_epochs": 10,
+    "status": "GATE_A_VERIFIED_AWAITING_KAGGLE_SESSION_3",
+    "target_criteria_clarification": {
+      "note": "All percentage targets represent absolute percentage-point improvements (+pp), not relative percentages.",
+      "small_vru_recall_gate_relative_to_960px_baseline": {
+        "baseline_960px_recall": "42.73% (385 / 901)",
+        "required_improvement": "+2.00 percentage points absolute",
+        "minimum_target_threshold": ">= 44.73% (>= 403 / 901 TP)"
+      },
+      "small_vru_recall_gate_relative_to_1280px_reference": {
+        "reference_1280px_recall": "45.17% (407 / 901)",
+        "stretch_target": ">= 47.17% (>= 425 / 901 TP, +2.00 pp absolute over native 1280px)"
+      },
+      "vru_macro_map50_gate": {
+        "baseline_vru_map50": "60.25%",
+        "minimum_target_threshold": ">= 61.75% (+1.50 pp absolute)"
+      },
+      "vru_precision_gate": {
+        "baseline_precision": "78.45% (pilot) / 77.17% (all-val)",
+        "minimum_target_threshold": ">= 75.00% (anti-hallucination constraint)"
+      },
+      "all_class_map50_gate": {
+        "baseline_all_class_map50": "61.31%",
+        "minimum_target_threshold": ">= 61.31% (zero catastrophic forgetting)"
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "experiment_id": "RoadSentinel-Phase-10B",
+  "experiment_name": "Controlled YOLO11m Extended Training (26 to 50 Epochs)",
+  "timestamp": "2026-10-13T11:05:00Z",
+  "status": "STAGE1_AUDIT_COMPLETE_STAGE2_PREPARED",
+  "model_specification": {
+    "architecture": "YOLO11m",
+    "parameters_count": 20114680,
+    "input_resolution": 960,
+    "batch_size_total": 16,
+    "batch_size_per_gpu": 8,
+    "loss_function": "Ultralytics DetectionCriterion with Custom VRU Class Weights",
+    "class_weights": {
+      "person": 1.2,
+      "rider": 2.0,
+      "car": 1.0,
+      "bus": 1.0,
+      "truck": 1.0,
+      "bike": 1.8,
+      "motor": 2.0,
+      "traffic light": 1.0,
+      "traffic sign": 1.0,
+      "train": 1.0
+    }
+  },
+  "checkpoint_provenance": {
+    "baseline_best_weights": {
+      "path": "scratch/kaggle_upload_weights/best.pt",
+      "sha256": "42d4b385ec69d01209e76dcf85f0fb4ffb33857d85f4daa02a4271d20f76541e",
+      "completed_epochs": 26,
+      "verified_intact": true
+    },
+    "resumable_state_checkpoint": {
+      "path": "experiments/phase6_session2_error/resume_last.pt",
+      "sha256": "db64f798410ed392e2af35217661ef1b8ecab32e4a6f431600468d3c44915305",
+      "file_size_bytes": 80805199,
+      "epoch_index_0based": 25,
+      "completed_epochs": 26,
+      "best_fitness": 0.31074,
+      "optimizer_intact": true,
+      "ema_intact": true,
+      "scaler_intact": true,
+      "total_optimizer_updates": 29287,
+      "current_lr": 0.0004807692307692305
+    }
+  },
+  "training_continuation_schedule": {
+    "total_schedule_epochs": 50,
+    "initial_completed_epochs": 26,
+    "extension_epochs_remaining": 24,
+    "close_mosaic_epochs": 10,
+    "mosaic_disable_epoch": 41,
+    "measured_epoch_duration_seconds": 2001.3,
+    "measured_epoch_duration_minutes": 33.36,
+    "projected_total_runtime_hours": 13.34,
+    "kaggle_session_limit_hours": 12.0,
+    "session_partitioning": {
+      "session_3": {
+        "start_epoch": 27,
+        "end_epoch": 38,
+        "epoch_count": 12,
+        "estimated_duration_hours": 6.67,
+        "handoff_checkpoint": "handoff_phase10b_session3/resume_last.pt"
+      },
+      "session_4": {
+        "start_epoch": 39,
+        "end_epoch": 50,
+        "epoch_count": 12,
+        "estimated_duration_hours": 6.67,
+        "close_mosaic_active": true,
+        "final_checkpoint": "weights/best.pt"
+      }
+    }
+  },
+  "quarantine_and_integrity": {
+    "test_split_path": "bdd100k_dataset/test",
+    "quarantine_strictly_preserved": true,
+    "test_split_access_count": 0,
+    "temporal_fusion_enabled": false
+  }
+}

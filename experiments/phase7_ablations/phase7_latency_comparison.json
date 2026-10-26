@@ -1,0 +1,28 @@
+{
+  "hardware": "Local multi-core CPU (16 threads, PyTorch oneDNN)",
+  "num_evaluated_frames": 10,
+  "warmup_frames": 2,
+  "raw_full_frame": {
+    "mean_ms": 654.5,
+    "p50_ms": 608.0,
+    "p95_ms": 925.5,
+    "fps": 1.53
+  },
+  "horizon_slicing_wbf": {
+    "mean_ms": 1825.6,
+    "p50_ms": 1723.1,
+    "p95_ms": 2542.8,
+    "fps": 0.55,
+    "slice_extraction_mean_ms": 5.4,
+    "slice_inference_mean_ms": 702.4,
+    "wbf_mean_ms": 1.4
+  },
+  "active_foveation_wbf": {
+    "mean_ms": 2756.0,
+    "p50_ms": 2836.7,
+    "p95_ms": 3615.6,
+    "fps": 0.36,
+    "mean_crops_per_frame": 1.5,
+    "crop_processing_mean_ms": 1225.2
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "hardikgautam25/roadsentinel-stage-0b-floor-dump",
+  "title": "RoadSentinel Stage 0b Floor Dump",
+  "code_file": "stage0b_floor_dump.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": [
+    "a7madmostafa/bdd100k-yolo",
+    "hardikgautam25/roadsentinel-weights"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [
+    "hardikgautam25/roadsentinel-phase-5a-vru-model-training",
+    "hardikgautam25/roadsentinel-phase-5a-r-vru-weighted"
+  ],
+  "model_sources": []
+}

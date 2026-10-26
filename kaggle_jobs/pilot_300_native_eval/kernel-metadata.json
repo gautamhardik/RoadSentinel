@@ -1,0 +1,18 @@
+{
+  "id": "hardikgautam24119014/roadsentinel-pilot-300-native-eval",
+  "title": "RoadSentinel Pilot 300 Native Eval",
+  "code_file": "evaluate_pilot_native.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "dataset_sources": [
+    "a7madmostafa/bdd100k-yolo",
+    "hardikgautam24119014/roadsentinel-phase6-weights"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

@@ -1,0 +1,804 @@
+destination_p2_key,source_std_key,tensor_shape,param_count,layer_role,status
+model.0.conv.weight,model.0.conv.weight,"[64, 3, 3, 3]",1728,Backbone Layer 0,TRANSFERRED
+model.0.bn.weight,model.0.bn.weight,[64],64,Backbone Layer 0,TRANSFERRED
+model.0.bn.bias,model.0.bn.bias,[64],64,Backbone Layer 0,TRANSFERRED
+model.0.bn.running_mean,model.0.bn.running_mean,[64],64,Backbone Layer 0,TRANSFERRED
+model.0.bn.running_var,model.0.bn.running_var,[64],64,Backbone Layer 0,TRANSFERRED
+model.0.bn.num_batches_tracked,model.0.bn.num_batches_tracked,[],1,Backbone Layer 0,TRANSFERRED
+model.1.conv.weight,model.1.conv.weight,"[128, 64, 3, 3]",73728,Backbone Layer 1,TRANSFERRED
+model.1.bn.weight,model.1.bn.weight,[128],128,Backbone Layer 1,TRANSFERRED
+model.1.bn.bias,model.1.bn.bias,[128],128,Backbone Layer 1,TRANSFERRED
+model.1.bn.running_mean,model.1.bn.running_mean,[128],128,Backbone Layer 1,TRANSFERRED
+model.1.bn.running_var,model.1.bn.running_var,[128],128,Backbone Layer 1,TRANSFERRED
+model.1.bn.num_batches_tracked,model.1.bn.num_batches_tracked,[],1,Backbone Layer 1,TRANSFERRED
+model.2.cv1.conv.weight,model.2.cv1.conv.weight,"[128, 128, 1, 1]",16384,Backbone Layer 2,TRANSFERRED
+model.2.cv1.bn.weight,model.2.cv1.bn.weight,[128],128,Backbone Layer 2,TRANSFERRED
+model.2.cv1.bn.bias,model.2.cv1.bn.bias,[128],128,Backbone Layer 2,TRANSFERRED
+model.2.cv1.bn.running_mean,model.2.cv1.bn.running_mean,[128],128,Backbone Layer 2,TRANSFERRED
+model.2.cv1.bn.running_var,model.2.cv1.bn.running_var,[128],128,Backbone Layer 2,TRANSFERRED
+model.2.cv1.bn.num_batches_tracked,model.2.cv1.bn.num_batches_tracked,[],1,Backbone Layer 2,TRANSFERRED
+model.2.cv2.conv.weight,model.2.cv2.conv.weight,"[256, 192, 1, 1]",49152,Backbone Layer 2,TRANSFERRED
+model.2.cv2.bn.weight,model.2.cv2.bn.weight,[256],256,Backbone Layer 2,TRANSFERRED
+model.2.cv2.bn.bias,model.2.cv2.bn.bias,[256],256,Backbone Layer 2,TRANSFERRED
+model.2.cv2.bn.running_mean,model.2.cv2.bn.running_mean,[256],256,Backbone Layer 2,TRANSFERRED
+model.2.cv2.bn.running_var,model.2.cv2.bn.running_var,[256],256,Backbone Layer 2,TRANSFERRED
+model.2.cv2.bn.num_batches_tracked,model.2.cv2.bn.num_batches_tracked,[],1,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv1.conv.weight,model.2.m.0.cv1.conv.weight,"[32, 64, 1, 1]",2048,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv1.bn.weight,model.2.m.0.cv1.bn.weight,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv1.bn.bias,model.2.m.0.cv1.bn.bias,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv1.bn.running_mean,model.2.m.0.cv1.bn.running_mean,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv1.bn.running_var,model.2.m.0.cv1.bn.running_var,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv1.bn.num_batches_tracked,model.2.m.0.cv1.bn.num_batches_tracked,[],1,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv2.conv.weight,model.2.m.0.cv2.conv.weight,"[32, 64, 1, 1]",2048,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv2.bn.weight,model.2.m.0.cv2.bn.weight,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv2.bn.bias,model.2.m.0.cv2.bn.bias,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv2.bn.running_mean,model.2.m.0.cv2.bn.running_mean,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv2.bn.running_var,model.2.m.0.cv2.bn.running_var,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv2.bn.num_batches_tracked,model.2.m.0.cv2.bn.num_batches_tracked,[],1,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv3.conv.weight,model.2.m.0.cv3.conv.weight,"[64, 64, 1, 1]",4096,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv3.bn.weight,model.2.m.0.cv3.bn.weight,[64],64,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv3.bn.bias,model.2.m.0.cv3.bn.bias,[64],64,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv3.bn.running_mean,model.2.m.0.cv3.bn.running_mean,[64],64,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv3.bn.running_var,model.2.m.0.cv3.bn.running_var,[64],64,Backbone Layer 2,TRANSFERRED
+model.2.m.0.cv3.bn.num_batches_tracked,model.2.m.0.cv3.bn.num_batches_tracked,[],1,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.0.cv1.conv.weight,model.2.m.0.m.0.cv1.conv.weight,"[32, 32, 3, 3]",9216,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.0.cv1.bn.weight,model.2.m.0.m.0.cv1.bn.weight,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.0.cv1.bn.bias,model.2.m.0.m.0.cv1.bn.bias,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.0.cv1.bn.running_mean,model.2.m.0.m.0.cv1.bn.running_mean,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.0.cv1.bn.running_var,model.2.m.0.m.0.cv1.bn.running_var,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.0.cv1.bn.num_batches_tracked,model.2.m.0.m.0.cv1.bn.num_batches_tracked,[],1,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.0.cv2.conv.weight,model.2.m.0.m.0.cv2.conv.weight,"[32, 32, 3, 3]",9216,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.0.cv2.bn.weight,model.2.m.0.m.0.cv2.bn.weight,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.0.cv2.bn.bias,model.2.m.0.m.0.cv2.bn.bias,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.0.cv2.bn.running_mean,model.2.m.0.m.0.cv2.bn.running_mean,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.0.cv2.bn.running_var,model.2.m.0.m.0.cv2.bn.running_var,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.0.cv2.bn.num_batches_tracked,model.2.m.0.m.0.cv2.bn.num_batches_tracked,[],1,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.1.cv1.conv.weight,model.2.m.0.m.1.cv1.conv.weight,"[32, 32, 3, 3]",9216,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.1.cv1.bn.weight,model.2.m.0.m.1.cv1.bn.weight,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.1.cv1.bn.bias,model.2.m.0.m.1.cv1.bn.bias,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.1.cv1.bn.running_mean,model.2.m.0.m.1.cv1.bn.running_mean,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.1.cv1.bn.running_var,model.2.m.0.m.1.cv1.bn.running_var,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.1.cv1.bn.num_batches_tracked,model.2.m.0.m.1.cv1.bn.num_batches_tracked,[],1,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.1.cv2.conv.weight,model.2.m.0.m.1.cv2.conv.weight,"[32, 32, 3, 3]",9216,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.1.cv2.bn.weight,model.2.m.0.m.1.cv2.bn.weight,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.1.cv2.bn.bias,model.2.m.0.m.1.cv2.bn.bias,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.1.cv2.bn.running_mean,model.2.m.0.m.1.cv2.bn.running_mean,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.1.cv2.bn.running_var,model.2.m.0.m.1.cv2.bn.running_var,[32],32,Backbone Layer 2,TRANSFERRED
+model.2.m.0.m.1.cv2.bn.num_batches_tracked,model.2.m.0.m.1.cv2.bn.num_batches_tracked,[],1,Backbone Layer 2,TRANSFERRED
+model.3.conv.weight,model.3.conv.weight,"[256, 256, 3, 3]",589824,Backbone Layer 3,TRANSFERRED
+model.3.bn.weight,model.3.bn.weight,[256],256,Backbone Layer 3,TRANSFERRED
+model.3.bn.bias,model.3.bn.bias,[256],256,Backbone Layer 3,TRANSFERRED
+model.3.bn.running_mean,model.3.bn.running_mean,[256],256,Backbone Layer 3,TRANSFERRED
+model.3.bn.running_var,model.3.bn.running_var,[256],256,Backbone Layer 3,TRANSFERRED
+model.3.bn.num_batches_tracked,model.3.bn.num_batches_tracked,[],1,Backbone Layer 3,TRANSFERRED
+model.4.cv1.conv.weight,model.4.cv1.conv.weight,"[256, 256, 1, 1]",65536,Backbone Layer 4,TRANSFERRED
+model.4.cv1.bn.weight,model.4.cv1.bn.weight,[256],256,Backbone Layer 4,TRANSFERRED
+model.4.cv1.bn.bias,model.4.cv1.bn.bias,[256],256,Backbone Layer 4,TRANSFERRED
+model.4.cv1.bn.running_mean,model.4.cv1.bn.running_mean,[256],256,Backbone Layer 4,TRANSFERRED
+model.4.cv1.bn.running_var,model.4.cv1.bn.running_var,[256],256,Backbone Layer 4,TRANSFERRED
+model.4.cv1.bn.num_batches_tracked,model.4.cv1.bn.num_batches_tracked,[],1,Backbone Layer 4,TRANSFERRED
+model.4.cv2.conv.weight,model.4.cv2.conv.weight,"[512, 384, 1, 1]",196608,Backbone Layer 4,TRANSFERRED
+model.4.cv2.bn.weight,model.4.cv2.bn.weight,[512],512,Backbone Layer 4,TRANSFERRED
+model.4.cv2.bn.bias,model.4.cv2.bn.bias,[512],512,Backbone Layer 4,TRANSFERRED
+model.4.cv2.bn.running_mean,model.4.cv2.bn.running_mean,[512],512,Backbone Layer 4,TRANSFERRED
+model.4.cv2.bn.running_var,model.4.cv2.bn.running_var,[512],512,Backbone Layer 4,TRANSFERRED
+model.4.cv2.bn.num_batches_tracked,model.4.cv2.bn.num_batches_tracked,[],1,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv1.conv.weight,model.4.m.0.cv1.conv.weight,"[64, 128, 1, 1]",8192,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv1.bn.weight,model.4.m.0.cv1.bn.weight,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv1.bn.bias,model.4.m.0.cv1.bn.bias,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv1.bn.running_mean,model.4.m.0.cv1.bn.running_mean,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv1.bn.running_var,model.4.m.0.cv1.bn.running_var,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv1.bn.num_batches_tracked,model.4.m.0.cv1.bn.num_batches_tracked,[],1,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv2.conv.weight,model.4.m.0.cv2.conv.weight,"[64, 128, 1, 1]",8192,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv2.bn.weight,model.4.m.0.cv2.bn.weight,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv2.bn.bias,model.4.m.0.cv2.bn.bias,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv2.bn.running_mean,model.4.m.0.cv2.bn.running_mean,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv2.bn.running_var,model.4.m.0.cv2.bn.running_var,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv2.bn.num_batches_tracked,model.4.m.0.cv2.bn.num_batches_tracked,[],1,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv3.conv.weight,model.4.m.0.cv3.conv.weight,"[128, 128, 1, 1]",16384,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv3.bn.weight,model.4.m.0.cv3.bn.weight,[128],128,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv3.bn.bias,model.4.m.0.cv3.bn.bias,[128],128,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv3.bn.running_mean,model.4.m.0.cv3.bn.running_mean,[128],128,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv3.bn.running_var,model.4.m.0.cv3.bn.running_var,[128],128,Backbone Layer 4,TRANSFERRED
+model.4.m.0.cv3.bn.num_batches_tracked,model.4.m.0.cv3.bn.num_batches_tracked,[],1,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.0.cv1.conv.weight,model.4.m.0.m.0.cv1.conv.weight,"[64, 64, 3, 3]",36864,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.0.cv1.bn.weight,model.4.m.0.m.0.cv1.bn.weight,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.0.cv1.bn.bias,model.4.m.0.m.0.cv1.bn.bias,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.0.cv1.bn.running_mean,model.4.m.0.m.0.cv1.bn.running_mean,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.0.cv1.bn.running_var,model.4.m.0.m.0.cv1.bn.running_var,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.0.cv1.bn.num_batches_tracked,model.4.m.0.m.0.cv1.bn.num_batches_tracked,[],1,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.0.cv2.conv.weight,model.4.m.0.m.0.cv2.conv.weight,"[64, 64, 3, 3]",36864,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.0.cv2.bn.weight,model.4.m.0.m.0.cv2.bn.weight,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.0.cv2.bn.bias,model.4.m.0.m.0.cv2.bn.bias,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.0.cv2.bn.running_mean,model.4.m.0.m.0.cv2.bn.running_mean,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.0.cv2.bn.running_var,model.4.m.0.m.0.cv2.bn.running_var,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.0.cv2.bn.num_batches_tracked,model.4.m.0.m.0.cv2.bn.num_batches_tracked,[],1,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.1.cv1.conv.weight,model.4.m.0.m.1.cv1.conv.weight,"[64, 64, 3, 3]",36864,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.1.cv1.bn.weight,model.4.m.0.m.1.cv1.bn.weight,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.1.cv1.bn.bias,model.4.m.0.m.1.cv1.bn.bias,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.1.cv1.bn.running_mean,model.4.m.0.m.1.cv1.bn.running_mean,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.1.cv1.bn.running_var,model.4.m.0.m.1.cv1.bn.running_var,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.1.cv1.bn.num_batches_tracked,model.4.m.0.m.1.cv1.bn.num_batches_tracked,[],1,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.1.cv2.conv.weight,model.4.m.0.m.1.cv2.conv.weight,"[64, 64, 3, 3]",36864,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.1.cv2.bn.weight,model.4.m.0.m.1.cv2.bn.weight,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.1.cv2.bn.bias,model.4.m.0.m.1.cv2.bn.bias,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.1.cv2.bn.running_mean,model.4.m.0.m.1.cv2.bn.running_mean,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.1.cv2.bn.running_var,model.4.m.0.m.1.cv2.bn.running_var,[64],64,Backbone Layer 4,TRANSFERRED
+model.4.m.0.m.1.cv2.bn.num_batches_tracked,model.4.m.0.m.1.cv2.bn.num_batches_tracked,[],1,Backbone Layer 4,TRANSFERRED
+model.5.conv.weight,model.5.conv.weight,"[512, 512, 3, 3]",2359296,Backbone Layer 5,TRANSFERRED
+model.5.bn.weight,model.5.bn.weight,[512],512,Backbone Layer 5,TRANSFERRED
+model.5.bn.bias,model.5.bn.bias,[512],512,Backbone Layer 5,TRANSFERRED
+model.5.bn.running_mean,model.5.bn.running_mean,[512],512,Backbone Layer 5,TRANSFERRED
+model.5.bn.running_var,model.5.bn.running_var,[512],512,Backbone Layer 5,TRANSFERRED
+model.5.bn.num_batches_tracked,model.5.bn.num_batches_tracked,[],1,Backbone Layer 5,TRANSFERRED
+model.6.cv1.conv.weight,model.6.cv1.conv.weight,"[512, 512, 1, 1]",262144,Backbone Layer 6,TRANSFERRED
+model.6.cv1.bn.weight,model.6.cv1.bn.weight,[512],512,Backbone Layer 6,TRANSFERRED
+model.6.cv1.bn.bias,model.6.cv1.bn.bias,[512],512,Backbone Layer 6,TRANSFERRED
+model.6.cv1.bn.running_mean,model.6.cv1.bn.running_mean,[512],512,Backbone Layer 6,TRANSFERRED
+model.6.cv1.bn.running_var,model.6.cv1.bn.running_var,[512],512,Backbone Layer 6,TRANSFERRED
+model.6.cv1.bn.num_batches_tracked,model.6.cv1.bn.num_batches_tracked,[],1,Backbone Layer 6,TRANSFERRED
+model.6.cv2.conv.weight,model.6.cv2.conv.weight,"[512, 768, 1, 1]",393216,Backbone Layer 6,TRANSFERRED
+model.6.cv2.bn.weight,model.6.cv2.bn.weight,[512],512,Backbone Layer 6,TRANSFERRED
+model.6.cv2.bn.bias,model.6.cv2.bn.bias,[512],512,Backbone Layer 6,TRANSFERRED
+model.6.cv2.bn.running_mean,model.6.cv2.bn.running_mean,[512],512,Backbone Layer 6,TRANSFERRED
+model.6.cv2.bn.running_var,model.6.cv2.bn.running_var,[512],512,Backbone Layer 6,TRANSFERRED
+model.6.cv2.bn.num_batches_tracked,model.6.cv2.bn.num_batches_tracked,[],1,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv1.conv.weight,model.6.m.0.cv1.conv.weight,"[128, 256, 1, 1]",32768,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv1.bn.weight,model.6.m.0.cv1.bn.weight,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv1.bn.bias,model.6.m.0.cv1.bn.bias,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv1.bn.running_mean,model.6.m.0.cv1.bn.running_mean,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv1.bn.running_var,model.6.m.0.cv1.bn.running_var,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv1.bn.num_batches_tracked,model.6.m.0.cv1.bn.num_batches_tracked,[],1,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv2.conv.weight,model.6.m.0.cv2.conv.weight,"[128, 256, 1, 1]",32768,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv2.bn.weight,model.6.m.0.cv2.bn.weight,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv2.bn.bias,model.6.m.0.cv2.bn.bias,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv2.bn.running_mean,model.6.m.0.cv2.bn.running_mean,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv2.bn.running_var,model.6.m.0.cv2.bn.running_var,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv2.bn.num_batches_tracked,model.6.m.0.cv2.bn.num_batches_tracked,[],1,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv3.conv.weight,model.6.m.0.cv3.conv.weight,"[256, 256, 1, 1]",65536,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv3.bn.weight,model.6.m.0.cv3.bn.weight,[256],256,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv3.bn.bias,model.6.m.0.cv3.bn.bias,[256],256,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv3.bn.running_mean,model.6.m.0.cv3.bn.running_mean,[256],256,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv3.bn.running_var,model.6.m.0.cv3.bn.running_var,[256],256,Backbone Layer 6,TRANSFERRED
+model.6.m.0.cv3.bn.num_batches_tracked,model.6.m.0.cv3.bn.num_batches_tracked,[],1,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.0.cv1.conv.weight,model.6.m.0.m.0.cv1.conv.weight,"[128, 128, 3, 3]",147456,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.0.cv1.bn.weight,model.6.m.0.m.0.cv1.bn.weight,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.0.cv1.bn.bias,model.6.m.0.m.0.cv1.bn.bias,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.0.cv1.bn.running_mean,model.6.m.0.m.0.cv1.bn.running_mean,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.0.cv1.bn.running_var,model.6.m.0.m.0.cv1.bn.running_var,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.0.cv1.bn.num_batches_tracked,model.6.m.0.m.0.cv1.bn.num_batches_tracked,[],1,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.0.cv2.conv.weight,model.6.m.0.m.0.cv2.conv.weight,"[128, 128, 3, 3]",147456,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.0.cv2.bn.weight,model.6.m.0.m.0.cv2.bn.weight,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.0.cv2.bn.bias,model.6.m.0.m.0.cv2.bn.bias,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.0.cv2.bn.running_mean,model.6.m.0.m.0.cv2.bn.running_mean,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.0.cv2.bn.running_var,model.6.m.0.m.0.cv2.bn.running_var,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.0.cv2.bn.num_batches_tracked,model.6.m.0.m.0.cv2.bn.num_batches_tracked,[],1,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.1.cv1.conv.weight,model.6.m.0.m.1.cv1.conv.weight,"[128, 128, 3, 3]",147456,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.1.cv1.bn.weight,model.6.m.0.m.1.cv1.bn.weight,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.1.cv1.bn.bias,model.6.m.0.m.1.cv1.bn.bias,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.1.cv1.bn.running_mean,model.6.m.0.m.1.cv1.bn.running_mean,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.1.cv1.bn.running_var,model.6.m.0.m.1.cv1.bn.running_var,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.1.cv1.bn.num_batches_tracked,model.6.m.0.m.1.cv1.bn.num_batches_tracked,[],1,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.1.cv2.conv.weight,model.6.m.0.m.1.cv2.conv.weight,"[128, 128, 3, 3]",147456,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.1.cv2.bn.weight,model.6.m.0.m.1.cv2.bn.weight,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.1.cv2.bn.bias,model.6.m.0.m.1.cv2.bn.bias,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.1.cv2.bn.running_mean,model.6.m.0.m.1.cv2.bn.running_mean,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.1.cv2.bn.running_var,model.6.m.0.m.1.cv2.bn.running_var,[128],128,Backbone Layer 6,TRANSFERRED
+model.6.m.0.m.1.cv2.bn.num_batches_tracked,model.6.m.0.m.1.cv2.bn.num_batches_tracked,[],1,Backbone Layer 6,TRANSFERRED
+model.7.conv.weight,model.7.conv.weight,"[512, 512, 3, 3]",2359296,Backbone Layer 7,TRANSFERRED
+model.7.bn.weight,model.7.bn.weight,[512],512,Backbone Layer 7,TRANSFERRED
+model.7.bn.bias,model.7.bn.bias,[512],512,Backbone Layer 7,TRANSFERRED
+model.7.bn.running_mean,model.7.bn.running_mean,[512],512,Backbone Layer 7,TRANSFERRED
+model.7.bn.running_var,model.7.bn.running_var,[512],512,Backbone Layer 7,TRANSFERRED
+model.7.bn.num_batches_tracked,model.7.bn.num_batches_tracked,[],1,Backbone Layer 7,TRANSFERRED
+model.8.cv1.conv.weight,model.8.cv1.conv.weight,"[512, 512, 1, 1]",262144,Backbone Layer 8,TRANSFERRED
+model.8.cv1.bn.weight,model.8.cv1.bn.weight,[512],512,Backbone Layer 8,TRANSFERRED
+model.8.cv1.bn.bias,model.8.cv1.bn.bias,[512],512,Backbone Layer 8,TRANSFERRED
+model.8.cv1.bn.running_mean,model.8.cv1.bn.running_mean,[512],512,Backbone Layer 8,TRANSFERRED
+model.8.cv1.bn.running_var,model.8.cv1.bn.running_var,[512],512,Backbone Layer 8,TRANSFERRED
+model.8.cv1.bn.num_batches_tracked,model.8.cv1.bn.num_batches_tracked,[],1,Backbone Layer 8,TRANSFERRED
+model.8.cv2.conv.weight,model.8.cv2.conv.weight,"[512, 768, 1, 1]",393216,Backbone Layer 8,TRANSFERRED
+model.8.cv2.bn.weight,model.8.cv2.bn.weight,[512],512,Backbone Layer 8,TRANSFERRED
+model.8.cv2.bn.bias,model.8.cv2.bn.bias,[512],512,Backbone Layer 8,TRANSFERRED
+model.8.cv2.bn.running_mean,model.8.cv2.bn.running_mean,[512],512,Backbone Layer 8,TRANSFERRED
+model.8.cv2.bn.running_var,model.8.cv2.bn.running_var,[512],512,Backbone Layer 8,TRANSFERRED
+model.8.cv2.bn.num_batches_tracked,model.8.cv2.bn.num_batches_tracked,[],1,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv1.conv.weight,model.8.m.0.cv1.conv.weight,"[128, 256, 1, 1]",32768,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv1.bn.weight,model.8.m.0.cv1.bn.weight,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv1.bn.bias,model.8.m.0.cv1.bn.bias,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv1.bn.running_mean,model.8.m.0.cv1.bn.running_mean,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv1.bn.running_var,model.8.m.0.cv1.bn.running_var,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv1.bn.num_batches_tracked,model.8.m.0.cv1.bn.num_batches_tracked,[],1,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv2.conv.weight,model.8.m.0.cv2.conv.weight,"[128, 256, 1, 1]",32768,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv2.bn.weight,model.8.m.0.cv2.bn.weight,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv2.bn.bias,model.8.m.0.cv2.bn.bias,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv2.bn.running_mean,model.8.m.0.cv2.bn.running_mean,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv2.bn.running_var,model.8.m.0.cv2.bn.running_var,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv2.bn.num_batches_tracked,model.8.m.0.cv2.bn.num_batches_tracked,[],1,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv3.conv.weight,model.8.m.0.cv3.conv.weight,"[256, 256, 1, 1]",65536,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv3.bn.weight,model.8.m.0.cv3.bn.weight,[256],256,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv3.bn.bias,model.8.m.0.cv3.bn.bias,[256],256,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv3.bn.running_mean,model.8.m.0.cv3.bn.running_mean,[256],256,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv3.bn.running_var,model.8.m.0.cv3.bn.running_var,[256],256,Backbone Layer 8,TRANSFERRED
+model.8.m.0.cv3.bn.num_batches_tracked,model.8.m.0.cv3.bn.num_batches_tracked,[],1,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.0.cv1.conv.weight,model.8.m.0.m.0.cv1.conv.weight,"[128, 128, 3, 3]",147456,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.0.cv1.bn.weight,model.8.m.0.m.0.cv1.bn.weight,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.0.cv1.bn.bias,model.8.m.0.m.0.cv1.bn.bias,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.0.cv1.bn.running_mean,model.8.m.0.m.0.cv1.bn.running_mean,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.0.cv1.bn.running_var,model.8.m.0.m.0.cv1.bn.running_var,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.0.cv1.bn.num_batches_tracked,model.8.m.0.m.0.cv1.bn.num_batches_tracked,[],1,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.0.cv2.conv.weight,model.8.m.0.m.0.cv2.conv.weight,"[128, 128, 3, 3]",147456,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.0.cv2.bn.weight,model.8.m.0.m.0.cv2.bn.weight,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.0.cv2.bn.bias,model.8.m.0.m.0.cv2.bn.bias,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.0.cv2.bn.running_mean,model.8.m.0.m.0.cv2.bn.running_mean,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.0.cv2.bn.running_var,model.8.m.0.m.0.cv2.bn.running_var,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.0.cv2.bn.num_batches_tracked,model.8.m.0.m.0.cv2.bn.num_batches_tracked,[],1,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.1.cv1.conv.weight,model.8.m.0.m.1.cv1.conv.weight,"[128, 128, 3, 3]",147456,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.1.cv1.bn.weight,model.8.m.0.m.1.cv1.bn.weight,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.1.cv1.bn.bias,model.8.m.0.m.1.cv1.bn.bias,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.1.cv1.bn.running_mean,model.8.m.0.m.1.cv1.bn.running_mean,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.1.cv1.bn.running_var,model.8.m.0.m.1.cv1.bn.running_var,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.1.cv1.bn.num_batches_tracked,model.8.m.0.m.1.cv1.bn.num_batches_tracked,[],1,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.1.cv2.conv.weight,model.8.m.0.m.1.cv2.conv.weight,"[128, 128, 3, 3]",147456,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.1.cv2.bn.weight,model.8.m.0.m.1.cv2.bn.weight,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.1.cv2.bn.bias,model.8.m.0.m.1.cv2.bn.bias,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.1.cv2.bn.running_mean,model.8.m.0.m.1.cv2.bn.running_mean,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.1.cv2.bn.running_var,model.8.m.0.m.1.cv2.bn.running_var,[128],128,Backbone Layer 8,TRANSFERRED
+model.8.m.0.m.1.cv2.bn.num_batches_tracked,model.8.m.0.m.1.cv2.bn.num_batches_tracked,[],1,Backbone Layer 8,TRANSFERRED
+model.9.cv1.conv.weight,model.9.cv1.conv.weight,"[256, 512, 1, 1]",131072,Backbone Layer 9,TRANSFERRED
+model.9.cv1.bn.weight,model.9.cv1.bn.weight,[256],256,Backbone Layer 9,TRANSFERRED
+model.9.cv1.bn.bias,model.9.cv1.bn.bias,[256],256,Backbone Layer 9,TRANSFERRED
+model.9.cv1.bn.running_mean,model.9.cv1.bn.running_mean,[256],256,Backbone Layer 9,TRANSFERRED
+model.9.cv1.bn.running_var,model.9.cv1.bn.running_var,[256],256,Backbone Layer 9,TRANSFERRED
+model.9.cv1.bn.num_batches_tracked,model.9.cv1.bn.num_batches_tracked,[],1,Backbone Layer 9,TRANSFERRED
+model.9.cv2.conv.weight,model.9.cv2.conv.weight,"[512, 1024, 1, 1]",524288,Backbone Layer 9,TRANSFERRED
+model.9.cv2.bn.weight,model.9.cv2.bn.weight,[512],512,Backbone Layer 9,TRANSFERRED
+model.9.cv2.bn.bias,model.9.cv2.bn.bias,[512],512,Backbone Layer 9,TRANSFERRED
+model.9.cv2.bn.running_mean,model.9.cv2.bn.running_mean,[512],512,Backbone Layer 9,TRANSFERRED
+model.9.cv2.bn.running_var,model.9.cv2.bn.running_var,[512],512,Backbone Layer 9,TRANSFERRED
+model.9.cv2.bn.num_batches_tracked,model.9.cv2.bn.num_batches_tracked,[],1,Backbone Layer 9,TRANSFERRED
+model.10.cv1.conv.weight,model.10.cv1.conv.weight,"[512, 512, 1, 1]",262144,Backbone Layer 10,TRANSFERRED
+model.10.cv1.bn.weight,model.10.cv1.bn.weight,[512],512,Backbone Layer 10,TRANSFERRED
+model.10.cv1.bn.bias,model.10.cv1.bn.bias,[512],512,Backbone Layer 10,TRANSFERRED
+model.10.cv1.bn.running_mean,model.10.cv1.bn.running_mean,[512],512,Backbone Layer 10,TRANSFERRED
+model.10.cv1.bn.running_var,model.10.cv1.bn.running_var,[512],512,Backbone Layer 10,TRANSFERRED
+model.10.cv1.bn.num_batches_tracked,model.10.cv1.bn.num_batches_tracked,[],1,Backbone Layer 10,TRANSFERRED
+model.10.cv2.conv.weight,model.10.cv2.conv.weight,"[512, 512, 1, 1]",262144,Backbone Layer 10,TRANSFERRED
+model.10.cv2.bn.weight,model.10.cv2.bn.weight,[512],512,Backbone Layer 10,TRANSFERRED
+model.10.cv2.bn.bias,model.10.cv2.bn.bias,[512],512,Backbone Layer 10,TRANSFERRED
+model.10.cv2.bn.running_mean,model.10.cv2.bn.running_mean,[512],512,Backbone Layer 10,TRANSFERRED
+model.10.cv2.bn.running_var,model.10.cv2.bn.running_var,[512],512,Backbone Layer 10,TRANSFERRED
+model.10.cv2.bn.num_batches_tracked,model.10.cv2.bn.num_batches_tracked,[],1,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.qkv.conv.weight,model.10.m.0.attn.qkv.conv.weight,"[512, 256, 1, 1]",131072,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.qkv.bn.weight,model.10.m.0.attn.qkv.bn.weight,[512],512,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.qkv.bn.bias,model.10.m.0.attn.qkv.bn.bias,[512],512,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.qkv.bn.running_mean,model.10.m.0.attn.qkv.bn.running_mean,[512],512,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.qkv.bn.running_var,model.10.m.0.attn.qkv.bn.running_var,[512],512,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.qkv.bn.num_batches_tracked,model.10.m.0.attn.qkv.bn.num_batches_tracked,[],1,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.proj.conv.weight,model.10.m.0.attn.proj.conv.weight,"[256, 256, 1, 1]",65536,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.proj.bn.weight,model.10.m.0.attn.proj.bn.weight,[256],256,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.proj.bn.bias,model.10.m.0.attn.proj.bn.bias,[256],256,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.proj.bn.running_mean,model.10.m.0.attn.proj.bn.running_mean,[256],256,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.proj.bn.running_var,model.10.m.0.attn.proj.bn.running_var,[256],256,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.proj.bn.num_batches_tracked,model.10.m.0.attn.proj.bn.num_batches_tracked,[],1,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.pe.conv.weight,model.10.m.0.attn.pe.conv.weight,"[256, 1, 3, 3]",2304,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.pe.bn.weight,model.10.m.0.attn.pe.bn.weight,[256],256,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.pe.bn.bias,model.10.m.0.attn.pe.bn.bias,[256],256,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.pe.bn.running_mean,model.10.m.0.attn.pe.bn.running_mean,[256],256,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.pe.bn.running_var,model.10.m.0.attn.pe.bn.running_var,[256],256,Backbone Layer 10,TRANSFERRED
+model.10.m.0.attn.pe.bn.num_batches_tracked,model.10.m.0.attn.pe.bn.num_batches_tracked,[],1,Backbone Layer 10,TRANSFERRED
+model.10.m.0.ffn.0.conv.weight,model.10.m.0.ffn.0.conv.weight,"[512, 256, 1, 1]",131072,Backbone Layer 10,TRANSFERRED
+model.10.m.0.ffn.0.bn.weight,model.10.m.0.ffn.0.bn.weight,[512],512,Backbone Layer 10,TRANSFERRED
+model.10.m.0.ffn.0.bn.bias,model.10.m.0.ffn.0.bn.bias,[512],512,Backbone Layer 10,TRANSFERRED
+model.10.m.0.ffn.0.bn.running_mean,model.10.m.0.ffn.0.bn.running_mean,[512],512,Backbone Layer 10,TRANSFERRED
+model.10.m.0.ffn.0.bn.running_var,model.10.m.0.ffn.0.bn.running_var,[512],512,Backbone Layer 10,TRANSFERRED
+model.10.m.0.ffn.0.bn.num_batches_tracked,model.10.m.0.ffn.0.bn.num_batches_tracked,[],1,Backbone Layer 10,TRANSFERRED
+model.10.m.0.ffn.1.conv.weight,model.10.m.0.ffn.1.conv.weight,"[256, 512, 1, 1]",131072,Backbone Layer 10,TRANSFERRED
+model.10.m.0.ffn.1.bn.weight,model.10.m.0.ffn.1.bn.weight,[256],256,Backbone Layer 10,TRANSFERRED
+model.10.m.0.ffn.1.bn.bias,model.10.m.0.ffn.1.bn.bias,[256],256,Backbone Layer 10,TRANSFERRED
+model.10.m.0.ffn.1.bn.running_mean,model.10.m.0.ffn.1.bn.running_mean,[256],256,Backbone Layer 10,TRANSFERRED
+model.10.m.0.ffn.1.bn.running_var,model.10.m.0.ffn.1.bn.running_var,[256],256,Backbone Layer 10,TRANSFERRED
+model.10.m.0.ffn.1.bn.num_batches_tracked,model.10.m.0.ffn.1.bn.num_batches_tracked,[],1,Backbone Layer 10,TRANSFERRED
+model.13.cv1.conv.weight,model.13.cv1.conv.weight,"[512, 1024, 1, 1]",524288,FPN P4 C3k2,TRANSFERRED
+model.13.cv1.bn.weight,model.13.cv1.bn.weight,[512],512,FPN P4 C3k2,TRANSFERRED
+model.13.cv1.bn.bias,model.13.cv1.bn.bias,[512],512,FPN P4 C3k2,TRANSFERRED
+model.13.cv1.bn.running_mean,model.13.cv1.bn.running_mean,[512],512,FPN P4 C3k2,TRANSFERRED
+model.13.cv1.bn.running_var,model.13.cv1.bn.running_var,[512],512,FPN P4 C3k2,TRANSFERRED
+model.13.cv1.bn.num_batches_tracked,model.13.cv1.bn.num_batches_tracked,[],1,FPN P4 C3k2,TRANSFERRED
+model.13.cv2.conv.weight,model.13.cv2.conv.weight,"[512, 768, 1, 1]",393216,FPN P4 C3k2,TRANSFERRED
+model.13.cv2.bn.weight,model.13.cv2.bn.weight,[512],512,FPN P4 C3k2,TRANSFERRED
+model.13.cv2.bn.bias,model.13.cv2.bn.bias,[512],512,FPN P4 C3k2,TRANSFERRED
+model.13.cv2.bn.running_mean,model.13.cv2.bn.running_mean,[512],512,FPN P4 C3k2,TRANSFERRED
+model.13.cv2.bn.running_var,model.13.cv2.bn.running_var,[512],512,FPN P4 C3k2,TRANSFERRED
+model.13.cv2.bn.num_batches_tracked,model.13.cv2.bn.num_batches_tracked,[],1,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv1.conv.weight,model.13.m.0.cv1.conv.weight,"[128, 256, 1, 1]",32768,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv1.bn.weight,model.13.m.0.cv1.bn.weight,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv1.bn.bias,model.13.m.0.cv1.bn.bias,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv1.bn.running_mean,model.13.m.0.cv1.bn.running_mean,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv1.bn.running_var,model.13.m.0.cv1.bn.running_var,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv1.bn.num_batches_tracked,model.13.m.0.cv1.bn.num_batches_tracked,[],1,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv2.conv.weight,model.13.m.0.cv2.conv.weight,"[128, 256, 1, 1]",32768,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv2.bn.weight,model.13.m.0.cv2.bn.weight,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv2.bn.bias,model.13.m.0.cv2.bn.bias,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv2.bn.running_mean,model.13.m.0.cv2.bn.running_mean,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv2.bn.running_var,model.13.m.0.cv2.bn.running_var,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv2.bn.num_batches_tracked,model.13.m.0.cv2.bn.num_batches_tracked,[],1,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv3.conv.weight,model.13.m.0.cv3.conv.weight,"[256, 256, 1, 1]",65536,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv3.bn.weight,model.13.m.0.cv3.bn.weight,[256],256,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv3.bn.bias,model.13.m.0.cv3.bn.bias,[256],256,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv3.bn.running_mean,model.13.m.0.cv3.bn.running_mean,[256],256,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv3.bn.running_var,model.13.m.0.cv3.bn.running_var,[256],256,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.cv3.bn.num_batches_tracked,model.13.m.0.cv3.bn.num_batches_tracked,[],1,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.0.cv1.conv.weight,model.13.m.0.m.0.cv1.conv.weight,"[128, 128, 3, 3]",147456,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.0.cv1.bn.weight,model.13.m.0.m.0.cv1.bn.weight,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.0.cv1.bn.bias,model.13.m.0.m.0.cv1.bn.bias,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.0.cv1.bn.running_mean,model.13.m.0.m.0.cv1.bn.running_mean,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.0.cv1.bn.running_var,model.13.m.0.m.0.cv1.bn.running_var,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.0.cv1.bn.num_batches_tracked,model.13.m.0.m.0.cv1.bn.num_batches_tracked,[],1,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.0.cv2.conv.weight,model.13.m.0.m.0.cv2.conv.weight,"[128, 128, 3, 3]",147456,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.0.cv2.bn.weight,model.13.m.0.m.0.cv2.bn.weight,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.0.cv2.bn.bias,model.13.m.0.m.0.cv2.bn.bias,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.0.cv2.bn.running_mean,model.13.m.0.m.0.cv2.bn.running_mean,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.0.cv2.bn.running_var,model.13.m.0.m.0.cv2.bn.running_var,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.0.cv2.bn.num_batches_tracked,model.13.m.0.m.0.cv2.bn.num_batches_tracked,[],1,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.1.cv1.conv.weight,model.13.m.0.m.1.cv1.conv.weight,"[128, 128, 3, 3]",147456,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.1.cv1.bn.weight,model.13.m.0.m.1.cv1.bn.weight,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.1.cv1.bn.bias,model.13.m.0.m.1.cv1.bn.bias,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.1.cv1.bn.running_mean,model.13.m.0.m.1.cv1.bn.running_mean,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.1.cv1.bn.running_var,model.13.m.0.m.1.cv1.bn.running_var,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.1.cv1.bn.num_batches_tracked,model.13.m.0.m.1.cv1.bn.num_batches_tracked,[],1,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.1.cv2.conv.weight,model.13.m.0.m.1.cv2.conv.weight,"[128, 128, 3, 3]",147456,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.1.cv2.bn.weight,model.13.m.0.m.1.cv2.bn.weight,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.1.cv2.bn.bias,model.13.m.0.m.1.cv2.bn.bias,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.1.cv2.bn.running_mean,model.13.m.0.m.1.cv2.bn.running_mean,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.1.cv2.bn.running_var,model.13.m.0.m.1.cv2.bn.running_var,[128],128,FPN P4 C3k2,TRANSFERRED
+model.13.m.0.m.1.cv2.bn.num_batches_tracked,model.13.m.0.m.1.cv2.bn.num_batches_tracked,[],1,FPN P4 C3k2,TRANSFERRED
+model.16.cv1.conv.weight,model.16.cv1.conv.weight,"[256, 1024, 1, 1]",262144,FPN P3 C3k2,TRANSFERRED
+model.16.cv1.bn.weight,model.16.cv1.bn.weight,[256],256,FPN P3 C3k2,TRANSFERRED
+model.16.cv1.bn.bias,model.16.cv1.bn.bias,[256],256,FPN P3 C3k2,TRANSFERRED
+model.16.cv1.bn.running_mean,model.16.cv1.bn.running_mean,[256],256,FPN P3 C3k2,TRANSFERRED
+model.16.cv1.bn.running_var,model.16.cv1.bn.running_var,[256],256,FPN P3 C3k2,TRANSFERRED
+model.16.cv1.bn.num_batches_tracked,model.16.cv1.bn.num_batches_tracked,[],1,FPN P3 C3k2,TRANSFERRED
+model.16.cv2.conv.weight,model.16.cv2.conv.weight,"[256, 384, 1, 1]",98304,FPN P3 C3k2,TRANSFERRED
+model.16.cv2.bn.weight,model.16.cv2.bn.weight,[256],256,FPN P3 C3k2,TRANSFERRED
+model.16.cv2.bn.bias,model.16.cv2.bn.bias,[256],256,FPN P3 C3k2,TRANSFERRED
+model.16.cv2.bn.running_mean,model.16.cv2.bn.running_mean,[256],256,FPN P3 C3k2,TRANSFERRED
+model.16.cv2.bn.running_var,model.16.cv2.bn.running_var,[256],256,FPN P3 C3k2,TRANSFERRED
+model.16.cv2.bn.num_batches_tracked,model.16.cv2.bn.num_batches_tracked,[],1,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv1.conv.weight,model.16.m.0.cv1.conv.weight,"[64, 128, 1, 1]",8192,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv1.bn.weight,model.16.m.0.cv1.bn.weight,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv1.bn.bias,model.16.m.0.cv1.bn.bias,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv1.bn.running_mean,model.16.m.0.cv1.bn.running_mean,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv1.bn.running_var,model.16.m.0.cv1.bn.running_var,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv1.bn.num_batches_tracked,model.16.m.0.cv1.bn.num_batches_tracked,[],1,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv2.conv.weight,model.16.m.0.cv2.conv.weight,"[64, 128, 1, 1]",8192,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv2.bn.weight,model.16.m.0.cv2.bn.weight,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv2.bn.bias,model.16.m.0.cv2.bn.bias,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv2.bn.running_mean,model.16.m.0.cv2.bn.running_mean,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv2.bn.running_var,model.16.m.0.cv2.bn.running_var,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv2.bn.num_batches_tracked,model.16.m.0.cv2.bn.num_batches_tracked,[],1,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv3.conv.weight,model.16.m.0.cv3.conv.weight,"[128, 128, 1, 1]",16384,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv3.bn.weight,model.16.m.0.cv3.bn.weight,[128],128,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv3.bn.bias,model.16.m.0.cv3.bn.bias,[128],128,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv3.bn.running_mean,model.16.m.0.cv3.bn.running_mean,[128],128,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv3.bn.running_var,model.16.m.0.cv3.bn.running_var,[128],128,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.cv3.bn.num_batches_tracked,model.16.m.0.cv3.bn.num_batches_tracked,[],1,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.0.cv1.conv.weight,model.16.m.0.m.0.cv1.conv.weight,"[64, 64, 3, 3]",36864,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.0.cv1.bn.weight,model.16.m.0.m.0.cv1.bn.weight,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.0.cv1.bn.bias,model.16.m.0.m.0.cv1.bn.bias,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.0.cv1.bn.running_mean,model.16.m.0.m.0.cv1.bn.running_mean,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.0.cv1.bn.running_var,model.16.m.0.m.0.cv1.bn.running_var,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.0.cv1.bn.num_batches_tracked,model.16.m.0.m.0.cv1.bn.num_batches_tracked,[],1,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.0.cv2.conv.weight,model.16.m.0.m.0.cv2.conv.weight,"[64, 64, 3, 3]",36864,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.0.cv2.bn.weight,model.16.m.0.m.0.cv2.bn.weight,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.0.cv2.bn.bias,model.16.m.0.m.0.cv2.bn.bias,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.0.cv2.bn.running_mean,model.16.m.0.m.0.cv2.bn.running_mean,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.0.cv2.bn.running_var,model.16.m.0.m.0.cv2.bn.running_var,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.0.cv2.bn.num_batches_tracked,model.16.m.0.m.0.cv2.bn.num_batches_tracked,[],1,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.1.cv1.conv.weight,model.16.m.0.m.1.cv1.conv.weight,"[64, 64, 3, 3]",36864,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.1.cv1.bn.weight,model.16.m.0.m.1.cv1.bn.weight,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.1.cv1.bn.bias,model.16.m.0.m.1.cv1.bn.bias,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.1.cv1.bn.running_mean,model.16.m.0.m.1.cv1.bn.running_mean,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.1.cv1.bn.running_var,model.16.m.0.m.1.cv1.bn.running_var,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.1.cv1.bn.num_batches_tracked,model.16.m.0.m.1.cv1.bn.num_batches_tracked,[],1,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.1.cv2.conv.weight,model.16.m.0.m.1.cv2.conv.weight,"[64, 64, 3, 3]",36864,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.1.cv2.bn.weight,model.16.m.0.m.1.cv2.bn.weight,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.1.cv2.bn.bias,model.16.m.0.m.1.cv2.bn.bias,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.1.cv2.bn.running_mean,model.16.m.0.m.1.cv2.bn.running_mean,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.1.cv2.bn.running_var,model.16.m.0.m.1.cv2.bn.running_var,[64],64,FPN P3 C3k2,TRANSFERRED
+model.16.m.0.m.1.cv2.bn.num_batches_tracked,model.16.m.0.m.1.cv2.bn.num_batches_tracked,[],1,FPN P3 C3k2,TRANSFERRED
+model.19.cv1.conv.weight,N/A,"[128, 512, 1, 1]",65536,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.cv1.bn.weight,N/A,[128],128,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.cv1.bn.bias,N/A,[128],128,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.cv1.bn.running_mean,N/A,[128],128,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.cv1.bn.running_var,N/A,[128],128,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.cv1.bn.num_batches_tracked,N/A,[],1,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.cv2.conv.weight,N/A,"[128, 192, 1, 1]",24576,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.cv2.bn.weight,N/A,[128],128,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.cv2.bn.bias,N/A,[128],128,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.cv2.bn.running_mean,N/A,[128],128,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.cv2.bn.running_var,N/A,[128],128,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.cv2.bn.num_batches_tracked,N/A,[],1,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv1.conv.weight,N/A,"[32, 64, 1, 1]",2048,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv1.bn.weight,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv1.bn.bias,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv1.bn.running_mean,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv1.bn.running_var,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv1.bn.num_batches_tracked,N/A,[],1,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv2.conv.weight,N/A,"[32, 64, 1, 1]",2048,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv2.bn.weight,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv2.bn.bias,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv2.bn.running_mean,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv2.bn.running_var,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv2.bn.num_batches_tracked,N/A,[],1,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv3.conv.weight,N/A,"[64, 64, 1, 1]",4096,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv3.bn.weight,N/A,[64],64,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv3.bn.bias,N/A,[64],64,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv3.bn.running_mean,N/A,[64],64,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv3.bn.running_var,N/A,[64],64,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.cv3.bn.num_batches_tracked,N/A,[],1,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.0.cv1.conv.weight,N/A,"[32, 32, 3, 3]",9216,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.0.cv1.bn.weight,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.0.cv1.bn.bias,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.0.cv1.bn.running_mean,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.0.cv1.bn.running_var,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.0.cv1.bn.num_batches_tracked,N/A,[],1,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.0.cv2.conv.weight,N/A,"[32, 32, 3, 3]",9216,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.0.cv2.bn.weight,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.0.cv2.bn.bias,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.0.cv2.bn.running_mean,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.0.cv2.bn.running_var,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.0.cv2.bn.num_batches_tracked,N/A,[],1,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.1.cv1.conv.weight,N/A,"[32, 32, 3, 3]",9216,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.1.cv1.bn.weight,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.1.cv1.bn.bias,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.1.cv1.bn.running_mean,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.1.cv1.bn.running_var,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.1.cv1.bn.num_batches_tracked,N/A,[],1,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.1.cv2.conv.weight,N/A,"[32, 32, 3, 3]",9216,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.1.cv2.bn.weight,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.1.cv2.bn.bias,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.1.cv2.bn.running_mean,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.1.cv2.bn.running_var,N/A,[32],32,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.19.m.0.m.1.cv2.bn.num_batches_tracked,N/A,[],1,FPN P2 C3k2 (New P2 Lateral Block),NEW_INITIALIZATION
+model.20.conv.weight,N/A,"[128, 128, 3, 3]",147456,PAN P2->P3 Conv (New P2 Downsampler),NEW_INITIALIZATION
+model.20.bn.weight,N/A,[128],128,PAN P2->P3 Conv (New P2 Downsampler),NEW_INITIALIZATION
+model.20.bn.bias,N/A,[128],128,PAN P2->P3 Conv (New P2 Downsampler),NEW_INITIALIZATION
+model.20.bn.running_mean,N/A,[128],128,PAN P2->P3 Conv (New P2 Downsampler),NEW_INITIALIZATION
+model.20.bn.running_var,N/A,[128],128,PAN P2->P3 Conv (New P2 Downsampler),NEW_INITIALIZATION
+model.20.bn.num_batches_tracked,N/A,[],1,PAN P2->P3 Conv (New P2 Downsampler),NEW_INITIALIZATION
+model.22.cv1.conv.weight,N/A,"[256, 384, 1, 1]",98304,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.cv1.bn.weight,N/A,[256],256,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.cv1.bn.bias,N/A,[256],256,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.cv1.bn.running_mean,N/A,[256],256,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.cv1.bn.running_var,N/A,[256],256,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.cv1.bn.num_batches_tracked,N/A,[],1,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.cv2.conv.weight,N/A,"[256, 384, 1, 1]",98304,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.cv2.bn.weight,N/A,[256],256,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.cv2.bn.bias,N/A,[256],256,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.cv2.bn.running_mean,N/A,[256],256,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.cv2.bn.running_var,N/A,[256],256,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.cv2.bn.num_batches_tracked,N/A,[],1,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv1.conv.weight,N/A,"[64, 128, 1, 1]",8192,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv1.bn.weight,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv1.bn.bias,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv1.bn.running_mean,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv1.bn.running_var,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv1.bn.num_batches_tracked,N/A,[],1,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv2.conv.weight,N/A,"[64, 128, 1, 1]",8192,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv2.bn.weight,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv2.bn.bias,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv2.bn.running_mean,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv2.bn.running_var,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv2.bn.num_batches_tracked,N/A,[],1,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv3.conv.weight,N/A,"[128, 128, 1, 1]",16384,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv3.bn.weight,N/A,[128],128,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv3.bn.bias,N/A,[128],128,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv3.bn.running_mean,N/A,[128],128,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv3.bn.running_var,N/A,[128],128,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.cv3.bn.num_batches_tracked,N/A,[],1,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.0.cv1.conv.weight,N/A,"[64, 64, 3, 3]",36864,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.0.cv1.bn.weight,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.0.cv1.bn.bias,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.0.cv1.bn.running_mean,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.0.cv1.bn.running_var,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.0.cv1.bn.num_batches_tracked,N/A,[],1,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.0.cv2.conv.weight,N/A,"[64, 64, 3, 3]",36864,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.0.cv2.bn.weight,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.0.cv2.bn.bias,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.0.cv2.bn.running_mean,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.0.cv2.bn.running_var,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.0.cv2.bn.num_batches_tracked,N/A,[],1,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.1.cv1.conv.weight,N/A,"[64, 64, 3, 3]",36864,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.1.cv1.bn.weight,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.1.cv1.bn.bias,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.1.cv1.bn.running_mean,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.1.cv1.bn.running_var,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.1.cv1.bn.num_batches_tracked,N/A,[],1,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.1.cv2.conv.weight,N/A,"[64, 64, 3, 3]",36864,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.1.cv2.bn.weight,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.1.cv2.bn.bias,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.1.cv2.bn.running_mean,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.1.cv2.bn.running_var,N/A,[64],64,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.22.m.0.m.1.cv2.bn.num_batches_tracked,N/A,[],1,PAN P3 C3k2 (New P2-Fused Block),NEW_INITIALIZATION
+model.23.conv.weight,model.17.conv.weight,"[256, 256, 3, 3]",589824,PAN P4 Conv,TRANSFERRED
+model.23.bn.weight,model.17.bn.weight,[256],256,PAN P4 Conv,TRANSFERRED
+model.23.bn.bias,model.17.bn.bias,[256],256,PAN P4 Conv,TRANSFERRED
+model.23.bn.running_mean,model.17.bn.running_mean,[256],256,PAN P4 Conv,TRANSFERRED
+model.23.bn.running_var,model.17.bn.running_var,[256],256,PAN P4 Conv,TRANSFERRED
+model.23.bn.num_batches_tracked,model.17.bn.num_batches_tracked,[],1,PAN P4 Conv,TRANSFERRED
+model.25.cv1.conv.weight,model.19.cv1.conv.weight,"[512, 768, 1, 1]",393216,PAN P4 C3k2,TRANSFERRED
+model.25.cv1.bn.weight,model.19.cv1.bn.weight,[512],512,PAN P4 C3k2,TRANSFERRED
+model.25.cv1.bn.bias,model.19.cv1.bn.bias,[512],512,PAN P4 C3k2,TRANSFERRED
+model.25.cv1.bn.running_mean,model.19.cv1.bn.running_mean,[512],512,PAN P4 C3k2,TRANSFERRED
+model.25.cv1.bn.running_var,model.19.cv1.bn.running_var,[512],512,PAN P4 C3k2,TRANSFERRED
+model.25.cv1.bn.num_batches_tracked,model.19.cv1.bn.num_batches_tracked,[],1,PAN P4 C3k2,TRANSFERRED
+model.25.cv2.conv.weight,model.19.cv2.conv.weight,"[512, 768, 1, 1]",393216,PAN P4 C3k2,TRANSFERRED
+model.25.cv2.bn.weight,model.19.cv2.bn.weight,[512],512,PAN P4 C3k2,TRANSFERRED
+model.25.cv2.bn.bias,model.19.cv2.bn.bias,[512],512,PAN P4 C3k2,TRANSFERRED
+model.25.cv2.bn.running_mean,model.19.cv2.bn.running_mean,[512],512,PAN P4 C3k2,TRANSFERRED
+model.25.cv2.bn.running_var,model.19.cv2.bn.running_var,[512],512,PAN P4 C3k2,TRANSFERRED
+model.25.cv2.bn.num_batches_tracked,model.19.cv2.bn.num_batches_tracked,[],1,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv1.conv.weight,model.19.m.0.cv1.conv.weight,"[128, 256, 1, 1]",32768,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv1.bn.weight,model.19.m.0.cv1.bn.weight,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv1.bn.bias,model.19.m.0.cv1.bn.bias,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv1.bn.running_mean,model.19.m.0.cv1.bn.running_mean,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv1.bn.running_var,model.19.m.0.cv1.bn.running_var,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv1.bn.num_batches_tracked,model.19.m.0.cv1.bn.num_batches_tracked,[],1,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv2.conv.weight,model.19.m.0.cv2.conv.weight,"[128, 256, 1, 1]",32768,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv2.bn.weight,model.19.m.0.cv2.bn.weight,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv2.bn.bias,model.19.m.0.cv2.bn.bias,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv2.bn.running_mean,model.19.m.0.cv2.bn.running_mean,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv2.bn.running_var,model.19.m.0.cv2.bn.running_var,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv2.bn.num_batches_tracked,model.19.m.0.cv2.bn.num_batches_tracked,[],1,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv3.conv.weight,model.19.m.0.cv3.conv.weight,"[256, 256, 1, 1]",65536,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv3.bn.weight,model.19.m.0.cv3.bn.weight,[256],256,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv3.bn.bias,model.19.m.0.cv3.bn.bias,[256],256,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv3.bn.running_mean,model.19.m.0.cv3.bn.running_mean,[256],256,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv3.bn.running_var,model.19.m.0.cv3.bn.running_var,[256],256,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.cv3.bn.num_batches_tracked,model.19.m.0.cv3.bn.num_batches_tracked,[],1,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.0.cv1.conv.weight,model.19.m.0.m.0.cv1.conv.weight,"[128, 128, 3, 3]",147456,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.0.cv1.bn.weight,model.19.m.0.m.0.cv1.bn.weight,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.0.cv1.bn.bias,model.19.m.0.m.0.cv1.bn.bias,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.0.cv1.bn.running_mean,model.19.m.0.m.0.cv1.bn.running_mean,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.0.cv1.bn.running_var,model.19.m.0.m.0.cv1.bn.running_var,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.0.cv1.bn.num_batches_tracked,model.19.m.0.m.0.cv1.bn.num_batches_tracked,[],1,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.0.cv2.conv.weight,model.19.m.0.m.0.cv2.conv.weight,"[128, 128, 3, 3]",147456,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.0.cv2.bn.weight,model.19.m.0.m.0.cv2.bn.weight,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.0.cv2.bn.bias,model.19.m.0.m.0.cv2.bn.bias,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.0.cv2.bn.running_mean,model.19.m.0.m.0.cv2.bn.running_mean,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.0.cv2.bn.running_var,model.19.m.0.m.0.cv2.bn.running_var,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.0.cv2.bn.num_batches_tracked,model.19.m.0.m.0.cv2.bn.num_batches_tracked,[],1,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.1.cv1.conv.weight,model.19.m.0.m.1.cv1.conv.weight,"[128, 128, 3, 3]",147456,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.1.cv1.bn.weight,model.19.m.0.m.1.cv1.bn.weight,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.1.cv1.bn.bias,model.19.m.0.m.1.cv1.bn.bias,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.1.cv1.bn.running_mean,model.19.m.0.m.1.cv1.bn.running_mean,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.1.cv1.bn.running_var,model.19.m.0.m.1.cv1.bn.running_var,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.1.cv1.bn.num_batches_tracked,model.19.m.0.m.1.cv1.bn.num_batches_tracked,[],1,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.1.cv2.conv.weight,model.19.m.0.m.1.cv2.conv.weight,"[128, 128, 3, 3]",147456,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.1.cv2.bn.weight,model.19.m.0.m.1.cv2.bn.weight,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.1.cv2.bn.bias,model.19.m.0.m.1.cv2.bn.bias,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.1.cv2.bn.running_mean,model.19.m.0.m.1.cv2.bn.running_mean,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.1.cv2.bn.running_var,model.19.m.0.m.1.cv2.bn.running_var,[128],128,PAN P4 C3k2,TRANSFERRED
+model.25.m.0.m.1.cv2.bn.num_batches_tracked,model.19.m.0.m.1.cv2.bn.num_batches_tracked,[],1,PAN P4 C3k2,TRANSFERRED
+model.26.conv.weight,model.20.conv.weight,"[512, 512, 3, 3]",2359296,PAN P5 Conv,TRANSFERRED
+model.26.bn.weight,model.20.bn.weight,[512],512,PAN P5 Conv,TRANSFERRED
+model.26.bn.bias,model.20.bn.bias,[512],512,PAN P5 Conv,TRANSFERRED
+model.26.bn.running_mean,model.20.bn.running_mean,[512],512,PAN P5 Conv,TRANSFERRED
+model.26.bn.running_var,model.20.bn.running_var,[512],512,PAN P5 Conv,TRANSFERRED
+model.26.bn.num_batches_tracked,model.20.bn.num_batches_tracked,[],1,PAN P5 Conv,TRANSFERRED
+model.28.cv1.conv.weight,model.22.cv1.conv.weight,"[512, 1024, 1, 1]",524288,PAN P5 C3k2,TRANSFERRED
+model.28.cv1.bn.weight,model.22.cv1.bn.weight,[512],512,PAN P5 C3k2,TRANSFERRED
+model.28.cv1.bn.bias,model.22.cv1.bn.bias,[512],512,PAN P5 C3k2,TRANSFERRED
+model.28.cv1.bn.running_mean,model.22.cv1.bn.running_mean,[512],512,PAN P5 C3k2,TRANSFERRED
+model.28.cv1.bn.running_var,model.22.cv1.bn.running_var,[512],512,PAN P5 C3k2,TRANSFERRED
+model.28.cv1.bn.num_batches_tracked,model.22.cv1.bn.num_batches_tracked,[],1,PAN P5 C3k2,TRANSFERRED
+model.28.cv2.conv.weight,model.22.cv2.conv.weight,"[512, 768, 1, 1]",393216,PAN P5 C3k2,TRANSFERRED
+model.28.cv2.bn.weight,model.22.cv2.bn.weight,[512],512,PAN P5 C3k2,TRANSFERRED
+model.28.cv2.bn.bias,model.22.cv2.bn.bias,[512],512,PAN P5 C3k2,TRANSFERRED
+model.28.cv2.bn.running_mean,model.22.cv2.bn.running_mean,[512],512,PAN P5 C3k2,TRANSFERRED
+model.28.cv2.bn.running_var,model.22.cv2.bn.running_var,[512],512,PAN P5 C3k2,TRANSFERRED
+model.28.cv2.bn.num_batches_tracked,model.22.cv2.bn.num_batches_tracked,[],1,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv1.conv.weight,model.22.m.0.cv1.conv.weight,"[128, 256, 1, 1]",32768,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv1.bn.weight,model.22.m.0.cv1.bn.weight,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv1.bn.bias,model.22.m.0.cv1.bn.bias,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv1.bn.running_mean,model.22.m.0.cv1.bn.running_mean,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv1.bn.running_var,model.22.m.0.cv1.bn.running_var,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv1.bn.num_batches_tracked,model.22.m.0.cv1.bn.num_batches_tracked,[],1,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv2.conv.weight,model.22.m.0.cv2.conv.weight,"[128, 256, 1, 1]",32768,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv2.bn.weight,model.22.m.0.cv2.bn.weight,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv2.bn.bias,model.22.m.0.cv2.bn.bias,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv2.bn.running_mean,model.22.m.0.cv2.bn.running_mean,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv2.bn.running_var,model.22.m.0.cv2.bn.running_var,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv2.bn.num_batches_tracked,model.22.m.0.cv2.bn.num_batches_tracked,[],1,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv3.conv.weight,model.22.m.0.cv3.conv.weight,"[256, 256, 1, 1]",65536,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv3.bn.weight,model.22.m.0.cv3.bn.weight,[256],256,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv3.bn.bias,model.22.m.0.cv3.bn.bias,[256],256,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv3.bn.running_mean,model.22.m.0.cv3.bn.running_mean,[256],256,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv3.bn.running_var,model.22.m.0.cv3.bn.running_var,[256],256,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.cv3.bn.num_batches_tracked,model.22.m.0.cv3.bn.num_batches_tracked,[],1,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.0.cv1.conv.weight,model.22.m.0.m.0.cv1.conv.weight,"[128, 128, 3, 3]",147456,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.0.cv1.bn.weight,model.22.m.0.m.0.cv1.bn.weight,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.0.cv1.bn.bias,model.22.m.0.m.0.cv1.bn.bias,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.0.cv1.bn.running_mean,model.22.m.0.m.0.cv1.bn.running_mean,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.0.cv1.bn.running_var,model.22.m.0.m.0.cv1.bn.running_var,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.0.cv1.bn.num_batches_tracked,model.22.m.0.m.0.cv1.bn.num_batches_tracked,[],1,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.0.cv2.conv.weight,model.22.m.0.m.0.cv2.conv.weight,"[128, 128, 3, 3]",147456,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.0.cv2.bn.weight,model.22.m.0.m.0.cv2.bn.weight,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.0.cv2.bn.bias,model.22.m.0.m.0.cv2.bn.bias,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.0.cv2.bn.running_mean,model.22.m.0.m.0.cv2.bn.running_mean,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.0.cv2.bn.running_var,model.22.m.0.m.0.cv2.bn.running_var,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.0.cv2.bn.num_batches_tracked,model.22.m.0.m.0.cv2.bn.num_batches_tracked,[],1,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.1.cv1.conv.weight,model.22.m.0.m.1.cv1.conv.weight,"[128, 128, 3, 3]",147456,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.1.cv1.bn.weight,model.22.m.0.m.1.cv1.bn.weight,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.1.cv1.bn.bias,model.22.m.0.m.1.cv1.bn.bias,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.1.cv1.bn.running_mean,model.22.m.0.m.1.cv1.bn.running_mean,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.1.cv1.bn.running_var,model.22.m.0.m.1.cv1.bn.running_var,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.1.cv1.bn.num_batches_tracked,model.22.m.0.m.1.cv1.bn.num_batches_tracked,[],1,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.1.cv2.conv.weight,model.22.m.0.m.1.cv2.conv.weight,"[128, 128, 3, 3]",147456,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.1.cv2.bn.weight,model.22.m.0.m.1.cv2.bn.weight,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.1.cv2.bn.bias,model.22.m.0.m.1.cv2.bn.bias,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.1.cv2.bn.running_mean,model.22.m.0.m.1.cv2.bn.running_mean,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.1.cv2.bn.running_var,model.22.m.0.m.1.cv2.bn.running_var,[128],128,PAN P5 C3k2,TRANSFERRED
+model.28.m.0.m.1.cv2.bn.num_batches_tracked,model.22.m.0.m.1.cv2.bn.num_batches_tracked,[],1,PAN P5 C3k2,TRANSFERRED
+model.29.cv2.0.0.conv.weight,N/A,"[64, 128, 3, 3]",73728,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv2.0.0.bn.weight,N/A,[64],64,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv2.0.0.bn.bias,N/A,[64],64,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv2.0.0.bn.running_mean,N/A,[64],64,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv2.0.0.bn.running_var,N/A,[64],64,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv2.0.0.bn.num_batches_tracked,N/A,[],1,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv2.0.1.conv.weight,N/A,"[64, 64, 3, 3]",36864,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv2.0.1.bn.weight,N/A,[64],64,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv2.0.1.bn.bias,N/A,[64],64,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv2.0.1.bn.running_mean,N/A,[64],64,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv2.0.1.bn.running_var,N/A,[64],64,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv2.0.1.bn.num_batches_tracked,N/A,[],1,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv2.0.2.weight,N/A,"[64, 64, 1, 1]",4096,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv2.0.2.bias,N/A,[64],64,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv2.1.0.conv.weight,model.23.cv2.0.0.conv.weight,"[64, 256, 3, 3]",147456,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv2.1.0.bn.weight,model.23.cv2.0.0.bn.weight,[64],64,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv2.1.0.bn.bias,model.23.cv2.0.0.bn.bias,[64],64,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv2.1.0.bn.running_mean,model.23.cv2.0.0.bn.running_mean,[64],64,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv2.1.0.bn.running_var,model.23.cv2.0.0.bn.running_var,[64],64,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv2.1.0.bn.num_batches_tracked,model.23.cv2.0.0.bn.num_batches_tracked,[],1,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv2.1.1.conv.weight,model.23.cv2.0.1.conv.weight,"[64, 64, 3, 3]",36864,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv2.1.1.bn.weight,model.23.cv2.0.1.bn.weight,[64],64,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv2.1.1.bn.bias,model.23.cv2.0.1.bn.bias,[64],64,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv2.1.1.bn.running_mean,model.23.cv2.0.1.bn.running_mean,[64],64,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv2.1.1.bn.running_var,model.23.cv2.0.1.bn.running_var,[64],64,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv2.1.1.bn.num_batches_tracked,model.23.cv2.0.1.bn.num_batches_tracked,[],1,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv2.1.2.weight,model.23.cv2.0.2.weight,"[64, 64, 1, 1]",4096,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv2.1.2.bias,model.23.cv2.0.2.bias,[64],64,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv2.2.0.conv.weight,model.23.cv2.1.0.conv.weight,"[64, 512, 3, 3]",294912,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv2.2.0.bn.weight,model.23.cv2.1.0.bn.weight,[64],64,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv2.2.0.bn.bias,model.23.cv2.1.0.bn.bias,[64],64,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv2.2.0.bn.running_mean,model.23.cv2.1.0.bn.running_mean,[64],64,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv2.2.0.bn.running_var,model.23.cv2.1.0.bn.running_var,[64],64,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv2.2.0.bn.num_batches_tracked,model.23.cv2.1.0.bn.num_batches_tracked,[],1,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv2.2.1.conv.weight,model.23.cv2.1.1.conv.weight,"[64, 64, 3, 3]",36864,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv2.2.1.bn.weight,model.23.cv2.1.1.bn.weight,[64],64,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv2.2.1.bn.bias,model.23.cv2.1.1.bn.bias,[64],64,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv2.2.1.bn.running_mean,model.23.cv2.1.1.bn.running_mean,[64],64,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv2.2.1.bn.running_var,model.23.cv2.1.1.bn.running_var,[64],64,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv2.2.1.bn.num_batches_tracked,model.23.cv2.1.1.bn.num_batches_tracked,[],1,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv2.2.2.weight,model.23.cv2.1.2.weight,"[64, 64, 1, 1]",4096,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv2.2.2.bias,model.23.cv2.1.2.bias,[64],64,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv2.3.0.conv.weight,model.23.cv2.2.0.conv.weight,"[64, 512, 3, 3]",294912,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv2.3.0.bn.weight,model.23.cv2.2.0.bn.weight,[64],64,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv2.3.0.bn.bias,model.23.cv2.2.0.bn.bias,[64],64,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv2.3.0.bn.running_mean,model.23.cv2.2.0.bn.running_mean,[64],64,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv2.3.0.bn.running_var,model.23.cv2.2.0.bn.running_var,[64],64,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv2.3.0.bn.num_batches_tracked,model.23.cv2.2.0.bn.num_batches_tracked,[],1,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv2.3.1.conv.weight,model.23.cv2.2.1.conv.weight,"[64, 64, 3, 3]",36864,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv2.3.1.bn.weight,model.23.cv2.2.1.bn.weight,[64],64,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv2.3.1.bn.bias,model.23.cv2.2.1.bn.bias,[64],64,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv2.3.1.bn.running_mean,model.23.cv2.2.1.bn.running_mean,[64],64,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv2.3.1.bn.running_var,model.23.cv2.2.1.bn.running_var,[64],64,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv2.3.1.bn.num_batches_tracked,model.23.cv2.2.1.bn.num_batches_tracked,[],1,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv2.3.2.weight,model.23.cv2.2.2.weight,"[64, 64, 1, 1]",4096,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv2.3.2.bias,model.23.cv2.2.2.bias,[64],64,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv3.0.0.0.conv.weight,N/A,"[128, 1, 3, 3]",1152,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.0.0.bn.weight,N/A,[128],128,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.0.0.bn.bias,N/A,[128],128,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.0.0.bn.running_mean,N/A,[128],128,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.0.0.bn.running_var,N/A,[128],128,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.0.0.bn.num_batches_tracked,N/A,[],1,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.0.1.conv.weight,N/A,"[128, 128, 1, 1]",16384,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.0.1.bn.weight,N/A,[128],128,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.0.1.bn.bias,N/A,[128],128,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.0.1.bn.running_mean,N/A,[128],128,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.0.1.bn.running_var,N/A,[128],128,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.0.1.bn.num_batches_tracked,N/A,[],1,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.1.0.conv.weight,N/A,"[128, 1, 3, 3]",1152,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.1.0.bn.weight,N/A,[128],128,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.1.0.bn.bias,N/A,[128],128,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.1.0.bn.running_mean,N/A,[128],128,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.1.0.bn.running_var,N/A,[128],128,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.1.0.bn.num_batches_tracked,N/A,[],1,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.1.1.conv.weight,N/A,"[128, 128, 1, 1]",16384,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.1.1.bn.weight,N/A,[128],128,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.1.1.bn.bias,N/A,[128],128,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.1.1.bn.running_mean,N/A,[128],128,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.1.1.bn.running_var,N/A,[128],128,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.1.1.bn.num_batches_tracked,N/A,[],1,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.2.weight,N/A,"[10, 128, 1, 1]",1280,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.0.2.bias,N/A,[10],10,"Detect P2 Subhead (Stride 4, New Head)",NEW_INITIALIZATION
+model.29.cv3.1.0.0.conv.weight,model.23.cv3.0.0.0.conv.weight,"[256, 1, 3, 3]",2304,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv3.1.0.0.bn.weight,model.23.cv3.0.0.0.bn.weight,[256],256,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv3.1.0.0.bn.bias,model.23.cv3.0.0.0.bn.bias,[256],256,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv3.1.0.0.bn.running_mean,model.23.cv3.0.0.0.bn.running_mean,[256],256,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv3.1.0.0.bn.running_var,model.23.cv3.0.0.0.bn.running_var,[256],256,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv3.1.0.0.bn.num_batches_tracked,model.23.cv3.0.0.0.bn.num_batches_tracked,[],1,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv3.1.0.1.conv.weight,N/A,"[128, 256, 1, 1]",32768,Detect P3 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.1.0.1.bn.weight,N/A,[128],128,Detect P3 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.1.0.1.bn.bias,N/A,[128],128,Detect P3 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.1.0.1.bn.running_mean,N/A,[128],128,Detect P3 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.1.0.1.bn.running_var,N/A,[128],128,Detect P3 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.1.0.1.bn.num_batches_tracked,model.23.cv3.0.0.1.bn.num_batches_tracked,[],1,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv3.1.1.0.conv.weight,N/A,"[128, 1, 3, 3]",1152,Detect P3 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.1.1.0.bn.weight,N/A,[128],128,Detect P3 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.1.1.0.bn.bias,N/A,[128],128,Detect P3 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.1.1.0.bn.running_mean,N/A,[128],128,Detect P3 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.1.1.0.bn.running_var,N/A,[128],128,Detect P3 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.1.1.0.bn.num_batches_tracked,model.23.cv3.0.1.0.bn.num_batches_tracked,[],1,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv3.1.1.1.conv.weight,N/A,"[128, 128, 1, 1]",16384,Detect P3 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.1.1.1.bn.weight,N/A,[128],128,Detect P3 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.1.1.1.bn.bias,N/A,[128],128,Detect P3 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.1.1.1.bn.running_mean,N/A,[128],128,Detect P3 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.1.1.1.bn.running_var,N/A,[128],128,Detect P3 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.1.1.1.bn.num_batches_tracked,model.23.cv3.0.1.1.bn.num_batches_tracked,[],1,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv3.1.2.weight,N/A,"[10, 128, 1, 1]",1280,Detect P3 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.1.2.bias,model.23.cv3.0.2.bias,[10],10,Detect P3 Subhead (Transferred),TRANSFERRED
+model.29.cv3.2.0.0.conv.weight,model.23.cv3.1.0.0.conv.weight,"[512, 1, 3, 3]",4608,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv3.2.0.0.bn.weight,model.23.cv3.1.0.0.bn.weight,[512],512,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv3.2.0.0.bn.bias,model.23.cv3.1.0.0.bn.bias,[512],512,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv3.2.0.0.bn.running_mean,model.23.cv3.1.0.0.bn.running_mean,[512],512,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv3.2.0.0.bn.running_var,model.23.cv3.1.0.0.bn.running_var,[512],512,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv3.2.0.0.bn.num_batches_tracked,model.23.cv3.1.0.0.bn.num_batches_tracked,[],1,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv3.2.0.1.conv.weight,N/A,"[128, 512, 1, 1]",65536,Detect P4 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.2.0.1.bn.weight,N/A,[128],128,Detect P4 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.2.0.1.bn.bias,N/A,[128],128,Detect P4 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.2.0.1.bn.running_mean,N/A,[128],128,Detect P4 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.2.0.1.bn.running_var,N/A,[128],128,Detect P4 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.2.0.1.bn.num_batches_tracked,model.23.cv3.1.0.1.bn.num_batches_tracked,[],1,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv3.2.1.0.conv.weight,N/A,"[128, 1, 3, 3]",1152,Detect P4 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.2.1.0.bn.weight,N/A,[128],128,Detect P4 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.2.1.0.bn.bias,N/A,[128],128,Detect P4 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.2.1.0.bn.running_mean,N/A,[128],128,Detect P4 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.2.1.0.bn.running_var,N/A,[128],128,Detect P4 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.2.1.0.bn.num_batches_tracked,model.23.cv3.1.1.0.bn.num_batches_tracked,[],1,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv3.2.1.1.conv.weight,N/A,"[128, 128, 1, 1]",16384,Detect P4 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.2.1.1.bn.weight,N/A,[128],128,Detect P4 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.2.1.1.bn.bias,N/A,[128],128,Detect P4 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.2.1.1.bn.running_mean,N/A,[128],128,Detect P4 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.2.1.1.bn.running_var,N/A,[128],128,Detect P4 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.2.1.1.bn.num_batches_tracked,model.23.cv3.1.1.1.bn.num_batches_tracked,[],1,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv3.2.2.weight,N/A,"[10, 128, 1, 1]",1280,Detect P4 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.2.2.bias,model.23.cv3.1.2.bias,[10],10,Detect P4 Subhead (Transferred),TRANSFERRED
+model.29.cv3.3.0.0.conv.weight,model.23.cv3.2.0.0.conv.weight,"[512, 1, 3, 3]",4608,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv3.3.0.0.bn.weight,model.23.cv3.2.0.0.bn.weight,[512],512,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv3.3.0.0.bn.bias,model.23.cv3.2.0.0.bn.bias,[512],512,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv3.3.0.0.bn.running_mean,model.23.cv3.2.0.0.bn.running_mean,[512],512,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv3.3.0.0.bn.running_var,model.23.cv3.2.0.0.bn.running_var,[512],512,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv3.3.0.0.bn.num_batches_tracked,model.23.cv3.2.0.0.bn.num_batches_tracked,[],1,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv3.3.0.1.conv.weight,N/A,"[128, 512, 1, 1]",65536,Detect P5 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.3.0.1.bn.weight,N/A,[128],128,Detect P5 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.3.0.1.bn.bias,N/A,[128],128,Detect P5 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.3.0.1.bn.running_mean,N/A,[128],128,Detect P5 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.3.0.1.bn.running_var,N/A,[128],128,Detect P5 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.3.0.1.bn.num_batches_tracked,model.23.cv3.2.0.1.bn.num_batches_tracked,[],1,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv3.3.1.0.conv.weight,N/A,"[128, 1, 3, 3]",1152,Detect P5 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.3.1.0.bn.weight,N/A,[128],128,Detect P5 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.3.1.0.bn.bias,N/A,[128],128,Detect P5 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.3.1.0.bn.running_mean,N/A,[128],128,Detect P5 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.3.1.0.bn.running_var,N/A,[128],128,Detect P5 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.3.1.0.bn.num_batches_tracked,model.23.cv3.2.1.0.bn.num_batches_tracked,[],1,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv3.3.1.1.conv.weight,N/A,"[128, 128, 1, 1]",16384,Detect P5 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.3.1.1.bn.weight,N/A,[128],128,Detect P5 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.3.1.1.bn.bias,N/A,[128],128,Detect P5 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.3.1.1.bn.running_mean,N/A,[128],128,Detect P5 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.3.1.1.bn.running_var,N/A,[128],128,Detect P5 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.3.1.1.bn.num_batches_tracked,model.23.cv3.2.1.1.bn.num_batches_tracked,[],1,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.cv3.3.2.weight,N/A,"[10, 128, 1, 1]",1280,Detect P5 Subhead (Transferred),NEW_INITIALIZATION
+model.29.cv3.3.2.bias,model.23.cv3.2.2.bias,[10],10,Detect P5 Subhead (Transferred),TRANSFERRED
+model.29.dfl.conv.weight,model.23.dfl.conv.weight,"[1, 16, 1, 1]",16,Detect DFL Register Buffer,TRANSFERRED

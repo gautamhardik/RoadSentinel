@@ -1,0 +1,12 @@
+{
+  "experiment": "Phase 14 \u2014 Hard-Negative Precision Lock",
+  "base_checkpoint": "phase13_best.pt",
+  "base_sha256": "bbac96e571881b294c96020756ae59140bc72a97229d1d42d703904bb61354ce",
+  "target_epochs": 8,
+  "imgsz": 1024,
+  "curriculum_size": 40554,
+  "holdout_size": 5000,
+  "total_elapsed_hours": 3.5933691744009653,
+  "best_checkpoint_sha256": "80c4b8c25e44ee8eebab0835d220e9c3821633f09173b276c66210853e244c8f",
+  "status": "COMPLETED"
+}

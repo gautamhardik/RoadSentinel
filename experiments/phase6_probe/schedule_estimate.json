@@ -1,0 +1,75 @@
+{
+  "measured": {
+    "mosaic_steady_img_per_s": {
+      "p10": 32.92,
+      "p50": 33.79,
+      "p90": 35.21
+    },
+    "mosaic_epoch_level_img_per_s": [
+      32.0,
+      33.28
+    ],
+    "mosaic_data_wait_fraction": 0.001,
+    "no_mosaic_epoch_level_img_per_s": [
+      27.84,
+      27.38
+    ],
+    "holdout_val_s": [
+      54.3,
+      47.3,
+      57.7,
+      62.3
+    ],
+    "launch_overhead_s": [
+      250.3,
+      291
+    ]
+  },
+  "extrapolated": {
+    "optimistic": {
+      "mosaic_img_per_s": 35.21,
+      "no_mosaic_img_per_s": 27.84,
+      "full_mosaic_epoch_h": 0.53,
+      "full_no_mosaic_epoch_h": 0.666,
+      "session1_epochs": 17,
+      "session2_epochs": 16,
+      "two_session_total_epochs": 33,
+      "session1_used_h": 9.09,
+      "session2_used_h": 9.28
+    },
+    "typical": {
+      "mosaic_img_per_s": 33.79,
+      "no_mosaic_img_per_s": 27.84,
+      "full_mosaic_epoch_h": 0.552,
+      "full_no_mosaic_epoch_h": 0.666,
+      "session1_epochs": 16,
+      "session2_epochs": 15,
+      "two_session_total_epochs": 31,
+      "session1_used_h": 8.91,
+      "session2_used_h": 8.96
+    },
+    "conservative": {
+      "mosaic_img_per_s": 27.38,
+      "no_mosaic_img_per_s": 27.38,
+      "full_mosaic_epoch_h": 0.677,
+      "full_no_mosaic_epoch_h": 0.677,
+      "session1_epochs": 13,
+      "session2_epochs": 13,
+      "two_session_total_epochs": 26,
+      "session1_used_h": 8.88,
+      "session2_used_h": 8.91
+    }
+  },
+  "recommended_fixed_total_epochs": 26,
+  "recommended_split": {
+    "session1": 13,
+    "session2": 13
+  },
+  "assumptions": {
+    "session_h": 11.0,
+    "safety_margin": 0.15,
+    "close_mosaic_epochs": 5,
+    "full_train_images": 65000,
+    "scaling": "linear in training images per epoch"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "phase": "4D",
+  "experiment_name": "RoadSentinel Phase 4D — Pre-Registered Adaptive-Area Calibration Experiment",
+  "run_timestamp": "2026-10-10 04:40:34",
+  "execution_platform": {
+    "platform": "Kaggle GPU Notebook",
+    "kernel_slug": "hardikgautam25/roadsentinel-phase-4d-adaptive-area-benchmark",
+    "gpu": "Tesla T4 (15GB)",
+    "pytorch_version": "2.1.2",
+    "ultralytics_version": "8.3.70",
+    "os": "Linux 6.6.137+ (Kaggle Container)"
+  },
+  "checkpoint": {
+    "filename": "bdd100k_yolo11s.pt",
+    "sha256": "A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3",
+    "verified": true
+  },
+  "dataset_manifest": {
+    "dataset": "BDD100K Detection Validation",
+    "total_validation_images": 10000,
+    "pilot_cohort_images": 300,
+    "non_pilot_confirmation_images": 9700,
+    "test_split_quarantine_verified": true,
+    "test_images_accessed": 0
+  },
+  "candidate_grid": {
+    "Candidate-A-AdaptiveArea": {
+      "tau_isolated_small (<1024 px2)": 0.28,
+      "tau_isolated_large (>=1024 px2)": 0.45
+    },
+    "Candidate-B-AdaptiveArea": {
+      "tau_isolated_small (<1024 px2)": 0.30,
+      "tau_isolated_large (>=1024 px2)": 0.45
+    },
+    "Candidate-C-AdaptiveArea": {
+      "tau_isolated_small (<1024 px2)": 0.32,
+      "tau_isolated_large (>=1024 px2)": 0.45
+    }
+  },
+  "references": [
+    "ActiveFoveation-960 (Baseline)",
+    "Calibrated-ActiveFoveation-960 (Phase 4C Reference)"
+  ],
+  "frozen_parameters": {
+    "full_frame_imgsz": 960,
+    "crop_imgsz": 640,
+    "max_crops_per_frame": 2,
+    "tau_full_frame": 0.25,
+    "tau_confirmed_crop": 0.20,
+    "iou_concurrence_threshold": 0.30,
+    "coarse_full_frame_support_floor": 0.10,
+    "wbf_cluster_iou_threshold": 0.50,
+    "wbf_crop_coordinate_weight": 1.20,
+    "wbf_consensus_boost": 0.08,
+    "area_predicted_formula": "max(0, min(1280, x2) - max(0, x1)) * max(0, min(720, y2) - max(0, y1))"
+  },
+  "quality_gate_evaluations_9700_partition": {
+    "Gate1_Precision_Gain_GE_5pp": {
+      "Baseline": "64.03%",
+      "Candidate-A": "71.39% (+7.36 pp) -> PASS",
+      "Candidate-B": "71.78% (+7.75 pp) -> PASS",
+      "Candidate-C": "72.04% (+8.01 pp) -> PASS"
+    },
+    "Gate2_Recall_Decline_LE_2pp": {
+      "Baseline": "62.00%",
+      "Candidate-A": "61.26% (-0.74 pp) -> PASS",
+      "Candidate-B": "61.17% (-0.83 pp) -> PASS",
+      "Candidate-C": "61.05% (-0.95 pp) -> PASS"
+    },
+    "Gate3_Small_VRU_Recall_GE_45pct": {
+      "Threshold": ">= 45.00%",
+      "Candidate-A": "44.52% (2,728 / 6,128) -> FAIL",
+      "Candidate-B": "44.34% (2,717 / 6,128) -> FAIL",
+      "Candidate-C": "44.08% (2,701 / 6,128) -> FAIL"
+    },
+    "Gate4_VRU_F1_GE_0_6500": {
+      "Threshold": ">= 0.6500",
+      "Candidate-A": "0.6594 -> PASS",
+      "Candidate-B": "0.6605 -> PASS",
+      "Candidate-C": "0.6609 -> PASS"
+    }
+  },
+  "final_verdict": "FAIL \u2014 one or more mandatory gates failed",
+  "verdict_rationale": "All three pre-registered candidate configurations improved small-VRU recall relative to Phase 4C (43.36% -> 44.52%, 44.34%, 44.08%), but none satisfied the mandatory Gate 3 requirement of >= 45.0% small-VRU recall on the previously inspected 9,700-image confirmation cohort. Under the pre-declared selection rule, no candidate qualifies.",
+  "artifact_hashes": {
+    "kaggle_jobs/calibration_benchmark/evaluate_phase4d_adaptive_area.py": "031326dab734dbf54e95c4a0df22057a75e99a9c57d875d17c7a12fe5d6a8729",
+    "tests/test_phase4d_adaptive_area.py": "45c6970aca4c323d5184551e61babe699d572825a83e6007c73d0438ce522cd1",
+    "experiments/phase4d_validation/config.json": "a1954dcee45ef028ce8f485e62c8b58513f322e5e90f219344e1063e9914c865",
+    "experiments/phase4d_validation/candidate_comparison.csv": "0b0e5614ffea9716706f59947dda291a18607f2680b5c439e770f5548e976e85",
+    "experiments/phase4d_validation/size_group_analysis.csv": "f5d0cb7dc5ca16d984c8e78affd2f7bd255bd5c9666a317024015763e691e791",
+    "experiments/phase4d_validation/phase4d_metrics.json": "26e02b948db60f3ed78a718dfcc3d6f08c845dd26a47897252d526e38b5a70c1",
+    "experiments/phase4d_validation/per_image_records.jsonl": "e5c3f5e80800bcc5b117abdc65c844807c33e53165f31f47f50f231e234e58be",
+    "experiments/phase4d_validation/console.log": "4753d8e98c46d50c00a7115fa90fe85024a3586ce290cc795bd8ba76f683f472",
+    "docs/phase4/phase4d_adaptive_area_report.md": "dab54bacfc7f64bc175bc9cf028d653d7461e98b655a3914a5667f8f366e85cc",
+    "weights/bdd100k_yolo11s.pt": "a4747292648f37f68ab997bea65a36391c41356f35e309a9f3d2eb1d3ea8d8e3"
+  }
+}

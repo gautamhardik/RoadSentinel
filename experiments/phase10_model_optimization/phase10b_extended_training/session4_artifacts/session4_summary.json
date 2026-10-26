@@ -1,0 +1,19 @@
+{
+  "session": 4,
+  "target_completed_epoch": 51,
+  "start_epoch": 39,
+  "epochs_trained_in_session": 13,
+  "final_checkpoint_file": "session4_final_checkpoint_ep50.pt",
+  "final_checkpoint_sha256": "b6b27d1d66f61c07cd95e16afa4374368e5422add1399a68fd474989e0c1a971",
+  "optimizer_intact": true,
+  "optimizer_state_tensors": 330,
+  "optimizer_param_groups": 3,
+  "best_fitness": 0.35972,
+  "final_metrics": {
+    "metrics/precision(B)": 0.7666023156641663,
+    "metrics/recall(B)": 0.5707663909648321,
+    "metrics/mAP50(B)": 0.6181071074608226,
+    "metrics/mAP50-95(B)": 0.35913556176658995
+  },
+  "elapsed_hours": 7.7389978302187385
+}

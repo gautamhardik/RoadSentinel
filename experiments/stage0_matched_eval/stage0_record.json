@@ -1,0 +1,284 @@
+{
+ "A2_reconciliation": {
+  "checks": 585,
+  "failed": 0,
+  "failures": []
+ },
+ "A3_confidence_floor_audit": {
+  "base_yolo11s": {
+   "per_class": {
+    "person": {
+     "n_pred_at_floor": 117926,
+     "recall_at_floor": 0.8802,
+     "precision_at_floor": 0.0876,
+     "ap50_floor": 0.6551,
+     "ap50_upper_bound": 0.6669,
+     "ap50_reported_by_kernel": 0.6551
+    },
+    "rider": {
+     "n_pred_at_floor": 2325,
+     "recall_at_floor": 0.6159,
+     "precision_at_floor": 0.1566,
+     "ap50_floor": 0.4439,
+     "ap50_upper_bound": 0.5347,
+     "ap50_reported_by_kernel": 0.4439
+    },
+    "bike": {
+     "n_pred_at_floor": 11058,
+     "recall_at_floor": 0.7932,
+     "precision_at_floor": 0.0635,
+     "ap50_floor": 0.4972,
+     "ap50_upper_bound": 0.5137,
+     "ap50_reported_by_kernel": 0.4972
+    },
+    "motor": {
+     "n_pred_at_floor": 2388,
+     "recall_at_floor": 0.6524,
+     "precision_at_floor": 0.1147,
+     "ap50_floor": 0.4662,
+     "ap50_upper_bound": 0.5244,
+     "ap50_reported_by_kernel": 0.4661
+    }
+   },
+   "vru_mAP50_floor": 0.5156,
+   "vru_mAP50_upper_bound": 0.5599,
+   "max_possible_truncation_loss": 0.0443
+  },
+  "phase5a_u": {
+   "per_class": {
+    "person": {
+     "n_pred_at_floor": 142559,
+     "recall_at_floor": 0.8818,
+     "precision_at_floor": 0.0726,
+     "ap50_floor": 0.6503,
+     "ap50_upper_bound": 0.6601,
+     "ap50_reported_by_kernel": 0.6502
+    },
+    "rider": {
+     "n_pred_at_floor": 3997,
+     "recall_at_floor": 0.6311,
+     "precision_at_floor": 0.0933,
+     "ap50_floor": 0.4393,
+     "ap50_upper_bound": 0.4915,
+     "ap50_reported_by_kernel": 0.4393
+    },
+    "bike": {
+     "n_pred_at_floor": 15033,
+     "recall_at_floor": 0.7932,
+     "precision_at_floor": 0.0467,
+     "ap50_floor": 0.4899,
+     "ap50_upper_bound": 0.5021,
+     "ap50_reported_by_kernel": 0.4899
+    },
+    "motor": {
+     "n_pred_at_floor": 4776,
+     "recall_at_floor": 0.669,
+     "precision_at_floor": 0.0588,
+     "ap50_floor": 0.4517,
+     "ap50_upper_bound": 0.4807,
+     "ap50_reported_by_kernel": 0.4516
+    }
+   },
+   "vru_mAP50_floor": 0.5078,
+   "vru_mAP50_upper_bound": 0.5336,
+   "max_possible_truncation_loss": 0.0258
+  },
+  "phase5a_r": {
+   "per_class": {
+    "person": {
+     "n_pred_at_floor": 149295,
+     "recall_at_floor": 0.883,
+     "precision_at_floor": 0.0694,
+     "ap50_floor": 0.6421,
+     "ap50_upper_bound": 0.6514,
+     "ap50_reported_by_kernel": 0.6421
+    },
+    "rider": {
+     "n_pred_at_floor": 3979,
+     "recall_at_floor": 0.6379,
+     "precision_at_floor": 0.0947,
+     "ap50_floor": 0.4575,
+     "ap50_upper_bound": 0.5098,
+     "ap50_reported_by_kernel": 0.458
+    },
+    "bike": {
+     "n_pred_at_floor": 13601,
+     "recall_at_floor": 0.8056,
+     "precision_at_floor": 0.0524,
+     "ap50_floor": 0.4874,
+     "ap50_upper_bound": 0.5002,
+     "ap50_reported_by_kernel": 0.4874
+    },
+    "motor": {
+     "n_pred_at_floor": 4008,
+     "recall_at_floor": 0.6667,
+     "precision_at_floor": 0.0699,
+     "ap50_floor": 0.4583,
+     "ap50_upper_bound": 0.4926,
+     "ap50_reported_by_kernel": 0.4583
+    }
+   },
+   "vru_mAP50_floor": 0.5113,
+   "vru_mAP50_upper_bound": 0.5385,
+   "max_possible_truncation_loss": 0.0272
+  }
+ },
+ "A5_checkpoints": {
+  "original_yolo11s": {
+   "path": "weights/bdd100k_yolo11s.pt",
+   "sha256": "A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3",
+   "bytes": 19199194,
+   "read_only": true
+  },
+  "phase5a_u_best": {
+   "path": "experiments/phase5a_modeling/runs/phase5a_u_ablation/phase5a_training/yolo11s_vru_finetune/weights/best.pt",
+   "sha256": "BB1823C6190E28CB56C12B549B0D1233B7DE6CF1B8624B1ED02378B42BB693E5",
+   "bytes": 19194650,
+   "read_only": true
+  },
+  "phase5a_u_last": {
+   "path": "experiments/phase5a_modeling/runs/phase5a_u_ablation/phase5a_training/yolo11s_vru_finetune/weights/last.pt",
+   "sha256": "FDDD805671CAC97F39B383A1C7F45A7F147021430B62C69F07AD2311A67945D0",
+   "bytes": 19194650,
+   "read_only": true
+  },
+  "phase5a_r_best": {
+   "path": "experiments/phase5a_modeling/runs/phase5a_r_training/phase5a_r_training/yolo11s_vru_weighted_finetune/weights/best.pt",
+   "sha256": "EDCCA4BF03CEC24A4E9D4EEEA524A63FBFD75E40E37359E106264F12A1B447F0",
+   "bytes": 19194965,
+   "read_only": true
+  },
+  "phase5a_r_last": {
+   "path": "experiments/phase5a_modeling/runs/phase5a_r_training/phase5a_r_training/yolo11s_vru_weighted_finetune/weights/last.pt",
+   "sha256": "7C18CE937A10A750972C39DE731758DF08E5BFA8D3EFA99BA2820D70E7E682AB",
+   "bytes": 19194965,
+   "read_only": true
+  }
+ },
+ "A1_archive_manifest": {
+  "experiments/stage0_matched_eval/roadsentinel-stage-0-matched-evaluation.log": {
+   "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+   "bytes": 0
+  },
+  "experiments/stage0_matched_eval/stage0/ap_recompute.json": {
+   "sha256": "111A5886925CD215330FB62A1FBDE4B5F85F22F03E4E5D2DA1B03D920A54B2C1",
+   "bytes": 2230
+  },
+  "experiments/stage0_matched_eval/stage0/base_yolo11s/candidate_comparison.csv": {
+   "sha256": "4ADF76DD5EAEF867665DEB7ADAC8BBCDD2B7677D7782A559DD50C291A8AE0128",
+   "bytes": 984
+  },
+  "experiments/stage0_matched_eval/stage0/base_yolo11s/console.log": {
+   "sha256": "F4B69C67D591041A09805D199EFA7B4BCAF0699A9C72BD81688728B559A00C4E",
+   "bytes": 1540
+  },
+  "experiments/stage0_matched_eval/stage0/base_yolo11s/per_image_records.jsonl": {
+   "sha256": "5207EEEE5F875B7F6473791B3F1518B475D3872D53C7D9464592C69EB9B09241",
+   "bytes": 113190
+  },
+  "experiments/stage0_matched_eval/stage0/base_yolo11s/phase4d_metrics.json": {
+   "sha256": "381DAB2A2EDC4A3A55E38C85B6423102D5DFDCE5922092B69D456487E2D767A3",
+   "bytes": 74651
+  },
+  "experiments/stage0_matched_eval/stage0/base_yolo11s/raw_detections.jsonl.gz": {
+   "sha256": "D468D6576CDC1B291ADCBEDA383AF6821BCE6EF552D8365BB06E84EA624E73C6",
+   "bytes": 19334462
+  },
+  "experiments/stage0_matched_eval/stage0/base_yolo11s/raw_metrics.json": {
+   "sha256": "381DAB2A2EDC4A3A55E38C85B6423102D5DFDCE5922092B69D456487E2D767A3",
+   "bytes": 74651
+  },
+  "experiments/stage0_matched_eval/stage0/base_yolo11s/size_group_analysis.csv": {
+   "sha256": "E4397397EE2A5B2013B7D06434DF1EDF19448235D7FC178375D55276E6661E9C",
+   "bytes": 1348
+  },
+  "experiments/stage0_matched_eval/stage0/operating_points.json": {
+   "sha256": "14709C2208A9C490E24289451C6B35B10D3A4EDB05E23F1D994D31C4CCB3EA05",
+   "bytes": 30498
+  },
+  "experiments/stage0_matched_eval/stage0/operating_points.txt": {
+   "sha256": "591DB77EA8F87EFC8969DF64BAB47FD0DFDF84056D512723595C754D93619F14",
+   "bytes": 7606
+  },
+  "experiments/stage0_matched_eval/stage0/phase5a_r/candidate_comparison.csv": {
+   "sha256": "8099C03D71289B46AC963AEC9072349981AA37F654F8CDAFE8E44224C84359DD",
+   "bytes": 985
+  },
+  "experiments/stage0_matched_eval/stage0/phase5a_r/console.log": {
+   "sha256": "6C2372AF10DF5CB931F2EC56AD6D0F7F019A7DF2CE74B8403FF66B4CCA8B2D11",
+   "bytes": 1709
+  },
+  "experiments/stage0_matched_eval/stage0/phase5a_r/per_image_records.jsonl": {
+   "sha256": "52CCC9E3646F656462C9BA8FDCD410449079CD20380AB1999DAFEAB164D10A9C",
+   "bytes": 113240
+  },
+  "experiments/stage0_matched_eval/stage0/phase5a_r/phase4d_metrics.json": {
+   "sha256": "AFB4C6824F1E6CD1657C47BE47C75E13CABBF629E876E0E3C2738A5472D9ABA0",
+   "bytes": 74651
+  },
+  "experiments/stage0_matched_eval/stage0/phase5a_r/raw_detections.jsonl.gz": {
+   "sha256": "B8BEAAF252D15638A7A87C9A87B19373180C2CD77EE62243A72DE0DB154EE5EB",
+   "bytes": 21451904
+  },
+  "experiments/stage0_matched_eval/stage0/phase5a_r/raw_metrics.json": {
+   "sha256": "AFB4C6824F1E6CD1657C47BE47C75E13CABBF629E876E0E3C2738A5472D9ABA0",
+   "bytes": 74651
+  },
+  "experiments/stage0_matched_eval/stage0/phase5a_r/size_group_analysis.csv": {
+   "sha256": "5DFD391187E123169BA6B04C5AF2D7FA29621C6706AECB7CF70B5AB65E61512F",
+   "bytes": 1348
+  },
+  "experiments/stage0_matched_eval/stage0/phase5a_u/candidate_comparison.csv": {
+   "sha256": "1C943DBA0F9CF9D9D4812EE0F7CCF1448BF8C726C9F611996D36F0F86C2A87F0",
+   "bytes": 985
+  },
+  "experiments/stage0_matched_eval/stage0/phase5a_u/console.log": {
+   "sha256": "79D32F33E5562347353FC0F6224F488500433AB7BDE92DD953D9F25A491A3E1F",
+   "bytes": 1702
+  },
+  "experiments/stage0_matched_eval/stage0/phase5a_u/per_image_records.jsonl": {
+   "sha256": "FA8512AE71690815AE7647F5FDDEBDC4DABF65A85AE35389C64C5FA2F97F9AF2",
+   "bytes": 113222
+  },
+  "experiments/stage0_matched_eval/stage0/phase5a_u/phase4d_metrics.json": {
+   "sha256": "4D3333B0AF80B6B8449116087AD6716CF3801BA6F0DEB994BC89D21718D631BB",
+   "bytes": 74608
+  },
+  "experiments/stage0_matched_eval/stage0/phase5a_u/raw_detections.jsonl.gz": {
+   "sha256": "81461331A99E01BE4A94976E4B444EF328C7F7FF864075BF012C883987B9D0B1",
+   "bytes": 21642414
+  },
+  "experiments/stage0_matched_eval/stage0/phase5a_u/raw_metrics.json": {
+   "sha256": "4D3333B0AF80B6B8449116087AD6716CF3801BA6F0DEB994BC89D21718D631BB",
+   "bytes": 74608
+  },
+  "experiments/stage0_matched_eval/stage0/phase5a_u/size_group_analysis.csv": {
+   "sha256": "1374E9DDB3CAEC541601685CE758C3A6F340370AFC55667695BA334CAF46766B",
+   "bytes": 1348
+  },
+  "experiments/stage0_matched_eval/stage0/stage0_manifest.json": {
+   "sha256": "15423AA1F79F0DCDEF6DE8D2786500F39B2ED355E623F3E852C45CAC4074B917",
+   "bytes": 1099
+  },
+  "kaggle_jobs/stage0_matched_eval/kernel/stage0_matched_eval.py": {
+   "sha256": "049315756D4E05CFFD737338782D5BD183661368AC75F80325AD21F1FA0972E9",
+   "bytes": 51922
+  },
+  "kaggle_jobs/stage0_matched_eval/kernel/kernel-metadata.json": {
+   "sha256": "28877A2C80D9EC7208C46F07FC748D257A9A74295C75255FF2BED1C7B0AB99C8",
+   "bytes": 678
+  },
+  "kaggle_jobs/stage0_matched_eval/build_kernel.py": {
+   "sha256": "710A01BB7E950924B7F194233A9E1F93CCE5D64922683B011E15995DF61BA965",
+   "bytes": 5881
+  },
+  "docs/phase6/stage0_matched_evaluation_report.md": {
+   "sha256": "6F42D2609EC59A1F57F7528ACB42B1383B84C2999C83637011328B0C5F2F089C",
+   "bytes": 7321
+  },
+  "docs/phase6/stage1_split_audit.md": {
+   "sha256": "5B78659F9BA66F9BCB88AC419DD15684640C8865664AD7A30179637B0A9C760D",
+   "bytes": 3424
+  }
+ }
+}

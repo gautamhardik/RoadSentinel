@@ -1,0 +1,9 @@
+{
+  "1": {
+    "trace_id": 1,
+    "action": "APPROVE_AUTONOMOUS_LOCK",
+    "reviewer": "Safety Inspector 01",
+    "notes": "Verified against ground-truth box.",
+    "timestamp": "2026-10-25 20:30:00 UTC"
+  }
+}

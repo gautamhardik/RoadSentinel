@@ -1,0 +1,336 @@
+{
+  "evaluation_name": "RoadSentinel Full BDD100K Validation Baseline",
+  "benchmark_type": "Full 10,000-Image Representative Validation Benchmark",
+  "timestamp": "2026-10-09 09:42:32",
+  "hardware_environment": {
+    "device": "cuda:0",
+    "gpu_name": "Tesla T4",
+    "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "torch_version": "2.11.0+cu128",
+    "cuda_version": "12.8",
+    "model_load_time_ms": 649.48
+  },
+  "provenance": {
+    "weights_file": "bdd100k_yolo11s.pt",
+    "date_trained": "2026-09-23T23:55:04.410734+02:00",
+    "ultralytics_version": "8.4.155",
+    "license": "AGPL-3.0 (https://ultralytics.com/license)",
+    "train_imgsz": 960,
+    "train_epochs": 50,
+    "train_optimizer": "SGD",
+    "model_architecture": "yolo11s.pt"
+  },
+  "latency_benchmark": {
+    "device": "cuda:0",
+    "gpu_model": "Tesla T4",
+    "input_resolution": "640x640",
+    "batch_size": 32,
+    "num_timed_images": 10000,
+    "total_inference_time_s": 302.81,
+    "mean_latency_ms": 30.28,
+    "throughput_fps": 33.02
+  },
+  "evaluation_config": {
+    "operational_confidence_threshold": 0.25,
+    "operational_iou_threshold": 0.5,
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "ap_interpolation": "COCO 101-point interpolated AP",
+    "class_alignment": "Explicit semantic mapping from Scalabel to 2018 YOLO labels"
+  },
+  "summary": {
+    "evaluated_images_count": 10000,
+    "total_ground_truth_boxes": 185578,
+    "classes_present_count": 10,
+    "classes_absent_count": 0,
+    "overall_mAP_50": 0.4819,
+    "overall_mAP_50_95": 0.2757,
+    "overall_macro_precision_50": 0.6462,
+    "overall_macro_recall_50": 0.4463
+  },
+  "vru_aggregates": {
+    "vru_classes": [
+      "person",
+      "rider",
+      "bike",
+      "motor"
+    ],
+    "vru_ground_truth_total": 15373,
+    "vru_operational_predictions_total": 10159,
+    "vru_tp_50": 7435,
+    "vru_fp_50": 2724,
+    "vru_fn_50": 7938,
+    "vru_micro_precision_50": 0.7319,
+    "vru_micro_recall_50": 0.4836,
+    "vru_micro_f1_50": 0.5824,
+    "vru_macro_mAP_50": 0.4428,
+    "vru_macro_mAP_50_95": 0.2276,
+    "vru_macro_precision_50": 0.6977,
+    "vru_macro_recall_50": 0.397
+  },
+  "per_class_metrics": [
+    {
+      "name": "person",
+      "is_vru": true,
+      "is_absent_in_gt": false,
+      "gt_count": 13265,
+      "pred_total_count": 68158,
+      "pred_operational_count": 9009,
+      "tp_50": 6662,
+      "fp_50": 2347,
+      "fn_50": 6603,
+      "precision_50": 0.7395,
+      "recall_50": 0.5022,
+      "f1_50": 0.5982,
+      "ap_50": 0.5803,
+      "ap_50_95": 0.295
+    },
+    {
+      "name": "rider",
+      "is_vru": true,
+      "is_absent_in_gt": false,
+      "gt_count": 649,
+      "pred_total_count": 1315,
+      "pred_operational_count": 349,
+      "tp_50": 247,
+      "fp_50": 102,
+      "fn_50": 402,
+      "precision_50": 0.7077,
+      "recall_50": 0.3806,
+      "f1_50": 0.495,
+      "ap_50": 0.3969,
+      "ap_50_95": 0.2058
+    },
+    {
+      "name": "car",
+      "is_vru": false,
+      "is_absent_in_gt": false,
+      "gt_count": 102540,
+      "pred_total_count": 354492,
+      "pred_operational_count": 92241,
+      "tp_50": 72039,
+      "fp_50": 20202,
+      "fn_50": 30501,
+      "precision_50": 0.781,
+      "recall_50": 0.7025,
+      "f1_50": 0.7397,
+      "ap_50": 0.7551,
+      "ap_50_95": 0.4644
+    },
+    {
+      "name": "bus",
+      "is_vru": false,
+      "is_absent_in_gt": false,
+      "gt_count": 1597,
+      "pred_total_count": 2972,
+      "pred_operational_count": 1118,
+      "tp_50": 813,
+      "fp_50": 305,
+      "fn_50": 784,
+      "precision_50": 0.7272,
+      "recall_50": 0.5091,
+      "f1_50": 0.5989,
+      "ap_50": 0.5327,
+      "ap_50_95": 0.4197
+    },
+    {
+      "name": "truck",
+      "is_vru": false,
+      "is_absent_in_gt": false,
+      "gt_count": 4247,
+      "pred_total_count": 9802,
+      "pred_operational_count": 3040,
+      "tp_50": 2204,
+      "fp_50": 836,
+      "fn_50": 2043,
+      "precision_50": 0.725,
+      "recall_50": 0.519,
+      "f1_50": 0.6049,
+      "ap_50": 0.544,
+      "ap_50_95": 0.4028
+    },
+    {
+      "name": "bike",
+      "is_vru": true,
+      "is_absent_in_gt": false,
+      "gt_count": 1007,
+      "pred_total_count": 5632,
+      "pred_operational_count": 588,
+      "tp_50": 376,
+      "fp_50": 212,
+      "fn_50": 631,
+      "precision_50": 0.6395,
+      "recall_50": 0.3734,
+      "f1_50": 0.4715,
+      "ap_50": 0.4179,
+      "ap_50_95": 0.2156
+    },
+    {
+      "name": "motor",
+      "is_vru": true,
+      "is_absent_in_gt": false,
+      "gt_count": 452,
+      "pred_total_count": 1103,
+      "pred_operational_count": 213,
+      "tp_50": 150,
+      "fp_50": 63,
+      "fn_50": 302,
+      "precision_50": 0.7042,
+      "recall_50": 0.3319,
+      "f1_50": 0.4511,
+      "ap_50": 0.3762,
+      "ap_50_95": 0.1939
+    },
+    {
+      "name": "traffic light",
+      "is_vru": false,
+      "is_absent_in_gt": false,
+      "gt_count": 26891,
+      "pred_total_count": 117137,
+      "pred_operational_count": 22813,
+      "tp_50": 15670,
+      "fp_50": 7143,
+      "fn_50": 11221,
+      "precision_50": 0.6869,
+      "recall_50": 0.5827,
+      "f1_50": 0.6305,
+      "ap_50": 0.5915,
+      "ap_50_95": 0.2276
+    },
+    {
+      "name": "traffic sign",
+      "is_vru": false,
+      "is_absent_in_gt": false,
+      "gt_count": 34915,
+      "pred_total_count": 152556,
+      "pred_operational_count": 26106,
+      "tp_50": 19600,
+      "fp_50": 6506,
+      "fn_50": 15315,
+      "precision_50": 0.7508,
+      "recall_50": 0.5614,
+      "f1_50": 0.6424,
+      "ap_50": 0.6242,
+      "ap_50_95": 0.3323
+    },
+    {
+      "name": "train",
+      "is_vru": false,
+      "is_absent_in_gt": false,
+      "gt_count": 15,
+      "pred_total_count": 33,
+      "pred_operational_count": 0,
+      "tp_50": 0,
+      "fp_50": 0,
+      "fn_50": 15,
+      "precision_50": 0.0,
+      "recall_50": 0.0,
+      "f1_50": 0.0,
+      "ap_50": 0.0,
+      "ap_50_95": 0.0
+    }
+  ],
+  "failure_cases": [
+    {
+      "image": "b1c66a42-6f7d68ca.jpg",
+      "missed_class": "rider",
+      "missed_count": 1,
+      "artifact": "vru_miss_01_b1c66a42-6f7d68ca.jpg"
+    },
+    {
+      "image": "b1ca8418-84a133a0.jpg",
+      "missed_class": "motor",
+      "missed_count": 1,
+      "artifact": "vru_miss_02_b1ca8418-84a133a0.jpg"
+    },
+    {
+      "image": "b1ceb32e-3f481b43.jpg",
+      "missed_class": "person",
+      "missed_count": 2,
+      "artifact": "vru_miss_03_b1ceb32e-3f481b43.jpg"
+    },
+    {
+      "image": "b1ceb32e-a106591d.jpg",
+      "missed_class": "person",
+      "missed_count": 1,
+      "artifact": "vru_miss_04_b1ceb32e-a106591d.jpg"
+    },
+    {
+      "image": "b1d0a191-5490450b.jpg",
+      "missed_class": "rider",
+      "missed_count": 1,
+      "artifact": "vru_miss_05_b1d0a191-5490450b.jpg"
+    },
+    {
+      "image": "b1d0a191-65deaeef.jpg",
+      "missed_class": "person",
+      "missed_count": 1,
+      "artifact": "vru_miss_06_b1d0a191-65deaeef.jpg"
+    },
+    {
+      "image": "b1d10d08-da110fcb.jpg",
+      "missed_class": "person",
+      "missed_count": 1,
+      "artifact": "vru_miss_07_b1d10d08-da110fcb.jpg"
+    },
+    {
+      "image": "b1d4b62c-d9805029.jpg",
+      "missed_class": "person",
+      "missed_count": 1,
+      "artifact": "vru_miss_08_b1d4b62c-d9805029.jpg"
+    },
+    {
+      "image": "b1d7b3ac-0bdb47dc.jpg",
+      "missed_class": "person",
+      "missed_count": 2,
+      "artifact": "vru_miss_09_b1d7b3ac-0bdb47dc.jpg"
+    },
+    {
+      "image": "b1dce572-c6a8cb5e.jpg",
+      "missed_class": "person",
+      "missed_count": 2,
+      "artifact": "vru_miss_10_b1dce572-c6a8cb5e.jpg"
+    },
+    {
+      "image": "b1df722f-5bcc3db7.jpg",
+      "missed_class": "rider",
+      "missed_count": 4,
+      "artifact": "vru_miss_11_b1df722f-5bcc3db7.jpg"
+    },
+    {
+      "image": "b1e9ee0e-67e26f2e.jpg",
+      "missed_class": "person",
+      "missed_count": 1,
+      "artifact": "vru_miss_12_b1e9ee0e-67e26f2e.jpg"
+    },
+    {
+      "image": "b1f022d3-3774de8b.jpg",
+      "missed_class": "person",
+      "missed_count": 6,
+      "artifact": "vru_miss_13_b1f022d3-3774de8b.jpg"
+    },
+    {
+      "image": "b1f0efd9-e900c6e5.jpg",
+      "missed_class": "person",
+      "missed_count": 1,
+      "artifact": "vru_miss_14_b1f0efd9-e900c6e5.jpg"
+    },
+    {
+      "image": "b1f4491b-cf446195.jpg",
+      "missed_class": "person",
+      "missed_count": 1,
+      "artifact": "vru_miss_15_b1f4491b-cf446195.jpg"
+    }
+  ]
+}

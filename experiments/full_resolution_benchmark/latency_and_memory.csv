@@ -1,0 +1,4 @@
+Configuration,Resolution,BatchSize,ActualBatchSize,ThroughputFPS,AmortizedMS,Batch1_MeanMS,Batch1_StdMS,Batch1_P50MS,Batch1_P95MS,PeakVRAM_MB
+Control-640,640,32,32,35.34,28.3,29.01,3.98,28.95,33.95,957.4
+Candidate-960,960,16,16,34.71,28.81,19.55,1.24,19.27,22.07,1008.9
+Candidate-1280,1280,8,8,25.41,39.36,24.73,0.96,24.64,25.99,957.2

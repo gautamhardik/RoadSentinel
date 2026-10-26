@@ -1,0 +1,88 @@
+================================================================================
+ROADSENTINEL PHASE 2B.1 — HIGH-RESOLUTION PILOT RUN LOG
+================================================================================
+Timestamp: 2026-10-09 10:58:11 UTC
+Run Type: 100-Image Multi-Resolution Pilot Evaluation
+Platform: Linux-6.18.48+-x86_64-with-glibc2.39 (Kaggle GPU Kernel)
+Hardware Device: NVIDIA Tesla T4 (cuda:0)
+PyTorch Version: 2.11.0+cu128 | CUDA Version: 12.8
+Ultralytics Version: 8.4.174
+
+CHECKPOINT PROVENANCE:
+- Checkpoint Path: weights/bdd100k_yolo11s.pt
+- Checkpoint Size: 19.3 MB
+- SHA-256 Hash: A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3
+- Architecture: YOLO11s (10 classes: person, rider, car, bus, truck, bike, motor, traffic light, traffic sign, train)
+
+DATASET AUDIT & RECONCILIATION:
+- Split: BDD100K Val (100 deterministic subset images)
+- Total GT Annotations: 1,956 boxes
+- VRU GT Annotations: 270 boxes (person: 238, rider: 10, bike: 12, motor: 10)
+- Size Group Distribution (Area = W x H in original 1280x720):
+  * Large (>= 96^2 = 9216 px^2): 255 total boxes (14 VRUs)
+  * Medium [32^2 - 96^2) [1024 - 9216 px^2): 680 total boxes (150 VRUs)
+  * Small (< 32^2 = 1024 px^2): 1021 total boxes (106 VRUs)
+
+EVALUATION METHODOLOGY:
+- Metric: COCO-style 101-point Interpolated Average Precision
+- AP Procedure: Detections ranked globally per class by confidence score; greedy 1-to-1 IoU matching against GT at IoU thresholds [0.50:0.05:0.95].
+- Operational Metrics: Fixed confidence tau = 0.25, IoU = 0.50.
+- Preprocessing: Standard letterbox resizing preserving aspect ratio (1280x720 -> square dimension with padding).
+- Timing Methodology: CUDA synchronization before and after pure model inference forward passes; warm-up runs executed prior to timing.
+
+CONFIGURATION 1: REFERENCE-640
+- Target Image Size: 640x640
+- Input Tensor Shape: (16, 3, 640, 640)
+- Batch Size: 16 (Configured: 16, Actual: 16, OOM: False)
+- Model Inference Time (100 images): 2.900 s
+- Amortized Latency: 29.00 ms / image
+- Throughput: 34.48 images / sec
+- Peak GPU VRAM Allocated: 519.7 MB
+- Overall mAP@50: 0.5217 | mAP@50-95: 0.3271
+- VRU Macro mAP@50: 0.3980 | mAP@50-95: 0.2501
+- VRU Micro Operational (tau=0.25, IoU=0.50): Prec=0.7849, Rec=0.5000, F1=0.6109
+- Size Group VRU Recall:
+  * Large: 92.86% (13/14)
+  * Medium: 70.67% (106/150)
+  * Small: 15.09% (16/106)
+
+CONFIGURATION 2: HIGHRES-960
+- Target Image Size: 960x960
+- Input Tensor Shape: (16, 3, 960, 960)
+- Batch Size: 16 (Configured: 16, Actual: 16, OOM: False)
+- Model Inference Time (100 images): 2.554 s
+- Amortized Latency: 25.54 ms / image
+- Throughput: 39.15 images / sec
+- Peak GPU VRAM Allocated: 968.0 MB
+- Overall mAP@50: 0.5734 | mAP@50-95: 0.3479
+- VRU Macro mAP@50: 0.4209 | mAP@50-95: 0.2454
+- VRU Micro Operational (tau=0.25, IoU=0.50): Prec=0.7755, Rec=0.5630, F1=0.6524
+- Size Group VRU Recall:
+  * Large: 92.86% (13/14)
+  * Medium: 75.33% (113/150)
+  * Small: 24.53% (26/106)
+
+CONFIGURATION 3: MAXRES-1280
+- Target Image Size: 1280x1280
+- Input Tensor Shape: (8, 3, 1280, 1280)
+- Batch Size: 8 (Configured: 8, Actual: 8, OOM: False)
+- Model Inference Time (100 images): 3.360 s
+- Amortized Latency: 33.60 ms / image
+- Throughput: 29.76 images / sec
+- Peak GPU VRAM Allocated: 881.5 MB
+- Overall mAP@50: 0.6037 | mAP@50-95: 0.3545
+- VRU Macro mAP@50: 0.4517 | mAP@50-95: 0.2526
+- VRU Micro Operational (tau=0.25, IoU=0.50): Prec=0.7946, Rec=0.5444, F1=0.6462
+- Size Group VRU Recall:
+  * Large: 92.86% (13/14)
+  * Medium: 70.67% (106/150)
+  * Small: 26.42% (28/106)
+
+SUMMARY COMPARISON:
+- Best VRU Operational Recall & F1: 960 (Recall=56.30%, F1=65.24%)
+- Best VRU Macro mAP@50: 1280 (0.4517 vs 0.4209 @ 960 vs 0.3980 @ 640)
+- Best Small VRU Recall (<32^2): 1280 (26.42%) closely followed by 960 (24.53%) vs 640 (15.09%)
+- Failed Images: 0 (100/100 processed successfully across all 3 resolutions)
+- Out of Memory Errors: 0
+- Recommendation: Advance both 960 and 1280 to full validation (Primary: 960 for real-time edge/safety latency-recall sweet spot; Secondary: 1280 for maximum AP and small-object detection).
+================================================================================

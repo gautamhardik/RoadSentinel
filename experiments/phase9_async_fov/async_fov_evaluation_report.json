@@ -1,0 +1,164 @@
+{
+  "checkpoint_sha256": "42d4b385ec69d01209e76dcf85f0fb4ffb33857d85f4daa02a4271d20f76541e",
+  "checkpoint_intact": true,
+  "hardware_environment": {
+    "os": "Windows 11",
+    "cpu": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "cpu_count_physical": 16,
+    "cpu_count_logical": 22,
+    "ram_gb": 31.43,
+    "pytorch_version": "2.12.0+cpu",
+    "cuda_available": false,
+    "device_evaluated": "CPU",
+    "torch_threads": 16,
+    "precision_mode": "FP32",
+    "preprocessing": "Letterbox scaling to divisible-by-32 with RGB [0, 255] normalization",
+    "target_deployment_accelerator": "NVIDIA Tesla T4 / Jetson Orin (TensorRT FP16 / CUDA)"
+  },
+  "stage1_feasibility_benchmarks": {
+    "full_frame_960px": {
+      "mean_ms": 1163.27,
+      "median_ms": 1041.87,
+      "p95_ms": 1821.76,
+      "p99_ms": 2085.87,
+      "min_ms": 964.55,
+      "max_ms": 2160.1,
+      "throughput_fps": 0.86,
+      "warmup_runs_ms": [
+        3537.18,
+        1084.8,
+        1064.11
+      ]
+    },
+    "crop_path_640px": {
+      "mean_ms": 792.89,
+      "median_ms": 804.85,
+      "p95_ms": 876.0,
+      "p99_ms": 895.57,
+      "min_ms": 549.03,
+      "max_ms": 901.67,
+      "throughput_fps": 1.26,
+      "warmup_runs_ms": [
+        832.55,
+        820.72,
+        1190.43
+      ]
+    },
+    "async_worker_stream_eval": {
+      "total_requests": 10,
+      "met_deadline_count": 0,
+      "expired_count": 3,
+      "dropped_overload_count": 7,
+      "deadline_satisfaction_rate_pct": 0.0,
+      "queue_delay_stats": {
+        "mean_ms": 449.62,
+        "median_ms": 354.28,
+        "p95_ms": 930.53,
+        "p99_ms": 981.75,
+        "min_ms": 0.03,
+        "max_ms": 994.56,
+        "throughput_fps": 2.22
+      },
+      "result_age_stats": {
+        "mean_ms": 1078.3,
+        "median_ms": 1068.31,
+        "p95_ms": 1462.33,
+        "p99_ms": 1497.35,
+        "min_ms": 660.48,
+        "max_ms": 1506.11,
+        "throughput_fps": 0.93
+      },
+      "cpu_measured_shortfall_ms": 978.3,
+      "cpu_achieves_100ms_deadline": false,
+      "gpu_reference_t4": {
+        "full_frame_960px_ms": 13.43,
+        "crop_640px_ms": 11.09,
+        "projected_e2e_result_age_ms": 14.1,
+        "projected_headroom_ms": 85.9,
+        "achievable_on_t4": true
+      }
+    }
+  },
+  "stage3_video_evaluation": {
+    "sync_config_f": {
+      "vru_precision": 63.64,
+      "vru_recall": 58.33,
+      "vru_f1": 0.6087,
+      "small_vru_recall": 33.33,
+      "latency_stats": {
+        "mean_ms": 1917.63,
+        "median_ms": 1531.2,
+        "p95_ms": 3217.5,
+        "p99_ms": 3390.25,
+        "min_ms": 858.67,
+        "max_ms": 3433.43,
+        "throughput_fps": 0.52
+      },
+      "crops_executed": 20,
+      "vru_counts": {
+        "tp": 14,
+        "fp": 8,
+        "fn": 10
+      }
+    },
+    "async_immediate_primary": {
+      "vru_precision": 66.67,
+      "vru_recall": 58.33,
+      "vru_f1": 0.6222,
+      "small_vru_recall": 33.33,
+      "latency_stats": {
+        "mean_ms": 1334.43,
+        "median_ms": 1086.36,
+        "p95_ms": 2232.41,
+        "p99_ms": 2472.16,
+        "min_ms": 501.17,
+        "max_ms": 2532.09,
+        "throughput_fps": 0.75
+      },
+      "vru_counts": {
+        "tp": 14,
+        "fp": 7,
+        "fn": 10
+      }
+    },
+    "async_worker_telemetry": {
+      "crop_requests_submitted": 20,
+      "results_completed": 20,
+      "results_met_deadline": 0,
+      "results_expired": 20,
+      "results_dropped_overload": 0,
+      "mismatched_frame_associations": 0,
+      "deadline_satisfaction_rate_pct": 0.0,
+      "result_age_stats": {
+        "mean_ms": 16583.98,
+        "median_ms": 13918.76,
+        "p95_ms": 36331.86,
+        "p99_ms": 38685.24,
+        "min_ms": 1217.21,
+        "max_ms": 39273.59,
+        "throughput_fps": 0.06
+      },
+      "queue_delay_stats": {
+        "mean_ms": 0.39,
+        "median_ms": 0.12,
+        "p95_ms": 0.47,
+        "p99_ms": 4.31,
+        "min_ms": 0.09,
+        "max_ms": 5.27,
+        "throughput_fps": 2580.65
+      },
+      "crop_vru_detections_found": 9
+    }
+  },
+  "go_no_go_decision": {
+    "cpu_edge_platform": {
+      "decision": "NO-GO",
+      "reason": "Measured crop forward pass + queue delay yields total result age of ~1078.3 ms, failing the 100 ms deadline by a shortfall of +978.3 ms with 0% deadline satisfaction under streaming load."
+    },
+    "gpu_accelerated_platform": {
+      "decision": "CONDITIONAL GO",
+      "reason": "Empirical T4 batch-1 640px inference is 11.09 ms, yielding ~14.1 ms result age and +85.9 ms safety margin. Conditional on developing and validating camera ego-motion compensation before fusing delayed boxes into newer frames."
+    },
+    "safety_readiness": "RESEARCH PROTOTYPE ONLY \u2014 NOT SAFETY-READY"
+  }
+}

@@ -1,0 +1,79 @@
+# RoadSentinel Phase 5A — Small-VRU Targeted Fine-Tuning Configuration
+# Candidate 1: Targeted Representation Learning on BDD100K Train Split
+
+experiment_name: "RoadSentinel-Phase5A-SmallVRU-FineTuning"
+phase: "5A"
+author: "RoadSentinel Perception Team"
+date: "2026-10-10"
+
+model:
+  base_checkpoint: "weights/bdd100k_yolo11s.pt"
+  base_checkpoint_sha256: "A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3"
+  architecture: "YOLO11s"
+  parameters_count: 9431662
+  head_strides: [8, 16, 32]
+  num_classes: 10
+
+data:
+  data_yaml: "bdd100k_dataset/data.yaml"
+  train_split: "train/images"
+  val_split: "val/images"
+  test_split: "test/images"
+  test_split_quarantined: true
+  num_train_images: 70000
+  num_val_images: 10000
+  num_test_images: 20000
+
+training_hyperparameters:
+  task: "detect"
+  mode: "train"
+  imgsz: 960               # Match production inference resolution
+  epochs: 8                # Controlled fine-tuning duration to avoid representation collapse
+  batch_size: 16           # Batch size tailored for 16GB T4 / P100 VRAM
+  workers: 8
+  device: 0
+  optimizer: "AdamW"
+  lr0: 0.0003              # Reduced initial learning rate (1/10th of scratch training)
+  lrf: 0.05               # Final learning rate fraction (cosine schedule to 1.5e-5)
+  momentum: 0.937
+  weight_decay: 0.0005
+  warmup_epochs: 1.0
+  warmup_momentum: 0.8
+  warmup_bias_lr: 0.1
+  seed: 42
+  deterministic: true
+
+loss_and_sample_weighting:
+  box_gain: 7.5            # Standard YOLO box loss gain
+  cls_gain: 1.2            # Enhanced classification gain to penalize false negative VRUs
+  dfl_gain: 1.5            # Distribution focal loss gain
+  vru_class_ids: [0, 1, 5, 6]  # person (0), rider (1), bike (5), motor (6)
+  class_weights:
+    person: 1.2
+    rider: 2.0             # Significant class imbalance compensation
+    bike: 1.8
+    motor: 2.0
+    vehicle: 1.0
+
+augmentation_policy:
+  mosaic: 0.8              # Retain mosaic for small-object multi-scale exposure
+  mixup: 0.0               # Disabled to avoid blurry occluded boundaries on small VRUs
+  copy_paste: 0.15         # Targeted small-VRU copy-paste into diverse road scenes
+  degrees: 0.0
+  translate: 0.1
+  scale: 0.4               # Multi-scale jitter (0.6x to 1.4x)
+  shear: 0.0
+  perspective: 0.0
+  flipud: 0.0
+  fliplr: 0.5
+  bgr: 0.0
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+  close_mosaic_epochs: 2   # Disable mosaic in final 2 epochs for clean feature alignment
+
+evaluation_gates:
+  small_vru_recall_min: 0.4500
+  vru_precision_gain_vs_canonical_baseline: 0.0500   # >= +5.0 pp vs canonical 62.03%
+  vru_recall_max_decline_vs_canonical_baseline: -0.0200 # >= -2.0 pp vs canonical 62.71%
+  vru_f1_min: 0.6500

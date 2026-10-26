@@ -1,0 +1,14 @@
+names:
+  0: person
+  1: rider
+  2: car
+  3: bus
+  4: truck
+  5: bike
+  6: motor
+  7: traffic light
+  8: traffic sign
+  9: train
+path: /kaggle/input/datasets/a7madmostafa/bdd100k-yolo
+train: /kaggle/working/train_split.txt
+val: /kaggle/working/holdout_split.txt

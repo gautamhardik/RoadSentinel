@@ -1,0 +1,28 @@
+[{"stream_name":"stderr","time":36.025923387,"data":"WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('\u003cpip._vendor.urllib3.connection.HTTPSConnection object at 0x7844bfdf9fd0\u003e: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/ultralytics/\n"}
+,{"stream_name":"stderr","time":68.538589967,"data":"WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('\u003cpip._vendor.urllib3.connection.HTTPSConnection object at 0x7844bfdc2850\u003e: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/ultralytics/\n"}
+,{"stream_name":"stderr","time":101.553410367,"data":"WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('\u003cpip._vendor.urllib3.connection.HTTPSConnection object at 0x7844bfdc2ad0\u003e: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/ultralytics/\n"}
+,{"stream_name":"stderr","time":135.569156803,"data":"WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('\u003cpip._vendor.urllib3.connection.HTTPSConnection object at 0x7844bfdc2d50\u003e: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/ultralytics/\n"}
+,{"stream_name":"stderr","time":171.582479623,"data":"WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('\u003cpip._vendor.urllib3.connection.HTTPSConnection object at 0x7844bfdc2fd0\u003e: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/ultralytics/\n"}
+,{"stream_name":"stderr","time":203.607139635,"data":"ERROR: Could not find a version that satisfies the requirement ultralytics==8.4.174 (from versions: none)\n"}
+,{"stream_name":"stderr","time":203.607501211,"data":"ERROR: No matching distribution found for ultralytics==8.4.174\n"}
+,{"stream_name":"stderr","time":203.820127828,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":203.820525392,"data":"  File \"/kaggle/src/script.py\", line 25, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":203.820552167,"data":"    import ultralytics\n"}
+,{"stream_name":"stderr","time":203.820558433,"data":"ModuleNotFoundError: No module named 'ultralytics'\n"}
+,{"stream_name":"stderr","time":203.820563582,"data":"\n"}
+,{"stream_name":"stderr","time":203.820568463,"data":"During handling of the above exception, another exception occurred:\n"}
+,{"stream_name":"stderr","time":203.82057357,"data":"\n"}
+,{"stream_name":"stderr","time":203.820578383,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":203.821249674,"data":"  File \"/kaggle/src/script.py\", line 28, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":203.8212763,"data":"    subprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", \"-q\", \"ultralytics==8.4.174\"])\n"}
+,{"stream_name":"stderr","time":203.821283896,"data":"    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":203.821289612,"data":"  File \"/usr/lib/python3.13/subprocess.py\", line 419, in check_call\n"}
+,{"stream_name":"stderr","time":203.821295191,"data":"    raise CalledProcessError(retcode, cmd)\n"}
+,{"stream_name":"stderr","time":203.821300395,"data":"subprocess.CalledProcessError: Command '['/usr/bin/python3', '-m', 'pip', 'install', '-q', 'ultralytics==8.4.174']' returned non-zero exit status 1.\n"}
+,{"stream_name":"stderr","time":206.533404071,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":206.533442866,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":206.896508212,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":206.896535192,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":207.992118134,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":209.293415752,"data":"[NbConvertApp] Writing 323375 bytes to __results__.html\n"}
+]

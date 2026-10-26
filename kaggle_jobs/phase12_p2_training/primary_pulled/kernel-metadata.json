@@ -1,0 +1,22 @@
+{
+  "id": "hardikgautam24119014/roadsentinel-phase-12-p2-training-gpu",
+  "id_no": 139754491,
+  "title": "RoadSentinel Phase 12 P2 Training GPU",
+  "code_file": "roadsentinel-phase-12-p2-training-gpu.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [
+    "a7madmostafa/bdd100k-yolo",
+    "hardikgautam24119014/roadsentinel-phase12-p2"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+  "machine_shape": "NvidiaTeslaT4"
+}

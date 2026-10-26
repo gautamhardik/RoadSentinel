@@ -1,0 +1,386 @@
+{
+  "evaluation_name": "RoadSentinel Phase 2A Corrected Baseline Evaluation",
+  "evaluation_type": "VRU-enriched validation subset (NOT representative full validation)",
+  "timestamp": "2026-10-09 13:54:56",
+  "hardware_environment": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "python_version": "3.13.9",
+    "torch_version": "2.12.0+cpu",
+    "cuda_available": false,
+    "device": "cpu",
+    "model_weights": "bdd100k_yolo11s.pt",
+    "model_load_time_ms": 217.5
+  },
+  "latency_methodology": {
+    "model_loading_isolated": true,
+    "warmup_cycles": 5,
+    "timed_inference_images": 100,
+    "stats": {
+      "device": "cpu",
+      "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+      "num_timed_images": 100,
+      "image_size": "640x640",
+      "mean_ms": 493.93,
+      "median_ms": 348.96,
+      "std_ms": 499.69,
+      "min_ms": 104.72,
+      "max_ms": 3033.05,
+      "p95_ms": 1516.83,
+      "fps": 2.02
+    }
+  },
+  "evaluation_config": {
+    "operational_confidence_threshold": 0.25,
+    "operational_iou_threshold": 0.5,
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "evaluation_method": "COCO 101-point interpolated AP with explicit class alignment"
+  },
+  "summary": {
+    "evaluated_images_count": 100,
+    "total_ground_truth_boxes": 1956,
+    "total_predicted_boxes": 7722,
+    "classes_present_count": 9,
+    "classes_absent_count": 1,
+    "overall_mAP_50": 0.5219,
+    "overall_mAP_50_95": 0.3273,
+    "overall_macro_precision_50": 0.747,
+    "overall_macro_recall_50": 0.4718
+  },
+  "vru_aggregates": {
+    "vru_classes_evaluated": [
+      "person",
+      "rider",
+      "bike",
+      "motor"
+    ],
+    "vru_ground_truth_total": 270,
+    "vru_predictions_operational_total": 172,
+    "vru_tp_50": 135,
+    "vru_fp_50": 37,
+    "vru_fn_50": 135,
+    "vru_micro_precision_50": 0.7849,
+    "vru_micro_recall_50": 0.5,
+    "vru_micro_f1_50": 0.6109,
+    "vru_macro_mAP_50": 0.398,
+    "vru_macro_mAP_50_95": 0.2501,
+    "vru_macro_precision_50": 0.7356,
+    "vru_macro_recall_50": 0.349
+  },
+  "per_class_metrics": [
+    {
+      "name": "person",
+      "is_vru": true,
+      "is_absent_in_gt": false,
+      "gt_count": 238,
+      "pred_total_count": 1116,
+      "pred_operational_count": 159,
+      "tp_50": 126,
+      "fp_50": 33,
+      "fn_50": 112,
+      "precision_50": 0.7925,
+      "recall_50": 0.5294,
+      "f1_50": 0.6348,
+      "ap_50": 0.6242,
+      "ap_50_95": 0.333
+    },
+    {
+      "name": "rider",
+      "is_vru": true,
+      "is_absent_in_gt": false,
+      "gt_count": 10,
+      "pred_total_count": 15,
+      "pred_operational_count": 4,
+      "tp_50": 3,
+      "fp_50": 1,
+      "fn_50": 7,
+      "precision_50": 0.75,
+      "recall_50": 0.3,
+      "f1_50": 0.4286,
+      "ap_50": 0.3069,
+      "ap_50_95": 0.2432
+    },
+    {
+      "name": "car",
+      "is_vru": false,
+      "is_absent_in_gt": false,
+      "gt_count": 1006,
+      "pred_total_count": 3591,
+      "pred_operational_count": 941,
+      "tp_50": 706,
+      "fp_50": 235,
+      "fn_50": 300,
+      "precision_50": 0.7503,
+      "recall_50": 0.7018,
+      "f1_50": 0.7252,
+      "ap_50": 0.7438,
+      "ap_50_95": 0.4781
+    },
+    {
+      "name": "bus",
+      "is_vru": false,
+      "is_absent_in_gt": false,
+      "gt_count": 20,
+      "pred_total_count": 27,
+      "pred_operational_count": 12,
+      "tp_50": 10,
+      "fp_50": 2,
+      "fn_50": 10,
+      "precision_50": 0.8333,
+      "recall_50": 0.5,
+      "f1_50": 0.625,
+      "ap_50": 0.5727,
+      "ap_50_95": 0.4796
+    },
+    {
+      "name": "truck",
+      "is_vru": false,
+      "is_absent_in_gt": false,
+      "gt_count": 54,
+      "pred_total_count": 113,
+      "pred_operational_count": 36,
+      "tp_50": 29,
+      "fp_50": 7,
+      "fn_50": 25,
+      "precision_50": 0.8056,
+      "recall_50": 0.537,
+      "f1_50": 0.6444,
+      "ap_50": 0.6014,
+      "ap_50_95": 0.456
+    },
+    {
+      "name": "bike",
+      "is_vru": true,
+      "is_absent_in_gt": false,
+      "gt_count": 12,
+      "pred_total_count": 39,
+      "pred_operational_count": 5,
+      "tp_50": 2,
+      "fp_50": 3,
+      "fn_50": 10,
+      "precision_50": 0.4,
+      "recall_50": 0.1667,
+      "f1_50": 0.2353,
+      "ap_50": 0.184,
+      "ap_50_95": 0.1008
+    },
+    {
+      "name": "motor",
+      "is_vru": true,
+      "is_absent_in_gt": false,
+      "gt_count": 10,
+      "pred_total_count": 14,
+      "pred_operational_count": 4,
+      "tp_50": 4,
+      "fp_50": 0,
+      "fn_50": 6,
+      "precision_50": 1.0,
+      "recall_50": 0.4,
+      "f1_50": 0.5714,
+      "ap_50": 0.4767,
+      "ap_50_95": 0.3236
+    },
+    {
+      "name": "traffic light",
+      "is_vru": false,
+      "is_absent_in_gt": false,
+      "gt_count": 286,
+      "pred_total_count": 1232,
+      "pred_operational_count": 242,
+      "tp_50": 165,
+      "fp_50": 77,
+      "fn_50": 121,
+      "precision_50": 0.6818,
+      "recall_50": 0.5769,
+      "f1_50": 0.625,
+      "ap_50": 0.5903,
+      "ap_50_95": 0.2221
+    },
+    {
+      "name": "traffic sign",
+      "is_vru": false,
+      "is_absent_in_gt": false,
+      "gt_count": 320,
+      "pred_total_count": 1575,
+      "pred_operational_count": 241,
+      "tp_50": 171,
+      "fp_50": 70,
+      "fn_50": 149,
+      "precision_50": 0.7095,
+      "recall_50": 0.5344,
+      "f1_50": 0.6096,
+      "ap_50": 0.5973,
+      "ap_50_95": 0.309
+    },
+    {
+      "name": "train",
+      "is_vru": false,
+      "is_absent_in_gt": true,
+      "gt_count": 0,
+      "pred_total_count": 0,
+      "pred_operational_count": 0,
+      "tp_50": 0,
+      "fp_50": 0,
+      "fn_50": 0,
+      "precision_50": 0.0,
+      "recall_50": 0.0,
+      "f1_50": 0.0,
+      "ap_50": null,
+      "ap_50_95": null
+    }
+  ],
+  "failure_cases": [
+    {
+      "image_name": "b1c66a42-6f7d68ca.jpg",
+      "missed_vru_count": 2,
+      "missed_classes": [
+        "rider",
+        "motor"
+      ],
+      "saved_artifact": "experiments\\baseline_v2\\failure_cases\\failure_vru_01_b1c66a42-6f7d68ca.jpg"
+    },
+    {
+      "image_name": "b1ca2e5d-84cf9134.jpg",
+      "missed_vru_count": 11,
+      "missed_classes": [
+        "person",
+        "person",
+        "person",
+        "person",
+        "person",
+        "person",
+        "person",
+        "person",
+        "person",
+        "person",
+        "person"
+      ],
+      "saved_artifact": "experiments\\baseline_v2\\failure_cases\\failure_vru_02_b1ca2e5d-84cf9134.jpg"
+    },
+    {
+      "image_name": "b1ca8418-84a133a0.jpg",
+      "missed_vru_count": 1,
+      "missed_classes": [
+        "motor"
+      ],
+      "saved_artifact": "experiments\\baseline_v2\\failure_cases\\failure_vru_03_b1ca8418-84a133a0.jpg"
+    },
+    {
+      "image_name": "b1ceb32e-3f481b43.jpg",
+      "missed_vru_count": 2,
+      "missed_classes": [
+        "person",
+        "person"
+      ],
+      "saved_artifact": "experiments\\baseline_v2\\failure_cases\\failure_vru_04_b1ceb32e-3f481b43.jpg"
+    },
+    {
+      "image_name": "b1ceb32e-51852abe.jpg",
+      "missed_vru_count": 1,
+      "missed_classes": [
+        "person"
+      ],
+      "saved_artifact": "experiments\\baseline_v2\\failure_cases\\failure_vru_05_b1ceb32e-51852abe.jpg"
+    },
+    {
+      "image_name": "b1ceb32e-a106591d.jpg",
+      "missed_vru_count": 1,
+      "missed_classes": [
+        "person"
+      ],
+      "saved_artifact": "experiments\\baseline_v2\\failure_cases\\failure_vru_06_b1ceb32e-a106591d.jpg"
+    },
+    {
+      "image_name": "b1d0a191-03dcecc2.jpg",
+      "missed_vru_count": 2,
+      "missed_classes": [
+        "person",
+        "person"
+      ],
+      "saved_artifact": "experiments\\baseline_v2\\failure_cases\\failure_vru_07_b1d0a191-03dcecc2.jpg"
+    },
+    {
+      "image_name": "b1d0a191-06deb55d.jpg",
+      "missed_vru_count": 1,
+      "missed_classes": [
+        "person"
+      ],
+      "saved_artifact": "experiments\\baseline_v2\\failure_cases\\failure_vru_08_b1d0a191-06deb55d.jpg"
+    },
+    {
+      "image_name": "b1d0a191-5490450b.jpg",
+      "missed_vru_count": 3,
+      "missed_classes": [
+        "person",
+        "rider",
+        "bike"
+      ],
+      "saved_artifact": "experiments\\baseline_v2\\failure_cases\\failure_vru_09_b1d0a191-5490450b.jpg"
+    },
+    {
+      "image_name": "b1d0a191-65deaeef.jpg",
+      "missed_vru_count": 1,
+      "missed_classes": [
+        "person"
+      ],
+      "saved_artifact": "experiments\\baseline_v2\\failure_cases\\failure_vru_10_b1d0a191-65deaeef.jpg"
+    },
+    {
+      "image_name": "b1d0a191-de8948f6.jpg",
+      "missed_vru_count": 1,
+      "missed_classes": [
+        "person"
+      ],
+      "saved_artifact": "experiments\\baseline_v2\\failure_cases\\failure_vru_11_b1d0a191-de8948f6.jpg"
+    },
+    {
+      "image_name": "b1d10d08-da110fcb.jpg",
+      "missed_vru_count": 1,
+      "missed_classes": [
+        "person"
+      ],
+      "saved_artifact": "experiments\\baseline_v2\\failure_cases\\failure_vru_12_b1d10d08-da110fcb.jpg"
+    },
+    {
+      "image_name": "b1d22ed6-f1cac061.jpg",
+      "missed_vru_count": 6,
+      "missed_classes": [
+        "person",
+        "person",
+        "person",
+        "person",
+        "person",
+        "person"
+      ],
+      "saved_artifact": "experiments\\baseline_v2\\failure_cases\\failure_vru_13_b1d22ed6-f1cac061.jpg"
+    },
+    {
+      "image_name": "b1d4b62c-d9805029.jpg",
+      "missed_vru_count": 1,
+      "missed_classes": [
+        "person"
+      ],
+      "saved_artifact": "experiments\\baseline_v2\\failure_cases\\failure_vru_14_b1d4b62c-d9805029.jpg"
+    },
+    {
+      "image_name": "b1d7b3ac-0bdb47dc.jpg",
+      "missed_vru_count": 2,
+      "missed_classes": [
+        "person",
+        "person"
+      ],
+      "saved_artifact": "experiments\\baseline_v2\\failure_cases\\failure_vru_15_b1d7b3ac-0bdb47dc.jpg"
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "cohort": "300-Image Development Pilot",
+  "checkpoint_sha256": "42d4b385ec69d01209e76dcf85f0fb4ffb33857d85f4daa02a4271d20f76541e",
+  "evaluation_scope": "Identical 300-image development cohort, zero test-split leakage",
+  "configurations": {
+    "A_baseline_960px": {
+      "name": "Full-Frame 960px Baseline",
+      "resolution": 960,
+      "strategy": "Single-pass full-frame inference",
+      "latency_per_img_ms": 273.0,
+      "throughput_fps": 3.66,
+      "mean_crops_per_image": 0.0,
+      "inspected_area_pct": 100.0,
+      "vru_recall": 60.46,
+      "vru_precision": 78.45,
+      "vru_f1": 0.6829,
+      "small_vru_recall": 42.73,
+      "small_vru_tp": 385,
+      "small_vru_total": 901,
+      "all_class_recall": 71.88,
+      "all_class_precision": 77.93,
+      "all_class_f1": 0.7478,
+      "per_class_recall": {
+        "person": 61.91,
+        "rider": 55.17,
+        "bike": 51.64,
+        "motor": 34.38
+      }
+    },
+    "B_reference_1280px": {
+      "name": "Full-Frame 1280px Reference",
+      "resolution": 1280,
+      "strategy": "Single-pass high-resolution inference",
+      "latency_per_img_ms": 1051.9,
+      "throughput_fps": 0.95,
+      "mean_crops_per_image": 0.0,
+      "inspected_area_pct": 100.0,
+      "vru_recall": 61.84,
+      "vru_precision": 78.2,
+      "vru_f1": 0.6906,
+      "small_vru_recall": 45.17,
+      "small_vru_tp": 407,
+      "small_vru_total": 901,
+      "all_class_recall": 73.64,
+      "all_class_precision": 77.68,
+      "all_class_f1": 0.7561,
+      "per_class_recall": {
+        "person": 63.22,
+        "rider": 56.9,
+        "bike": 55.74,
+        "motor": 28.12
+      }
+    },
+    "C_active_foveation_960px": {
+      "name": "Active Foveation (960px + Crops)",
+      "resolution": "960px base + 640px crops",
+      "strategy": "Uncertainty-triggered targeted inspection (K<=2 crops)",
+      "latency_per_img_ms": 1496.12,
+      "throughput_fps": 0.67,
+      "mean_crops_per_image": 1.94,
+      "crop_distribution": {
+        "0_crops": 4,
+        "1_crop": 11,
+        "2_crops": 285
+      },
+      "mean_inspected_crop_area_pct": 5.44,
+      "stage_timings_ms": {
+        "read_ms": 6.21,
+        "full_frame_infer_ms": 607.13,
+        "uncertainty_proposal_ms": 3.39,
+        "crop_extraction_ms": 0.19,
+        "crop_infer_ms": 871.88,
+        "fusion_ms": 3.16,
+        "total_ms": 1496.12
+      },
+      "peak_memory_rss_mb": 894.3,
+      "tracemalloc_peak_mb": 81.3,
+      "vru_recall": 63.85,
+      "vru_precision": 70.85,
+      "vru_f1": 0.6717,
+      "small_vru_recall": 48.28,
+      "small_vru_tp": 435,
+      "small_vru_total": 901,
+      "all_class_recall": 73.55,
+      "all_class_precision": 69.72,
+      "all_class_f1": 0.7159,
+      "per_class_recall": {
+        "person": 65.51,
+        "rider": 56.9,
+        "bike": 53.28,
+        "motor": 37.5
+      },
+      "per_class_full": {
+        "person": {
+          "tp": 1001,
+          "fp": 384,
+          "fn": 527,
+          "precision": 72.27,
+          "recall": 65.51,
+          "f1_score": 0.6873
+        },
+        "rider": {
+          "tp": 33,
+          "fp": 18,
+          "fn": 25,
+          "precision": 64.71,
+          "recall": 56.9,
+          "f1_score": 0.6055
+        },
+        "car": {
+          "tp": 2313,
+          "fp": 820,
+          "fn": 590,
+          "precision": 73.83,
+          "recall": 79.68,
+          "f1_score": 0.7664
+        },
+        "bus": {
+          "tp": 41,
+          "fp": 19,
+          "fn": 24,
+          "precision": 68.33,
+          "recall": 63.08,
+          "f1_score": 0.656
+        },
+        "truck": {
+          "tp": 90,
+          "fp": 78,
+          "fn": 43,
+          "precision": 53.57,
+          "recall": 67.67,
+          "f1_score": 0.598
+        },
+        "bike": {
+          "tp": 65,
+          "fp": 48,
+          "fn": 57,
+          "precision": 57.52,
+          "recall": 53.28,
+          "f1_score": 0.5532
+        },
+        "motor": {
+          "tp": 12,
+          "fp": 7,
+          "fn": 20,
+          "precision": 63.16,
+          "recall": 37.5,
+          "f1_score": 0.4706
+        },
+        "traffic light": {
+          "tp": 709,
+          "fp": 362,
+          "fn": 271,
+          "precision": 66.2,
+          "recall": 72.35,
+          "f1_score": 0.6914
+        },
+        "traffic sign": {
+          "tp": 805,
+          "fp": 465,
+          "fn": 265,
+          "precision": 63.39,
+          "recall": 75.23,
+          "f1_score": 0.688
+        },
+        "train": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0
+        }
+      }
+    }
+  },
+  "deltas_vs_960px_baseline": {
+    "vru_recall_delta": 3.39,
+    "vru_precision_delta": -7.6,
+    "vru_f1_delta": -0.0112,
+    "small_vru_recall_delta": 5.55,
+    "small_vru_tp_gain": 50,
+    "latency_multiplier": 5.48
+  },
+  "deltas_vs_1280px_reference": {
+    "vru_recall_gap": 2.01,
+    "small_vru_recall_gap": 3.11,
+    "small_vru_tp_gap": 28,
+    "latency_reduction_factor": 0.7,
+    "latency_savings_pct": -42.2
+  }
+}

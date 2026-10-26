@@ -1,0 +1,2 @@
+{"schema_version": "1.0", "target": "per_request_telemetry", "fields": ["frame_id", "capture_ts_ms", "enqueue_ts_ms", "dequeue_ts_ms", "queue_delay_ms", "extract_ms", "dma_h2d_ms", "infer_ms", "postprocess_ms", "publish_ts_ms", "total_result_age_ms", "status", "mismatched_id_flag"]}
+{"status": "HOLD_PENDING_CUDA_RUNNER", "message": "Telemetry collection will populate during execution of experiments/phase9_2_gpu_benchmark/run_gpu_benchmark.py on an active CUDA GPU."}

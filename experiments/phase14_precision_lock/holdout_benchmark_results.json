@@ -1,0 +1,79 @@
+{
+  "timestamp": "2026-10-26T03:40:24Z",
+  "cohort_size": 50,
+  "resolution": 960,
+  "champion_id": "phase13_best",
+  "champion_name": "Phase 13 Standalone (16 Ep)",
+  "results": [
+    {
+      "name": "Phase 13 Standalone (16 Ep)",
+      "id": "phase13_best",
+      "path": "weights/phase13_best.pt",
+      "role": "Phase 13 Recall Champion",
+      "file_size_mb": 38.66,
+      "sha256": "bbac96e571881b294c96020756ae59140bc72a97229d1d42d703904bb61354ce",
+      "mAP50": 71.58,
+      "mAP50_95": 42.49,
+      "precision": 82.5,
+      "recall": 71.74,
+      "f1_score": 0.7675,
+      "eval_time_sec": 67.67
+    },
+    {
+      "name": "Session 4 Baseline (50 Ep)",
+      "id": "session4_best",
+      "path": "weights/session4_best.pt",
+      "role": "Phase 10F Baseline",
+      "file_size_mb": 38.66,
+      "sha256": "4a245c1f81d1240f28fbd4d35bd175cdff765fcadc4c3137f52fb5ca912666cd",
+      "mAP50": 70.5,
+      "mAP50_95": 41.37,
+      "precision": 82.29,
+      "recall": 71.61,
+      "f1_score": 0.7658,
+      "eval_time_sec": 84.41
+    },
+    {
+      "name": "RoadSentinel Ultimate Champion",
+      "id": "ultimate_champion",
+      "path": "weights/roadsentinel_ultimate_champion.pt",
+      "role": "Decoupled Graft (P13 Recall + P14 Precision)",
+      "file_size_mb": 38.72,
+      "sha256": "b5ff94d664f66ec290ad8665e3c05aa2a4e22fe71bb48d3b5ef9a006c94f9861",
+      "mAP50": 71.02,
+      "mAP50_95": 42.72,
+      "precision": 84.31,
+      "recall": 69.9,
+      "f1_score": 0.7643,
+      "eval_time_sec": 109.54
+    },
+    {
+      "name": "Phase 13 Surgical Champion",
+      "id": "phase13_surgical",
+      "path": "weights/phase13_surgical_champion.pt",
+      "role": "Decoupled Head Graft (S4+P13)",
+      "file_size_mb": 77.13,
+      "sha256": "b1fa056901e0705f65bb0d4afd0d20c66c35c30c10da9cddc91450ad23eae0e5",
+      "mAP50": 70.7,
+      "mAP50_95": 42.26,
+      "precision": 82.98,
+      "recall": 70.73,
+      "f1_score": 0.7637,
+      "eval_time_sec": 46.41
+    },
+    {
+      "name": "Phase 14 Precision Lock (8 Ep)",
+      "id": "phase14_best",
+      "path": "weights/phase14_best.pt",
+      "role": "Hard-Negative Precision Lock",
+      "file_size_mb": 38.67,
+      "sha256": "e15e3bb46aef7542b5cdcf1139ac3e45d5c34b22c136398b5165f95700d4e73f",
+      "mAP50": 68.45,
+      "mAP50_95": 40.95,
+      "precision": 83.93,
+      "recall": 67.53,
+      "f1_score": 0.7484,
+      "eval_time_sec": 68.08
+    }
+  ]
+}

@@ -1,0 +1,695 @@
+{
+  "benchmark_name": "RoadSentinel Phase 2B.1 \u2014 High-Resolution Inference Pilot Benchmark",
+  "timestamp": "2026-10-09 10:58:11",
+  "checkpoint": {
+    "file": "bdd100k_yolo11s.pt",
+    "sha256": "A4747292648F37F68AB997BEA65A36391C41356F35E309A9F3D2EB1D3EA8D8E3"
+  },
+  "hardware": {
+    "device": "cuda:0",
+    "gpu_name": "Tesla T4",
+    "pytorch_version": "2.11.0+cu128",
+    "cuda_version": "12.8",
+    "platform": "Linux-6.18.48+-x86_64-with-glibc2.39"
+  },
+  "pilot_dataset": {
+    "num_images": 100,
+    "total_gt_boxes": 1956,
+    "vru_gt_boxes": 270
+  },
+  "configurations": {
+    "Reference-640": {
+      "name": "Reference-640",
+      "imgsz": 640,
+      "initial_batch_size": 16,
+      "actual_batch_size": 16,
+      "oom_occurred": false,
+      "latency": {
+        "num_images": 100,
+        "total_infer_time_s": 2.9,
+        "amortized_ms_per_image": 29.0,
+        "throughput_fps": 34.48,
+        "peak_vram_mb": 519.7
+      },
+      "summary": {
+        "overall_mAP_50": 0.5217,
+        "overall_mAP_50_95": 0.3271,
+        "overall_macro_precision_50": 0.747,
+        "overall_macro_recall_50": 0.4718
+      },
+      "vru_aggregates": {
+        "vru_macro_mAP_50": 0.398,
+        "vru_macro_mAP_50_95": 0.2501,
+        "vru_micro_precision_50": 0.7849,
+        "vru_micro_recall_50": 0.5,
+        "vru_micro_f1_50": 0.6109
+      },
+      "per_class_results": [
+        {
+          "class_name": "person",
+          "is_vru": true,
+          "gt_count": 238,
+          "total_preds": 1116,
+          "operational_preds": 159,
+          "tp_50": 126,
+          "fp_50": 33,
+          "fn_50": 112,
+          "precision_50": 0.7925,
+          "recall_50": 0.5294,
+          "f1_50": 0.6348,
+          "ap_50": 0.6242,
+          "ap_50_95": 0.333
+        },
+        {
+          "class_name": "rider",
+          "is_vru": true,
+          "gt_count": 10,
+          "total_preds": 15,
+          "operational_preds": 4,
+          "tp_50": 3,
+          "fp_50": 1,
+          "fn_50": 7,
+          "precision_50": 0.75,
+          "recall_50": 0.3,
+          "f1_50": 0.4286,
+          "ap_50": 0.3069,
+          "ap_50_95": 0.2432
+        },
+        {
+          "class_name": "car",
+          "is_vru": false,
+          "gt_count": 1006,
+          "total_preds": 3591,
+          "operational_preds": 941,
+          "tp_50": 706,
+          "fp_50": 235,
+          "fn_50": 300,
+          "precision_50": 0.7503,
+          "recall_50": 0.7018,
+          "f1_50": 0.7252,
+          "ap_50": 0.7438,
+          "ap_50_95": 0.4781
+        },
+        {
+          "class_name": "bus",
+          "is_vru": false,
+          "gt_count": 20,
+          "total_preds": 27,
+          "operational_preds": 12,
+          "tp_50": 10,
+          "fp_50": 2,
+          "fn_50": 10,
+          "precision_50": 0.8333,
+          "recall_50": 0.5,
+          "f1_50": 0.625,
+          "ap_50": 0.5711,
+          "ap_50_95": 0.4785
+        },
+        {
+          "class_name": "truck",
+          "is_vru": false,
+          "gt_count": 54,
+          "total_preds": 113,
+          "operational_preds": 36,
+          "tp_50": 29,
+          "fp_50": 7,
+          "fn_50": 25,
+          "precision_50": 0.8056,
+          "recall_50": 0.537,
+          "f1_50": 0.6444,
+          "ap_50": 0.6014,
+          "ap_50_95": 0.456
+        },
+        {
+          "class_name": "bike",
+          "is_vru": true,
+          "gt_count": 12,
+          "total_preds": 39,
+          "operational_preds": 5,
+          "tp_50": 2,
+          "fp_50": 3,
+          "fn_50": 10,
+          "precision_50": 0.4,
+          "recall_50": 0.1667,
+          "f1_50": 0.2353,
+          "ap_50": 0.184,
+          "ap_50_95": 0.1008
+        },
+        {
+          "class_name": "motor",
+          "is_vru": true,
+          "gt_count": 10,
+          "total_preds": 14,
+          "operational_preds": 4,
+          "tp_50": 4,
+          "fp_50": 0,
+          "fn_50": 6,
+          "precision_50": 1.0,
+          "recall_50": 0.4,
+          "f1_50": 0.5714,
+          "ap_50": 0.4767,
+          "ap_50_95": 0.3236
+        },
+        {
+          "class_name": "traffic light",
+          "is_vru": false,
+          "gt_count": 286,
+          "total_preds": 1232,
+          "operational_preds": 242,
+          "tp_50": 165,
+          "fp_50": 77,
+          "fn_50": 121,
+          "precision_50": 0.6818,
+          "recall_50": 0.5769,
+          "f1_50": 0.625,
+          "ap_50": 0.5903,
+          "ap_50_95": 0.2221
+        },
+        {
+          "class_name": "traffic sign",
+          "is_vru": false,
+          "gt_count": 320,
+          "total_preds": 1575,
+          "operational_preds": 241,
+          "tp_50": 171,
+          "fp_50": 70,
+          "fn_50": 149,
+          "precision_50": 0.7095,
+          "recall_50": 0.5344,
+          "f1_50": 0.6096,
+          "ap_50": 0.5973,
+          "ap_50_95": 0.309
+        },
+        {
+          "class_name": "train",
+          "is_vru": false,
+          "gt_count": 0,
+          "total_preds": 0,
+          "operational_preds": 0,
+          "tp_50": 0,
+          "fp_50": 0,
+          "fn_50": 0,
+          "precision_50": 0.0,
+          "recall_50": 0.0,
+          "f1_50": 0.0,
+          "ap_50": 0.0,
+          "ap_50_95": 0.0
+        }
+      ],
+      "size_group_results": {
+        "Large (\u226596\u00b2)": {
+          "total_gt": 255,
+          "matched_gt": 245,
+          "overall_recall": 0.9608,
+          "vru_gt": 14,
+          "vru_matched": 13,
+          "vru_recall": 0.9286
+        },
+        "Medium [32\u00b2-96\u00b2)": {
+          "total_gt": 680,
+          "matched_gt": 542,
+          "overall_recall": 0.7971,
+          "vru_gt": 150,
+          "vru_matched": 106,
+          "vru_recall": 0.7067
+        },
+        "Small (<32\u00b2)": {
+          "total_gt": 1021,
+          "matched_gt": 429,
+          "overall_recall": 0.4202,
+          "vru_gt": 106,
+          "vru_matched": 16,
+          "vru_recall": 0.1509
+        }
+      }
+    },
+    "HighRes-960": {
+      "name": "HighRes-960",
+      "imgsz": 960,
+      "initial_batch_size": 16,
+      "actual_batch_size": 16,
+      "oom_occurred": false,
+      "latency": {
+        "num_images": 100,
+        "total_infer_time_s": 2.554,
+        "amortized_ms_per_image": 25.54,
+        "throughput_fps": 39.15,
+        "peak_vram_mb": 968.0
+      },
+      "summary": {
+        "overall_mAP_50": 0.5734,
+        "overall_mAP_50_95": 0.3479,
+        "overall_macro_precision_50": 0.7652,
+        "overall_macro_recall_50": 0.5387
+      },
+      "vru_aggregates": {
+        "vru_macro_mAP_50": 0.4209,
+        "vru_macro_mAP_50_95": 0.2454,
+        "vru_micro_precision_50": 0.7755,
+        "vru_micro_recall_50": 0.563,
+        "vru_micro_f1_50": 0.6524
+      },
+      "per_class_results": [
+        {
+          "class_name": "person",
+          "is_vru": true,
+          "gt_count": 238,
+          "total_preds": 1200,
+          "operational_preds": 182,
+          "tp_50": 142,
+          "fp_50": 40,
+          "fn_50": 96,
+          "precision_50": 0.7802,
+          "recall_50": 0.5966,
+          "f1_50": 0.6762,
+          "ap_50": 0.7069,
+          "ap_50_95": 0.386
+        },
+        {
+          "class_name": "rider",
+          "is_vru": true,
+          "gt_count": 10,
+          "total_preds": 11,
+          "operational_preds": 4,
+          "tp_50": 3,
+          "fp_50": 1,
+          "fn_50": 7,
+          "precision_50": 0.75,
+          "recall_50": 0.3,
+          "f1_50": 0.4286,
+          "ap_50": 0.3069,
+          "ap_50_95": 0.2267
+        },
+        {
+          "class_name": "car",
+          "is_vru": false,
+          "gt_count": 1006,
+          "total_preds": 4004,
+          "operational_preds": 937,
+          "tp_50": 756,
+          "fp_50": 181,
+          "fn_50": 250,
+          "precision_50": 0.8068,
+          "recall_50": 0.7515,
+          "f1_50": 0.7782,
+          "ap_50": 0.806,
+          "ap_50_95": 0.517
+        },
+        {
+          "class_name": "bus",
+          "is_vru": false,
+          "gt_count": 20,
+          "total_preds": 26,
+          "operational_preds": 14,
+          "tp_50": 12,
+          "fp_50": 2,
+          "fn_50": 8,
+          "precision_50": 0.8571,
+          "recall_50": 0.6,
+          "f1_50": 0.7059,
+          "ap_50": 0.6151,
+          "ap_50_95": 0.4874
+        },
+        {
+          "class_name": "truck",
+          "is_vru": false,
+          "gt_count": 54,
+          "total_preds": 120,
+          "operational_preds": 46,
+          "tp_50": 34,
+          "fp_50": 12,
+          "fn_50": 20,
+          "precision_50": 0.7391,
+          "recall_50": 0.6296,
+          "f1_50": 0.68,
+          "ap_50": 0.6599,
+          "ap_50_95": 0.4855
+        },
+        {
+          "class_name": "bike",
+          "is_vru": true,
+          "gt_count": 12,
+          "total_preds": 54,
+          "operational_preds": 6,
+          "tp_50": 3,
+          "fp_50": 3,
+          "fn_50": 9,
+          "precision_50": 0.5,
+          "recall_50": 0.25,
+          "f1_50": 0.3333,
+          "ap_50": 0.264,
+          "ap_50_95": 0.127
+        },
+        {
+          "class_name": "motor",
+          "is_vru": true,
+          "gt_count": 10,
+          "total_preds": 15,
+          "operational_preds": 4,
+          "tp_50": 4,
+          "fp_50": 0,
+          "fn_50": 6,
+          "precision_50": 1.0,
+          "recall_50": 0.4,
+          "f1_50": 0.5714,
+          "ap_50": 0.4059,
+          "ap_50_95": 0.242
+        },
+        {
+          "class_name": "traffic light",
+          "is_vru": false,
+          "gt_count": 286,
+          "total_preds": 1292,
+          "operational_preds": 255,
+          "tp_50": 189,
+          "fp_50": 66,
+          "fn_50": 97,
+          "precision_50": 0.7412,
+          "recall_50": 0.6608,
+          "f1_50": 0.6987,
+          "ap_50": 0.6984,
+          "ap_50_95": 0.2768
+        },
+        {
+          "class_name": "traffic sign",
+          "is_vru": false,
+          "gt_count": 320,
+          "total_preds": 1480,
+          "operational_preds": 296,
+          "tp_50": 211,
+          "fp_50": 85,
+          "fn_50": 109,
+          "precision_50": 0.7128,
+          "recall_50": 0.6594,
+          "f1_50": 0.6851,
+          "ap_50": 0.6971,
+          "ap_50_95": 0.3823
+        },
+        {
+          "class_name": "train",
+          "is_vru": false,
+          "gt_count": 0,
+          "total_preds": 0,
+          "operational_preds": 0,
+          "tp_50": 0,
+          "fp_50": 0,
+          "fn_50": 0,
+          "precision_50": 0.0,
+          "recall_50": 0.0,
+          "f1_50": 0.0,
+          "ap_50": 0.0,
+          "ap_50_95": 0.0
+        }
+      ],
+      "size_group_results": {
+        "Large (\u226596\u00b2)": {
+          "total_gt": 255,
+          "matched_gt": 246,
+          "overall_recall": 0.9647,
+          "vru_gt": 14,
+          "vru_matched": 13,
+          "vru_recall": 0.9286
+        },
+        "Medium [32\u00b2-96\u00b2)": {
+          "total_gt": 680,
+          "matched_gt": 555,
+          "overall_recall": 0.8162,
+          "vru_gt": 150,
+          "vru_matched": 113,
+          "vru_recall": 0.7533
+        },
+        "Small (<32\u00b2)": {
+          "total_gt": 1021,
+          "matched_gt": 553,
+          "overall_recall": 0.5416,
+          "vru_gt": 106,
+          "vru_matched": 26,
+          "vru_recall": 0.2453
+        }
+      }
+    },
+    "MaxRes-1280": {
+      "name": "MaxRes-1280",
+      "imgsz": 1280,
+      "initial_batch_size": 8,
+      "actual_batch_size": 8,
+      "oom_occurred": false,
+      "latency": {
+        "num_images": 100,
+        "total_infer_time_s": 3.36,
+        "amortized_ms_per_image": 33.6,
+        "throughput_fps": 29.76,
+        "peak_vram_mb": 881.5
+      },
+      "summary": {
+        "overall_mAP_50": 0.6037,
+        "overall_mAP_50_95": 0.3545,
+        "overall_macro_precision_50": 0.7509,
+        "overall_macro_recall_50": 0.5222
+      },
+      "vru_aggregates": {
+        "vru_macro_mAP_50": 0.4517,
+        "vru_macro_mAP_50_95": 0.2526,
+        "vru_micro_precision_50": 0.7946,
+        "vru_micro_recall_50": 0.5444,
+        "vru_micro_f1_50": 0.6462
+      },
+      "per_class_results": [
+        {
+          "class_name": "person",
+          "is_vru": true,
+          "gt_count": 238,
+          "total_preds": 1379,
+          "operational_preds": 169,
+          "tp_50": 138,
+          "fp_50": 31,
+          "fn_50": 100,
+          "precision_50": 0.8166,
+          "recall_50": 0.5798,
+          "f1_50": 0.6781,
+          "ap_50": 0.7203,
+          "ap_50_95": 0.3901
+        },
+        {
+          "class_name": "rider",
+          "is_vru": true,
+          "gt_count": 10,
+          "total_preds": 15,
+          "operational_preds": 5,
+          "tp_50": 3,
+          "fp_50": 2,
+          "fn_50": 7,
+          "precision_50": 0.6,
+          "recall_50": 0.3,
+          "f1_50": 0.4,
+          "ap_50": 0.3729,
+          "ap_50_95": 0.2564
+        },
+        {
+          "class_name": "car",
+          "is_vru": false,
+          "gt_count": 1006,
+          "total_preds": 4534,
+          "operational_preds": 952,
+          "tp_50": 771,
+          "fp_50": 181,
+          "fn_50": 235,
+          "precision_50": 0.8099,
+          "recall_50": 0.7664,
+          "f1_50": 0.7875,
+          "ap_50": 0.8242,
+          "ap_50_95": 0.5243
+        },
+        {
+          "class_name": "bus",
+          "is_vru": false,
+          "gt_count": 20,
+          "total_preds": 24,
+          "operational_preds": 10,
+          "tp_50": 10,
+          "fp_50": 0,
+          "fn_50": 10,
+          "precision_50": 1.0,
+          "recall_50": 0.5,
+          "f1_50": 0.6667,
+          "ap_50": 0.6002,
+          "ap_50_95": 0.4532
+        },
+        {
+          "class_name": "truck",
+          "is_vru": false,
+          "gt_count": 54,
+          "total_preds": 129,
+          "operational_preds": 39,
+          "tp_50": 33,
+          "fp_50": 6,
+          "fn_50": 21,
+          "precision_50": 0.8462,
+          "recall_50": 0.6111,
+          "f1_50": 0.7097,
+          "ap_50": 0.7289,
+          "ap_50_95": 0.5019
+        },
+        {
+          "class_name": "bike",
+          "is_vru": true,
+          "gt_count": 12,
+          "total_preds": 81,
+          "operational_preds": 7,
+          "tp_50": 3,
+          "fp_50": 4,
+          "fn_50": 9,
+          "precision_50": 0.4286,
+          "recall_50": 0.25,
+          "f1_50": 0.3158,
+          "ap_50": 0.2654,
+          "ap_50_95": 0.1215
+        },
+        {
+          "class_name": "motor",
+          "is_vru": true,
+          "gt_count": 10,
+          "total_preds": 16,
+          "operational_preds": 4,
+          "tp_50": 3,
+          "fp_50": 1,
+          "fn_50": 7,
+          "precision_50": 0.75,
+          "recall_50": 0.3,
+          "f1_50": 0.4286,
+          "ap_50": 0.4484,
+          "ap_50_95": 0.2424
+        },
+        {
+          "class_name": "traffic light",
+          "is_vru": false,
+          "gt_count": 286,
+          "total_preds": 1379,
+          "operational_preds": 266,
+          "tp_50": 199,
+          "fp_50": 67,
+          "fn_50": 87,
+          "precision_50": 0.7481,
+          "recall_50": 0.6958,
+          "f1_50": 0.721,
+          "ap_50": 0.7241,
+          "ap_50_95": 0.2911
+        },
+        {
+          "class_name": "traffic sign",
+          "is_vru": false,
+          "gt_count": 320,
+          "total_preds": 1511,
+          "operational_preds": 294,
+          "tp_50": 223,
+          "fp_50": 71,
+          "fn_50": 97,
+          "precision_50": 0.7585,
+          "recall_50": 0.6969,
+          "f1_50": 0.7264,
+          "ap_50": 0.7487,
+          "ap_50_95": 0.4095
+        },
+        {
+          "class_name": "train",
+          "is_vru": false,
+          "gt_count": 0,
+          "total_preds": 0,
+          "operational_preds": 0,
+          "tp_50": 0,
+          "fp_50": 0,
+          "fn_50": 0,
+          "precision_50": 0.0,
+          "recall_50": 0.0,
+          "f1_50": 0.0,
+          "ap_50": 0.0,
+          "ap_50_95": 0.0
+        }
+      ],
+      "size_group_results": {
+        "Large (\u226596\u00b2)": {
+          "total_gt": 255,
+          "matched_gt": 244,
+          "overall_recall": 0.9569,
+          "vru_gt": 14,
+          "vru_matched": 13,
+          "vru_recall": 0.9286
+        },
+        "Medium [32\u00b2-96\u00b2)": {
+          "total_gt": 680,
+          "matched_gt": 552,
+          "overall_recall": 0.8118,
+          "vru_gt": 150,
+          "vru_matched": 106,
+          "vru_recall": 0.7067
+        },
+        "Small (<32\u00b2)": {
+          "total_gt": 1021,
+          "matched_gt": 587,
+          "overall_recall": 0.5749,
+          "vru_gt": 106,
+          "vru_matched": 28,
+          "vru_recall": 0.2642
+        }
+      }
+    }
+  },
+  "visual_comparison_cases": [
+    {
+      "case_type": "Recovered VRU",
+      "image": "b1ca2e5d-84cf9134.jpg",
+      "class": "person",
+      "file": "CaseA_Recovered_person_b1ca2e5d-84cf9134.jpg.jpg",
+      "notes": "Missed at 640px; successfully recovered at higher resolution."
+    },
+    {
+      "case_type": "Persistent Miss",
+      "image": "b1ca2e5d-84cf9134.jpg",
+      "class": "person",
+      "file": "CaseC_PersistentMiss_person_b1ca2e5d-84cf9134.jpg.jpg",
+      "notes": "Missed across all resolutions; requires active foveation."
+    },
+    {
+      "case_type": "Recovered VRU",
+      "image": "b1ca8418-84a133a0.jpg",
+      "class": "motor",
+      "file": "CaseA_Recovered_motor_b1ca8418-84a133a0.jpg.jpg",
+      "notes": "Missed at 640px; successfully recovered at higher resolution."
+    },
+    {
+      "case_type": "Persistent Miss",
+      "image": "b1ceb32e-3f481b43.jpg",
+      "class": "person",
+      "file": "CaseC_PersistentMiss_person_b1ceb32e-3f481b43.jpg.jpg",
+      "notes": "Missed across all resolutions; requires active foveation."
+    },
+    {
+      "case_type": "Persistent Miss",
+      "image": "b1ceb32e-51852abe.jpg",
+      "class": "person",
+      "file": "CaseC_PersistentMiss_person_b1ceb32e-51852abe.jpg.jpg",
+      "notes": "Missed across all resolutions; requires active foveation."
+    },
+    {
+      "case_type": "Persistent Miss",
+      "image": "b1ceb32e-a106591d.jpg",
+      "class": "person",
+      "file": "CaseC_PersistentMiss_person_b1ceb32e-a106591d.jpg.jpg",
+      "notes": "Missed across all resolutions; requires active foveation."
+    },
+    {
+      "case_type": "Recovered VRU",
+      "image": "b1d0a191-03dcecc2.jpg",
+      "class": "person",
+      "file": "CaseA_Recovered_person_b1d0a191-03dcecc2.jpg.jpg",
+      "notes": "Missed at 640px; successfully recovered at higher resolution."
+    },
+    {
+      "case_type": "Recovered VRU",
+      "image": "b1d0a191-5490450b.jpg",
+      "class": "rider",
+      "file": "CaseA_Recovered_rider_b1d0a191-5490450b.jpg.jpg",
+      "notes": "Missed at 640px; successfully recovered at higher resolution."
+    }
+  ]
+}

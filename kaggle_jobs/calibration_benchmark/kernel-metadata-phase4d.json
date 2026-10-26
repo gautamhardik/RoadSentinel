@@ -1,0 +1,18 @@
+{
+  "id": "hardikgautam25/roadsentinel-phase-4d-adaptive-area",
+  "title": "RoadSentinel Phase 4D Adaptive Area Benchmark",
+  "code_file": "evaluate_phase4d_adaptive_area.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "dataset_sources": [
+    "a7madmostafa/bdd100k-yolo",
+    "hardikgautam25/roadsentinel-weights"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}
